@@ -1,0 +1,244 @@
+[
+  {
+    "Utf32": 61501,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 78,
+    "FontName": "Consolas"
+  },
+  {
+    "Utf32": 61555,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61487,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 72,
+    "FontName": "Consolas"
+  },
+  {
+    "Utf32": 61536,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61499,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61532,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61500,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61552,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 84,
+    "FontName": "Consolas"
+  },
+  {
+    "Utf32": 61553,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 83,
+    "FontName": "Consolas"
+  },
+  {
+    "Utf32": 61525,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61552,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61554,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61561,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 86,
+    "FontName": "Consolas"
+  },
+  {
+    "Utf32": 61514,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61562,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 85,
+    "FontName": "Calibri"
+  },
+  {
+    "Utf32": 61558,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61629,
+    "FontName": "Wingdings 2"
+  },
+  {
+    "Utf32": 76,
+    "FontName": "Consolas"
+  },
+  {
+    "Utf32": 61564,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61628,
+    "FontName": "Wingdings 2"
+  },
+  {
+    "Utf32": 61521,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61531,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61486,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61554,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61565,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61564,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61495,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61535,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61545,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61551,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61536,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61557,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61545,
+    "FontName": "Wingdings 2"
+  },
+  {
+    "Utf32": 61546,
+    "FontName": "Wingdings 2"
+  },
+  {
+    "Utf32": 61530,
+    "FontName": "Wingdings 2"
+  },
+  {
+    "Utf32": 61528,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 45,
+    "FontName": "Calibri"
+  },
+  {
+    "Utf32": 88,
+    "FontName": "Calibri"
+  },
+  {
+    "Utf32": 124,
+    "FontName": "Calibri",
+    "StrikeThrough": true,
+    "Underline": true
+  },
+  {
+    "Utf32": 61528,
+    "FontName": "Wingdings 2"
+  },
+  {
+    "Utf32": 73,
+    "FontName": "Consolas"
+  },
+  {
+    "Utf32": 61473,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61494,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61523,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61518,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61524,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61556,
+    "FontName": "Wingdings 2"
+  },
+  {
+    "Utf32": 61557,
+    "FontName": "Wingdings 2"
+  },
+  {
+    "Utf32": 45,
+    "FontName": "Calibri",
+    "Bold": true,
+    "Italic": true,
+    "StrikeThrough": true,
+    "Underline": true
+  },
+  {
+    "Utf32": 88,
+    "FontName": "Calibri",
+    "Bold": true,
+    "Italic": true,
+    "StrikeThrough": true,
+    "Underline": true
+  },
+  {
+    "Utf32": 124,
+    "FontName": "Calibri",
+    "Bold": true,
+    "Italic": true,
+    "StrikeThrough": true,
+    "Underline": true
+  }
+]
