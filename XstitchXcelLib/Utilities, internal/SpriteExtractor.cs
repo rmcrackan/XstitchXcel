@@ -81,11 +81,13 @@ namespace XstitchXcelLib.Utilities
 			if ((color.A & color.R & color.G & color.B) == 255 && cell.Interior.ColorIndex == -4142)
 				color = System.Drawing.Color.Transparent;
 
+			var text = cell.Value2 is string str ? str : cell.Value2?.ToString();
+
 			var pixel = new Pixel
 			{
 				RowNumber = cell.Row, // not the same as 'r' if there are unused blank rows before UsedRange
 				ColumnNumber = cell.Column, // not the same as 'r' if there are unused blank columns before UsedRange
-				Text = ((string)cell.Value2)?.Trim() ?? "",
+				Text = text?.Trim() ?? "",
 				Color = color,
 			};
 			return pixel;
