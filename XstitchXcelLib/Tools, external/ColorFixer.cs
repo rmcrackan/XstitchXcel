@@ -33,7 +33,13 @@ namespace XstitchXcelLib.Tools
 
 			bool isMatch(Range c) => ColorTranslator.FromOle((int)c.Interior.Color).IsEquivalent(oldColor);
 
-			void change(Range cell) => cell.Interior.Color = newColorOle;
+			void change(Range cell)
+			{
+				if (newColor.IsTransparent())
+					cell.Interior.ColorIndex = 0;
+				else
+					cell.Interior.Color = newColorOle;
+			}
 
 			using var editor = new ExcelEditor(Pattern.InputFile) { CreateBackupFile = CreateBackupFile };
 			editor.Iterate(isMatch, change);

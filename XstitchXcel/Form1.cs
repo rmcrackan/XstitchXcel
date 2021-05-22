@@ -155,7 +155,7 @@ namespace XstitchXcel
 
 			var isValidColor = !color.IsEquivalent(Color.Empty);
 
-			pb.Visible = isValidColor;
+			pb.Visible = isValidColor && !color.IsTransparent();
 			isDmcLbl.Visible = isValidColor;
 			if (!isValidColor)
 				return;
