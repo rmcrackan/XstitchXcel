@@ -3,12 +3,35 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using XstitchXcelLib.DataClasses;
 
 namespace XstitchXcelLib
 {
 	public static class HelperMethods
 	{
+		private static Regex isHex { get; } = new("^\\s*(#[0-9a-f]{3}|#?[0-9a-f]{6})\\s*$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+		public static Color SmartColorFinder(string colorString, DmcColorProcessor processor)
+		{
+			// try to convert from hex:
+			//   #hhh
+			//   #hhhhhh
+			//   hhhhhh
+			if (isHex.IsMatch(colorString))
+				return HexToColor(colorString);
+
+			// transparent
+			if (colorString.Trim().ToUpper() == "T")
+				return Color.Transparent;
+
+			// else: try DMC
+			var dmc = processor.GetByName(colorString);
+			if (dmc is not null)
+				return dmc.Color;
+
+			return Color.Empty;
+		}
+
 		public static Color HexToColor(string hex)
 		{
 			if (hex is null)

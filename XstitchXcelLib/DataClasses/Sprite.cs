@@ -10,7 +10,7 @@ namespace XstitchXcelLib.DataClasses
 		public string Name { get; set; }
 		public List<Pixel> Pixels { get; set; } = new List<Pixel>();
 
-		public Point Location => new Point(
+		public Point Location => new(
 			Pixels.Any()
 				? Pixels.Min(p => p.RowNumber)
 				: 0,
@@ -18,7 +18,7 @@ namespace XstitchXcelLib.DataClasses
 				? Pixels.Min(p => p.ColumnNumber)
 				: 0
 			);
-		public Size Size => new Size(
+		public Size Size => new(
 			Pixels.Any()
 				? Pixels.Max(p => p.ColumnNumber) - Pixels.Min(p => p.ColumnNumber) + 1
 				: 0,

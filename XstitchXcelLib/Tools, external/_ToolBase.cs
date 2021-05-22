@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using XstitchXcelLib.Config;
 using XstitchXcelLib.DataClasses;
 
 namespace XstitchXcelLib.Tools
 {
 	public abstract class ToolBase
 	{
-		protected DmcColorProcessor DmcColorProcessor { get; } = new DmcColorProcessor();
+		protected DmcColorProcessor DmcColorProcessor { get; } = new();
 
 		protected Pattern Pattern { get; }
 

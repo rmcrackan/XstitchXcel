@@ -12,7 +12,7 @@ namespace XstitchXcelConsole
 
 		// loading pattern can be expensive. "LoadPattern" is more expressive os this than ctor
 		private EzApi(Pattern pattern) => this.pattern = pattern;
-		public static EzApi LoadPattern(string patternInputFile) => new EzApi(Configuration.GetPattern(patternInputFile));
+		public static EzApi LoadPattern(string patternInputFile) => new(Configuration.GetPattern(patternInputFile));
 
 		public void DiscoverNonDmcAllSprites() => new PatternAnalyzer(pattern).DiscoverNonDmcAllSprites();
 
@@ -26,5 +26,9 @@ namespace XstitchXcelConsole
 		}
 
 		public void ConvertToPattern() => new PatternBuilder(pattern).ConvertToPattern();
+
+		public void PrintGlitchConsole() => new Glitcher(pattern).PrintToConsole();
+
+		public void SaveGlitchFile() => new Glitcher(pattern).SaveToFile();
 	}
 }

@@ -58,7 +58,6 @@ namespace XstitchXcel
 			this.replaceColorTabPage = new System.Windows.Forms.TabPage();
 			this.newIsDmcLbl = new System.Windows.Forms.Label();
 			this.oldIsDmcLbl = new System.Windows.Forms.Label();
-			this.hexLbl = new System.Windows.Forms.Label();
 			this.replaceColorInstructionsTb = new System.Windows.Forms.TextBox();
 			this.beginColorFixBtn = new System.Windows.Forms.Button();
 			this.newColorPb = new System.Windows.Forms.PictureBox();
@@ -68,6 +67,12 @@ namespace XstitchXcel
 			this.oldColorTb = new System.Windows.Forms.TextBox();
 			this.oldColorLbl = new System.Windows.Forms.Label();
 			this.replaceColorBakCb = new System.Windows.Forms.CheckBox();
+			this.glitchTabPage = new System.Windows.Forms.TabPage();
+			this.glitchInstructionsTb = new System.Windows.Forms.TextBox();
+			this.createGlitchBtn = new System.Windows.Forms.Button();
+			this.glitchOutputBtn = new System.Windows.Forms.Button();
+			this.glitchOutputTb = new System.Windows.Forms.TextBox();
+			this.glitchOutputLbl = new System.Windows.Forms.Label();
 			this.tabControl.SuspendLayout();
 			this.createPatternTabPage.SuspendLayout();
 			this.statsTabPage.SuspendLayout();
@@ -76,6 +81,7 @@ namespace XstitchXcel
 			this.replaceColorTabPage.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.newColorPb)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.oldColorPb)).BeginInit();
+			this.glitchTabPage.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// fileNameLbl
@@ -117,6 +123,7 @@ namespace XstitchXcel
 			this.tabControl.Controls.Add(this.statsTabPage);
 			this.tabControl.Controls.Add(this.findDmcColorsTabPage);
 			this.tabControl.Controls.Add(this.replaceColorTabPage);
+			this.tabControl.Controls.Add(this.glitchTabPage);
 			this.tabControl.Location = new System.Drawing.Point(12, 42);
 			this.tabControl.Name = "tabControl";
 			this.tabControl.SelectedIndex = 0;
@@ -367,7 +374,6 @@ namespace XstitchXcel
 			// 
 			this.replaceColorTabPage.Controls.Add(this.newIsDmcLbl);
 			this.replaceColorTabPage.Controls.Add(this.oldIsDmcLbl);
-			this.replaceColorTabPage.Controls.Add(this.hexLbl);
 			this.replaceColorTabPage.Controls.Add(this.replaceColorInstructionsTb);
 			this.replaceColorTabPage.Controls.Add(this.beginColorFixBtn);
 			this.replaceColorTabPage.Controls.Add(this.newColorPb);
@@ -407,16 +413,6 @@ namespace XstitchXcel
 			this.oldIsDmcLbl.Text = "label1";
 			this.oldIsDmcLbl.Visible = false;
 			// 
-			// hexLbl
-			// 
-			this.hexLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.hexLbl.AutoSize = true;
-			this.hexLbl.Location = new System.Drawing.Point(81, 189);
-			this.hexLbl.Name = "hexLbl";
-			this.hexLbl.Size = new System.Drawing.Size(125, 15);
-			this.hexLbl.TabIndex = 11;
-			this.hexLbl.Text = "Hex code. Eg: #123456";
-			// 
 			// replaceColorInstructionsTb
 			// 
 			this.replaceColorInstructionsTb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -427,7 +423,7 @@ namespace XstitchXcel
 			this.replaceColorInstructionsTb.Name = "replaceColorInstructionsTb";
 			this.replaceColorInstructionsTb.ReadOnly = true;
 			this.replaceColorInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.replaceColorInstructionsTb.Size = new System.Drawing.Size(687, 158);
+			this.replaceColorInstructionsTb.Size = new System.Drawing.Size(687, 180);
 			this.replaceColorInstructionsTb.TabIndex = 10;
 			this.replaceColorInstructionsTb.Text = resources.GetString("replaceColorInstructionsTb.Text");
 			// 
@@ -506,12 +502,83 @@ namespace XstitchXcel
 			// 
 			this.replaceColorBakCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.replaceColorBakCb.AutoSize = true;
-			this.replaceColorBakCb.Location = new System.Drawing.Point(3, 167);
+			this.replaceColorBakCb.Location = new System.Drawing.Point(3, 189);
 			this.replaceColorBakCb.Name = "replaceColorBakCb";
 			this.replaceColorBakCb.Size = new System.Drawing.Size(234, 19);
 			this.replaceColorBakCb.TabIndex = 0;
 			this.replaceColorBakCb.Text = "Back up my file before making changes";
 			this.replaceColorBakCb.UseVisualStyleBackColor = true;
+			// 
+			// glitchTabPage
+			// 
+			this.glitchTabPage.Controls.Add(this.glitchInstructionsTb);
+			this.glitchTabPage.Controls.Add(this.createGlitchBtn);
+			this.glitchTabPage.Controls.Add(this.glitchOutputBtn);
+			this.glitchTabPage.Controls.Add(this.glitchOutputTb);
+			this.glitchTabPage.Controls.Add(this.glitchOutputLbl);
+			this.glitchTabPage.Location = new System.Drawing.Point(4, 24);
+			this.glitchTabPage.Name = "glitchTabPage";
+			this.glitchTabPage.Padding = new System.Windows.Forms.Padding(3);
+			this.glitchTabPage.Size = new System.Drawing.Size(693, 306);
+			this.glitchTabPage.TabIndex = 4;
+			this.glitchTabPage.Text = "Glitch";
+			this.glitchTabPage.UseVisualStyleBackColor = true;
+			// 
+			// glitchInstructionsTb
+			// 
+			this.glitchInstructionsTb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.glitchInstructionsTb.Location = new System.Drawing.Point(3, 3);
+			this.glitchInstructionsTb.Multiline = true;
+			this.glitchInstructionsTb.Name = "glitchInstructionsTb";
+			this.glitchInstructionsTb.ReadOnly = true;
+			this.glitchInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.glitchInstructionsTb.Size = new System.Drawing.Size(687, 168);
+			this.glitchInstructionsTb.TabIndex = 17;
+			this.glitchInstructionsTb.Text = "Apply a glitch effect to your design.\r\n\r\nALL non-transparent pixels are treated a" +
+    "s white, then the glitch effect is applied.";
+			// 
+			// createGlitchBtn
+			// 
+			this.createGlitchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.createGlitchBtn.Location = new System.Drawing.Point(530, 279);
+			this.createGlitchBtn.Name = "createGlitchBtn";
+			this.createGlitchBtn.Size = new System.Drawing.Size(160, 23);
+			this.createGlitchBtn.TabIndex = 16;
+			this.createGlitchBtn.Text = "Create Glitch";
+			this.createGlitchBtn.UseVisualStyleBackColor = true;
+			this.createGlitchBtn.Click += new System.EventHandler(this.createGlitchBtn_Click);
+			// 
+			// glitchOutputBtn
+			// 
+			this.glitchOutputBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.glitchOutputBtn.Location = new System.Drawing.Point(658, 177);
+			this.glitchOutputBtn.Name = "glitchOutputBtn";
+			this.glitchOutputBtn.Size = new System.Drawing.Size(32, 23);
+			this.glitchOutputBtn.TabIndex = 12;
+			this.glitchOutputBtn.Text = "...";
+			this.glitchOutputBtn.UseVisualStyleBackColor = true;
+			this.glitchOutputBtn.Click += new System.EventHandler(this.glitchOutputBtn_Click);
+			// 
+			// glitchOutputTb
+			// 
+			this.glitchOutputTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.glitchOutputTb.Location = new System.Drawing.Point(108, 178);
+			this.glitchOutputTb.Name = "glitchOutputTb";
+			this.glitchOutputTb.Size = new System.Drawing.Size(544, 23);
+			this.glitchOutputTb.TabIndex = 11;
+			// 
+			// glitchOutputLbl
+			// 
+			this.glitchOutputLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.glitchOutputLbl.AutoSize = true;
+			this.glitchOutputLbl.Location = new System.Drawing.Point(3, 181);
+			this.glitchOutputLbl.Name = "glitchOutputLbl";
+			this.glitchOutputLbl.Size = new System.Drawing.Size(99, 15);
+			this.glitchOutputLbl.TabIndex = 10;
+			this.glitchOutputLbl.Text = "Glitch output file:";
 			// 
 			// Form1
 			// 
@@ -538,6 +605,8 @@ namespace XstitchXcel
 			this.replaceColorTabPage.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.newColorPb)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.oldColorPb)).EndInit();
+			this.glitchTabPage.ResumeLayout(false);
+			this.glitchTabPage.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -577,12 +646,17 @@ namespace XstitchXcel
 		private System.Windows.Forms.TextBox oldColorTb;
 		private System.Windows.Forms.Label oldColorLbl;
 		private System.Windows.Forms.CheckBox replaceColorBakCb;
-		private System.Windows.Forms.Label hexLbl;
 		private System.Windows.Forms.TextBox replaceColorInstructionsTb;
 		private System.Windows.Forms.Label newIsDmcLbl;
 		private System.Windows.Forms.Label oldIsDmcLbl;
 		private System.Windows.Forms.TextBox findDmcColorsInstructionsTb;
 		private System.Windows.Forms.Button findDmcColorsBtn;
+		private System.Windows.Forms.TabPage glitchTabPage;
+		private System.Windows.Forms.TextBox glitchInstructionsTb;
+		private System.Windows.Forms.Button createGlitchBtn;
+		private System.Windows.Forms.Button glitchOutputBtn;
+		private System.Windows.Forms.TextBox glitchOutputTb;
+		private System.Windows.Forms.Label glitchOutputLbl;
 	}
 }
 

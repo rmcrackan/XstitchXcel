@@ -48,12 +48,14 @@ namespace XstitchXcelLib.Config
 			}
 
 			// pad with any default symbols which aren't already present. don't save to file
-			var defaultSymbols = JsonConvert.DeserializeObject<List<SymbolEntry>>(File.ReadAllText(@"Config\symbols.json"));
+			var defaultSymbols = GetDefaultSymbolEntries();
 			var newSymbols = defaultSymbols.Where(s => !patternEntry.Symbols.Contains(s)).ToList();
 			patternEntry.Symbols.AddRange(newSymbols);
 
 			return patternEntry.ToPattern(inputFile);
 		}
+
+		public static List<SymbolEntry> GetDefaultSymbolEntries() => JsonConvert.DeserializeObject<List<SymbolEntry>>(File.ReadAllText(@"Config\symbols.json"));
 
 		private static bool xlsxToSprites(PatternEntry patternEntry, string inputFile)
 		{

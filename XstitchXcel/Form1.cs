@@ -42,6 +42,7 @@ namespace XstitchXcel
 			var output = HelperMethods.GetUniqueFileName(HelperMethods.AddFileSuffix(fileNameTb.Text, " - output"));
 
 			patternOutputTb.Text = output;
+			glitchOutputTb.Text = output;
 		}
 
 		private void fileNameBtn_Click(object sender, EventArgs e)
@@ -150,17 +151,21 @@ namespace XstitchXcel
 		private void newColorTb_TextChanged(object sender, EventArgs e) => setPictureBox(newColorTb, newColorPb, newIsDmcLbl);
 		private void setPictureBox(TextBox tb, PictureBox pb, Label isDmcLbl)
 		{
-			var color = HelperMethods.HexToColor(tb.Text);
+			var color = HelperMethods.SmartColorFinder(tb.Text, dmcColorProcessor);
 
-			pb.Visible = !color.IsEquivalent(Color.Empty);
-			if (pb.Visible)
-				pb.BackColor = color;
+			var isValidColor = !color.IsEquivalent(Color.Empty);
 
-			isDmcLbl.Visible = pb.Visible;
-			if (isDmcLbl.Visible)
-				isDmcLbl.Text = dmcColorProcessor.TryGetMatch(color, out var dmcColor)
-					? $"DMC # {dmcColor.DmcNumber} - {dmcColor.Name}"
-					: "Non-DMC";
+			pb.Visible = isValidColor;
+			isDmcLbl.Visible = isValidColor;
+			if (!isValidColor)
+				return;
+
+			pb.BackColor = color;
+
+			isDmcLbl.Text
+				= color.IsTransparent() ? "Transparent"
+				: dmcColorProcessor.TryGetMatch(color, out var dmcColor) ? $"DMC # {dmcColor.DmcNumber} - {dmcColor.Name}"
+				: "Non-DMC";
 		}
 
 		private async void beginColorFixBtn_Click(object sender, EventArgs e) => await RunFullAsync(replaceColor);
@@ -170,6 +175,39 @@ namespace XstitchXcel
 				CreateBackupFile = replaceColorBakCb.Checked
 			}
 			.Replace(oldColorTb.Text, newColorTb.Text);
+		#endregion
+
+		#region tab: Glitch
+		private void glitchOutputBtn_Click(object sender, EventArgs e)
+		{
+			var dialog = new SaveFileDialog
+			{
+				Title = "Save generated glitch file",
+
+				AddExtension = true,
+				DefaultExt = "xlsx",
+				FileName = glitchOutputTb.Text,
+				Filter = "Excel Spreadsheet (*.xlsx)|*.xlsx|All files (*.*)|*.*",
+				FilterIndex = 0,
+				OverwritePrompt = true
+			};
+
+			if (dialog.ShowDialog() == DialogResult.OK)
+				glitchOutputTb.Text = dialog.FileName;
+		}
+
+		private async void createGlitchBtn_Click(object sender, EventArgs e) => await RunFullAsync(createGlitch);
+		private void createGlitch()
+		{
+			var pattern = getPattern();
+
+			var glitcher = new Glitcher(pattern)
+			{
+				OutputFile = glitchOutputTb.Text
+			};
+
+			glitcher.SaveToFile();
+		}
 		#endregion
 
 		#region run tool async

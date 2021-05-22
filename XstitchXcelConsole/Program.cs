@@ -10,10 +10,7 @@ namespace XstitchXcelConsole
 			{
 				Run();
 			}
-			catch (Exception e)
-			{
-				Console.WriteLine(e);
-			}
+			//catch (Exception e) { Console.WriteLine(e); }
 			finally
 			{
 				GC.Collect();
@@ -33,6 +30,7 @@ namespace XstitchXcelConsole
 
 			//api.DiscoverNonDmcAllSprites();
 
+
 			//var oldHex = "C00000"; // non dmc
 			//var newHex = "BB051F"; // dmc
 			//api.ReplaceColors(oldHex, newHex);
@@ -42,6 +40,10 @@ namespace XstitchXcelConsole
 
 
 			//api.ConvertToPattern();
+
+
+			//api.PrintGlitchConsole();
+			//api.SaveGlitchFile();
 		}
 	}
 }

@@ -16,9 +16,14 @@ namespace XstitchXcelLib.Tools
 	public class PatternBuilder : ToolBase
 	{
 		public string OutputFile { get; set; }
+
 		public bool PrintColorsGrid { get; set; } = true;
 		public bool PrintSymbolsGrid { get; set; } = true;
 		public bool PrintColorsAndSymbolsGrid { get; set; } = true;
+		public bool PrintLineNumbers { get; set; } = true;
+		public bool PrintGridLines { get; set; } = true;
+		public bool PrintArrowsAtMidpoints { get; set; } = true;
+		public bool PrintLegend { get; set; } = true;
 
 		private Sprite sprite => Pattern.Sprites[0];
 
@@ -31,6 +36,23 @@ namespace XstitchXcelLib.Tools
 
 			if (pattern?.Symbols is null || pattern.Symbols.Count == 0)
 				throw new Exception("no symbols loaded");
+		}
+
+		/// <summary>
+		/// Utility method to print colored design only. No pattern artifacts. eg: gridlines, arrows, symbols, legend
+		/// </summary>
+		public void PrintDesignOnly()
+		{
+			PrintColorsGrid = true;
+
+			PrintColorsAndSymbolsGrid = false;
+			PrintSymbolsGrid = false;
+			PrintLineNumbers = false;
+			PrintGridLines = false;
+			PrintArrowsAtMidpoints = false;
+			PrintLegend = false;
+
+			ConvertToPattern();
 		}
 
 		/// <summary>Convert input Excel layout to printable cross stitch patterns</summary>
@@ -46,12 +68,22 @@ namespace XstitchXcelLib.Tools
 			var cols = size.Width;
 
 			// top and left gutters for row/col numbers
-			var numberRowsTop = (int)Math.Log10(cols) + 1;
-			var numberColsLeft = (int)Math.Log10(rows) + 1;
+			var numberRowsTop = 0;
+			var numberColsLeft = 0;
+			if (PrintLineNumbers)
+			{
+				numberRowsTop = (int)Math.Log10(cols) + 1;
+				numberColsLeft = (int)Math.Log10(rows) + 1;
+			}
 
 			// bottom and right row for center triangles
-			var bottomArrowCellSize = 1;
-			var rightArrowCellSize = 1;
+			var bottomArrowCellSize = 0;
+			var rightArrowCellSize = 0;
+			if (PrintArrowsAtMidpoints)
+			{
+				bottomArrowCellSize = 1;
+				rightArrowCellSize = 1;
+			}
 
 			// right buffer between pattern and legend
 			var bufferBeforeLegend = 1;
@@ -138,18 +170,17 @@ namespace XstitchXcelLib.Tools
 				var offset = gridOffset * g;
 				var contentRowOffset = offset + numberRowsTop;
 
-				// top line numbers
+				if (PrintLineNumbers)
 				{
+					// top line numbers
 					for (var x = 0; x < numberRowsTop; x++)
 						for (var c = 1; c <= cols; c++)
 							writer.GetCell(
 								1 + x + offset,
 								c + numberColsLeft)
 								.Value = c.ToString().PadLeft(numberRowsTop)[x].ToString().Trim();
-				}
 
-				// left line numbers
-				{
+					// left line numbers
 					for (var x = 1; x <= rows; x++)
 						for (var c = 0; c < numberColsLeft; c++)
 							writer.GetCell(
@@ -163,6 +194,7 @@ namespace XstitchXcelLib.Tools
 				// - thin solid line grid 5x5
 				// - thick solid line grid 10x10
 				// - thick exterior solid line border
+				if (PrintGridLines)
 				{
 					// 1x1
 					var contentRange = writer.GetRange(1 + contentRowOffset, 1 + contentColOffset, rows + contentRowOffset, cols + contentColOffset);
@@ -195,16 +227,15 @@ namespace XstitchXcelLib.Tools
 					patternRange.DrawAllEdgeBorders(3, XlLineStyle.xlContinuous);
 				}
 
-				// right arrow. merge. Wingdings 3. left-facing arrow is 't'
+				if (PrintArrowsAtMidpoints)
 				{
+					// right arrow. merge. Wingdings 3. left-facing arrow is 't'
 					var rightArrowRange = writer.GetRange(contentRowOffset + 1, rightArrowBuffer, contentRowOffset + size.Height, rightArrowBuffer);
 					rightArrowRange.Merge();
 					rightArrowRange.Value = "t";
 					rightArrowRange.Font.Name = "Wingdings 3";
-				}
 
-				// bottom arrow. merge. Wingdings 3. top-facing arrow is 'p'
-				{
+					// bottom arrow. merge. Wingdings 3. top-facing arrow is 'p'
 					var rangeRow = contentRowOffset + rows + bottomArrowCellSize;
 					var bottomArrowRange = writer.GetRange(rangeRow, contentColOffset + 1, rangeRow, contentColOffset + size.Width);
 					bottomArrowRange.Merge();
@@ -221,6 +252,7 @@ namespace XstitchXcelLib.Tools
 				//   grid 1: no changes
 				//   grid 2: col 1: symbols
 				//   grid 3: col 2: symbols. this will combine the color box and symbols
+				if (PrintLegend)
 				{
 					var legendColBuffer = rightArrowBuffer + bufferBeforeLegend;
 					var legendCol1 = legendColBuffer + 1;
@@ -262,21 +294,6 @@ namespace XstitchXcelLib.Tools
 						legend3cell.VerticalAlignment = XlVAlign.xlVAlignBottom;
 					}
 				}
-
-				/*
-				// test print full grid area
-				for (var r = 1; r <= rows; r++)
-					for (var c = 1; c <= cols; c++)
-						writer.Write(r + contentRowOffset, c + contentColOffset, ".");
-
-				// test print pattern in grid
-				foreach (var p in sprite.Pixels.Where(p => !p.Color.GetIsTransparent()))
-					// I have no idea why +1 is necessary. These 1-based indexes are killing me
-					writer.Write(
-						p.RowNumber + contentRowOffset - location.X + 1,
-						p.ColumnNumber + contentColOffset - location.Y + 1,
-						".");
-				*/
 
 				// content
 				// grid 1 content: print pattern pixel colors

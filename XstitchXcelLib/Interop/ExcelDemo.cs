@@ -64,7 +64,7 @@ namespace XstitchXcelLib.Interop
             excel.UserControl = true;
         }
 
-        public void PrintExample(string fileName)
+        public static void PrintExample(string fileName)
         {
             var app = new Application { Visible = true };
             var workbook = app.Workbooks.Open(fileName);

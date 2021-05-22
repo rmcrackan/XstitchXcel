@@ -14,15 +14,19 @@ namespace XstitchXcelLib.Tools
 
 		public ColorFixer(Pattern pattern) : base(pattern) { }
 
-		/// <summary>fix colors from non-DMC => dmc</summary>
-		/// <param name="oldColorHex"></param>
-		/// <param name="newDmcColorHex"></param>
-		public void Replace(string oldColorHex, string newDmcColorHex)
+		public void Replace(string oldColorHex, string newColorHex)
 		{
-			var oldColor = HelperMethods.HexToColor(oldColorHex);
-			var newColor = HelperMethods.HexToColor(newDmcColorHex);
+			var oldColor = HelperMethods.SmartColorFinder(oldColorHex, DmcColorProcessor);
+			var newColor = HelperMethods.SmartColorFinder(newColorHex, DmcColorProcessor);
 
-			if (oldColor.IsEquivalent(newColor))
+			Replace(oldColor, newColor);
+		}
+
+		public void Replace(Color oldColor, Color newColor)
+		{
+			if (oldColor.IsEquivalent(newColor) ||
+				oldColor.IsEquivalent(Color.Empty) ||
+				newColor.IsEquivalent(Color.Empty))
 				return;
 
 			var newColorOle = newColor.ToOle();
