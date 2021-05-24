@@ -34,14 +34,14 @@ namespace XstitchXcelLib.Utilities
 			// If this is never used, it will be deleted during 'crop sprites'
 			spritesCache = new List<Sprite> { new Sprite() };
 
-			if (reader.UsedRows == 0 || reader.UsedColumns == 0)
+			if (reader.UsedRangeIsEmpty)
 				return;
 
-			for (var r = 1; r <= reader.UsedRows; r++)
+			for (var r = 1; r <= reader.UsedRowCount; r++)
 			{
-				var row = new Pixel[reader.UsedColumns];
+				var row = new Pixel[reader.UsedColumnCount];
 
-				for (var c = 1; c <= reader.UsedColumns; c++)
+				for (var c = 1; c <= reader.UsedColumnCount; c++)
 					row[c - 1] = parsePixel(reader.GetCellfromUsedRange(r, c));
 
 				if (row.IsNameRow())

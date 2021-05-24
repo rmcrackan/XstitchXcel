@@ -13,10 +13,19 @@ namespace XstitchXcelLib.Interop
 		private Application app { get; }
 		private Workbook workbook { get; set; }
 		private Worksheet worksheet { get; }
+
 		private Range usedRange { get; }
 
-		public int UsedRows => usedRange.Rows.Count;
-		public int UsedColumns => usedRange.Columns.Count;
+		public bool UsedRangeIsEmpty => usedRange.Rows.Count <= 0 || usedRange.Columns.Count <= 0;
+
+		public int UsedRowCount => usedRange.Rows.Count;
+		public int UsedColumnCount => usedRange.Columns.Count;
+
+		public int FirstUsedRow => usedRange.Row;
+		public int FirstUsedColumn => usedRange.Column;
+
+		public int LastUsedRow => UsedRowCount + FirstUsedRow - 1;
+		public int LastUsedColumn => UsedColumnCount + FirstUsedColumn - 1;
 
 		protected abstract Workbook GetWorkbook(Workbooks workbooks);
 
@@ -54,8 +63,8 @@ namespace XstitchXcelLib.Interop
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="row">1-based index</param>
-		/// <param name="column">1-based index</param>
+		/// <param name="row">1-based index relative to the used range. NOT relative to the entire sheet.</param>
+		/// <param name="column">1-based index. NOT relative to the entire sheet.</param>
 		/// <returns></returns>
 		public Range GetCellfromUsedRange(int row, int column) => getCell(usedRange, row, column);
 
@@ -79,9 +88,9 @@ namespace XstitchXcelLib.Interop
 
 		public void Iterate(Func<Range, bool> conditionalFunc, Action<Range> conditionalAction)
 		{
-			for (int i = 1; i <= UsedRows; i++)
+			for (var i = FirstUsedRow; i <= LastUsedRow; i++)
 			{
-				for (int j = 1; j <= UsedColumns; j++)
+				for (var j = FirstUsedColumn; j <= LastUsedColumn; j++)
 				{
 					var cell = GetCell(i, j);
 					if (conditionalFunc(cell))
