@@ -58,6 +58,10 @@ namespace XstitchXcelLib.Tools
 		/// <summary>Convert input Excel layout to printable cross stitch patterns</summary>
 		public void ConvertToPattern()
 		{
+			var grids = getGrids().ToList();
+			if (grids.Count < 1)
+				return;
+
 			var colorsAndSymbols = getSortedColorsAndSymbols();
 
 			// aka offset within the original picture from 0,0 (aka 1,1)
@@ -105,7 +109,7 @@ namespace XstitchXcelLib.Tools
 			var gridOffset = gridHeight + bufferBetweenGrids;
 
 			// total cell range needed for all 3 grids
-			var totalHeight = gridHeight + bufferBetweenGrids + gridHeight + bufferBetweenGrids + gridHeight;
+			var totalHeight = (grids.Count * gridHeight) + ((grids.Count - 1) * bufferBetweenGrids);
 			var totalWidth = numberColsLeft + size.Width + rightArrowCellSize + bufferBeforeLegend + legendWidth;
 
 			// these columns are same for all grids
@@ -135,7 +139,6 @@ namespace XstitchXcelLib.Tools
 				totalRange.VerticalAlignment = XlVAlign.xlVAlignCenter;
 			}
 
-			var grids = getGrids().ToList();
 			for (var g = 0; g < grids.Count; g++)
 			{
 				//// to put on different tabs instead of same:
@@ -301,8 +304,8 @@ namespace XstitchXcelLib.Tools
 				// grid 3 content: print pattern pixel colors and symbols
 				foreach (var p in sprite.Pixels.Where(p => !p.Color.IsTransparent()))
 				{
-					var row = p.RowNumber + contentRowOffset - location.X + 1;
-					var column = p.ColumnNumber + contentColOffset - location.Y + 1;
+					var row = p.RowNumber + contentRowOffset - location.Y + 1;
+					var column = p.ColumnNumber + contentColOffset - location.X + 1;
 					var cell = writer.GetCell(row, column);
 
 					if (grid.PatternColors)

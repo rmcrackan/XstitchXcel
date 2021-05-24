@@ -12,10 +12,10 @@ namespace XstitchXcelLib.DataClasses
 
 		public Point Location => new(
 			Pixels.Any()
-				? Pixels.Min(p => p.RowNumber)
+				? Pixels.Min(p => p.ColumnNumber)
 				: 0,
 			Pixels.Any()
-				? Pixels.Min(p => p.ColumnNumber)
+				? Pixels.Min(p => p.RowNumber)
 				: 0
 			);
 		public Size Size => new(

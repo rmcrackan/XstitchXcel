@@ -19,7 +19,7 @@ namespace XstitchXcelLib
 
 		public DmcColor GetMatch(Color color) => dmcColors.SingleOrDefault(d => color.IsEquivalent(d.Color));
 
-		public DmcColor GetByName(string color) => dmcColors.SingleOrDefault(d => string.Equals(d.Name, color.Trim(), StringComparison.OrdinalIgnoreCase));
+		public DmcColor GetByDmcNumber(string color) => dmcColors.SingleOrDefault(d => string.Equals(d.DmcNumber, color.Trim(), StringComparison.OrdinalIgnoreCase));
 
 		/// <summary>sort by DMC color name, then by hex for non-DMC</summary>
 		public IOrderedEnumerable<Color> GetSortedColors(List<Pixel> pixels) =>

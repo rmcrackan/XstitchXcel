@@ -25,7 +25,7 @@ namespace XstitchXcelLib
 				return Color.Transparent;
 
 			// else: try DMC
-			var dmc = processor.GetByName(colorString);
+			var dmc = processor.GetByDmcNumber(colorString);
 			if (dmc is not null)
 				return dmc.Color;
 

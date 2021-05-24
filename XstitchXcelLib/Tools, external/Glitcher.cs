@@ -13,6 +13,7 @@ namespace XstitchXcelLib.Tools
 		public string OutputFile { get; set; }
 
 		private int[,] _matrix { get; }
+		private Dictionary<int, Color> colorMap { get; }
 
 		public Glitcher(Pattern pattern) : base(pattern)
 		{
@@ -20,6 +21,9 @@ namespace XstitchXcelLib.Tools
 
 			if (pattern?.Sprites is null || pattern.Sprites.Count != 1)
 				throw new Exception("unexpected image qty");
+
+			// must be inside this ctor so base ctor has already init'd dmcProcessor
+			colorMap = createColorMap();
 
 			_matrix = buildMatrix(Pattern.InputFile);
 		}
@@ -45,6 +49,18 @@ namespace XstitchXcelLib.Tools
 
 			return matrix;
 		}
+
+		private Dictionary<int, Color> createColorMap() => new Dictionary<int, Color>
+		{
+			[000] = Color.Black, // unoccupied
+			[001] = DmcColorProcessor.GetByDmcNumber("820").Color, // Very Dark Royal Blue
+			[010] = DmcColorProcessor.GetByDmcNumber("907").Color, // Light Parrot Green
+			[011] = DmcColorProcessor.GetByDmcNumber("3846").Color, // Light Bright Turquoise
+			[100] = DmcColorProcessor.GetByDmcNumber("606").Color, // Bright Orange-Red
+			[101] = DmcColorProcessor.GetByDmcNumber("956").Color, // Geranium pink
+			[110] = DmcColorProcessor.GetByDmcNumber("973").Color, // Bright Canary yellow
+			[111] = Color.White,
+		};
 
 		public void PrintToConsole()
 		{
@@ -74,7 +90,7 @@ namespace XstitchXcelLib.Tools
 
 		public void SaveToFile()
 		{
-			var sprite = matrixToSprite(Pattern.InputFile, _matrix);
+			var sprite = matrixToSprite();
 
 			// build pattern
 			var pattern = new Pattern(Pattern.InputFile);
@@ -86,39 +102,25 @@ namespace XstitchXcelLib.Tools
 			builder.PrintDesignOnly();
 		}
 
-		private static Sprite matrixToSprite(string patternInputFile, int[,] matrix, bool showBackground = false)
+		private Sprite matrixToSprite(bool showBackground = false)
 		{
-			var sprite = new Sprite { Name = patternInputFile };
+			var sprite = new Sprite { Name = Pattern.InputFile };
 
-			for (var y = 0; y < matrix.GetLength(1); y++)
+			for (var y = 0; y < _matrix.GetLength(1); y++)
 			{
-				for (var x = 0; x < matrix.GetLength(0); x++)
+				for (var x = 0; x < _matrix.GetLength(0); x++)
 				{
-					var value = matrix[x, y];
+					var value = _matrix[x, y];
 
 					if (!showBackground && value == 0)
 						continue;
 
-					var color = value switch
+					sprite.Add(new()
 					{
-						000 => Color.Black, // unoccupied
-						001 => Color.DarkBlue,
-						010 => Color.Green,
-						011 => Color.Cyan,
-						100 => Color.Red,
-						101 => Color.Magenta,
-						110 => Color.Yellow,
-						111 => Color.White,
-						_ => throw new Exception("oops")
-					};
-
-					var px = new Pixel
-					{
-						Color = color,
+						Color = colorMap[value],
 						ColumnNumber = x + 1,
 						RowNumber = y + 1
-					};
-					sprite.Add(px);
+					});
 				}
 			}
 
