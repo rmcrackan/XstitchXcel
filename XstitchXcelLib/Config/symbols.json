@@ -4,8 +4,8 @@
     "FontName": "Webdings"
   },
   {
-    "Utf32": 78,
-    "FontName": "Consolas"
+    "Utf32": 61499,
+    "FontName": "Webdings"
   },
   {
     "Utf32": 61555,
@@ -16,24 +16,8 @@
     "FontName": "Webdings"
   },
   {
-    "Utf32": 72,
-    "FontName": "Consolas"
-  },
-  {
     "Utf32": 61536,
     "FontName": "Wingdings 3"
-  },
-  {
-    "Utf32": 61499,
-    "FontName": "Webdings"
-  },
-  {
-    "Utf32": 61532,
-    "FontName": "Webdings"
-  },
-  {
-    "Utf32": 61500,
-    "FontName": "Webdings"
   },
   {
     "Utf32": 61552,
@@ -44,12 +28,12 @@
     "FontName": "Consolas"
   },
   {
-    "Utf32": 61553,
-    "FontName": "Wingdings 3"
-  },
-  {
     "Utf32": 83,
     "FontName": "Consolas"
+  },
+  {
+    "Utf32": 61500,
+    "FontName": "Webdings"
   },
   {
     "Utf32": 61525,
@@ -68,6 +52,46 @@
     "FontName": "Webdings"
   },
   {
+    "Utf32": 61495,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61486,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61521,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61531,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61558,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 85,
+    "FontName": "Calibri"
+  },
+  {
+    "Utf32": 61551,
+    "FontName": "Wingdings 3"
+  },
+  {
+    "Utf32": 61536,
+    "FontName": "Wingdings"
+  },
+  {
+    "Utf32": 61532,
+    "FontName": "Webdings"
+  },
+  {
+    "Utf32": 61553,
+    "FontName": "Wingdings 3"
+  },
+  {
     "Utf32": 86,
     "FontName": "Consolas"
   },
@@ -77,14 +101,6 @@
   },
   {
     "Utf32": 61562,
-    "FontName": "Wingdings"
-  },
-  {
-    "Utf32": 85,
-    "FontName": "Calibri"
-  },
-  {
-    "Utf32": 61558,
     "FontName": "Wingdings"
   },
   {
@@ -104,16 +120,12 @@
     "FontName": "Wingdings 2"
   },
   {
-    "Utf32": 61521,
-    "FontName": "Wingdings 3"
+    "Utf32": 72,
+    "FontName": "Consolas"
   },
   {
-    "Utf32": 61531,
-    "FontName": "Wingdings"
-  },
-  {
-    "Utf32": 61486,
-    "FontName": "Webdings"
+    "Utf32": 78,
+    "FontName": "Consolas"
   },
   {
     "Utf32": 61554,
@@ -128,24 +140,12 @@
     "FontName": "Wingdings 3"
   },
   {
-    "Utf32": 61495,
-    "FontName": "Webdings"
-  },
-  {
     "Utf32": 61535,
     "FontName": "Wingdings 3"
   },
   {
     "Utf32": 61545,
     "FontName": "Wingdings 3"
-  },
-  {
-    "Utf32": 61551,
-    "FontName": "Wingdings 3"
-  },
-  {
-    "Utf32": 61536,
-    "FontName": "Wingdings"
   },
   {
     "Utf32": 61557,
