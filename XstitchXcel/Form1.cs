@@ -16,10 +16,7 @@ namespace XstitchXcel
 	{
 		private DmcColorProcessor dmcColorProcessor { get; } = new DmcColorProcessor();
 
-		public Form1()
-		{
-			InitializeComponent();
-		}
+		public Form1() => InitializeComponent();
 
 		#region main form
 		private void Form1_DragEnter(object sender, DragEventArgs e)
@@ -86,6 +83,7 @@ namespace XstitchXcel
 				patternOutputTb.Text = dialog.FileName;
 		}
 
+		private async void patternOutputTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, createPattern);
 		private async void createPatternBtn_Click(object sender, EventArgs e) => await RunFullAsync(createPattern);
 		private void createPattern()
 		{
@@ -168,6 +166,8 @@ namespace XstitchXcel
 				: "Non-DMC";
 		}
 
+		private async void oldColorTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceColor);
+		private async void newColorTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceColor);
 		private async void beginColorFixBtn_Click(object sender, EventArgs e) => await RunFullAsync(replaceColor);
 		private void replaceColor()
 			=> new ColorFixer(getPattern())
@@ -196,6 +196,7 @@ namespace XstitchXcel
 				glitchOutputTb.Text = dialog.FileName;
 		}
 
+		private async void glitchOutputTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, createGlitch);
 		private async void createGlitchBtn_Click(object sender, EventArgs e) => await RunFullAsync(createGlitch);
 		private void createGlitch()
 		{
@@ -211,6 +212,16 @@ namespace XstitchXcel
 		#endregion
 
 		#region run tool async
+		private async Task TextBoxEnterKeyAsync(KeyPressEventArgs e, Action action)
+		{
+			if (e.KeyChar == (char)Keys.Return)
+			{
+				// silence the 'ding'
+				e.Handled = true;
+
+				await RunFullAsync(action);
+			}
+		}
 		private async Task RunFullAsync(Action action)
 		{
 			var ex = await RunAsync(action);

@@ -231,6 +231,7 @@ namespace XstitchXcel
 			this.patternOutputTb.Name = "patternOutputTb";
 			this.patternOutputTb.Size = new System.Drawing.Size(537, 23);
 			this.patternOutputTb.TabIndex = 1;
+			this.patternOutputTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.patternOutputTb_KeyPress);
 			// 
 			// patternOutputLbl
 			// 
@@ -457,6 +458,7 @@ namespace XstitchXcel
 			this.newColorTb.Size = new System.Drawing.Size(100, 23);
 			this.newColorTb.TabIndex = 5;
 			this.newColorTb.TextChanged += new System.EventHandler(this.newColorTb_TextChanged);
+			this.newColorTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.newColorTb_KeyPress);
 			// 
 			// newColorLbl
 			// 
@@ -487,6 +489,7 @@ namespace XstitchXcel
 			this.oldColorTb.Size = new System.Drawing.Size(100, 23);
 			this.oldColorTb.TabIndex = 2;
 			this.oldColorTb.TextChanged += new System.EventHandler(this.oldColorTb_TextChanged);
+			this.oldColorTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.oldColorTb_KeyPress);
 			// 
 			// oldColorLbl
 			// 
@@ -569,6 +572,7 @@ namespace XstitchXcel
 			this.glitchOutputTb.Name = "glitchOutputTb";
 			this.glitchOutputTb.Size = new System.Drawing.Size(544, 23);
 			this.glitchOutputTb.TabIndex = 11;
+			this.glitchOutputTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.glitchOutputTb_KeyPress);
 			// 
 			// glitchOutputLbl
 			// 
