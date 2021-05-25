@@ -59,7 +59,7 @@ namespace XstitchXcel
 			this.newIsDmcLbl = new System.Windows.Forms.Label();
 			this.oldIsDmcLbl = new System.Windows.Forms.Label();
 			this.replaceColorInstructionsTb = new System.Windows.Forms.TextBox();
-			this.beginColorFixBtn = new System.Windows.Forms.Button();
+			this.beginColorReplaceBtn = new System.Windows.Forms.Button();
 			this.newColorPb = new System.Windows.Forms.PictureBox();
 			this.newColorTb = new System.Windows.Forms.TextBox();
 			this.newColorLbl = new System.Windows.Forms.Label();
@@ -376,7 +376,7 @@ namespace XstitchXcel
 			this.replaceColorTabPage.Controls.Add(this.newIsDmcLbl);
 			this.replaceColorTabPage.Controls.Add(this.oldIsDmcLbl);
 			this.replaceColorTabPage.Controls.Add(this.replaceColorInstructionsTb);
-			this.replaceColorTabPage.Controls.Add(this.beginColorFixBtn);
+			this.replaceColorTabPage.Controls.Add(this.beginColorReplaceBtn);
 			this.replaceColorTabPage.Controls.Add(this.newColorPb);
 			this.replaceColorTabPage.Controls.Add(this.newColorTb);
 			this.replaceColorTabPage.Controls.Add(this.newColorLbl);
@@ -428,16 +428,16 @@ namespace XstitchXcel
 			this.replaceColorInstructionsTb.TabIndex = 10;
 			this.replaceColorInstructionsTb.Text = resources.GetString("replaceColorInstructionsTb.Text");
 			// 
-			// beginColorFixBtn
+			// beginColorReplaceBtn
 			// 
-			this.beginColorFixBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.beginColorFixBtn.Location = new System.Drawing.Point(530, 280);
-			this.beginColorFixBtn.Name = "beginColorFixBtn";
-			this.beginColorFixBtn.Size = new System.Drawing.Size(160, 23);
-			this.beginColorFixBtn.TabIndex = 7;
-			this.beginColorFixBtn.Text = "Begin color fix";
-			this.beginColorFixBtn.UseVisualStyleBackColor = true;
-			this.beginColorFixBtn.Click += new System.EventHandler(this.beginColorFixBtn_Click);
+			this.beginColorReplaceBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.beginColorReplaceBtn.Location = new System.Drawing.Point(530, 280);
+			this.beginColorReplaceBtn.Name = "beginColorReplaceBtn";
+			this.beginColorReplaceBtn.Size = new System.Drawing.Size(160, 23);
+			this.beginColorReplaceBtn.TabIndex = 7;
+			this.beginColorReplaceBtn.Text = "Begin color replace";
+			this.beginColorReplaceBtn.UseVisualStyleBackColor = true;
+			this.beginColorReplaceBtn.Click += new System.EventHandler(this.beginColorReplaceBtn_Click);
 			// 
 			// newColorPb
 			// 
@@ -642,7 +642,7 @@ namespace XstitchXcel
 		private System.Windows.Forms.DataGridViewTextBoxColumn hex;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dmcNumber;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dmcName;
-		private System.Windows.Forms.Button beginColorFixBtn;
+		private System.Windows.Forms.Button beginColorReplaceBtn;
 		private System.Windows.Forms.PictureBox newColorPb;
 		private System.Windows.Forms.TextBox newColorTb;
 		private System.Windows.Forms.Label newColorLbl;

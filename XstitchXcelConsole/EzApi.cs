@@ -16,7 +16,7 @@ namespace XstitchXcelConsole
 
 		public void DiscoverNonDmcAllSprites() => new PatternAnalyzer(pattern).DiscoverNonDmcAllSprites();
 
-		public void ReplaceColors(string oldHex, string newHex) => new ColorFixer(pattern).Replace(oldHex, newHex);
+		public void ReplaceColors(string oldHex, string newHex) => new ColorReplacer(pattern).Replace(oldHex, newHex);
 
 		public void PrintStitchStatsReport()
 		{

@@ -25,13 +25,11 @@ namespace XstitchXcelLib.Tools
 			// must be inside this ctor so base ctor has already init'd dmcProcessor
 			colorMap = createColorMap();
 
-			_matrix = buildMatrix(Pattern.InputFile);
+			_matrix = buildMatrix(Pattern.Sprites.Single());
 		}
 
-		private static int[,] buildMatrix(string patternInputFile)
+		private static int[,] buildMatrix(Sprite sprite)
 		{
-			var pattern = Configuration.GetPattern(patternInputFile);
-			var sprite = pattern.Sprites.Single();
 			var matrix = new int[sprite.Size.Width + 2, sprite.Size.Height];
 
 			foreach (var pixel in sprite.Pixels)

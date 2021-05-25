@@ -30,7 +30,7 @@ namespace XstitchXcelLib.DataClasses
 		public void Add(Pixel pixel) => Pixels.Add(pixel);
 		public void AddRange(IEnumerable<Pixel> pixels) => Pixels.AddRange(pixels);
 
-		/// <summary>Trim dead-beginning and dead-end : rows and columns</summary>
+		/// <summary>Remove transparent pixels. Trim dead-beginning and dead-end : rows and columns</summary>
 		public void Crop()
 		{
 			Pixels = Pixels.Where(p => !p.Color.IsTransparent()).ToList();

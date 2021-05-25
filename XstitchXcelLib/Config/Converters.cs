@@ -61,7 +61,7 @@ namespace XstitchXcelLib.Config
 
 		public static List<SpriteEntry> ToSpriteEntries(this IEnumerable<Sprite> sprites) => sprites.Select(s => s.ToSpriteEntry()).ToList();
 
-		public static Pattern ToPattern(this PatternEntry patternEntry, string inputFile) => new(inputFile)
+		public static Pattern ToPattern(this PatternEntry patternEntry) => new(patternEntry.InputFile)
 		{
 			Sprites = patternEntry.Sprites.Select(s => s.ToSprite()).ToList(),
 			Symbols = patternEntry.Symbols.Select(s => s.ToSymbol()).ToList()

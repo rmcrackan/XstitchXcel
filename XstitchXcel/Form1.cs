@@ -168,9 +168,9 @@ namespace XstitchXcel
 
 		private async void oldColorTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceColor);
 		private async void newColorTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceColor);
-		private async void beginColorFixBtn_Click(object sender, EventArgs e) => await RunFullAsync(replaceColor);
+		private async void beginColorReplaceBtn_Click(object sender, EventArgs e) => await RunFullAsync(replaceColor);
 		private void replaceColor()
-			=> new ColorFixer(getPattern())
+			=> new ColorReplacer(getPattern())
 			{
 				CreateBackupFile = replaceColorBakCb.Checked
 			}

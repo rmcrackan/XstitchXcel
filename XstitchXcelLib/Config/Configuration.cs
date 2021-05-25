@@ -31,68 +31,124 @@ namespace XstitchXcelLib.Config
 			if (Path.GetExtension(inputFile).Trim('.').ToLower() != "xlsx")
 				throw new Exception("unexpected file extension");
 
-			var jsonFilename = Path.Combine(Path.GetDirectoryName(inputFile), Path.GetFileNameWithoutExtension(inputFile) + ".json");
-			var patternEntry = File.Exists(jsonFilename)
-				? JsonConvert.DeserializeObject<PatternEntry>(File.ReadAllText(jsonFilename))
-				: new PatternEntry();
+			var patternEntry = loadPattern(inputFile);
 
 			var saveFile = false;
 
-			saveFile |= xlsxToSprites(patternEntry, inputFile);
-			saveFile |= docxToSymbols(patternEntry, inputFile);
+			saveFile |= xlsxToSprites(patternEntry);
+			saveFile |= docxToSymbols(patternEntry);
 
 			if (saveFile)
-			{
-				var json = JsonConvert.SerializeObject(patternEntry, Formatting.Indented);
-				File.WriteAllText(jsonFilename, json);
-			}
+				savePattern(patternEntry);
 
 			// pad with any default symbols which aren't already present. don't save to file
 			var defaultSymbols = GetDefaultSymbolEntries();
 			var newSymbols = defaultSymbols.Where(s => !patternEntry.Symbols.Contains(s)).ToList();
 			patternEntry.Symbols.AddRange(newSymbols);
 
-			return patternEntry.ToPattern(inputFile);
+			return patternEntry.ToPattern();
 		}
 
 		public static List<SymbolEntry> GetDefaultSymbolEntries() => JsonConvert.DeserializeObject<List<SymbolEntry>>(File.ReadAllText(@"Config\symbols.json"));
 
-		private static bool xlsxToSprites(PatternEntry patternEntry, string inputFile)
+		private static bool xlsxToSprites(PatternEntry patternEntry)
 		{
-			var xlsxInputFileLastModified = File.GetLastWriteTimeUtc(inputFile);
-
-			if (patternEntry?.Sprites is not null && patternEntry.Sprites.Any() && xlsxInputFileLastModified <= patternEntry.XlsxLastModified)
+			if (patternEntry?.Sprites is not null &&
+				patternEntry.Sprites.Any() &&
+				File.GetLastWriteTimeUtc(patternEntry.InputFile) <= patternEntry.XlsxLastModified)
 				return false;
 
-			patternEntry.XlsxLastModified = xlsxInputFileLastModified;
+			patternEntry.RefreshXlsxLastModified();
 
-			var spriteExtractor = new SpriteExtractor(inputFile);
-			patternEntry.Sprites = spriteExtractor.GetSprites().ToSpriteEntries();
+			patternEntry.Sprites = new SpriteExtractor(patternEntry.InputFile)
+				.GetSprites()
+				.ToSpriteEntries();
 
 			if (patternEntry?.Sprites is not null && patternEntry.Sprites.Any() && string.IsNullOrWhiteSpace(patternEntry.Sprites[0].Name))
-				patternEntry.Sprites[0].Name = Path.GetFileNameWithoutExtension(inputFile);
+				patternEntry.Sprites[0].Name = Path.GetFileNameWithoutExtension(patternEntry.InputFile);
 
 			return true;
 		}
 
-		private static bool docxToSymbols(PatternEntry patternEntry, string xlsxInputFile)
+		private static bool docxToSymbols(PatternEntry patternEntry)
 		{
-			var docxFile = Path.Combine(Path.GetDirectoryName(xlsxInputFile), Path.GetFileNameWithoutExtension(xlsxInputFile) + ".docx");
+			var docxFile = Path.Combine(Path.GetDirectoryName(patternEntry.InputFile), Path.GetFileNameWithoutExtension(patternEntry.InputFile) + ".docx");
 
-			if (!File.Exists(docxFile))
+			if (!File.Exists(docxFile) ||
+				File.GetLastWriteTimeUtc(docxFile) <= patternEntry.DocxLastModified)
 				return false;
 
-			var docxInputFileLastModified = File.GetLastWriteTimeUtc(docxFile);
-
-			if (docxInputFileLastModified <= patternEntry.DocxLastModified)
-				return false;
-
-			patternEntry.DocxLastModified = docxInputFileLastModified;
+			patternEntry.RefreshDocxLastModified();
 
 			using var reader = new WordReader(docxFile);
 			patternEntry.Symbols = reader.GetSymbols().ToSymbolEntries();
 
 			return true;
+		}
+
+		public static void SaveSprites(IEnumerable<Sprite> sprites, string inputFile)
+		{
+			var patternEntry = loadPattern(inputFile);
+			patternEntry.Sprites = sprites.ToSpriteEntries();
+			patternEntry.RefreshXlsxLastModified();
+			savePattern(patternEntry);
+		}
+
+		/// <summary>
+		/// this is the ONLY place PatternEntry should be constructed. This ensures inputFile is always correctly populated
+		/// </summary>
+		/// <param name="inputFile"></param>
+		/// <returns></returns>
+		private static PatternEntry loadPattern(string inputFile)
+		{
+			var jsonFilename = getJsonFilename(inputFile);
+
+			if (!File.Exists(jsonFilename))
+				return new(inputFile);
+
+			var patternEntry = JsonConvert.DeserializeObject<PatternEntry>(File.ReadAllText(jsonFilename));
+			patternEntry.InputFile = inputFile;
+
+			return patternEntry;
+		}
+
+		private static void savePattern(PatternEntry patternEntry)
+		{
+			var filename = getJsonFilename(patternEntry.InputFile);
+			var json = JsonConvert.SerializeObject(patternEntry, Formatting.Indented);
+			File.WriteAllText(filename, json);
+		}
+
+		private static string getJsonFilename(string inputFile) => Path.Combine(Path.GetDirectoryName(inputFile), Path.GetFileNameWithoutExtension(inputFile) + ".json");
+	}
+	internal static class ConfigurationHelpers
+	{
+		public static void RefreshXlsxLastModified(this PatternEntry patternEntry)
+			=> refreshLastModified(
+				patternEntry.InputFile,
+				patternEntry.XlsxLastModified,
+				dt => patternEntry.XlsxLastModified = dt);
+
+		public static void RefreshDocxLastModified(this PatternEntry patternEntry)
+			=> refreshLastModified(
+				Path.Combine(Path.GetDirectoryName(patternEntry.InputFile), Path.GetFileNameWithoutExtension(patternEntry.InputFile) + ".docx"),
+				patternEntry.DocxLastModified,
+				dt => patternEntry.DocxLastModified = dt);
+
+		private static void refreshLastModified(
+			string filepath,
+			DateTime fileLastModified,
+			Action<DateTime> setDateTime)
+		{
+			if (!File.Exists(filepath))
+				return;
+
+			var lastModified = File.GetLastWriteTimeUtc(filepath);
+
+			if (lastModified <= fileLastModified)
+				return;
+
+			setDateTime(lastModified);
 		}
 	}
 }
