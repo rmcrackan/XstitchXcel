@@ -42,8 +42,8 @@ namespace XstitchXcelConsole
 			//api.ConvertToPattern();
 
 
-			//api.PrintGlitchConsole();
-			//api.SaveGlitchFile();
+			//api.PrintCrtBlurConsole();
+			//api.SaveCrtBlurFile();
 		}
 	}
 }

@@ -8,14 +8,14 @@ using XstitchXcelLib.DataClasses;
 
 namespace XstitchXcelLib.Tools
 {
-	public class Glitcher : ToolBase
+	public class CrtBlurer : ToolBase
 	{
 		public string OutputFile { get; set; }
 
 		private int[,] _matrix { get; }
 		private Dictionary<int, Color> colorMap { get; }
 
-		public Glitcher(Pattern pattern) : base(pattern)
+		public CrtBlurer(Pattern pattern) : base(pattern)
 		{
 			OutputFile = Path.Combine(Path.GetDirectoryName(pattern.InputFile), Path.GetFileNameWithoutExtension(pattern.InputFile) + " - output" + Path.GetExtension(pattern.InputFile));
 

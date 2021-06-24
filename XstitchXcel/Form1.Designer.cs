@@ -67,12 +67,12 @@ namespace XstitchXcel
 			this.oldColorTb = new System.Windows.Forms.TextBox();
 			this.oldColorLbl = new System.Windows.Forms.Label();
 			this.replaceColorBakCb = new System.Windows.Forms.CheckBox();
-			this.glitchTabPage = new System.Windows.Forms.TabPage();
-			this.glitchInstructionsTb = new System.Windows.Forms.TextBox();
-			this.createGlitchBtn = new System.Windows.Forms.Button();
-			this.glitchOutputBtn = new System.Windows.Forms.Button();
-			this.glitchOutputTb = new System.Windows.Forms.TextBox();
-			this.glitchOutputLbl = new System.Windows.Forms.Label();
+			this.crtBlurTabPage = new System.Windows.Forms.TabPage();
+			this.crtBlurInstructionsTb = new System.Windows.Forms.TextBox();
+			this.createCrtBlurBtn = new System.Windows.Forms.Button();
+			this.crtBlurOutputBtn = new System.Windows.Forms.Button();
+			this.crtBlurOutputTb = new System.Windows.Forms.TextBox();
+			this.crtBlurOutputLbl = new System.Windows.Forms.Label();
 			this.tabControl.SuspendLayout();
 			this.createPatternTabPage.SuspendLayout();
 			this.statsTabPage.SuspendLayout();
@@ -81,7 +81,7 @@ namespace XstitchXcel
 			this.replaceColorTabPage.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.newColorPb)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.oldColorPb)).BeginInit();
-			this.glitchTabPage.SuspendLayout();
+			this.crtBlurTabPage.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// fileNameLbl
@@ -123,7 +123,7 @@ namespace XstitchXcel
 			this.tabControl.Controls.Add(this.statsTabPage);
 			this.tabControl.Controls.Add(this.findDmcColorsTabPage);
 			this.tabControl.Controls.Add(this.replaceColorTabPage);
-			this.tabControl.Controls.Add(this.glitchTabPage);
+			this.tabControl.Controls.Add(this.crtBlurTabPage);
 			this.tabControl.Location = new System.Drawing.Point(12, 42);
 			this.tabControl.Name = "tabControl";
 			this.tabControl.SelectedIndex = 0;
@@ -512,77 +512,77 @@ namespace XstitchXcel
 			this.replaceColorBakCb.Text = "Back up my file before making changes";
 			this.replaceColorBakCb.UseVisualStyleBackColor = true;
 			// 
-			// glitchTabPage
+			// crtBlurTabPage
 			// 
-			this.glitchTabPage.Controls.Add(this.glitchInstructionsTb);
-			this.glitchTabPage.Controls.Add(this.createGlitchBtn);
-			this.glitchTabPage.Controls.Add(this.glitchOutputBtn);
-			this.glitchTabPage.Controls.Add(this.glitchOutputTb);
-			this.glitchTabPage.Controls.Add(this.glitchOutputLbl);
-			this.glitchTabPage.Location = new System.Drawing.Point(4, 24);
-			this.glitchTabPage.Name = "glitchTabPage";
-			this.glitchTabPage.Padding = new System.Windows.Forms.Padding(3);
-			this.glitchTabPage.Size = new System.Drawing.Size(693, 306);
-			this.glitchTabPage.TabIndex = 4;
-			this.glitchTabPage.Text = "Glitch";
-			this.glitchTabPage.UseVisualStyleBackColor = true;
+			this.crtBlurTabPage.Controls.Add(this.crtBlurInstructionsTb);
+			this.crtBlurTabPage.Controls.Add(this.createCrtBlurBtn);
+			this.crtBlurTabPage.Controls.Add(this.crtBlurOutputBtn);
+			this.crtBlurTabPage.Controls.Add(this.crtBlurOutputTb);
+			this.crtBlurTabPage.Controls.Add(this.crtBlurOutputLbl);
+			this.crtBlurTabPage.Location = new System.Drawing.Point(4, 24);
+			this.crtBlurTabPage.Name = "crtBlurTabPage";
+			this.crtBlurTabPage.Padding = new System.Windows.Forms.Padding(3);
+			this.crtBlurTabPage.Size = new System.Drawing.Size(693, 306);
+			this.crtBlurTabPage.TabIndex = 4;
+			this.crtBlurTabPage.Text = "CRT Blur";
+			this.crtBlurTabPage.UseVisualStyleBackColor = true;
 			// 
-			// glitchInstructionsTb
+			// crtBlurInstructionsTb
 			// 
-			this.glitchInstructionsTb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.crtBlurInstructionsTb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.glitchInstructionsTb.Location = new System.Drawing.Point(3, 3);
-			this.glitchInstructionsTb.Multiline = true;
-			this.glitchInstructionsTb.Name = "glitchInstructionsTb";
-			this.glitchInstructionsTb.ReadOnly = true;
-			this.glitchInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.glitchInstructionsTb.Size = new System.Drawing.Size(687, 168);
-			this.glitchInstructionsTb.TabIndex = 17;
-			this.glitchInstructionsTb.Text = "Apply a glitch effect to your design.\r\n\r\nALL non-transparent pixels are treated a" +
-    "s white, then the glitch effect is applied.";
+			this.crtBlurInstructionsTb.Location = new System.Drawing.Point(3, 3);
+			this.crtBlurInstructionsTb.Multiline = true;
+			this.crtBlurInstructionsTb.Name = "crtBlurInstructionsTb";
+			this.crtBlurInstructionsTb.ReadOnly = true;
+			this.crtBlurInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.crtBlurInstructionsTb.Size = new System.Drawing.Size(687, 168);
+			this.crtBlurInstructionsTb.TabIndex = 17;
+			this.crtBlurInstructionsTb.Text = "Apply a CRT blur effect to your design.\r\n\r\nALL non-transparent pixels are treated" +
+    " as white, then the CRT blur effect is applied.";
 			// 
-			// createGlitchBtn
+			// createCrtBlurBtn
 			// 
-			this.createGlitchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.createGlitchBtn.Location = new System.Drawing.Point(530, 279);
-			this.createGlitchBtn.Name = "createGlitchBtn";
-			this.createGlitchBtn.Size = new System.Drawing.Size(160, 23);
-			this.createGlitchBtn.TabIndex = 16;
-			this.createGlitchBtn.Text = "Create Glitch";
-			this.createGlitchBtn.UseVisualStyleBackColor = true;
-			this.createGlitchBtn.Click += new System.EventHandler(this.createGlitchBtn_Click);
+			this.createCrtBlurBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.createCrtBlurBtn.Location = new System.Drawing.Point(530, 279);
+			this.createCrtBlurBtn.Name = "createCrtBlurBtn";
+			this.createCrtBlurBtn.Size = new System.Drawing.Size(160, 23);
+			this.createCrtBlurBtn.TabIndex = 16;
+			this.createCrtBlurBtn.Text = "Create CRT Blur";
+			this.createCrtBlurBtn.UseVisualStyleBackColor = true;
+			this.createCrtBlurBtn.Click += new System.EventHandler(this.createCrtBlurBtn_Click);
 			// 
-			// glitchOutputBtn
+			// crtBlurOutputBtn
 			// 
-			this.glitchOutputBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.glitchOutputBtn.Location = new System.Drawing.Point(658, 177);
-			this.glitchOutputBtn.Name = "glitchOutputBtn";
-			this.glitchOutputBtn.Size = new System.Drawing.Size(32, 23);
-			this.glitchOutputBtn.TabIndex = 12;
-			this.glitchOutputBtn.Text = "...";
-			this.glitchOutputBtn.UseVisualStyleBackColor = true;
-			this.glitchOutputBtn.Click += new System.EventHandler(this.glitchOutputBtn_Click);
+			this.crtBlurOutputBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.crtBlurOutputBtn.Location = new System.Drawing.Point(658, 177);
+			this.crtBlurOutputBtn.Name = "crtBlurOutputBtn";
+			this.crtBlurOutputBtn.Size = new System.Drawing.Size(32, 23);
+			this.crtBlurOutputBtn.TabIndex = 12;
+			this.crtBlurOutputBtn.Text = "...";
+			this.crtBlurOutputBtn.UseVisualStyleBackColor = true;
+			this.crtBlurOutputBtn.Click += new System.EventHandler(this.crtBlurOutputBtn_Click);
 			// 
-			// glitchOutputTb
+			// crtBlurOutputTb
 			// 
-			this.glitchOutputTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+			this.crtBlurOutputTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.glitchOutputTb.Location = new System.Drawing.Point(108, 178);
-			this.glitchOutputTb.Name = "glitchOutputTb";
-			this.glitchOutputTb.Size = new System.Drawing.Size(544, 23);
-			this.glitchOutputTb.TabIndex = 11;
-			this.glitchOutputTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.glitchOutputTb_KeyPress);
+			this.crtBlurOutputTb.Location = new System.Drawing.Point(121, 178);
+			this.crtBlurOutputTb.Name = "crtBlurOutputTb";
+			this.crtBlurOutputTb.Size = new System.Drawing.Size(531, 23);
+			this.crtBlurOutputTb.TabIndex = 11;
+			this.crtBlurOutputTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.crtBlurOutputTb_KeyPress);
 			// 
-			// glitchOutputLbl
+			// crtBlurOutputLbl
 			// 
-			this.glitchOutputLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.glitchOutputLbl.AutoSize = true;
-			this.glitchOutputLbl.Location = new System.Drawing.Point(3, 181);
-			this.glitchOutputLbl.Name = "glitchOutputLbl";
-			this.glitchOutputLbl.Size = new System.Drawing.Size(99, 15);
-			this.glitchOutputLbl.TabIndex = 10;
-			this.glitchOutputLbl.Text = "Glitch output file:";
+			this.crtBlurOutputLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.crtBlurOutputLbl.AutoSize = true;
+			this.crtBlurOutputLbl.Location = new System.Drawing.Point(3, 181);
+			this.crtBlurOutputLbl.Name = "crtBlurOutputLbl";
+			this.crtBlurOutputLbl.Size = new System.Drawing.Size(112, 15);
+			this.crtBlurOutputLbl.TabIndex = 10;
+			this.crtBlurOutputLbl.Text = "CRT Blur output file:";
 			// 
 			// Form1
 			// 
@@ -609,8 +609,8 @@ namespace XstitchXcel
 			this.replaceColorTabPage.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.newColorPb)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.oldColorPb)).EndInit();
-			this.glitchTabPage.ResumeLayout(false);
-			this.glitchTabPage.PerformLayout();
+			this.crtBlurTabPage.ResumeLayout(false);
+			this.crtBlurTabPage.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -655,12 +655,12 @@ namespace XstitchXcel
 		private System.Windows.Forms.Label oldIsDmcLbl;
 		private System.Windows.Forms.TextBox findDmcColorsInstructionsTb;
 		private System.Windows.Forms.Button findDmcColorsBtn;
-		private System.Windows.Forms.TabPage glitchTabPage;
-		private System.Windows.Forms.TextBox glitchInstructionsTb;
-		private System.Windows.Forms.Button createGlitchBtn;
-		private System.Windows.Forms.Button glitchOutputBtn;
-		private System.Windows.Forms.TextBox glitchOutputTb;
-		private System.Windows.Forms.Label glitchOutputLbl;
+		private System.Windows.Forms.TabPage crtBlurTabPage;
+		private System.Windows.Forms.TextBox crtBlurInstructionsTb;
+		private System.Windows.Forms.Button createCrtBlurBtn;
+		private System.Windows.Forms.Button crtBlurOutputBtn;
+		private System.Windows.Forms.TextBox crtBlurOutputTb;
+		private System.Windows.Forms.Label crtBlurOutputLbl;
 	}
 }
 

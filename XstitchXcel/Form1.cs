@@ -39,7 +39,7 @@ namespace XstitchXcel
 			var output = HelperMethods.GetUniqueFileName(HelperMethods.AddFileSuffix(fileNameTb.Text, " - output"));
 
 			patternOutputTb.Text = output;
-			glitchOutputTb.Text = output;
+			crtBlurOutputTb.Text = output;
 		}
 
 		private void fileNameBtn_Click(object sender, EventArgs e)
@@ -177,37 +177,37 @@ namespace XstitchXcel
 			.Replace(oldColorTb.Text, newColorTb.Text);
 		#endregion
 
-		#region tab: Glitch
-		private void glitchOutputBtn_Click(object sender, EventArgs e)
+		#region tab: CRT Blur
+		private void crtBlurOutputBtn_Click(object sender, EventArgs e)
 		{
 			var dialog = new SaveFileDialog
 			{
-				Title = "Save generated glitch file",
+				Title = "Save generated CRT Blur file",
 
 				AddExtension = true,
 				DefaultExt = "xlsx",
-				FileName = glitchOutputTb.Text,
+				FileName = crtBlurOutputTb.Text,
 				Filter = "Excel Spreadsheet (*.xlsx)|*.xlsx|All files (*.*)|*.*",
 				FilterIndex = 0,
 				OverwritePrompt = true
 			};
 
 			if (dialog.ShowDialog() == DialogResult.OK)
-				glitchOutputTb.Text = dialog.FileName;
+				crtBlurOutputTb.Text = dialog.FileName;
 		}
 
-		private async void glitchOutputTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, createGlitch);
-		private async void createGlitchBtn_Click(object sender, EventArgs e) => await RunFullAsync(createGlitch);
-		private void createGlitch()
+		private async void crtBlurOutputTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, createCrtBlur);
+		private async void createCrtBlurBtn_Click(object sender, EventArgs e) => await RunFullAsync(createCrtBlur);
+		private void createCrtBlur()
 		{
 			var pattern = getPattern();
 
-			var glitcher = new Glitcher(pattern)
+			var crtBlurer = new CrtBlurer(pattern)
 			{
-				OutputFile = glitchOutputTb.Text
+				OutputFile = crtBlurOutputTb.Text
 			};
 
-			glitcher.SaveToFile();
+			crtBlurer.SaveToFile();
 		}
 		#endregion
 

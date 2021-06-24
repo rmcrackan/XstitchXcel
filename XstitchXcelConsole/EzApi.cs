@@ -27,8 +27,8 @@ namespace XstitchXcelConsole
 
 		public void ConvertToPattern() => new PatternBuilder(pattern).ConvertToPattern();
 
-		public void PrintGlitchConsole() => new Glitcher(pattern).PrintToConsole();
+		public void PrintCrtBlurConsole() => new CrtBlurer(pattern).PrintToConsole();
 
-		public void SaveGlitchFile() => new Glitcher(pattern).SaveToFile();
+		public void SaveCrtBlurFile() => new CrtBlurer(pattern).SaveToFile();
 	}
 }
