@@ -29,7 +29,7 @@ namespace XstitchXcelLib.DataClasses
 			var color
 				= Color.IsTransparent()
 				? "Transparent"
-				: Color.GetHexColor();
+				: Color.ToHex();
 
 			return $"[{RowNumber},{ColumnNumber}] {text}: {color}";
 		}

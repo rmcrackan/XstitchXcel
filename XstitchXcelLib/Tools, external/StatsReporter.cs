@@ -16,7 +16,7 @@ namespace XstitchXcelLib.Tools
 
 		public float MinSkeins => Count / EFFICIENT_STITCHES;
 		public float MaxSkeins => Count / INEFFICIENT_STITCHES;
-		public string Hex => Color.GetHexColor();
+		public string Hex => Color.ToHex();
 		public string DmcNumber => DmcColor?.DmcNumber ?? "[not dmc]";
 		public string DmcName => DmcColor?.Name ?? "[not dmc]";
 	}

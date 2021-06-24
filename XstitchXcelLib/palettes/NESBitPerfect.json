@@ -1,0 +1,600 @@
+{
+  "Name": "Nintendo Entertainment System (NES) Palette, bit-perfect",
+  "Notes": "omitted duplicate whites and blacks\r\nwhite: $20, $30\r\nblack: $0D, $1D, $0E-$3F\r\nSource: http://www.firebrandx.com/nespalette.html\r\n\r\nLuma:\r\n$0x: dark\r\n$1x: medium\r\n$2x: light\r\n$3x: pale\r\n\r\nChroma, hues:\r\n$x0: gray\r\n$x1: blue\r\n$x2: indigo\r\n$x3: purple\r\n$x4: magenta\r\n$x5: fuchsia\r\n$x6: red\r\n$x7: orange\r\n$x8: yellow or brown\r\n$x9: olive\r\n$xA: green\r\n$xB: aqua\r\n$xC: cyan",
+  "jsonColorMap": [
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$00",
+        "Name": "dark gray"
+      },
+      "Value": {
+        "Argb": -10395295,
+        "Hex": "616161"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$10",
+        "Name": "light gray or silver"
+      },
+      "Value": {
+        "Argb": -5592406,
+        "Hex": "AAAAAA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$20",
+        "Name": "white"
+      },
+      "Value": {
+        "Argb": -197380,
+        "Hex": "FCFCFC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$01",
+        "Name": "dark blue"
+      },
+      "Value": {
+        "Argb": -16777080,
+        "Hex": "000088"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$11",
+        "Name": "medium blue"
+      },
+      "Value": {
+        "Argb": -15905340,
+        "Hex": "0D4DC4"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$21",
+        "Name": "light blue"
+      },
+      "Value": {
+        "Argb": -10249476,
+        "Hex": "639AFC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$31",
+        "Name": "pale blue"
+      },
+      "Value": {
+        "Argb": -4270852,
+        "Hex": "BED4FC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$02",
+        "Name": "dark indigo"
+      },
+      "Value": {
+        "Argb": -14742119,
+        "Hex": "1F0D99"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$12",
+        "Name": "medium indigo"
+      },
+      "Value": {
+        "Argb": -11852578,
+        "Hex": "4B24DE"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$22",
+        "Name": "light indigo"
+      },
+      "Value": {
+        "Argb": -7700740,
+        "Hex": "8A7EFC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$32",
+        "Name": "pale indigo"
+      },
+      "Value": {
+        "Argb": -3486980,
+        "Hex": "CACAFC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$03",
+        "Name": "dark purple"
+      },
+      "Value": {
+        "Argb": -13167751,
+        "Hex": "371379"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$13",
+        "Name": "medium purple"
+      },
+      "Value": {
+        "Argb": -9891121,
+        "Hex": "6912CF"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$23",
+        "Name": "light purple"
+      },
+      "Value": {
+        "Argb": -5215492,
+        "Hex": "B06AFC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$33",
+        "Name": "pale purple"
+      },
+      "Value": {
+        "Argb": -2505476,
+        "Hex": "D9C4FC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$04",
+        "Name": "dark magenta"
+      },
+      "Value": {
+        "Argb": -11136416,
+        "Hex": "561260"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$14",
+        "Name": "medium magenta"
+      },
+      "Value": {
+        "Argb": -7334739,
+        "Hex": "9014AD"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$24",
+        "Name": "light magenta"
+      },
+      "Value": {
+        "Argb": -2265614,
+        "Hex": "DD6DF2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$34",
+        "Name": "pale magenta"
+      },
+      "Value": {
+        "Argb": -1261060,
+        "Hex": "ECC1FC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$05",
+        "Name": "dark fuchsia"
+      },
+      "Value": {
+        "Argb": -10682352,
+        "Hex": "5D0010"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$15",
+        "Name": "medium fuchsia"
+      },
+      "Value": {
+        "Argb": -6480824,
+        "Hex": "9D1C48"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$25",
+        "Name": "light fuchsia"
+      },
+      "Value": {
+        "Argb": -1609301,
+        "Hex": "E771AB"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$35",
+        "Name": "pale fuchsia"
+      },
+      "Value": {
+        "Argb": -343065,
+        "Hex": "FAC3E7"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$06",
+        "Name": "dark red"
+      },
+      "Value": {
+        "Argb": -11399680,
+        "Hex": "520E00"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$16",
+        "Name": "medium red"
+      },
+      "Value": {
+        "Argb": -7195644,
+        "Hex": "923404"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$26",
+        "Name": "light red"
+      },
+      "Value": {
+        "Argb": -1866152,
+        "Hex": "E38658"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$36",
+        "Name": "pale red"
+      },
+      "Value": {
+        "Argb": -536893,
+        "Hex": "F7CEC3"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$07",
+        "Name": "dark orange"
+      },
+      "Value": {
+        "Argb": -12967160,
+        "Hex": "3A2308"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$17",
+        "Name": "medium orange"
+      },
+      "Value": {
+        "Argb": -9220091,
+        "Hex": "735005"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$27",
+        "Name": "light orange"
+      },
+      "Value": {
+        "Argb": -3367390,
+        "Hex": "CC9E22"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$37",
+        "Name": "pale orange"
+      },
+      "Value": {
+        "Argb": -1913433,
+        "Hex": "E2CDA7"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$08",
+        "Name": "dark yellow or dark brown"
+      },
+      "Value": {
+        "Argb": -14600948,
+        "Hex": "21350C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$18",
+        "Name": "medium yellow or medium brown"
+      },
+      "Value": {
+        "Argb": -10655469,
+        "Hex": "5D6913"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$28",
+        "Name": "light yellow or light brown"
+      },
+      "Value": {
+        "Argb": -5721856,
+        "Hex": "A8B100"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$38",
+        "Name": "pale yellow or pale brown"
+      },
+      "Value": {
+        "Argb": -2434148,
+        "Hex": "DADB9C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$09",
+        "Name": "dark olive"
+      },
+      "Value": {
+        "Argb": -15908594,
+        "Hex": "0D410E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$19",
+        "Name": "medium olive"
+      },
+      "Value": {
+        "Argb": -15304175,
+        "Hex": "167A11"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$29",
+        "Name": "light olive"
+      },
+      "Value": {
+        "Argb": -9256704,
+        "Hex": "72C100"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$39",
+        "Name": "pale olive"
+      },
+      "Value": {
+        "Argb": -3611746,
+        "Hex": "C8E39E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$0A",
+        "Name": "dark green"
+      },
+      "Value": {
+        "Argb": -15252457,
+        "Hex": "174417"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$1A",
+        "Name": "medium green"
+      },
+      "Value": {
+        "Argb": -15499256,
+        "Hex": "138008"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$2A",
+        "Name": "light green"
+      },
+      "Value": {
+        "Argb": -10826418,
+        "Hex": "5ACD4E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$3A",
+        "Name": "pale green"
+      },
+      "Value": {
+        "Argb": -4201032,
+        "Hex": "BFE5B8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$0B",
+        "Name": "dark aqua"
+      },
+      "Value": {
+        "Argb": -16762337,
+        "Hex": "003A1F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$1B",
+        "Name": "medium aqua"
+      },
+      "Value": {
+        "Argb": -15567287,
+        "Hex": "127649"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$2B",
+        "Name": "light aqua"
+      },
+      "Value": {
+        "Argb": -13319538,
+        "Hex": "34C28E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$3B",
+        "Name": "pale aqua"
+      },
+      "Value": {
+        "Argb": -5051448,
+        "Hex": "B2EBC8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$0C",
+        "Name": "dark cyan"
+      },
+      "Value": {
+        "Argb": -16765097,
+        "Hex": "002F57"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$1C",
+        "Name": "medium cyan"
+      },
+      "Value": {
+        "Argb": -14915951,
+        "Hex": "1C6691"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$2C",
+        "Name": "light cyan"
+      },
+      "Value": {
+        "Argb": -11551026,
+        "Hex": "4FBECE"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$3C",
+        "Name": "pale cyan"
+      },
+      "Value": {
+        "Argb": -4725269,
+        "Hex": "B7E5EB"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$0D",
+        "Name": "black"
+      },
+      "Value": {
+        "Argb": -16777216,
+        "Hex": "000000"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$2D",
+        "Name": "dark gray #2"
+      },
+      "Value": {
+        "Argb": -12434878,
+        "Hex": "424242"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "NES",
+        "ID": "$3D",
+        "Name": "light gray or silver #2"
+      },
+      "Value": {
+        "Argb": -5460820,
+        "Hex": "ACACAC"
+      }
+    }
+  ]
+}

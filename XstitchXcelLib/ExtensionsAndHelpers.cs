@@ -102,7 +102,7 @@ namespace XstitchXcelLib
 			.OrderByDescending(x => x.Count)
 			.ToList();
 
-		public static string GetHexColor(this Color color)
+		public static string ToHex(this Color color)
 			=> color.IsTransparent()
 			? "Transparent"
 			: $"{color.R:X2}{color.G:X2}{color.B:X2}";

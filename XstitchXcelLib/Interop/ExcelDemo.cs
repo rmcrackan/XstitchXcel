@@ -102,7 +102,7 @@ namespace XstitchXcelLib.Interop
                     // to set transparent/no-fill: ColorIndex = 0
                     var isTransparent = (col.A & col.R & col.G & col.B) == 255 && cell.Interior.ColorIndex == -4142;
 
-                    Console.Write($"{i},{j}={str} | bg=#{col.GetHexColor()}");
+                    Console.Write($"{i},{j}={str} | bg=#{col.ToHex()}");
                     if (!isTransparent && (col.IsKnownColor || col.IsNamedColor || col.IsSystemColor))
                         Console.Write($" [{col.Name}]");
 

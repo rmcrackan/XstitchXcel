@@ -1,0 +1,5308 @@
+{
+  "Name": "DMC Photo (Stitchtastic)",
+  "Notes": "From: https://drive.google.com/file/d/1rNQm-FwAHJaX1HRQW86sQzm_GyZaPxPB/view",
+  "jsonColorMap": [
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "1",
+        "Name": "White Tin"
+      },
+      "Value": {
+        "Argb": -3092534,
+        "Hex": "D0CFCA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "2",
+        "Name": "Tin"
+      },
+      "Value": {
+        "Argb": -4144707,
+        "Hex": "C0C1BD"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3",
+        "Name": "Tin - Medium"
+      },
+      "Value": {
+        "Argb": -6316384,
+        "Hex": "9F9EA0"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "4",
+        "Name": "Tin - Dark"
+      },
+      "Value": {
+        "Argb": -8619911,
+        "Hex": "7C7879"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "5",
+        "Name": "Driftwood - Light"
+      },
+      "Value": {
+        "Argb": -3425104,
+        "Hex": "CBBCB0"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "6",
+        "Name": "Driftwood - Medium Light"
+      },
+      "Value": {
+        "Argb": -3820120,
+        "Hex": "C5B5A8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "7",
+        "Name": "Driftwood"
+      },
+      "Value": {
+        "Argb": -6584718,
+        "Hex": "9B8672"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "8",
+        "Name": "Driftwood - Dark"
+      },
+      "Value": {
+        "Argb": -10072772,
+        "Hex": "664D3C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "9",
+        "Name": "Cocoa - Very Dark"
+      },
+      "Value": {
+        "Argb": -11782861,
+        "Hex": "4C3533"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "10",
+        "Name": "Tender Green - Very Light"
+      },
+      "Value": {
+        "Argb": -2369876,
+        "Hex": "DBD6AC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "11",
+        "Name": "Tender Green - Light"
+      },
+      "Value": {
+        "Argb": -2239369,
+        "Hex": "DDD477"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "12",
+        "Name": "Tender Green"
+      },
+      "Value": {
+        "Argb": -3225019,
+        "Hex": "CECA45"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "13",
+        "Name": "Nile Green - Medium Light"
+      },
+      "Value": {
+        "Argb": -5124444,
+        "Hex": "B1CEA4"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "14",
+        "Name": "Apple Green - Pale"
+      },
+      "Value": {
+        "Argb": -3024227,
+        "Hex": "D1DA9D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "15",
+        "Name": "Apple Green"
+      },
+      "Value": {
+        "Argb": -3748226,
+        "Hex": "C6CE7E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "16",
+        "Name": "Chartreuse - Light"
+      },
+      "Value": {
+        "Argb": -4602286,
+        "Hex": "B9C652"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "17",
+        "Name": "Yellow Plum - Light"
+      },
+      "Value": {
+        "Argb": -1914544,
+        "Hex": "E2C950"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "18",
+        "Name": "Yellow Plum"
+      },
+      "Value": {
+        "Argb": -2572755,
+        "Hex": "D8BE2D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "19",
+        "Name": "Autumn Gold - Medium Light"
+      },
+      "Value": {
+        "Argb": -670359,
+        "Hex": "F5C569"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "20",
+        "Name": "Shrimp"
+      },
+      "Value": {
+        "Argb": -803168,
+        "Hex": "F3BEA0"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "21",
+        "Name": "Alizarian - Light"
+      },
+      "Value": {
+        "Argb": -3313578,
+        "Hex": "CD7056"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "22",
+        "Name": "Alizarian"
+      },
+      "Value": {
+        "Argb": -5424593,
+        "Hex": "AD3A2F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "23",
+        "Name": "Apple Blossom"
+      },
+      "Value": {
+        "Argb": -1583145,
+        "Hex": "E7D7D7"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "24",
+        "Name": "White Lavender"
+      },
+      "Value": {
+        "Argb": -1976872,
+        "Hex": "E1D5D8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "25",
+        "Name": "Lavender - Ultra Light"
+      },
+      "Value": {
+        "Argb": -2699818,
+        "Hex": "D6CDD6"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "26",
+        "Name": "Lavender - Pale"
+      },
+      "Value": {
+        "Argb": -3685162,
+        "Hex": "C7C4D6"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "27",
+        "Name": "White Violet"
+      },
+      "Value": {
+        "Argb": -2435111,
+        "Hex": "DAD7D9"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "28",
+        "Name": "Eggplant - Medium Light"
+      },
+      "Value": {
+        "Argb": -8161392,
+        "Hex": "837790"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "29",
+        "Name": "Eggplant"
+      },
+      "Value": {
+        "Argb": -11978924,
+        "Hex": "493754"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "30",
+        "Name": "Blueberry - Medium Light"
+      },
+      "Value": {
+        "Argb": -7699285,
+        "Hex": "8A84AB"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "31",
+        "Name": "Blueberry"
+      },
+      "Value": {
+        "Argb": -10198895,
+        "Hex": "646091"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "32",
+        "Name": "Blueberry - Dark"
+      },
+      "Value": {
+        "Argb": -12237453,
+        "Hex": "454573"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "33",
+        "Name": "Fuchsia"
+      },
+      "Value": {
+        "Argb": -7256193,
+        "Hex": "91477F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "34",
+        "Name": "Fuchsia - Dark"
+      },
+      "Value": {
+        "Argb": -8838823,
+        "Hex": "792159"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "35",
+        "Name": "Fuchsia - Very Dark"
+      },
+      "Value": {
+        "Argb": -11005642,
+        "Hex": "581136"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "150",
+        "Name": "Dusty Rose - Ultra Very Dark"
+      },
+      "Value": {
+        "Argb": -6676174,
+        "Hex": "9A2132"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "151",
+        "Name": "Dusty Rose - Ultra Light"
+      },
+      "Value": {
+        "Argb": -1921102,
+        "Hex": "E2AFB2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "152",
+        "Name": "Tawny - Dark"
+      },
+      "Value": {
+        "Argb": -3894393,
+        "Hex": "C49387"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "153",
+        "Name": "Lilac"
+      },
+      "Value": {
+        "Argb": -3427640,
+        "Hex": "CBB2C8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "154",
+        "Name": "Red - Very Dark"
+      },
+      "Value": {
+        "Argb": -13626073,
+        "Hex": "301527"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "155",
+        "Name": "Forget-me-not Blue"
+      },
+      "Value": {
+        "Argb": -7894335,
+        "Hex": "878AC1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "156",
+        "Name": "Blue - Medium"
+      },
+      "Value": {
+        "Argb": -7627326,
+        "Hex": "8B9DC2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "157",
+        "Name": "Blue - Light"
+      },
+      "Value": {
+        "Argb": -5851185,
+        "Hex": "A6B7CF"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "158",
+        "Name": "Blue - Dark"
+      },
+      "Value": {
+        "Argb": -14469517,
+        "Hex": "233673"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "159",
+        "Name": "Petrol Blue - Light"
+      },
+      "Value": {
+        "Argb": -6052423,
+        "Hex": "A3A5B9"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "160",
+        "Name": "Petrol Blue - Medium"
+      },
+      "Value": {
+        "Argb": -9338974,
+        "Hex": "717FA2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "161",
+        "Name": "Petrol Blue - Dark"
+      },
+      "Value": {
+        "Argb": -11378812,
+        "Hex": "525F84"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "162",
+        "Name": "Blue - Ultra Very Light"
+      },
+      "Value": {
+        "Argb": -4600622,
+        "Hex": "B9CCD2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "163",
+        "Name": "Celadon Green - Medium"
+      },
+      "Value": {
+        "Argb": -12029095,
+        "Hex": "487359"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "164",
+        "Name": "Green - Light"
+      },
+      "Value": {
+        "Argb": -5587313,
+        "Hex": "AABE8F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "165",
+        "Name": "Green - Bright"
+      },
+      "Value": {
+        "Argb": -3358104,
+        "Hex": "CCC268"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "166",
+        "Name": "Moss Green - Medium Light"
+      },
+      "Value": {
+        "Argb": -5463036,
+        "Hex": "ACA404"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "167",
+        "Name": "Khaki Brown"
+      },
+      "Value": {
+        "Argb": -7051992,
+        "Hex": "946528"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "168",
+        "Name": "Silver Gray"
+      },
+      "Value": {
+        "Argb": -4867398,
+        "Hex": "B5BABA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "169",
+        "Name": "Pewter Gray - Light"
+      },
+      "Value": {
+        "Argb": -8354429,
+        "Hex": "808583"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "208",
+        "Name": "Lavender - Very Dark"
+      },
+      "Value": {
+        "Argb": -9218656,
+        "Hex": "7355A0"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "209",
+        "Name": "Lavender - Dark"
+      },
+      "Value": {
+        "Argb": -6585929,
+        "Hex": "9B81B7"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "210",
+        "Name": "Lavender - Medium"
+      },
+      "Value": {
+        "Argb": -5004083,
+        "Hex": "B3A4CD"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "211",
+        "Name": "Lavender - Light"
+      },
+      "Value": {
+        "Argb": -3753514,
+        "Hex": "C6B9D6"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "221",
+        "Name": "Shell Pink - Very Dark"
+      },
+      "Value": {
+        "Argb": -8903647,
+        "Hex": "782421"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "223",
+        "Name": "Shell Pink - Light"
+      },
+      "Value": {
+        "Argb": -5743271,
+        "Hex": "A85D59"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "224",
+        "Name": "Shell Pink - Very Light"
+      },
+      "Value": {
+        "Argb": -2972519,
+        "Hex": "D2A499"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "225",
+        "Name": "Shell Pink - Ultra Very Light"
+      },
+      "Value": {
+        "Argb": -1916489,
+        "Hex": "E2C1B7"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "300",
+        "Name": "Mahogany - Very Dark"
+      },
+      "Value": {
+        "Argb": -10673908,
+        "Hex": "5D210C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "301",
+        "Name": "Mahogany - Medium"
+      },
+      "Value": {
+        "Argb": -5812196,
+        "Hex": "A7501C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "304",
+        "Name": "Red - Medium"
+      },
+      "Value": {
+        "Argb": -5627853,
+        "Hex": "AA2033"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "307",
+        "Name": "Lemon"
+      },
+      "Value": {
+        "Argb": -861949,
+        "Hex": "F2D903"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "309",
+        "Name": "Rose - Dark"
+      },
+      "Value": {
+        "Argb": -5361605,
+        "Hex": "AE303B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "310",
+        "Name": "Black"
+      },
+      "Value": {
+        "Argb": -15987699,
+        "Hex": "0C0C0D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "311",
+        "Name": "Blue - Medium"
+      },
+      "Value": {
+        "Argb": -16043429,
+        "Hex": "0B325B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "312",
+        "Name": "Baby Blue - Very Dark"
+      },
+      "Value": {
+        "Argb": -15384203,
+        "Hex": "154175"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "315",
+        "Name": "Antique Mauve - Medium Dark"
+      },
+      "Value": {
+        "Argb": -9094850,
+        "Hex": "75393E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "316",
+        "Name": "Antique Mauve - Medium"
+      },
+      "Value": {
+        "Argb": -4948083,
+        "Hex": "B47F8D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "317",
+        "Name": "Pewter Gray"
+      },
+      "Value": {
+        "Argb": -11249822,
+        "Hex": "545762"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "318",
+        "Name": "Steel Gray - Light"
+      },
+      "Value": {
+        "Argb": -6382425,
+        "Hex": "9E9CA7"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "319",
+        "Name": "Pistachio Green - Very Dark"
+      },
+      "Value": {
+        "Argb": -15188969,
+        "Hex": "183C17"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "320",
+        "Name": "Pistachio Green - Medium"
+      },
+      "Value": {
+        "Argb": -9663648,
+        "Hex": "6C8B60"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "321",
+        "Name": "Red"
+      },
+      "Value": {
+        "Argb": -5170650,
+        "Hex": "B11A26"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "322",
+        "Name": "Baby Blue"
+      },
+      "Value": {
+        "Argb": -11963742,
+        "Hex": "4972A2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "326",
+        "Name": "Rose - Very Dark"
+      },
+      "Value": {
+        "Argb": -5825485,
+        "Hex": "A71C33"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "327",
+        "Name": "Violet"
+      },
+      "Value": {
+        "Argb": -10733470,
+        "Hex": "5C3862"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "333",
+        "Name": "Blue Violet - Very Dark"
+      },
+      "Value": {
+        "Argb": -12105575,
+        "Hex": "474899"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "334",
+        "Name": "Baby Blue - Medium"
+      },
+      "Value": {
+        "Argb": -11566421,
+        "Hex": "4F82AB"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "335",
+        "Name": "Rose"
+      },
+      "Value": {
+        "Argb": -3188631,
+        "Hex": "CF5869"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "336",
+        "Name": "Blue"
+      },
+      "Value": {
+        "Argb": -15193772,
+        "Hex": "182954"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "340",
+        "Name": "Blue Violet - Medium"
+      },
+      "Value": {
+        "Argb": -7892027,
+        "Hex": "8793C5"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "341",
+        "Name": "Blue Violet - Light"
+      },
+      "Value": {
+        "Argb": -6443833,
+        "Hex": "9DACC7"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "347",
+        "Name": "Salmon - Very Dark"
+      },
+      "Value": {
+        "Argb": -4573902,
+        "Hex": "BA3532"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "349",
+        "Name": "Coral - Dark"
+      },
+      "Value": {
+        "Argb": -4444379,
+        "Hex": "BC2F25"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "350",
+        "Name": "Coral - Medium"
+      },
+      "Value": {
+        "Argb": -3390413,
+        "Hex": "CC4433"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "351",
+        "Name": "Coral"
+      },
+      "Value": {
+        "Argb": -2795709,
+        "Hex": "D55743"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "352",
+        "Name": "Coral - Light"
+      },
+      "Value": {
+        "Argb": -1799055,
+        "Hex": "E48C71"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "353",
+        "Name": "Peach"
+      },
+      "Value": {
+        "Argb": -1525598,
+        "Hex": "E8B8A2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "355",
+        "Name": "Terra Cotta - Dark"
+      },
+      "Value": {
+        "Argb": -7263971,
+        "Hex": "91291D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "356",
+        "Name": "Terra Cotta - Medium"
+      },
+      "Value": {
+        "Argb": -5417664,
+        "Hex": "AD5540"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "367",
+        "Name": "Pistachio Green - Dark"
+      },
+      "Value": {
+        "Argb": -12032192,
+        "Hex": "486740"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "368",
+        "Name": "Pistachio Green - Light"
+      },
+      "Value": {
+        "Argb": -7165835,
+        "Hex": "92A875"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "369",
+        "Name": "Pistachio Green - Very Light"
+      },
+      "Value": {
+        "Argb": -4273501,
+        "Hex": "BECAA3"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "370",
+        "Name": "Mustard - Medium"
+      },
+      "Value": {
+        "Argb": -6782656,
+        "Hex": "988140"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "371",
+        "Name": "Mustard"
+      },
+      "Value": {
+        "Argb": -6915266,
+        "Hex": "967B3E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "372",
+        "Name": "Mustard - Light"
+      },
+      "Value": {
+        "Argb": -5925535,
+        "Hex": "A59561"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "400",
+        "Name": "Mahogany - Dark"
+      },
+      "Value": {
+        "Argb": -8441845,
+        "Hex": "7F300B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "402",
+        "Name": "Mahogany - Very Light"
+      },
+      "Value": {
+        "Argb": -2385829,
+        "Hex": "DB985B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "407",
+        "Name": "Desert Sand - Dark"
+      },
+      "Value": {
+        "Argb": -5079454,
+        "Hex": "B27E62"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "413",
+        "Name": "Pewter Gray - Dark"
+      },
+      "Value": {
+        "Argb": -12762554,
+        "Hex": "3D4246"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "414",
+        "Name": "Steel Gray - Dark"
+      },
+      "Value": {
+        "Argb": -8947581,
+        "Hex": "777883"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "415",
+        "Name": "Pearl Gray"
+      },
+      "Value": {
+        "Argb": -4736836,
+        "Hex": "B7B8BC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "420",
+        "Name": "Hazelnut Brown - Dark"
+      },
+      "Value": {
+        "Argb": -6856416,
+        "Hex": "976120"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "422",
+        "Name": "Hazelnut Brown - Light"
+      },
+      "Value": {
+        "Argb": -4284577,
+        "Hex": "BE9F5F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "433",
+        "Name": "Brown - Medium"
+      },
+      "Value": {
+        "Argb": -9488366,
+        "Hex": "6F3812"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "434",
+        "Name": "Brown - Light"
+      },
+      "Value": {
+        "Argb": -7385582,
+        "Hex": "8F4E12"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "435",
+        "Name": "Brown - Very Light"
+      },
+      "Value": {
+        "Argb": -5214670,
+        "Hex": "B06E32"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "436",
+        "Name": "Tan"
+      },
+      "Value": {
+        "Argb": -4619707,
+        "Hex": "B98245"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "437",
+        "Name": "Tan - Light"
+      },
+      "Value": {
+        "Argb": -3102869,
+        "Hex": "D0A76B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "444",
+        "Name": "Lemon - Dark"
+      },
+      "Value": {
+        "Argb": -996607,
+        "Hex": "F0CB01"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "445",
+        "Name": "Lemon - Light"
+      },
+      "Value": {
+        "Argb": -857713,
+        "Hex": "F2E98F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "451",
+        "Name": "Shell Gray - Dark"
+      },
+      "Value": {
+        "Argb": -7572375,
+        "Hex": "8C7469"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "452",
+        "Name": "Shell Gray - Medium"
+      },
+      "Value": {
+        "Argb": -5334123,
+        "Hex": "AE9B95"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "453",
+        "Name": "Shell Gray - Light"
+      },
+      "Value": {
+        "Argb": -3818832,
+        "Hex": "C5BAB0"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "469",
+        "Name": "Avocado Green"
+      },
+      "Value": {
+        "Argb": -10985974,
+        "Hex": "585E0A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "470",
+        "Name": "Avocado Green - Light"
+      },
+      "Value": {
+        "Argb": -9732344,
+        "Hex": "6B7F08"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "471",
+        "Name": "Avocado Green - Very Light"
+      },
+      "Value": {
+        "Argb": -7696084,
+        "Hex": "8A912C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "472",
+        "Name": "Avocado Green - Ultra Light"
+      },
+      "Value": {
+        "Argb": -4541359,
+        "Hex": "BAB451"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "498",
+        "Name": "Red - Dark"
+      },
+      "Value": {
+        "Argb": -7334365,
+        "Hex": "901623"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "500",
+        "Name": "Blue Green - Very Dark"
+      },
+      "Value": {
+        "Argb": -15654628,
+        "Hex": "11211C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "501",
+        "Name": "Blue Green - Dark"
+      },
+      "Value": {
+        "Argb": -13085366,
+        "Hex": "38554A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "502",
+        "Name": "Blue Green"
+      },
+      "Value": {
+        "Argb": -10650775,
+        "Hex": "5D7B69"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "503",
+        "Name": "Blue Green - Medium"
+      },
+      "Value": {
+        "Argb": -8216427,
+        "Hex": "82A095"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "505",
+        "Name": "Grass Green - Dark"
+      },
+      "Value": {
+        "Argb": -14065604,
+        "Hex": "29603C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "517",
+        "Name": "Wedgewood - Dark"
+      },
+      "Value": {
+        "Argb": -16099694,
+        "Hex": "0A5692"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "518",
+        "Name": "Wedgewood - Light"
+      },
+      "Value": {
+        "Argb": -12612950,
+        "Hex": "3F8AAA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "519",
+        "Name": "Sky Blue"
+      },
+      "Value": {
+        "Argb": -8213309,
+        "Hex": "82ACC3"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "520",
+        "Name": "Fern Green - Dark"
+      },
+      "Value": {
+        "Argb": -12563925,
+        "Hex": "404A2B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "522",
+        "Name": "Fern Green"
+      },
+      "Value": {
+        "Argb": -7433104,
+        "Hex": "8E9470"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "523",
+        "Name": "Fern Green - Light"
+      },
+      "Value": {
+        "Argb": -6513285,
+        "Hex": "9C9D7B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "524",
+        "Name": "Fern Green - Very Light"
+      },
+      "Value": {
+        "Argb": -5526387,
+        "Hex": "ABAC8D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "535",
+        "Name": "Ash Gray - Very Light"
+      },
+      "Value": {
+        "Argb": -11580345,
+        "Hex": "4F4C47"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "543",
+        "Name": "Beige Brown - Ultra Very Light"
+      },
+      "Value": {
+        "Argb": -2900568,
+        "Hex": "D3BDA8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "550",
+        "Name": "Violet - Very Dark"
+      },
+      "Value": {
+        "Argb": -12839346,
+        "Hex": "3C164E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "552",
+        "Name": "Violet - Medium"
+      },
+      "Value": {
+        "Argb": -10075776,
+        "Hex": "664180"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "553",
+        "Name": "Violet"
+      },
+      "Value": {
+        "Argb": -8561768,
+        "Hex": "7D5B98"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "554",
+        "Name": "Violet - Light"
+      },
+      "Value": {
+        "Argb": -4678982,
+        "Hex": "B89ABA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "561",
+        "Name": "Jade - Very Dark"
+      },
+      "Value": {
+        "Argb": -14461631,
+        "Hex": "235541"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "562",
+        "Name": "Jade - Medium"
+      },
+      "Value": {
+        "Argb": -11828136,
+        "Hex": "4B8458"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "563",
+        "Name": "Jade - Light"
+      },
+      "Value": {
+        "Argb": -7556715,
+        "Hex": "8CB195"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "564",
+        "Name": "Jade - Very Light"
+      },
+      "Value": {
+        "Argb": -5782875,
+        "Hex": "A7C2A5"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "580",
+        "Name": "Moss Green - Dark"
+      },
+      "Value": {
+        "Argb": -10330616,
+        "Hex": "625E08"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "581",
+        "Name": "Moss Green"
+      },
+      "Value": {
+        "Argb": -8748027,
+        "Hex": "7A8405"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "597",
+        "Name": "Turquoise"
+      },
+      "Value": {
+        "Argb": -10840411,
+        "Hex": "5A96A5"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "598",
+        "Name": "Turquoise - Light"
+      },
+      "Value": {
+        "Argb": -7424584,
+        "Hex": "8EB5B8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "600",
+        "Name": "Cranberry - Very Dark"
+      },
+      "Value": {
+        "Argb": -4311723,
+        "Hex": "BE3555"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "601",
+        "Name": "Cranberry - Dark"
+      },
+      "Value": {
+        "Argb": -3586973,
+        "Hex": "C94463"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "602",
+        "Name": "Cranberry - Medium"
+      },
+      "Value": {
+        "Argb": -2531199,
+        "Hex": "D96081"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "603",
+        "Name": "Cranberry - Light Medium"
+      },
+      "Value": {
+        "Argb": -1865569,
+        "Hex": "E3889F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "604",
+        "Name": "Cranberry - Light"
+      },
+      "Value": {
+        "Argb": -1530445,
+        "Hex": "E8A5B3"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "605",
+        "Name": "Cranberry - Very Light"
+      },
+      "Value": {
+        "Argb": -1460800,
+        "Hex": "E9B5C0"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "606",
+        "Name": "Orange-red - Bright"
+      },
+      "Value": {
+        "Argb": -1621208,
+        "Hex": "E74328"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "608",
+        "Name": "Orange - Bright"
+      },
+      "Value": {
+        "Argb": -761311,
+        "Hex": "F46221"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "610",
+        "Name": "Drab Brown - Dark"
+      },
+      "Value": {
+        "Argb": -9613276,
+        "Hex": "6D5024"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "611",
+        "Name": "Drab Brown"
+      },
+      "Value": {
+        "Argb": -9283796,
+        "Hex": "72572C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "612",
+        "Name": "Drab Brown - Light"
+      },
+      "Value": {
+        "Argb": -5533346,
+        "Hex": "AB915E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "613",
+        "Name": "Drab Brown - Very Light"
+      },
+      "Value": {
+        "Argb": -3358814,
+        "Hex": "CCBFA2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "632",
+        "Name": "Desert Sand - Ultra Very Dark"
+      },
+      "Value": {
+        "Argb": -8634326,
+        "Hex": "7C402A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "640",
+        "Name": "Beige Gray - Very Dark"
+      },
+      "Value": {
+        "Argb": -8293552,
+        "Hex": "817350"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "642",
+        "Name": "Beige Gray - Dark"
+      },
+      "Value": {
+        "Argb": -6780312,
+        "Hex": "988A68"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "644",
+        "Name": "Beige Gray - Medium"
+      },
+      "Value": {
+        "Argb": -4015456,
+        "Hex": "C2BAA0"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "645",
+        "Name": "Beaver Gray - Very Dark"
+      },
+      "Value": {
+        "Argb": -10199214,
+        "Hex": "645F52"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "646",
+        "Name": "Beaver Gray - Dark"
+      },
+      "Value": {
+        "Argb": -8159646,
+        "Hex": "837E62"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "647",
+        "Name": "Beaver Gray - Medium"
+      },
+      "Value": {
+        "Argb": -5987699,
+        "Hex": "A4A28D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "648",
+        "Name": "Beaver Gray - Light"
+      },
+      "Value": {
+        "Argb": -4804705,
+        "Hex": "B6AF9F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "666",
+        "Name": "Red - Bright"
+      },
+      "Value": {
+        "Argb": -3201247,
+        "Hex": "CF2721"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "676",
+        "Name": "Old Gold - Light"
+      },
+      "Value": {
+        "Argb": -2377889,
+        "Hex": "DBB75F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "677",
+        "Name": "Old Gold - Very Light"
+      },
+      "Value": {
+        "Argb": -1979243,
+        "Hex": "E1CC95"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "680",
+        "Name": "Old Gold - Dark"
+      },
+      "Value": {
+        "Argb": -5473249,
+        "Hex": "AC7C1F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "699",
+        "Name": "Green"
+      },
+      "Value": {
+        "Argb": -16623836,
+        "Hex": "025724"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "700",
+        "Name": "Green - Bright"
+      },
+      "Value": {
+        "Argb": -15963351,
+        "Hex": "0C6B29"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "701",
+        "Name": "Green - Light"
+      },
+      "Value": {
+        "Argb": -13796561,
+        "Hex": "2D7B2F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "702",
+        "Name": "Kelly Green"
+      },
+      "Value": {
+        "Argb": -11957455,
+        "Hex": "498B31"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "703",
+        "Name": "Chartreuse"
+      },
+      "Value": {
+        "Argb": -9200324,
+        "Hex": "739D3C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "704",
+        "Name": "Chartreuse - Bright"
+      },
+      "Value": {
+        "Argb": -7756501,
+        "Hex": "89A52B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "712",
+        "Name": "Cream"
+      },
+      "Value": {
+        "Argb": -1714244,
+        "Hex": "E5D7BC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "718",
+        "Name": "Plum"
+      },
+      "Value": {
+        "Argb": -5953695,
+        "Hex": "A52761"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "720",
+        "Name": "Orange Spice - Dark"
+      },
+      "Value": {
+        "Argb": -3189488,
+        "Hex": "CF5510"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "721",
+        "Name": "Orange Spice - Medium"
+      },
+      "Value": {
+        "Argb": -2002649,
+        "Hex": "E17127"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "722",
+        "Name": "Orange Spice - Light"
+      },
+      "Value": {
+        "Argb": -1402803,
+        "Hex": "EA984D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "725",
+        "Name": "Topaz"
+      },
+      "Value": {
+        "Argb": -1065934,
+        "Hex": "EFBC32"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "726",
+        "Name": "Topaz - Light"
+      },
+      "Value": {
+        "Argb": -733112,
+        "Hex": "F4D048"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "727",
+        "Name": "Topaz - Very Light"
+      },
+      "Value": {
+        "Argb": -729468,
+        "Hex": "F4DE84"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "728",
+        "Name": "Golden Yellow"
+      },
+      "Value": {
+        "Argb": -1789141,
+        "Hex": "E4B32B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "729",
+        "Name": "Old Gold - Medium"
+      },
+      "Value": {
+        "Argb": -4025299,
+        "Hex": "C2942D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "730",
+        "Name": "Olive Green - Very Dark"
+      },
+      "Value": {
+        "Argb": -10728956,
+        "Hex": "5C4A04"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "732",
+        "Name": "Olive Green"
+      },
+      "Value": {
+        "Argb": -9150717,
+        "Hex": "745F03"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "733",
+        "Name": "Olive Green - Medium"
+      },
+      "Value": {
+        "Argb": -6387946,
+        "Hex": "9E8716"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "734",
+        "Name": "Olive Green - Light"
+      },
+      "Value": {
+        "Argb": -4874696,
+        "Hex": "B59E38"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "738",
+        "Name": "Tan - Very Light"
+      },
+      "Value": {
+        "Argb": -2902909,
+        "Hex": "D3B483"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "739",
+        "Name": "Tan - Ultra Very Light"
+      },
+      "Value": {
+        "Argb": -1913176,
+        "Hex": "E2CEA8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "740",
+        "Name": "Tangerine"
+      },
+      "Value": {
+        "Argb": -488951,
+        "Hex": "F88A09"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "741",
+        "Name": "Tangerine - Medium"
+      },
+      "Value": {
+        "Argb": -351223,
+        "Hex": "FAA409"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "742",
+        "Name": "Tangerine - Light"
+      },
+      "Value": {
+        "Argb": -740595,
+        "Hex": "F4B30D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "743",
+        "Name": "Yellow - Medium"
+      },
+      "Value": {
+        "Argb": -668862,
+        "Hex": "F5CB42"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "744",
+        "Name": "Yellow - Pale"
+      },
+      "Value": {
+        "Argb": -469126,
+        "Hex": "F8D77A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "745",
+        "Name": "Yellow - Light Pale"
+      },
+      "Value": {
+        "Argb": -598113,
+        "Hex": "F6DF9F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "746",
+        "Name": "Off White"
+      },
+      "Value": {
+        "Argb": -1515327,
+        "Hex": "E8E0C1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "747",
+        "Name": "Sky Blue - Very Light"
+      },
+      "Value": {
+        "Argb": -4270118,
+        "Hex": "BED7DA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "754",
+        "Name": "Peach - Light"
+      },
+      "Value": {
+        "Argb": -1919593,
+        "Hex": "E2B597"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "758",
+        "Name": "Terra Cotta - Very Light"
+      },
+      "Value": {
+        "Argb": -2712192,
+        "Hex": "D69D80"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "760",
+        "Name": "Salmon"
+      },
+      "Value": {
+        "Argb": -2585466,
+        "Hex": "D88C86"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "761",
+        "Name": "Salmon - Light"
+      },
+      "Value": {
+        "Argb": -1986902,
+        "Hex": "E1AEAA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "762",
+        "Name": "Pearl Gray - Very Light"
+      },
+      "Value": {
+        "Argb": -2499883,
+        "Hex": "D9DAD5"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "772",
+        "Name": "Yellow Green - Very Light"
+      },
+      "Value": {
+        "Argb": -2959954,
+        "Hex": "D2D5AE"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "775",
+        "Name": "Baby Blue - Very Light"
+      },
+      "Value": {
+        "Argb": -4338737,
+        "Hex": "BDCBCF"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "777",
+        "Name": "Red - Deep"
+      },
+      "Value": {
+        "Argb": -8317404,
+        "Hex": "811624"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "778",
+        "Name": "Antique Mauve - Very Light"
+      },
+      "Value": {
+        "Argb": -3431518,
+        "Hex": "CBA3A2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "779",
+        "Name": "Brown"
+      },
+      "Value": {
+        "Argb": -10338250,
+        "Hex": "624036"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "780",
+        "Name": "Topaz - Ultra Very Dark"
+      },
+      "Value": {
+        "Argb": -6400501,
+        "Hex": "9E560B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "782",
+        "Name": "Topaz - Dark"
+      },
+      "Value": {
+        "Argb": -5082870,
+        "Hex": "B2710A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "783",
+        "Name": "Topaz - Medium"
+      },
+      "Value": {
+        "Argb": -3568115,
+        "Hex": "C98E0D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "791",
+        "Name": "Cornflower Blue - Very Dark"
+      },
+      "Value": {
+        "Argb": -14800534,
+        "Hex": "1E296A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "792",
+        "Name": "Cornflower Blue - Dark"
+      },
+      "Value": {
+        "Argb": -13677676,
+        "Hex": "2F4B94"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "793",
+        "Name": "Cornflower Blue - Medium"
+      },
+      "Value": {
+        "Argb": -10060378,
+        "Hex": "667DA6"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "794",
+        "Name": "Cornflower Blue - Light"
+      },
+      "Value": {
+        "Argb": -8217156,
+        "Hex": "829DBC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "796",
+        "Name": "Royal Blue - Dark"
+      },
+      "Value": {
+        "Argb": -16112277,
+        "Hex": "0A256B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "797",
+        "Name": "Royal Blue"
+      },
+      "Value": {
+        "Argb": -15057532,
+        "Hex": "1A3D84"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "798",
+        "Name": "Delft Blue - Dark"
+      },
+      "Value": {
+        "Argb": -14197085,
+        "Hex": "275EA3"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "799",
+        "Name": "Delft Blue - Medium"
+      },
+      "Value": {
+        "Argb": -10581068,
+        "Hex": "5E8BB4"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "800",
+        "Name": "Delft Blue - Pale"
+      },
+      "Value": {
+        "Argb": -6703926,
+        "Hex": "99B4CA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "801",
+        "Name": "Coffee Brown - Dark"
+      },
+      "Value": {
+        "Argb": -10933487,
+        "Hex": "592B11"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "803",
+        "Name": "Blue - Deep"
+      },
+      "Value": {
+        "Argb": -15781278,
+        "Hex": "0F3262"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "807",
+        "Name": "Peacock Blue"
+      },
+      "Value": {
+        "Argb": -12151893,
+        "Hex": "4693AB"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "809",
+        "Name": "Delft Blue"
+      },
+      "Value": {
+        "Argb": -8281916,
+        "Hex": "81A0C4"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "813",
+        "Name": "Blue - Light"
+      },
+      "Value": {
+        "Argb": -9397318,
+        "Hex": "709BBA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "814",
+        "Name": "Garnet - Dark"
+      },
+      "Value": {
+        "Argb": -10743011,
+        "Hex": "5C131D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "815",
+        "Name": "Garnet - Medium"
+      },
+      "Value": {
+        "Argb": -10152932,
+        "Hex": "65141C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "816",
+        "Name": "Garnet"
+      },
+      "Value": {
+        "Argb": -7530207,
+        "Hex": "8D1921"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "817",
+        "Name": "Coral Red - Very Dark"
+      },
+      "Value": {
+        "Argb": -4905443,
+        "Hex": "B5261D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "818",
+        "Name": "Baby Pink"
+      },
+      "Value": {
+        "Argb": -1390399,
+        "Hex": "EAC8C1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "819",
+        "Name": "Baby Pink - Light"
+      },
+      "Value": {
+        "Argb": -1123634,
+        "Hex": "EEDACE"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "820",
+        "Name": "Royal Blue - Very Dark"
+      },
+      "Value": {
+        "Argb": -16246183,
+        "Hex": "081A59"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "822",
+        "Name": "Beige Gray - Light"
+      },
+      "Value": {
+        "Argb": -2700364,
+        "Hex": "D6CBB4"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "823",
+        "Name": "Blue - Dark"
+      },
+      "Value": {
+        "Argb": -15723215,
+        "Hex": "101531"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "824",
+        "Name": "Blue - Very Dark"
+      },
+      "Value": {
+        "Argb": -16370319,
+        "Hex": "063571"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "825",
+        "Name": "Blue - Dark"
+      },
+      "Value": {
+        "Argb": -16102005,
+        "Hex": "0A4D8B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "826",
+        "Name": "Blue - Medium"
+      },
+      "Value": {
+        "Argb": -12486998,
+        "Hex": "4176AA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "827",
+        "Name": "Blue - Very Light"
+      },
+      "Value": {
+        "Argb": -6308916,
+        "Hex": "9FBBCC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "828",
+        "Name": "Blue - Ultra Very Light"
+      },
+      "Value": {
+        "Argb": -4798003,
+        "Hex": "B6C9CD"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "829",
+        "Name": "Golden Olive - Very Dark"
+      },
+      "Value": {
+        "Argb": -9287410,
+        "Hex": "72490E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "830",
+        "Name": "Golden Olive - Dark"
+      },
+      "Value": {
+        "Argb": -9547766,
+        "Hex": "6E500A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "831",
+        "Name": "Golden Olive - Medium"
+      },
+      "Value": {
+        "Argb": -7378164,
+        "Hex": "8F6B0C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "832",
+        "Name": "Golden Olive"
+      },
+      "Value": {
+        "Argb": -6457331,
+        "Hex": "9D780D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "833",
+        "Name": "Golden Olive - Light"
+      },
+      "Value": {
+        "Argb": -5205979,
+        "Hex": "B09025"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "834",
+        "Name": "Golden Olive - Very Light"
+      },
+      "Value": {
+        "Argb": -4020152,
+        "Hex": "C2A848"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "838",
+        "Name": "Beige Brown - Very Dark"
+      },
+      "Value": {
+        "Argb": -12376548,
+        "Hex": "43261C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "839",
+        "Name": "Beige Brown - Dark"
+      },
+      "Value": {
+        "Argb": -11257821,
+        "Hex": "543823"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "840",
+        "Name": "Beige Brown - Medium"
+      },
+      "Value": {
+        "Argb": -7903928,
+        "Hex": "876548"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "841",
+        "Name": "Beige Brown - Light"
+      },
+      "Value": {
+        "Argb": -5862804,
+        "Hex": "A68A6C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "842",
+        "Name": "Beige Brown - Very Light"
+      },
+      "Value": {
+        "Argb": -4018795,
+        "Hex": "C2AD95"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "844",
+        "Name": "Beaver Gray - Ultra Dark"
+      },
+      "Value": {
+        "Argb": -12174029,
+        "Hex": "463D33"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "869",
+        "Name": "Hazelnut Brown - Very Dark"
+      },
+      "Value": {
+        "Argb": -9221617,
+        "Hex": "734A0F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "890",
+        "Name": "Pistachio Green - Ultra Dark"
+      },
+      "Value": {
+        "Argb": -15586797,
+        "Hex": "122A13"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "891",
+        "Name": "Carnation - Dark"
+      },
+      "Value": {
+        "Argb": -1879210,
+        "Hex": "E35356"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "892",
+        "Name": "Carnation - Medium"
+      },
+      "Value": {
+        "Argb": -1416353,
+        "Hex": "EA635F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "893",
+        "Name": "Carnation - Light"
+      },
+      "Value": {
+        "Argb": -1610636,
+        "Hex": "E76C74"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "894",
+        "Name": "Carnation - Very Light"
+      },
+      "Value": {
+        "Argb": -1205599,
+        "Hex": "ED9AA1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "895",
+        "Name": "Hunter Green - Very Dark"
+      },
+      "Value": {
+        "Argb": -14992870,
+        "Hex": "1B3A1A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "898",
+        "Name": "Coffee Brown - Very Dark"
+      },
+      "Value": {
+        "Argb": -12115442,
+        "Hex": "47220E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "899",
+        "Name": "Rose - Medium"
+      },
+      "Value": {
+        "Argb": -2526848,
+        "Hex": "D97180"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "900",
+        "Name": "Burnt Orange - Dark"
+      },
+      "Value": {
+        "Argb": -3586021,
+        "Hex": "C9481B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "902",
+        "Name": "Garnet - Very Dark"
+      },
+      "Value": {
+        "Argb": -9888218,
+        "Hex": "691E26"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "904",
+        "Name": "Parrot Green - Very Dark"
+      },
+      "Value": {
+        "Argb": -13282042,
+        "Hex": "355506"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "905",
+        "Name": "Parrot Green - Dark"
+      },
+      "Value": {
+        "Argb": -12491004,
+        "Hex": "416704"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "906",
+        "Name": "Parrot Green - Medium"
+      },
+      "Value": {
+        "Argb": -11762173,
+        "Hex": "4C8603"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "907",
+        "Name": "Parrot Green - Light"
+      },
+      "Value": {
+        "Argb": -7033334,
+        "Hex": "94AE0A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "909",
+        "Name": "Emerald Green - Very Dark"
+      },
+      "Value": {
+        "Argb": -16556756,
+        "Hex": "035D2C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "910",
+        "Name": "Emerald Green - Dark"
+      },
+      "Value": {
+        "Argb": -15894463,
+        "Hex": "0D7841"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "911",
+        "Name": "Emerald Green - Medium"
+      },
+      "Value": {
+        "Argb": -15037612,
+        "Hex": "1A8B54"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "912",
+        "Name": "Emerald Green - Light"
+      },
+      "Value": {
+        "Argb": -11099789,
+        "Hex": "56A173"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "913",
+        "Name": "Nile Green - Medium"
+      },
+      "Value": {
+        "Argb": -8867707,
+        "Hex": "78B085"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "915",
+        "Name": "Plum - Dark"
+      },
+      "Value": {
+        "Argb": -8580558,
+        "Hex": "7D1232"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "917",
+        "Name": "Plum - Medium"
+      },
+      "Value": {
+        "Argb": -5821337,
+        "Hex": "A72C67"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "918",
+        "Name": "Red Copper - Dark"
+      },
+      "Value": {
+        "Argb": -7721192,
+        "Hex": "8A2F18"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "919",
+        "Name": "Red Copper"
+      },
+      "Value": {
+        "Argb": -7132142,
+        "Hex": "932C12"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "920",
+        "Name": "Copper - Medium"
+      },
+      "Value": {
+        "Argb": -5619942,
+        "Hex": "AA3F1A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "921",
+        "Name": "Copper"
+      },
+      "Value": {
+        "Argb": -4106973,
+        "Hex": "C15523"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "922",
+        "Name": "Copper - Light"
+      },
+      "Value": {
+        "Argb": -3051209,
+        "Hex": "D17137"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "924",
+        "Name": "Gray Green - Very Dark"
+      },
+      "Value": {
+        "Argb": -15124670,
+        "Hex": "193742"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "926",
+        "Name": "Gray Green - Medium"
+      },
+      "Value": {
+        "Argb": -10126986,
+        "Hex": "657976"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "927",
+        "Name": "Gray Green - Light"
+      },
+      "Value": {
+        "Argb": -6378846,
+        "Hex": "9EAAA2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "928",
+        "Name": "Gray Green - Very Light"
+      },
+      "Value": {
+        "Argb": -4144196,
+        "Hex": "C0C3BC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "930",
+        "Name": "Antique Blue - Dark"
+      },
+      "Value": {
+        "Argb": -14336432,
+        "Hex": "253E50"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "931",
+        "Name": "Antique Blue - Medium"
+      },
+      "Value": {
+        "Argb": -11308660,
+        "Hex": "53718C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "932",
+        "Name": "Antique Blue - Light"
+      },
+      "Value": {
+        "Argb": -8087385,
+        "Hex": "8498A7"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "934",
+        "Name": "Avocado Green - BLACK"
+      },
+      "Value": {
+        "Argb": -14540269,
+        "Hex": "222213"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "935",
+        "Name": "Avocado Green - Dark"
+      },
+      "Value": {
+        "Argb": -13487336,
+        "Hex": "323318"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "936",
+        "Name": "Avocado Green - Very Dark"
+      },
+      "Value": {
+        "Argb": -12434927,
+        "Hex": "424211"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "937",
+        "Name": "Avocado Green - Medium"
+      },
+      "Value": {
+        "Argb": -12102903,
+        "Hex": "475309"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "938",
+        "Name": "Coffee Brown - Ultra Dark"
+      },
+      "Value": {
+        "Argb": -12837873,
+        "Hex": "3C1C0F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "939",
+        "Name": "Blue - Very Dark"
+      },
+      "Value": {
+        "Argb": -15921894,
+        "Hex": "0D0D1A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "943",
+        "Name": "Aquamarine - Medium"
+      },
+      "Value": {
+        "Argb": -16545155,
+        "Hex": "038A7D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "945",
+        "Name": "Tawny"
+      },
+      "Value": {
+        "Argb": -2376293,
+        "Hex": "DBBD9B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "946",
+        "Name": "Burnt Orange - Medium"
+      },
+      "Value": {
+        "Argb": -1677537,
+        "Hex": "E6671F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "947",
+        "Name": "Burnt Orange"
+      },
+      "Value": {
+        "Argb": -691690,
+        "Hex": "F57216"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "948",
+        "Name": "Peach - Very Light"
+      },
+      "Value": {
+        "Argb": -1717325,
+        "Hex": "E5CBB3"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "950",
+        "Name": "Desert Sand - Light"
+      },
+      "Value": {
+        "Argb": -2376799,
+        "Hex": "DBBBA1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "951",
+        "Name": "Tawny - Light"
+      },
+      "Value": {
+        "Argb": -2046296,
+        "Hex": "E0C6A8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "954",
+        "Name": "Nile Green"
+      },
+      "Value": {
+        "Argb": -7028837,
+        "Hex": "94BF9B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "955",
+        "Name": "Nile Green - Light"
+      },
+      "Value": {
+        "Argb": -5189455,
+        "Hex": "B0D0B1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "956",
+        "Name": "Geranium"
+      },
+      "Value": {
+        "Argb": -1348992,
+        "Hex": "EB6A80"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "957",
+        "Name": "Geranium - Pale"
+      },
+      "Value": {
+        "Argb": -942167,
+        "Hex": "F19FA9"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "958",
+        "Name": "Seagreen - Dark"
+      },
+      "Value": {
+        "Argb": -12410728,
+        "Hex": "42A098"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "959",
+        "Name": "Seagreen - Medium"
+      },
+      "Value": {
+        "Argb": -10440789,
+        "Hex": "60AFAB"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "961",
+        "Name": "Dusty Rose - Dark"
+      },
+      "Value": {
+        "Argb": -2856840,
+        "Hex": "D46878"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "962",
+        "Name": "Dusty Rose - Medium"
+      },
+      "Value": {
+        "Argb": -2521712,
+        "Hex": "D98590"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "963",
+        "Name": "Dusty Rose - Ultra Very Light"
+      },
+      "Value": {
+        "Argb": -1260606,
+        "Hex": "ECC3C2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "964",
+        "Name": "Seagreen - Light"
+      },
+      "Value": {
+        "Argb": -6895932,
+        "Hex": "96C6C4"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "966",
+        "Name": "Baby Green - Medium"
+      },
+      "Value": {
+        "Argb": -6309732,
+        "Hex": "9FB89C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "967",
+        "Name": "Peach - Light"
+      },
+      "Value": {
+        "Argb": -537938,
+        "Hex": "F7CAAE"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "970",
+        "Name": "Pumpkin - Light"
+      },
+      "Value": {
+        "Argb": -225249,
+        "Hex": "FC901F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "972",
+        "Name": "Canary - Deep"
+      },
+      "Value": {
+        "Argb": -740862,
+        "Hex": "F4B202"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "973",
+        "Name": "Canary - Bright"
+      },
+      "Value": {
+        "Argb": -863998,
+        "Hex": "F2D102"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "975",
+        "Name": "Golden Brown - Dark"
+      },
+      "Value": {
+        "Argb": -8571634,
+        "Hex": "7D350E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "976",
+        "Name": "Golden Brown - Medium"
+      },
+      "Value": {
+        "Argb": -3967206,
+        "Hex": "C3771A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "977",
+        "Name": "Golden Brown - Light"
+      },
+      "Value": {
+        "Argb": -2385338,
+        "Hex": "DB9A46"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "986",
+        "Name": "Forest Green - Very Dark"
+      },
+      "Value": {
+        "Argb": -14791917,
+        "Hex": "1E4B13"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "987",
+        "Name": "Forest Green - Dark"
+      },
+      "Value": {
+        "Argb": -11572691,
+        "Hex": "4F6A2D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "988",
+        "Name": "Forest Green - Medium"
+      },
+      "Value": {
+        "Argb": -9795781,
+        "Hex": "6A873B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "989",
+        "Name": "Forest Green"
+      },
+      "Value": {
+        "Argb": -8283825,
+        "Hex": "81994F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "991",
+        "Name": "Aquamarine - Dark"
+      },
+      "Value": {
+        "Argb": -16491180,
+        "Hex": "045D54"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "992",
+        "Name": "Aquamarine - Light"
+      },
+      "Value": {
+        "Argb": -11561595,
+        "Hex": "4F9585"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "993",
+        "Name": "Aquamarine - Very Light"
+      },
+      "Value": {
+        "Argb": -9065569,
+        "Hex": "75AB9F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "995",
+        "Name": "Electric Blue - Dark"
+      },
+      "Value": {
+        "Argb": -16616250,
+        "Hex": "0274C6"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "996",
+        "Name": "Electric Blue - Medium"
+      },
+      "Value": {
+        "Argb": -15621159,
+        "Hex": "11A3D9"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3011",
+        "Name": "Khaki Green - Dark"
+      },
+      "Value": {
+        "Argb": -10661862,
+        "Hex": "5D501A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3012",
+        "Name": "Khaki Green - Medium"
+      },
+      "Value": {
+        "Argb": -7833802,
+        "Hex": "887736"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3013",
+        "Name": "Khaki Green - Light"
+      },
+      "Value": {
+        "Argb": -5727132,
+        "Hex": "A89C64"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3021",
+        "Name": "Brown Gray - Very Dark"
+      },
+      "Value": {
+        "Argb": -13095650,
+        "Hex": "382D1E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3022",
+        "Name": "Brown Gray - Medium"
+      },
+      "Value": {
+        "Argb": -7632793,
+        "Hex": "8B8867"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3023",
+        "Name": "Brown Gray - Light"
+      },
+      "Value": {
+        "Argb": -5922938,
+        "Hex": "A59F86"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3024",
+        "Name": "Brown Gray - Very Light"
+      },
+      "Value": {
+        "Argb": -3685450,
+        "Hex": "C7C3B6"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3031",
+        "Name": "Mocha Brown - Very Dark"
+      },
+      "Value": {
+        "Argb": -13098732,
+        "Hex": "382114"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3032",
+        "Name": "Mocha Brown - Medium"
+      },
+      "Value": {
+        "Argb": -6781345,
+        "Hex": "98865F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3033",
+        "Name": "Mocha Brown - Very Light"
+      },
+      "Value": {
+        "Argb": -3030616,
+        "Hex": "D1C1A8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3041",
+        "Name": "Antique Violet - Medium"
+      },
+      "Value": {
+        "Argb": -8166285,
+        "Hex": "836473"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3042",
+        "Name": "Antique Violet - Light"
+      },
+      "Value": {
+        "Argb": -5858909,
+        "Hex": "A699A3"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3045",
+        "Name": "Yellow Beige - Dark"
+      },
+      "Value": {
+        "Argb": -5865922,
+        "Hex": "A67E3E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3046",
+        "Name": "Yellow Beige - Medium"
+      },
+      "Value": {
+        "Argb": -3953817,
+        "Hex": "C3AB67"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3047",
+        "Name": "Yellow Beige - Light"
+      },
+      "Value": {
+        "Argb": -2767465,
+        "Hex": "D5C597"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3051",
+        "Name": "Green Gray - Dark"
+      },
+      "Value": {
+        "Argb": -11974630,
+        "Hex": "49481A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3052",
+        "Name": "Green Gray - Medium"
+      },
+      "Value": {
+        "Argb": -8290480,
+        "Hex": "817F50"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3053",
+        "Name": "Green Gray"
+      },
+      "Value": {
+        "Argb": -6776730,
+        "Hex": "989866"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3064",
+        "Name": "Desert Sand"
+      },
+      "Value": {
+        "Argb": -4817319,
+        "Hex": "B67E59"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3072",
+        "Name": "Beaver Gray - Very Light"
+      },
+      "Value": {
+        "Argb": -3289408,
+        "Hex": "CDCEC0"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3078",
+        "Name": "Golden Yellow - Very Light"
+      },
+      "Value": {
+        "Argb": -794212,
+        "Hex": "F3E19C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3325",
+        "Name": "Baby Blue - Light"
+      },
+      "Value": {
+        "Argb": -6900533,
+        "Hex": "96B4CB"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3326",
+        "Name": "Rose - Light"
+      },
+      "Value": {
+        "Argb": -1859935,
+        "Hex": "E39EA1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3328",
+        "Name": "Salmon - Dark"
+      },
+      "Value": {
+        "Argb": -4173752,
+        "Hex": "C05048"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3340",
+        "Name": "Apricot - Medium"
+      },
+      "Value": {
+        "Argb": -818361,
+        "Hex": "F38347"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3341",
+        "Name": "Apricot"
+      },
+      "Value": {
+        "Argb": -746129,
+        "Hex": "F49D6F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3345",
+        "Name": "Hunter Green - Dark"
+      },
+      "Value": {
+        "Argb": -14205428,
+        "Hex": "273E0C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3346",
+        "Name": "Hunter Green"
+      },
+      "Value": {
+        "Argb": -10917853,
+        "Hex": "596823"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3347",
+        "Name": "Yellow Green - Medium"
+      },
+      "Value": {
+        "Argb": -9469907,
+        "Hex": "6F802D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3348",
+        "Name": "Yellow Green - Light"
+      },
+      "Value": {
+        "Argb": -4474762,
+        "Hex": "BBB876"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3350",
+        "Name": "Dusty Rose - Ultra Dark"
+      },
+      "Value": {
+        "Argb": -6148800,
+        "Hex": "A22D40"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3354",
+        "Name": "Dusty Rose - Light"
+      },
+      "Value": {
+        "Argb": -2648163,
+        "Hex": "D7979D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3362",
+        "Name": "Pine Green - Dark"
+      },
+      "Value": {
+        "Argb": -11906259,
+        "Hex": "4A532D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3363",
+        "Name": "Pine Green - Medium"
+      },
+      "Value": {
+        "Argb": -10393281,
+        "Hex": "61693F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3364",
+        "Name": "Pine Green"
+      },
+      "Value": {
+        "Argb": -8354490,
+        "Hex": "808546"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3371",
+        "Name": "Black Brown"
+      },
+      "Value": {
+        "Argb": -14674931,
+        "Hex": "20140D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3607",
+        "Name": "Plum - Light"
+      },
+      "Value": {
+        "Argb": -4306038,
+        "Hex": "BE4B8A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3608",
+        "Name": "Plum - Very Light"
+      },
+      "Value": {
+        "Argb": -2714958,
+        "Hex": "D692B2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3609",
+        "Name": "Plum - Ultra Light"
+      },
+      "Value": {
+        "Argb": -1921336,
+        "Hex": "E2AEC8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3685",
+        "Name": "Mauve - Very Dark"
+      },
+      "Value": {
+        "Argb": -9955290,
+        "Hex": "681826"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3687",
+        "Name": "Mauve"
+      },
+      "Value": {
+        "Argb": -5089686,
+        "Hex": "B2566A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3688",
+        "Name": "Mauve - Medium"
+      },
+      "Value": {
+        "Argb": -3834226,
+        "Hex": "C57E8E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3689",
+        "Name": "Mauve - Light"
+      },
+      "Value": {
+        "Argb": -1788994,
+        "Hex": "E4B3BE"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3705",
+        "Name": "Melon - Dark"
+      },
+      "Value": {
+        "Argb": -1878451,
+        "Hex": "E3564D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3706",
+        "Name": "Melon - Medium"
+      },
+      "Value": {
+        "Argb": -1014138,
+        "Hex": "F08686"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3708",
+        "Name": "Melon - Light"
+      },
+      "Value": {
+        "Argb": -876120,
+        "Hex": "F2A1A8"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3712",
+        "Name": "Salmon - Medium"
+      },
+      "Value": {
+        "Argb": -3117980,
+        "Hex": "D06C64"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3713",
+        "Name": "Salmon - Very Light"
+      },
+      "Value": {
+        "Argb": -1720905,
+        "Hex": "E5BDB7"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3716",
+        "Name": "Dusty Rose - Very Light"
+      },
+      "Value": {
+        "Argb": -1595731,
+        "Hex": "E7A6AD"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3721",
+        "Name": "Shell Pink - Dark"
+      },
+      "Value": {
+        "Argb": -7588816,
+        "Hex": "8C3430"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3722",
+        "Name": "Shell Pink - Medium"
+      },
+      "Value": {
+        "Argb": -6468279,
+        "Hex": "9D4D49"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3726",
+        "Name": "Antique Mauve - Dark"
+      },
+      "Value": {
+        "Argb": -7056298,
+        "Hex": "945456"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3727",
+        "Name": "Antique Mauve - Light"
+      },
+      "Value": {
+        "Argb": -3958625,
+        "Hex": "C3989F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3731",
+        "Name": "Dusty Rose - Very Dark"
+      },
+      "Value": {
+        "Argb": -4370336,
+        "Hex": "BD5060"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3733",
+        "Name": "Dusty Rose"
+      },
+      "Value": {
+        "Argb": -3245691,
+        "Hex": "CE7985"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3740",
+        "Name": "Antique Violet - Dark"
+      },
+      "Value": {
+        "Argb": -10403508,
+        "Hex": "61414C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3743",
+        "Name": "Antique Violet - Very Light"
+      },
+      "Value": {
+        "Argb": -4081730,
+        "Hex": "C1B7BE"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3746",
+        "Name": "Blue Violet - Dark"
+      },
+      "Value": {
+        "Argb": -10524240,
+        "Hex": "5F69B0"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3747",
+        "Name": "Blue Violet - Very Light"
+      },
+      "Value": {
+        "Argb": -4078127,
+        "Hex": "C1C5D1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3750",
+        "Name": "Antique Blue - Very Dark"
+      },
+      "Value": {
+        "Argb": -15717817,
+        "Hex": "102A47"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3752",
+        "Name": "Antique Blue - Very Light"
+      },
+      "Value": {
+        "Argb": -6179907,
+        "Hex": "A1B3BD"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3753",
+        "Name": "Antique Blue - Ultra Very Light"
+      },
+      "Value": {
+        "Argb": -4471094,
+        "Hex": "BBC6CA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3755",
+        "Name": "Baby Blue"
+      },
+      "Value": {
+        "Argb": -8608831,
+        "Hex": "7CA3C1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3756",
+        "Name": "Baby Blue - Light"
+      },
+      "Value": {
+        "Argb": -2368298,
+        "Hex": "DBDCD6"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3760",
+        "Name": "Wedgewood - Medium"
+      },
+      "Value": {
+        "Argb": -13796957,
+        "Hex": "2D79A3"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3761",
+        "Name": "Sky Blue - Light"
+      },
+      "Value": {
+        "Argb": -6044722,
+        "Hex": "A3C3CE"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3765",
+        "Name": "Peacock Blue - Very Dark"
+      },
+      "Value": {
+        "Argb": -16098931,
+        "Hex": "0A598D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3766",
+        "Name": "Peacock Blue - Light"
+      },
+      "Value": {
+        "Argb": -8080446,
+        "Hex": "84B3C2"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3768",
+        "Name": "Gray Green - Dark"
+      },
+      "Value": {
+        "Argb": -12102304,
+        "Hex": "475560"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3770",
+        "Name": "Tawny - Very Light"
+      },
+      "Value": {
+        "Argb": -1254460,
+        "Hex": "ECDBC4"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3771",
+        "Name": "Peach - Dark"
+      },
+      "Value": {
+        "Argb": -2514308,
+        "Hex": "D9A27C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3772",
+        "Name": "Desert Sand - Very Dark"
+      },
+      "Value": {
+        "Argb": -6989762,
+        "Hex": "95583E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3774",
+        "Name": "Desert Sand - Very Light"
+      },
+      "Value": {
+        "Argb": -2244183,
+        "Hex": "DDC1A9"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3776",
+        "Name": "Mahogany - Light"
+      },
+      "Value": {
+        "Argb": -3970250,
+        "Hex": "C36B36"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3777",
+        "Name": "Terra Cotta - Very Dark"
+      },
+      "Value": {
+        "Argb": -8183268,
+        "Hex": "83221C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3778",
+        "Name": "Terra Cotta - Light"
+      },
+      "Value": {
+        "Argb": -3837096,
+        "Hex": "C57358"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3779",
+        "Name": "Terra Cotta - Ultra Very Light"
+      },
+      "Value": {
+        "Argb": -1986662,
+        "Hex": "E1AF9A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3781",
+        "Name": "Mocha Brown - Dark"
+      },
+      "Value": {
+        "Argb": -11257055,
+        "Hex": "543B21"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3782",
+        "Name": "Mocha Brown - Light"
+      },
+      "Value": {
+        "Argb": -4807289,
+        "Hex": "B6A587"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3787",
+        "Name": "Brown Gray - Dark"
+      },
+      "Value": {
+        "Argb": -10988995,
+        "Hex": "58523D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3790",
+        "Name": "Beige Gray - Ultra Dark"
+      },
+      "Value": {
+        "Argb": -7968949,
+        "Hex": "86674B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3799",
+        "Name": "Pewter Gray - Very Dark"
+      },
+      "Value": {
+        "Argb": -13684946,
+        "Hex": "2F2F2E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3801",
+        "Name": "Melon - Very Dark"
+      },
+      "Value": {
+        "Argb": -2276038,
+        "Hex": "DD453A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3802",
+        "Name": "Antique Mauve - Very Dark"
+      },
+      "Value": {
+        "Argb": -10213842,
+        "Hex": "64262E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3803",
+        "Name": "Mauve - Dark"
+      },
+      "Value": {
+        "Argb": -8377278,
+        "Hex": "802C42"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3804",
+        "Name": "Cyclamen Pink - Dark"
+      },
+      "Value": {
+        "Argb": -3651474,
+        "Hex": "C8486E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3805",
+        "Name": "Cyclamen Pink"
+      },
+      "Value": {
+        "Argb": -2991742,
+        "Hex": "D25982"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3806",
+        "Name": "Cyclamen Pink - Light"
+      },
+      "Value": {
+        "Argb": -1863770,
+        "Hex": "E38FA6"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3807",
+        "Name": "Cornflower Blue"
+      },
+      "Value": {
+        "Argb": -11969642,
+        "Hex": "495B96"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3808",
+        "Name": "Turquoise - Ultra Very Dark"
+      },
+      "Value": {
+        "Argb": -16564133,
+        "Hex": "03405B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3809",
+        "Name": "Turquoise - Very Dark"
+      },
+      "Value": {
+        "Argb": -16229260,
+        "Hex": "085C74"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3810",
+        "Name": "Turquoise - Dark"
+      },
+      "Value": {
+        "Argb": -13533806,
+        "Hex": "317D92"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3811",
+        "Name": "Turquoise - Very Light"
+      },
+      "Value": {
+        "Argb": -5782074,
+        "Hex": "A7C5C6"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3812",
+        "Name": "Seagreen - Very Dark"
+      },
+      "Value": {
+        "Argb": -16612478,
+        "Hex": "028382"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3813",
+        "Name": "Blue Green - Light"
+      },
+      "Value": {
+        "Argb": -5916757,
+        "Hex": "A5B7AB"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3814",
+        "Name": "Aquamarine"
+      },
+      "Value": {
+        "Argb": -15109012,
+        "Hex": "19746C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3815",
+        "Name": "Celadon Green - Dark"
+      },
+      "Value": {
+        "Argb": -12489131,
+        "Hex": "416E55"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3816",
+        "Name": "Celadon Green"
+      },
+      "Value": {
+        "Argb": -9857659,
+        "Hex": "699585"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3817",
+        "Name": "Celadon Green - Light"
+      },
+      "Value": {
+        "Argb": -6441824,
+        "Hex": "9DB4A0"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3818",
+        "Name": "Emerald Green - Ultra Very Dark"
+      },
+      "Value": {
+        "Argb": -16628191,
+        "Hex": "024621"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3819",
+        "Name": "Moss Green - Light"
+      },
+      "Value": {
+        "Argb": -3752116,
+        "Hex": "C6BF4C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3820",
+        "Name": "Straw - Dark"
+      },
+      "Value": {
+        "Argb": -2971620,
+        "Hex": "D2A81C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3821",
+        "Name": "Straw"
+      },
+      "Value": {
+        "Argb": -2444490,
+        "Hex": "DAB336"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3822",
+        "Name": "Straw - Light"
+      },
+      "Value": {
+        "Argb": -1653406,
+        "Hex": "E6C562"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3823",
+        "Name": "Yellow - Ultra Pale"
+      },
+      "Value": {
+        "Argb": -990793,
+        "Hex": "F0E1B7"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3824",
+        "Name": "Apricot - Light"
+      },
+      "Value": {
+        "Argb": -610161,
+        "Hex": "F6B08F"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3825",
+        "Name": "Pumpkin - Pale"
+      },
+      "Value": {
+        "Argb": -1201299,
+        "Hex": "EDAB6D"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3826",
+        "Name": "Golden Brown"
+      },
+      "Value": {
+        "Argb": -5548012,
+        "Hex": "AB5814"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3827",
+        "Name": "Golden Brown - Pale"
+      },
+      "Value": {
+        "Argb": -2250664,
+        "Hex": "DDA858"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3828",
+        "Name": "Hazelnut Brown"
+      },
+      "Value": {
+        "Argb": -5668293,
+        "Hex": "A9823B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3829",
+        "Name": "Old Gold - Very Dark"
+      },
+      "Value": {
+        "Argb": -5935346,
+        "Hex": "A56F0E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3830",
+        "Name": "Terra Cotta"
+      },
+      "Value": {
+        "Argb": -5750482,
+        "Hex": "A8412E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3831",
+        "Name": "Raspberry - Dark"
+      },
+      "Value": {
+        "Argb": -5099462,
+        "Hex": "B2303A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3832",
+        "Name": "Raspberry - Medium"
+      },
+      "Value": {
+        "Argb": -3387048,
+        "Hex": "CC5158"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3833",
+        "Name": "Raspberry - Light"
+      },
+      "Value": {
+        "Argb": -2788487,
+        "Hex": "D57379"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3834",
+        "Name": "Grape - Dark"
+      },
+      "Value": {
+        "Argb": -10933174,
+        "Hex": "592C4A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3835",
+        "Name": "Grape - Medium"
+      },
+      "Value": {
+        "Argb": -7971973,
+        "Hex": "865B7B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3836",
+        "Name": "Grape - Light"
+      },
+      "Value": {
+        "Argb": -5469535,
+        "Hex": "AC8AA1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3837",
+        "Name": "Lavender - Ultra Dark"
+      },
+      "Value": {
+        "Argb": -11060088,
+        "Hex": "573C88"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3838",
+        "Name": "Lavender Blue - Dark"
+      },
+      "Value": {
+        "Argb": -11833939,
+        "Hex": "4B6DAD"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3839",
+        "Name": "Lavender Blue - Medium"
+      },
+      "Value": {
+        "Argb": -9795140,
+        "Hex": "6A89BC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3840",
+        "Name": "Lavender Blue - Light"
+      },
+      "Value": {
+        "Argb": -6441777,
+        "Hex": "9DB4CF"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3841",
+        "Name": "Baby Blue - Pale"
+      },
+      "Value": {
+        "Argb": -5126962,
+        "Hex": "B1C4CE"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3842",
+        "Name": "Wedgewood - Very Dark"
+      },
+      "Value": {
+        "Argb": -16563078,
+        "Hex": "03447A"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3843",
+        "Name": "Electric Blue"
+      },
+      "Value": {
+        "Argb": -16613172,
+        "Hex": "0280CC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3844",
+        "Name": "Bright Turquoise - Dark"
+      },
+      "Value": {
+        "Argb": -16613706,
+        "Hex": "027EB6"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3845",
+        "Name": "Bright Turquoise - Medium"
+      },
+      "Value": {
+        "Argb": -16473398,
+        "Hex": "04A2CA"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3846",
+        "Name": "Bright Turquoise - Light"
+      },
+      "Value": {
+        "Argb": -15682605,
+        "Hex": "10B3D3"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3847",
+        "Name": "Teal Green - Dark"
+      },
+      "Value": {
+        "Argb": -16627890,
+        "Hex": "02474E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3848",
+        "Name": "Teal Green - Medium"
+      },
+      "Value": {
+        "Argb": -15307663,
+        "Hex": "166C71"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3849",
+        "Name": "Teal Green - Light"
+      },
+      "Value": {
+        "Argb": -11890797,
+        "Hex": "4A8F93"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3850",
+        "Name": "Bright Green - Dark"
+      },
+      "Value": {
+        "Argb": -16549791,
+        "Hex": "037861"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3851",
+        "Name": "Bright Green - Light"
+      },
+      "Value": {
+        "Argb": -12541035,
+        "Hex": "40A395"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3852",
+        "Name": "Straw - Very Dark"
+      },
+      "Value": {
+        "Argb": -3369468,
+        "Hex": "CC9604"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3853",
+        "Name": "Autumn Gold - Dark"
+      },
+      "Value": {
+        "Argb": -2459098,
+        "Hex": "DA7A26"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3854",
+        "Name": "Autumn Gold - Medium"
+      },
+      "Value": {
+        "Argb": -1530029,
+        "Hex": "E8A753"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3855",
+        "Name": "Autumn Gold - Light"
+      },
+      "Value": {
+        "Argb": -931202,
+        "Hex": "F1CA7E"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3856",
+        "Name": "Mahogany - Ultra Very Light"
+      },
+      "Value": {
+        "Argb": -1984635,
+        "Hex": "E1B785"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3857",
+        "Name": "Rosewood - Dark"
+      },
+      "Value": {
+        "Argb": -10739691,
+        "Hex": "5C2015"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3858",
+        "Name": "Rosewood - Medium"
+      },
+      "Value": {
+        "Argb": -8833493,
+        "Hex": "79362B"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3859",
+        "Name": "Rosewood - Light"
+      },
+      "Value": {
+        "Argb": -5148073,
+        "Hex": "B17257"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3860",
+        "Name": "Cocoa"
+      },
+      "Value": {
+        "Argb": -9154232,
+        "Hex": "745148"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3861",
+        "Name": "Cocoa - Light"
+      },
+      "Value": {
+        "Argb": -6323592,
+        "Hex": "9F8278"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3862",
+        "Name": "Mocha Beige - Dark"
+      },
+      "Value": {
+        "Argb": -8235726,
+        "Hex": "825532"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3863",
+        "Name": "Mocha Beige - Medium"
+      },
+      "Value": {
+        "Argb": -6722740,
+        "Hex": "996B4C"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3864",
+        "Name": "Mocha Beige - Light"
+      },
+      "Value": {
+        "Argb": -4481663,
+        "Hex": "BB9D81"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3865",
+        "Name": "Winter White"
+      },
+      "Value": {
+        "Argb": -1119005,
+        "Hex": "EEECE3"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3866",
+        "Name": "Mocha Brown - Ultra Very Light"
+      },
+      "Value": {
+        "Argb": -2371135,
+        "Hex": "DBD1C1"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "B5200",
+        "Name": "Snow White"
+      },
+      "Value": {
+        "Argb": -855308,
+        "Hex": "F2F2F4"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "BLANC",
+        "Name": "White"
+      },
+      "Value": {
+        "Argb": -921364,
+        "Hex": "F1F0EC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "ECRU",
+        "Name": "Ecru/off-white"
+      },
+      "Value": {
+        "Argb": -1845572,
+        "Hex": "E3D6BC"
+      }
+    }
+  ]
+}

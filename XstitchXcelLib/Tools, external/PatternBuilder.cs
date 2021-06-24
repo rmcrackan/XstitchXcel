@@ -292,7 +292,7 @@ namespace XstitchXcelLib.Tools
 						legend3cell.Value
 							= DmcColorProcessor.TryGetMatch(color, out var dmcColor)
 							? $"{dmcColor.DmcNumber} - {dmcColor.Name}"
-							: $"Non-DMC: #{color.GetHexColor()}";
+							: $"Non-DMC: #{color.ToHex()}";
 						legend3cell.HorizontalAlignment = XlHAlign.xlHAlignLeft;
 						legend3cell.VerticalAlignment = XlVAlign.xlVAlignBottom;
 					}

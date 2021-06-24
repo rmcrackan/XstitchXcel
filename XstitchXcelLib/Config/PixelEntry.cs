@@ -21,12 +21,7 @@ namespace XstitchXcelLib.Config
 				: Text == "" ? "[empty]"
 				: Text;
 
-			var color
-				= Color.FromArgb(Argb).IsTransparent()
-				? "Transparent"
-				: Color.FromArgb(Argb).GetHexColor();
-
-			return $"[{RowNumber},{ColumnNumber}] {text}: {color}";
+			return $"[{RowNumber},{ColumnNumber}] {text}: {Color.FromArgb(Argb).ToHex()}";
 		}
 	}
 }

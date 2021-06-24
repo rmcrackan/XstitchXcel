@@ -44,8 +44,8 @@ namespace XstitchXcelLib.Tools
 			foreach (var unmatchedColor in unmatchedColors)
 			{
 				// print unmatched color
-				Console.WriteLine($"{unmatchedColor.GetHexColor()} : {unmatchedColor}");
-				writer.WriteRow("", unmatchedColor.GetHexColor(), "", unmatchedColor.R, unmatchedColor.G, unmatchedColor.B, unmatchedColor);
+				Console.WriteLine($"{unmatchedColor.ToHex()} : {unmatchedColor}");
+				writer.WriteRow("", unmatchedColor.ToHex(), "", unmatchedColor.R, unmatchedColor.G, unmatchedColor.B, unmatchedColor);
 
 				// print 3 naive and weighted matches
 				printScores(writer, unmatchedColor, DmcColorProcessor.GetNearestNaive, "n", 3);
@@ -65,7 +65,7 @@ namespace XstitchXcelLib.Tools
 				if (!DmcColorProcessor.TryGetMatch(clr, out var dmcMatch))
 					unmatchedColors.Add(clr);
 
-				Console.WriteLine($"- {cnt,3}: #{clr.GetHexColor()}. {(dmcMatch == default ? "NOT DMC" : $"DMC # {dmcMatch.DmcNumber} - {dmcMatch.Name}")}");
+				Console.WriteLine($"- {cnt,3}: #{clr.ToHex()}. {(dmcMatch == default ? "NOT DMC" : $"DMC # {dmcMatch.DmcNumber} - {dmcMatch.Name}")}");
 			}
 			Console.WriteLine();
 
@@ -94,8 +94,8 @@ namespace XstitchXcelLib.Tools
 				var label = $"{prefix}{i}";
 				var d = list[i];
 
-				Console.WriteLine($"- {label} {d.DmcNumber,6} #{d.Color.GetHexColor()} R={d.Color.R,3} G={d.Color.G,3} B={d.Color.B,3}");
-				writer.WriteRow(label, d.Color.GetHexColor(), d.DmcNumber, d.Color.R, d.Color.G, d.Color.B, unmatchedColor, d.Color);
+				Console.WriteLine($"- {label} {d.DmcNumber,6} #{d.Color.ToHex()} R={d.Color.R,3} G={d.Color.G,3} B={d.Color.B,3}");
+				writer.WriteRow(label, d.Color.ToHex(), d.DmcNumber, d.Color.R, d.Color.G, d.Color.B, unmatchedColor, d.Color);
 			}
 			Console.WriteLine();
 		}

@@ -1,0 +1,83 @@
+{
+  "Name": "Internet misc",
+  "Notes": "manually collected from misc places online",
+  "jsonColorMap": [
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "504",
+        "Name": "Blue Green - Very Light"
+      },
+      "Value": {
+        "Argb": -3875124,
+        "Hex": "C4DECC"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "731",
+        "Name": "Olive Green - Dark"
+      },
+      "Value": {
+        "Argb": -7107785,
+        "Hex": "938B37"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "776",
+        "Name": "Pink Medium"
+      },
+      "Value": {
+        "Argb": -216903,
+        "Hex": "FCB0B9"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "781",
+        "Name": "Topaz - Very Dark"
+      },
+      "Value": {
+        "Argb": -6132448,
+        "Hex": "A26D20"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "806",
+        "Name": "Peacock Blue Dark"
+      },
+      "Value": {
+        "Argb": -12741211,
+        "Hex": "3D95A5"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "971",
+        "Name": "Pumpkin"
+      },
+      "Value": {
+        "Argb": -622848,
+        "Hex": "F67F00"
+      }
+    },
+    {
+      "Key": {
+        "PaletteType": "DMC",
+        "ID": "3773",
+        "Name": "Desert Sand - Dark"
+      },
+      "Value": {
+        "Argb": -4819630,
+        "Hex": "B67552"
+      }
+    }
+  ]
+}

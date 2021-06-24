@@ -26,7 +26,7 @@ namespace XstitchXcelLib
 			pixels
 			.GetColors()
 			// sort DMC numbers, then non-DMC
-			.OrderBy(c => TryGetMatch(c, out var d) ? d.DmcNumber : "ZZZ" + c.GetHexColor());
+			.OrderBy(c => TryGetMatch(c, out var d) ? d.DmcNumber : "ZZZ" + c.ToHex());
 
 		private Dictionary<int, List<(DmcColor dmcColor, double score)>> naiveCache { get; } = new Dictionary<int, List<(DmcColor dmcColor, double score)>>();
 		public List<DmcColor> GetNearestNaive(Color color)
