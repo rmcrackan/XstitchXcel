@@ -82,15 +82,12 @@
     <None Update="palettes\Stitchtastic.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="palettes\Vance Wheelock.json">
+    <None Update="palettes\VanceWheelock.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="palettes\WinStitch.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="palettes\" />
   </ItemGroup>
 
 </Project>
