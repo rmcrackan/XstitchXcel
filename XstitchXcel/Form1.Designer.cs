@@ -44,6 +44,10 @@ namespace XstitchXcel
 			this.patternOutputTb = new System.Windows.Forms.TextBox();
 			this.patternOutputLbl = new System.Windows.Forms.Label();
 			this.statsTabPage = new System.Windows.Forms.TabPage();
+			this.statsOutTb = new System.Windows.Forms.TextBox();
+			this.statsUnitCb = new System.Windows.Forms.ComboBox();
+			this.statsCountNum = new System.Windows.Forms.NumericUpDown();
+			this.statsCountLbl = new System.Windows.Forms.Label();
 			this.generateStatsBtn = new System.Windows.Forms.Button();
 			this.statsDgv = new System.Windows.Forms.DataGridView();
 			this.qtyStitches = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +80,7 @@ namespace XstitchXcel
 			this.tabControl.SuspendLayout();
 			this.createPatternTabPage.SuspendLayout();
 			this.statsTabPage.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.statsCountNum)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.statsDgv)).BeginInit();
 			this.findDmcColorsTabPage.SuspendLayout();
 			this.replaceColorTabPage.SuspendLayout();
@@ -245,6 +250,10 @@ namespace XstitchXcel
 			// 
 			// statsTabPage
 			// 
+			this.statsTabPage.Controls.Add(this.statsOutTb);
+			this.statsTabPage.Controls.Add(this.statsUnitCb);
+			this.statsTabPage.Controls.Add(this.statsCountNum);
+			this.statsTabPage.Controls.Add(this.statsCountLbl);
 			this.statsTabPage.Controls.Add(this.generateStatsBtn);
 			this.statsTabPage.Controls.Add(this.statsDgv);
 			this.statsTabPage.Location = new System.Drawing.Point(4, 24);
@@ -255,13 +264,60 @@ namespace XstitchXcel
 			this.statsTabPage.Text = "Stats";
 			this.statsTabPage.UseVisualStyleBackColor = true;
 			// 
+			// statsOutTb
+			// 
+			this.statsOutTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.statsOutTb.Location = new System.Drawing.Point(172, 279);
+			this.statsOutTb.Name = "statsOutTb";
+			this.statsOutTb.ReadOnly = true;
+			this.statsOutTb.Size = new System.Drawing.Size(243, 23);
+			this.statsOutTb.TabIndex = 4;
+			// 
+			// statsUnitCb
+			// 
+			this.statsUnitCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.statsUnitCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.statsUnitCb.FormattingEnabled = true;
+			this.statsUnitCb.Items.AddRange(new object[] {
+            "inches",
+            "cm"});
+			this.statsUnitCb.Location = new System.Drawing.Point(106, 279);
+			this.statsUnitCb.Name = "statsUnitCb";
+			this.statsUnitCb.Size = new System.Drawing.Size(60, 23);
+			this.statsUnitCb.TabIndex = 3;
+			this.statsUnitCb.SelectedIndexChanged += new System.EventHandler(this.updateStatsOut);
+			// 
+			// statsCountNum
+			// 
+			this.statsCountNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.statsCountNum.Location = new System.Drawing.Point(52, 280);
+			this.statsCountNum.Name = "statsCountNum";
+			this.statsCountNum.Size = new System.Drawing.Size(48, 23);
+			this.statsCountNum.TabIndex = 2;
+			this.statsCountNum.Value = new decimal(new int[] {
+            14,
+            0,
+            0,
+            0});
+			this.statsCountNum.ValueChanged += new System.EventHandler(this.updateStatsOut);
+			// 
+			// statsCountLbl
+			// 
+			this.statsCountLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.statsCountLbl.AutoSize = true;
+			this.statsCountLbl.Location = new System.Drawing.Point(6, 282);
+			this.statsCountLbl.Name = "statsCountLbl";
+			this.statsCountLbl.Size = new System.Drawing.Size(40, 15);
+			this.statsCountLbl.TabIndex = 1;
+			this.statsCountLbl.Text = "Count";
+			// 
 			// generateStatsBtn
 			// 
 			this.generateStatsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.generateStatsBtn.Location = new System.Drawing.Point(530, 280);
 			this.generateStatsBtn.Name = "generateStatsBtn";
 			this.generateStatsBtn.Size = new System.Drawing.Size(160, 23);
-			this.generateStatsBtn.TabIndex = 1;
+			this.generateStatsBtn.TabIndex = 5;
 			this.generateStatsBtn.Text = "Generate Stats";
 			this.generateStatsBtn.UseVisualStyleBackColor = true;
 			this.generateStatsBtn.Click += new System.EventHandler(this.generateStatsBtn_Click);
@@ -602,6 +658,8 @@ namespace XstitchXcel
 			this.createPatternTabPage.ResumeLayout(false);
 			this.createPatternTabPage.PerformLayout();
 			this.statsTabPage.ResumeLayout(false);
+			this.statsTabPage.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.statsCountNum)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.statsDgv)).EndInit();
 			this.findDmcColorsTabPage.ResumeLayout(false);
 			this.findDmcColorsTabPage.PerformLayout();
@@ -661,6 +719,10 @@ namespace XstitchXcel
 		private System.Windows.Forms.Button crtBlurOutputBtn;
 		private System.Windows.Forms.TextBox crtBlurOutputTb;
 		private System.Windows.Forms.Label crtBlurOutputLbl;
+		private System.Windows.Forms.TextBox statsOutTb;
+		private System.Windows.Forms.ComboBox statsUnitCb;
+		private System.Windows.Forms.NumericUpDown statsCountNum;
+		private System.Windows.Forms.Label statsCountLbl;
 	}
 }
 

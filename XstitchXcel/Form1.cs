@@ -16,7 +16,12 @@ namespace XstitchXcel
 	{
 		private DmcColorProcessor dmcColorProcessor { get; } = new DmcColorProcessor();
 
-		public Form1() => InitializeComponent();
+		public Form1()
+		{
+			InitializeComponent();
+
+			initStats();
+		}
 
 		#region main form
 		private void Form1_DragEnter(object sender, DragEventArgs e)
@@ -102,17 +107,26 @@ namespace XstitchXcel
 		#endregion
 
 		#region tab: Stats
+		private void initStats()
+		{
+			statsCountNum.Value = 14;
+			statsUnitCb.SelectedIndex = 0;
+
+			updateStatsOut(null, null);
+		}
+
+		private Pattern statsPattern;
 		private async void generateStatsBtn_Click(object sender, EventArgs e)
 		{
-			Pattern pattern = null;
-			var ex = await RunAsync(() => pattern = getPattern());
+			var ex = await RunAsync(() => statsPattern = getPattern());
 			if (ex is not null)
 			{
+				statsPattern = null;
 				MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
-			var reporter = new StatsReporter(pattern);
+			var reporter = new StatsReporter(statsPattern);
 			var results = reporter.StitchStatsReport();
 
 			statsDgv.Rows.Clear();
@@ -120,8 +134,8 @@ namespace XstitchXcel
 			{
 				var row = new DataGridViewRow();
 				row.Cells.Add(new DataGridViewTextBoxCell { Value = $"{x.Count}" });
-				row.Cells.Add(new DataGridViewTextBoxCell { Value = $"{x.MinSkeins:F2}" });
-				row.Cells.Add(new DataGridViewTextBoxCell { Value = $"{x.MaxSkeins:F2}" });
+				row.Cells.Add(new DataGridViewTextBoxCell { Value = $"{x.MinSkeins:F1}" });
+				row.Cells.Add(new DataGridViewTextBoxCell { Value = $"{x.MaxSkeins:F1}" });
 
 				row.Cells.Add(new DataGridViewTextBoxCell
 				{
@@ -137,6 +151,37 @@ namespace XstitchXcel
 				row.Cells.Add(new DataGridViewTextBoxCell { Value = $"{x.DmcName}" });
 				statsDgv.Rows.Add(row);
 			}
+
+			updateStatsOut(sender, e);
+		}
+
+		private void updateStatsOut(object sender, EventArgs e)
+		{
+			var hasData = statsPattern is not null && statsDgv.RowCount > 0;
+
+			var ct = Convert.ToDouble(statsCountNum.Value);
+
+			var isValid = hasData && ct > 0;
+
+			statsOutTb.Visible = isValid;
+
+			if (!isValid)
+				return;
+
+			var sprite = statsPattern.Sprites[0];
+			var heightInInches = sprite.Size.Height / ct;
+			var widthInInches = sprite.Size.Width / ct;
+			var unit = ((string)statsUnitCb.SelectedItem).ToLower().Trim();
+
+			var tuple = unit switch
+			{
+				"inches" => (1, "inches"),
+				"cm" => (2.54, "cm"),
+				_ => throw new Exception()
+			};
+			(var multiplier, var symbol) = tuple;
+
+			statsOutTb.Text = $"{sprite.Pixels.Count:n0} stitches  {heightInInches * multiplier:F2}h x {widthInInches * multiplier:F2}w {symbol}";
 		}
 		#endregion
 
