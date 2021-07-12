@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Dinah.Core\Dinah.Core.WindowsDesktop\Dinah.Core.WindowsDesktop.csproj" />
     <ProjectReference Include="..\XstitchXcelLib\XstitchXcelLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

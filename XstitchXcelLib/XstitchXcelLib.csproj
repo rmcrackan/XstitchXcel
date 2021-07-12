@@ -52,6 +52,9 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Dinah.Core\Dinah.Core\Dinah.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="Config\dmc_colors.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

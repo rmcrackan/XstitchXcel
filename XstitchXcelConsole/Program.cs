@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using XstitchXcelLib.Tools;
 
 namespace XstitchXcelConsole
 {
@@ -23,9 +26,9 @@ namespace XstitchXcelConsole
 		}
 		static void Run()
 		{
-			var patternInputFile = @"C:\my\example\file.xlsx";
+			//var patternInputFile = @"C:\my\example\file.xlsx";
 
-			var api = EzApi.LoadPattern(patternInputFile);
+			//var api = EzApi.LoadPattern(patternInputFile);
 
 
 			//api.DiscoverNonDmcAllSprites();
@@ -44,6 +47,18 @@ namespace XstitchXcelConsole
 
 			//api.PrintCrtBlurConsole();
 			//api.SaveCrtBlurFile();
+
+
+			var list = new List<DmcColorName>
+			{
+				new DmcColorName(456),
+				new DmcColorName(123),
+				new DmcColorName('E', 123),
+				new DmcColorName("white"),
+				new DmcColorName("ecru"),
+				new DmcColorName('C', "ecru"),
+			};
+			list.Sort();
 		}
 	}
 }

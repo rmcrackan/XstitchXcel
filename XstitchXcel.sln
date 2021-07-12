@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XstitchXcel", "XstitchXcel\XstitchXcel.csproj", "{93815366-74C5-49AC-BBCD-93B05D61E984}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XstitchXcel", "XstitchXcel\XstitchXcel.csproj", "{93815366-74C5-49AC-BBCD-93B05D61E984}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XstitchXcelLib", "XstitchXcelLib\XstitchXcelLib.csproj", "{D7A417EF-06F7-4AEE-B9BE-66D2C85F6650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XstitchXcelLib", "XstitchXcelLib\XstitchXcelLib.csproj", "{D7A417EF-06F7-4AEE-B9BE-66D2C85F6650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XstitchXcelConsole", "XstitchXcelConsole\XstitchXcelConsole.csproj", "{7E61816E-F566-48DC-BC5F-0ADD57B81030}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XstitchXcelConsole", "XstitchXcelConsole\XstitchXcelConsole.csproj", "{7E61816E-F566-48DC-BC5F-0ADD57B81030}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dinah.Core", "..\Dinah.Core\Dinah.Core\Dinah.Core.csproj", "{33DF86EC-B77D-455C-99ED-A58EECEE558F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dinah.Core.WindowsDesktop", "..\Dinah.Core\Dinah.Core.WindowsDesktop\Dinah.Core.WindowsDesktop.csproj", "{CC027FED-28FD-4187-BBFA-441C51039647}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{7E61816E-F566-48DC-BC5F-0ADD57B81030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E61816E-F566-48DC-BC5F-0ADD57B81030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E61816E-F566-48DC-BC5F-0ADD57B81030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DF86EC-B77D-455C-99ED-A58EECEE558F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DF86EC-B77D-455C-99ED-A58EECEE558F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DF86EC-B77D-455C-99ED-A58EECEE558F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DF86EC-B77D-455C-99ED-A58EECEE558F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC027FED-28FD-4187-BBFA-441C51039647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC027FED-28FD-4187-BBFA-441C51039647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC027FED-28FD-4187-BBFA-441C51039647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC027FED-28FD-4187-BBFA-441C51039647}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
