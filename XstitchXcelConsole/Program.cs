@@ -36,6 +36,8 @@ namespace XstitchXcelConsole
 
 			//var oldHex = "C00000"; // non dmc
 			//var newHex = "BB051F"; // dmc
+			//// can replace as targeted or naive
+			//// static naive replace also available: no Pattern parsing required
 			//api.ReplaceColors(oldHex, newHex);
 
 

@@ -16,20 +16,17 @@ namespace XstitchXcelLib.Tools
 
 		public ColorReplacer(Pattern pattern) : base(pattern) { }
 
-		public void Replace(string oldColorHex, string newColorHex)
-		{
-			var oldColor = HelperMethods.SmartColorFinder(oldColorHex, DmcColorProcessor);
-			var newColor = HelperMethods.SmartColorFinder(newColorHex, DmcColorProcessor);
-
-			//NaiveReplace(oldColor, newColor);
-			TargetedReplace(oldColor, newColor);
-		}
+		#region TargetedReplace
 
 		/// <summary>
 		/// Replace per scanned model stored in Sprite, Pixels, json, et al.
 		/// </summary>
-		/// <param name="oldColor"></param>
-		/// <param name="newColor"></param>
+		public void TargetedReplace(string oldColorHex, string newColorHex)
+			=> TargetedReplace(DmcColorProcessor.SmartColorFinder(oldColorHex), DmcColorProcessor.SmartColorFinder(newColorHex));
+
+		/// <summary>
+		/// Replace per scanned model stored in Sprite, Pixels, json, et al.
+		/// </summary>
 		public void TargetedReplace(Color oldColor, Color newColor)
 		{
 			if (replacementIsInvalid(oldColor, newColor))
@@ -103,12 +100,28 @@ namespace XstitchXcelLib.Tools
 				px.Color = newColor;
 		}
 
+		#endregion
+
+		#region NaiveReplace
+
 		/// <summary>
 		/// Iterate through every pixel. If color matches: replace it
 		/// </summary>
-		/// <param name="oldColor"></param>
-		/// <param name="newColor"></param>
+		public void NaiveReplace(string oldColorHex, string newColorHex)
+			=> NaiveReplace(DmcColorProcessor.SmartColorFinder(oldColorHex), DmcColorProcessor.SmartColorFinder(newColorHex));
+
+		/// <summary>
+		/// Iterate through every pixel. If color matches: replace it
+		/// </summary>
 		public void NaiveReplace(Color oldColor, Color newColor)
+			=> NaiveReplace(Pattern.InputFile, oldColor, newColor, CreateBackupFile);
+
+		public static void NaiveReplace(string file, string oldColorHex, string newColorHex, bool createBackupFile = false)
+		{
+			var processor = new DmcColorProcessor();
+			NaiveReplace(file, processor.SmartColorFinder(oldColorHex), processor.SmartColorFinder(newColorHex), createBackupFile);
+		}
+		public static void NaiveReplace(string inputFile, Color oldColor, Color newColor, bool createBackupFile = false)
 		{
 			if (replacementIsInvalid(oldColor, newColor))
 				return;
@@ -118,11 +131,13 @@ namespace XstitchXcelLib.Tools
 
 			bool isMatch(Range c) => ColorTranslator.FromOle((int)c.Interior.Color).IsEquivalent(oldColor);
 
-			using var editor = new ExcelEditor(Pattern.InputFile) { CreateBackupFile = CreateBackupFile };
+			using var editor = new ExcelEditor(inputFile) { CreateBackupFile = createBackupFile };
 			editor.Iterate(isMatch, cell => setColor(cell, isTransparent, newColorOle));
 		}
 
-		static void setColor(Range cell, bool isTransparent, int newColorOle)
+		#endregion
+
+		private static void setColor(Range cell, bool isTransparent, int newColorOle)
 		{
 			if (isTransparent)
 				cell.Interior.ColorIndex = 0;

@@ -196,7 +196,7 @@ namespace XstitchXcel
 		private void newColorTb_TextChanged(object sender, EventArgs e) => setPictureBox(newColorTb, newColorPb, newIsDmcLbl);
 		private void setPictureBox(TextBox tb, PictureBox pb, Label isDmcLbl)
 		{
-			var color = HelperMethods.SmartColorFinder(tb.Text, dmcColorProcessor);
+			var color = dmcColorProcessor.SmartColorFinder(tb.Text);
 
 			var isValidColor = !color.IsEquivalent(Color.Empty);
 
@@ -221,7 +221,7 @@ namespace XstitchXcel
 			{
 				CreateBackupFile = replaceColorBakCb.Checked
 			}
-			.Replace(oldColorTb.Text, newColorTb.Text);
+			.TargetedReplace(oldColorTb.Text, newColorTb.Text);
 		#endregion
 
 		#region tab: CRT Blur

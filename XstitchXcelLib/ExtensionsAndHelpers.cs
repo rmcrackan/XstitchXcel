@@ -11,7 +11,7 @@ namespace XstitchXcelLib
 	public static class HelperMethods
 	{
 		private static Regex isHex { get; } = new("^\\s*(#[0-9a-f]{3}|#?[0-9a-f]{6})\\s*$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
-		public static Color SmartColorFinder(string colorString, DmcColorProcessor processor)
+		public static Color SmartColorFinder(this DmcColorProcessor processor, string colorString)
 		{
 			// try to convert from hex:
 			//   #hhh
