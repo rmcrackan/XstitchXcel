@@ -29,7 +29,7 @@ namespace XstitchXcelLib.Tools
 		/// </summary>
 		public void TargetedReplace(Color oldColor, Color newColor)
 		{
-			if (replacementIsInvalid(oldColor, newColor))
+			if (oldColor.ReplacementIsInvalid(newColor))
 				return;
 
 			spriteReplace(Pattern.Sprite, oldColor, newColor);
@@ -74,10 +74,9 @@ namespace XstitchXcelLib.Tools
 
 			using var editor = new ExcelEditor(Pattern.InputFile) { CreateBackupFile = CreateBackupFile };
 			foreach (var px in matches)
-			{
-				var cell = editor.GetCell(px.RowNumber, px.ColumnNumber);
-				setColor(cell, isTransparent, newColorOle);
-			}
+				editor
+					.GetCell(px.RowNumber, px.ColumnNumber)
+					.SetColor(newColorOle, isTransparent);
 		}
 
 		private static void modelReplace(Sprite sprite, List<Pixel> matches, Color oldColor, Color newColor)
@@ -123,7 +122,7 @@ namespace XstitchXcelLib.Tools
 		}
 		public static void NaiveReplace(string inputFile, Color oldColor, Color newColor, bool createBackupFile = false)
 		{
-			if (replacementIsInvalid(oldColor, newColor))
+			if (oldColor.ReplacementIsInvalid(newColor))
 				return;
 
 			var newColorOle = newColor.ToOle();
@@ -132,22 +131,24 @@ namespace XstitchXcelLib.Tools
 			bool isMatch(Range c) => ColorTranslator.FromOle((int)c.Interior.Color).IsEquivalent(oldColor);
 
 			using var editor = new ExcelEditor(inputFile) { CreateBackupFile = createBackupFile };
-			editor.Iterate(isMatch, cell => setColor(cell, isTransparent, newColorOle));
+			editor.Iterate(isMatch, cell => cell.SetColor(newColorOle, isTransparent));
 		}
 
 		#endregion
+	}
+	public static class ColorReplacerExtMethods
+	{
+		public static bool ReplacementIsInvalid(this Color oldColor, Color newColor)
+			=> oldColor.IsEquivalent(newColor)
+			|| oldColor.IsEquivalent(Color.Empty)
+			|| newColor.IsEquivalent(Color.Empty);
 
-		private static void setColor(Range cell, bool isTransparent, int newColorOle)
+		public static void SetColor(this Range cell, int newColorOle, bool isTransparent)
 		{
 			if (isTransparent)
 				cell.Interior.ColorIndex = 0;
 			else
 				cell.Interior.Color = newColorOle;
 		}
-
-		private static bool replacementIsInvalid(Color oldColor, Color newColor)
-			=> oldColor.IsEquivalent(newColor)
-			|| oldColor.IsEquivalent(Color.Empty)
-			|| newColor.IsEquivalent(Color.Empty);
 	}
 }

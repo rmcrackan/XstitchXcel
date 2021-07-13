@@ -192,9 +192,33 @@ namespace XstitchXcel
 		#endregion
 
 		#region tab: Replace Color
-		private void oldColorTb_TextChanged(object sender, EventArgs e) => setPictureBox(oldColorTb, oldColorPb, oldIsDmcLbl);
-		private void newColorTb_TextChanged(object sender, EventArgs e) => setPictureBox(newColorTb, newColorPb, newIsDmcLbl);
-		private void setPictureBox(TextBox tb, PictureBox pb, Label isDmcLbl)
+		private void oldColorTb_TextChanged(object sender, EventArgs e) => setDmcPictureBox(oldColorTb, oldColorPb, oldIsDmcLbl);
+		private void newColorTb_TextChanged(object sender, EventArgs e) => setDmcPictureBox(newColorTb, newColorPb, newIsDmcLbl);
+
+		private async void oldColorTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceColor);
+		private async void newColorTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceColor);
+		private async void beginColorReplaceBtn_Click(object sender, EventArgs e) => await RunFullAsync(replaceColor);
+		private void replaceColor()
+			=> new ColorReplacer(getPattern())
+			{
+				CreateBackupFile = replaceColorBakCb.Checked
+			}
+			.TargetedReplace(oldColorTb.Text, newColorTb.Text);
+		#endregion
+
+		#region tab: Replace Color (naive)
+
+		private void oldColorNaiveTb_TextChanged(object sender, EventArgs e) => setDmcPictureBox(oldColorNaiveTb, oldColorNaivePb, oldIsDmcNaiveLbl);
+		private void newColorNaiveTb_TextChanged(object sender, EventArgs e) => setDmcPictureBox(newColorNaiveTb, newColorNaivePb, newIsDmcNaiveLbl);
+
+		private async void oldColorNaiveTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceNaiveColor);
+		private async void newColorNaiveTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceNaiveColor);
+		private async void beginColorReplaceNaiveBtn_Click(object sender, EventArgs e) => await RunFullAsync(replaceNaiveColor);
+		private void replaceNaiveColor()
+			=> ColorReplacer.NaiveReplace(fileNameTb.Text, oldColorNaiveTb.Text, newColorNaiveTb.Text, replaceColorNaiveBakCb.Checked);
+		#endregion
+
+		private void setDmcPictureBox(TextBox tb, PictureBox pb, Label isDmcLbl)
 		{
 			var color = dmcColorProcessor.SmartColorFinder(tb.Text);
 
@@ -212,17 +236,6 @@ namespace XstitchXcel
 				: dmcColorProcessor.TryGetMatch(color, out var dmcColor) ? $"DMC # {dmcColor.DmcNumber} - {dmcColor.Name}"
 				: "Non-DMC";
 		}
-
-		private async void oldColorTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceColor);
-		private async void newColorTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceColor);
-		private async void beginColorReplaceBtn_Click(object sender, EventArgs e) => await RunFullAsync(replaceColor);
-		private void replaceColor()
-			=> new ColorReplacer(getPattern())
-			{
-				CreateBackupFile = replaceColorBakCb.Checked
-			}
-			.TargetedReplace(oldColorTb.Text, newColorTb.Text);
-		#endregion
 
 		#region tab: CRT Blur
 		private void crtBlurOutputBtn_Click(object sender, EventArgs e)

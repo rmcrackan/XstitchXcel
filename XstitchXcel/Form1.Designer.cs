@@ -71,6 +71,18 @@ namespace XstitchXcel
 			this.oldColorTb = new System.Windows.Forms.TextBox();
 			this.oldColorLbl = new System.Windows.Forms.Label();
 			this.replaceColorBakCb = new System.Windows.Forms.CheckBox();
+			this.replaceColorNaiveTabPage = new System.Windows.Forms.TabPage();
+			this.newIsDmcNaiveLbl = new System.Windows.Forms.Label();
+			this.oldIsDmcNaiveLbl = new System.Windows.Forms.Label();
+			this.replaceColorNaiveInstructionsTb = new System.Windows.Forms.TextBox();
+			this.beginColorReplaceNaiveBtn = new System.Windows.Forms.Button();
+			this.newColorNaivePb = new System.Windows.Forms.PictureBox();
+			this.newColorNaiveTb = new System.Windows.Forms.TextBox();
+			this.newColorNaiveLbl = new System.Windows.Forms.Label();
+			this.oldColorNaivePb = new System.Windows.Forms.PictureBox();
+			this.oldColorNaiveTb = new System.Windows.Forms.TextBox();
+			this.oldColorNaiveLbl = new System.Windows.Forms.Label();
+			this.replaceColorNaiveBakCb = new System.Windows.Forms.CheckBox();
 			this.crtBlurTabPage = new System.Windows.Forms.TabPage();
 			this.crtBlurInstructionsTb = new System.Windows.Forms.TextBox();
 			this.createCrtBlurBtn = new System.Windows.Forms.Button();
@@ -86,6 +98,9 @@ namespace XstitchXcel
 			this.replaceColorTabPage.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.newColorPb)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.oldColorPb)).BeginInit();
+			this.replaceColorNaiveTabPage.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.newColorNaivePb)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.oldColorNaivePb)).BeginInit();
 			this.crtBlurTabPage.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -128,6 +143,7 @@ namespace XstitchXcel
 			this.tabControl.Controls.Add(this.statsTabPage);
 			this.tabControl.Controls.Add(this.findDmcColorsTabPage);
 			this.tabControl.Controls.Add(this.replaceColorTabPage);
+			this.tabControl.Controls.Add(this.replaceColorNaiveTabPage);
 			this.tabControl.Controls.Add(this.crtBlurTabPage);
 			this.tabControl.Location = new System.Drawing.Point(12, 42);
 			this.tabControl.Name = "tabControl";
@@ -455,7 +471,7 @@ namespace XstitchXcel
 			this.newIsDmcLbl.Location = new System.Drawing.Point(331, 246);
 			this.newIsDmcLbl.Name = "newIsDmcLbl";
 			this.newIsDmcLbl.Size = new System.Drawing.Size(38, 15);
-			this.newIsDmcLbl.TabIndex = 13;
+			this.newIsDmcLbl.TabIndex = 6;
 			this.newIsDmcLbl.Text = "label2";
 			this.newIsDmcLbl.Visible = false;
 			// 
@@ -466,7 +482,7 @@ namespace XstitchXcel
 			this.oldIsDmcLbl.Location = new System.Drawing.Point(331, 217);
 			this.oldIsDmcLbl.Name = "oldIsDmcLbl";
 			this.oldIsDmcLbl.Size = new System.Drawing.Size(38, 15);
-			this.oldIsDmcLbl.TabIndex = 12;
+			this.oldIsDmcLbl.TabIndex = 3;
 			this.oldIsDmcLbl.Text = "label1";
 			this.oldIsDmcLbl.Visible = false;
 			// 
@@ -481,7 +497,7 @@ namespace XstitchXcel
 			this.replaceColorInstructionsTb.ReadOnly = true;
 			this.replaceColorInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
 			this.replaceColorInstructionsTb.Size = new System.Drawing.Size(687, 180);
-			this.replaceColorInstructionsTb.TabIndex = 10;
+			this.replaceColorInstructionsTb.TabIndex = 1;
 			this.replaceColorInstructionsTb.Text = resources.GetString("replaceColorInstructionsTb.Text");
 			// 
 			// beginColorReplaceBtn
@@ -554,7 +570,7 @@ namespace XstitchXcel
 			this.oldColorLbl.Location = new System.Drawing.Point(3, 217);
 			this.oldColorLbl.Name = "oldColorLbl";
 			this.oldColorLbl.Size = new System.Drawing.Size(59, 15);
-			this.oldColorLbl.TabIndex = 1;
+			this.oldColorLbl.TabIndex = 3;
 			this.oldColorLbl.Text = "Old color:";
 			// 
 			// replaceColorBakCb
@@ -564,9 +580,150 @@ namespace XstitchXcel
 			this.replaceColorBakCb.Location = new System.Drawing.Point(3, 189);
 			this.replaceColorBakCb.Name = "replaceColorBakCb";
 			this.replaceColorBakCb.Size = new System.Drawing.Size(234, 19);
-			this.replaceColorBakCb.TabIndex = 0;
+			this.replaceColorBakCb.TabIndex = 2;
 			this.replaceColorBakCb.Text = "Back up my file before making changes";
 			this.replaceColorBakCb.UseVisualStyleBackColor = true;
+			// 
+			// replaceColorNaiveTabPage
+			// 
+			this.replaceColorNaiveTabPage.Controls.Add(this.newIsDmcNaiveLbl);
+			this.replaceColorNaiveTabPage.Controls.Add(this.oldIsDmcNaiveLbl);
+			this.replaceColorNaiveTabPage.Controls.Add(this.replaceColorNaiveInstructionsTb);
+			this.replaceColorNaiveTabPage.Controls.Add(this.beginColorReplaceNaiveBtn);
+			this.replaceColorNaiveTabPage.Controls.Add(this.newColorNaivePb);
+			this.replaceColorNaiveTabPage.Controls.Add(this.newColorNaiveTb);
+			this.replaceColorNaiveTabPage.Controls.Add(this.newColorNaiveLbl);
+			this.replaceColorNaiveTabPage.Controls.Add(this.oldColorNaivePb);
+			this.replaceColorNaiveTabPage.Controls.Add(this.oldColorNaiveTb);
+			this.replaceColorNaiveTabPage.Controls.Add(this.oldColorNaiveLbl);
+			this.replaceColorNaiveTabPage.Controls.Add(this.replaceColorNaiveBakCb);
+			this.replaceColorNaiveTabPage.Location = new System.Drawing.Point(4, 24);
+			this.replaceColorNaiveTabPage.Name = "replaceColorNaiveTabPage";
+			this.replaceColorNaiveTabPage.Padding = new System.Windows.Forms.Padding(3);
+			this.replaceColorNaiveTabPage.Size = new System.Drawing.Size(693, 306);
+			this.replaceColorNaiveTabPage.TabIndex = 5;
+			this.replaceColorNaiveTabPage.Text = "Replace Color (naive)";
+			this.replaceColorNaiveTabPage.UseVisualStyleBackColor = true;
+			// 
+			// newIsDmcNaiveLbl
+			// 
+			this.newIsDmcNaiveLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.newIsDmcNaiveLbl.AutoSize = true;
+			this.newIsDmcNaiveLbl.Location = new System.Drawing.Point(331, 246);
+			this.newIsDmcNaiveLbl.Name = "newIsDmcNaiveLbl";
+			this.newIsDmcNaiveLbl.Size = new System.Drawing.Size(38, 15);
+			this.newIsDmcNaiveLbl.TabIndex = 16;
+			this.newIsDmcNaiveLbl.Text = "label2";
+			this.newIsDmcNaiveLbl.Visible = false;
+			// 
+			// oldIsDmcNaiveLbl
+			// 
+			this.oldIsDmcNaiveLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.oldIsDmcNaiveLbl.AutoSize = true;
+			this.oldIsDmcNaiveLbl.Location = new System.Drawing.Point(331, 217);
+			this.oldIsDmcNaiveLbl.Name = "oldIsDmcNaiveLbl";
+			this.oldIsDmcNaiveLbl.Size = new System.Drawing.Size(38, 15);
+			this.oldIsDmcNaiveLbl.TabIndex = 11;
+			this.oldIsDmcNaiveLbl.Text = "label1";
+			this.oldIsDmcNaiveLbl.Visible = false;
+			// 
+			// replaceColorNaiveInstructionsTb
+			// 
+			this.replaceColorNaiveInstructionsTb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.replaceColorNaiveInstructionsTb.Location = new System.Drawing.Point(3, 3);
+			this.replaceColorNaiveInstructionsTb.Multiline = true;
+			this.replaceColorNaiveInstructionsTb.Name = "replaceColorNaiveInstructionsTb";
+			this.replaceColorNaiveInstructionsTb.ReadOnly = true;
+			this.replaceColorNaiveInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.replaceColorNaiveInstructionsTb.Size = new System.Drawing.Size(687, 180);
+			this.replaceColorNaiveInstructionsTb.TabIndex = 8;
+			this.replaceColorNaiveInstructionsTb.Text = resources.GetString("replaceColorNaiveInstructionsTb.Text");
+			// 
+			// beginColorReplaceNaiveBtn
+			// 
+			this.beginColorReplaceNaiveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.beginColorReplaceNaiveBtn.Location = new System.Drawing.Point(530, 280);
+			this.beginColorReplaceNaiveBtn.Name = "beginColorReplaceNaiveBtn";
+			this.beginColorReplaceNaiveBtn.Size = new System.Drawing.Size(160, 23);
+			this.beginColorReplaceNaiveBtn.TabIndex = 18;
+			this.beginColorReplaceNaiveBtn.Text = "Begin color replace";
+			this.beginColorReplaceNaiveBtn.UseVisualStyleBackColor = true;
+			this.beginColorReplaceNaiveBtn.Click += new System.EventHandler(this.beginColorReplaceNaiveBtn_Click);
+			// 
+			// newColorNaivePb
+			// 
+			this.newColorNaivePb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.newColorNaivePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.newColorNaivePb.Location = new System.Drawing.Point(207, 243);
+			this.newColorNaivePb.Name = "newColorNaivePb";
+			this.newColorNaivePb.Size = new System.Drawing.Size(100, 23);
+			this.newColorNaivePb.TabIndex = 17;
+			this.newColorNaivePb.TabStop = false;
+			this.newColorNaivePb.Visible = false;
+			// 
+			// newColorNaiveTb
+			// 
+			this.newColorNaiveTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.newColorNaiveTb.Location = new System.Drawing.Point(81, 243);
+			this.newColorNaiveTb.Name = "newColorNaiveTb";
+			this.newColorNaiveTb.Size = new System.Drawing.Size(100, 23);
+			this.newColorNaiveTb.TabIndex = 15;
+			this.newColorNaiveTb.TextChanged += new System.EventHandler(this.newColorNaiveTb_TextChanged);
+			this.newColorNaiveTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.newColorNaiveTb_KeyPress);
+			// 
+			// newColorNaiveLbl
+			// 
+			this.newColorNaiveLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.newColorNaiveLbl.AutoSize = true;
+			this.newColorNaiveLbl.Location = new System.Drawing.Point(3, 246);
+			this.newColorNaiveLbl.Name = "newColorNaiveLbl";
+			this.newColorNaiveLbl.Size = new System.Drawing.Size(64, 15);
+			this.newColorNaiveLbl.TabIndex = 14;
+			this.newColorNaiveLbl.Text = "New color:";
+			// 
+			// oldColorNaivePb
+			// 
+			this.oldColorNaivePb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.oldColorNaivePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.oldColorNaivePb.Location = new System.Drawing.Point(207, 214);
+			this.oldColorNaivePb.Name = "oldColorNaivePb";
+			this.oldColorNaivePb.Size = new System.Drawing.Size(100, 23);
+			this.oldColorNaivePb.TabIndex = 12;
+			this.oldColorNaivePb.TabStop = false;
+			this.oldColorNaivePb.Visible = false;
+			// 
+			// oldColorNaiveTb
+			// 
+			this.oldColorNaiveTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.oldColorNaiveTb.Location = new System.Drawing.Point(81, 214);
+			this.oldColorNaiveTb.Name = "oldColorNaiveTb";
+			this.oldColorNaiveTb.Size = new System.Drawing.Size(100, 23);
+			this.oldColorNaiveTb.TabIndex = 9;
+			this.oldColorNaiveTb.TextChanged += new System.EventHandler(this.oldColorNaiveTb_TextChanged);
+			this.oldColorNaiveTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.oldColorNaiveTb_KeyPress);
+			// 
+			// oldColorNaiveLbl
+			// 
+			this.oldColorNaiveLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.oldColorNaiveLbl.AutoSize = true;
+			this.oldColorNaiveLbl.Location = new System.Drawing.Point(3, 217);
+			this.oldColorNaiveLbl.Name = "oldColorNaiveLbl";
+			this.oldColorNaiveLbl.Size = new System.Drawing.Size(59, 15);
+			this.oldColorNaiveLbl.TabIndex = 13;
+			this.oldColorNaiveLbl.Text = "Old color:";
+			// 
+			// replaceColorNaiveBakCb
+			// 
+			this.replaceColorNaiveBakCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.replaceColorNaiveBakCb.AutoSize = true;
+			this.replaceColorNaiveBakCb.Location = new System.Drawing.Point(3, 189);
+			this.replaceColorNaiveBakCb.Name = "replaceColorNaiveBakCb";
+			this.replaceColorNaiveBakCb.Size = new System.Drawing.Size(234, 19);
+			this.replaceColorNaiveBakCb.TabIndex = 10;
+			this.replaceColorNaiveBakCb.Text = "Back up my file before making changes";
+			this.replaceColorNaiveBakCb.UseVisualStyleBackColor = true;
 			// 
 			// crtBlurTabPage
 			// 
@@ -667,6 +824,10 @@ namespace XstitchXcel
 			this.replaceColorTabPage.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.newColorPb)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.oldColorPb)).EndInit();
+			this.replaceColorNaiveTabPage.ResumeLayout(false);
+			this.replaceColorNaiveTabPage.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.newColorNaivePb)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.oldColorNaivePb)).EndInit();
 			this.crtBlurTabPage.ResumeLayout(false);
 			this.crtBlurTabPage.PerformLayout();
 			this.ResumeLayout(false);
@@ -723,6 +884,18 @@ namespace XstitchXcel
 		private System.Windows.Forms.ComboBox statsUnitCb;
 		private System.Windows.Forms.NumericUpDown statsCountNum;
 		private System.Windows.Forms.Label statsCountLbl;
+		private System.Windows.Forms.TabPage replaceColorNaiveTabPage;
+		private System.Windows.Forms.Label newIsDmcNaiveLbl;
+		private System.Windows.Forms.Label oldIsDmcNaiveLbl;
+		private System.Windows.Forms.TextBox replaceColorNaiveInstructionsTb;
+		private System.Windows.Forms.Button beginColorReplaceNaiveBtn;
+		private System.Windows.Forms.PictureBox newColorNaivePb;
+		private System.Windows.Forms.TextBox newColorNaiveTb;
+		private System.Windows.Forms.Label newColorNaiveLbl;
+		private System.Windows.Forms.PictureBox oldColorNaivePb;
+		private System.Windows.Forms.TextBox oldColorNaiveTb;
+		private System.Windows.Forms.Label oldColorNaiveLbl;
+		private System.Windows.Forms.CheckBox replaceColorNaiveBakCb;
 	}
 }
 
