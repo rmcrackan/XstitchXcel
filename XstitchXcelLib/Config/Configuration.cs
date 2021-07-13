@@ -35,7 +35,7 @@ namespace XstitchXcelLib.Config
 
 			var saveFile = false;
 
-			saveFile |= xlsxToSprites(patternEntry);
+			saveFile |= xlsxToSprite(patternEntry);
 			saveFile |= docxToSymbols(patternEntry);
 
 			if (saveFile)
@@ -51,21 +51,20 @@ namespace XstitchXcelLib.Config
 
 		public static List<SymbolEntry> GetDefaultSymbolEntries() => JsonConvert.DeserializeObject<List<SymbolEntry>>(File.ReadAllText(@"Config\symbols.json"));
 
-		private static bool xlsxToSprites(PatternEntry patternEntry)
+		private static bool xlsxToSprite(PatternEntry patternEntry)
 		{
-			if (patternEntry?.Sprites is not null &&
-				patternEntry.Sprites.Any() &&
+			if (patternEntry?.Sprite is not null &&
 				File.GetLastWriteTimeUtc(patternEntry.InputFile) <= patternEntry.XlsxLastModified)
 				return false;
 
 			patternEntry.RefreshXlsxLastModified();
 
-			patternEntry.Sprites = new SpriteExtractor(patternEntry.InputFile)
-				.GetSprites()
-				.ToSpriteEntries();
+			patternEntry.Sprite = SpriteExtractor
+				.GetSprite(patternEntry.InputFile)
+				.ToSpriteEntry();
 
-			if (patternEntry?.Sprites is not null && patternEntry.Sprites.Any() && string.IsNullOrWhiteSpace(patternEntry.Sprites[0].Name))
-				patternEntry.Sprites[0].Name = Path.GetFileNameWithoutExtension(patternEntry.InputFile);
+			if (patternEntry?.Sprite is not null && string.IsNullOrWhiteSpace(patternEntry.Sprite.Name))
+				patternEntry.Sprite.Name = Path.GetFileNameWithoutExtension(patternEntry.InputFile);
 
 			return true;
 		}
@@ -86,10 +85,10 @@ namespace XstitchXcelLib.Config
 			return true;
 		}
 
-		public static void SaveSprites(IEnumerable<Sprite> sprites, string inputFile)
+		public static void SaveSprite(Sprite sprite, string inputFile)
 		{
 			var patternEntry = loadPattern(inputFile);
-			patternEntry.Sprites = sprites.ToSpriteEntries();
+			patternEntry.Sprite = sprite.ToSpriteEntry();
 			patternEntry.RefreshXlsxLastModified();
 			savePattern(patternEntry);
 		}

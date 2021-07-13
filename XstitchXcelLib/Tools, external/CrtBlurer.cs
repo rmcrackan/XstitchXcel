@@ -19,13 +19,13 @@ namespace XstitchXcelLib.Tools
 		{
 			OutputFile = Path.Combine(Path.GetDirectoryName(pattern.InputFile), Path.GetFileNameWithoutExtension(pattern.InputFile) + " - output" + Path.GetExtension(pattern.InputFile));
 
-			if (pattern?.Sprites is null || pattern.Sprites.Count != 1)
-				throw new Exception("unexpected image qty");
+			if (pattern?.Sprite is null)
+				throw new NullReferenceException(nameof(pattern.Sprite));
 
 			// must be inside this ctor so base ctor has already init'd dmcProcessor
 			colorMap = createColorMap();
 
-			_matrix = buildMatrix(Pattern.Sprites.Single());
+			_matrix = buildMatrix(Pattern.Sprite);
 		}
 
 		private static int[,] buildMatrix(Sprite sprite)
@@ -91,8 +91,7 @@ namespace XstitchXcelLib.Tools
 			var sprite = matrixToSprite();
 
 			// build pattern
-			var pattern = new Pattern(Pattern.InputFile);
-			pattern.Sprites.Add(sprite);
+			var pattern = new Pattern(Pattern.InputFile) { Sprite = sprite };
 			var defaultSymbols = Configuration.GetDefaultSymbolEntries().Select(se => Converters.ToSymbol(se));
 			pattern.Symbols.AddRange(defaultSymbols);
 

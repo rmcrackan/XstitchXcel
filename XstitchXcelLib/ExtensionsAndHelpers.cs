@@ -118,10 +118,5 @@ namespace XstitchXcelLib
 			var d = luminance > 0.5 ? 0 : 255;
 			return Color.FromArgb(d, d, d);
 		}
-
-		public static bool IsNameRow(this Pixel[] row)
-			=> row.All(p => p.Color.IsTransparent())
-			&& !string.IsNullOrWhiteSpace(row[0].Text)
-			&& row.Count(p => !string.IsNullOrWhiteSpace(p.Text)) == 1;
 	}
 }

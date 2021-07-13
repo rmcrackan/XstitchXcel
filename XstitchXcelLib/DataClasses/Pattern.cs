@@ -5,7 +5,7 @@ namespace XstitchXcelLib.DataClasses
 {
 	public class Pattern
 	{
-		public List<Sprite> Sprites = new();
+		public Sprite Sprite = new();
 		public List<Symbol> Symbols = new();
 
 		public string InputFile { get; }

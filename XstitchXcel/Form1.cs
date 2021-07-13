@@ -170,7 +170,7 @@ namespace XstitchXcel
 			if (!isValid)
 				return;
 
-			var sprite = statsPattern.Sprites[0];
+			var sprite = statsPattern.Sprite;
 			var heightInInches = sprite.Size.Height / ct;
 			var widthInInches = sprite.Size.Width / ct;
 			var unit = ((string)statsUnitCb.SelectedItem).ToLower().Trim();
@@ -188,7 +188,7 @@ namespace XstitchXcel
 		#endregion
 
 		#region tab: Find DMC Colors
-		private async void findDmcColorsBtn_Click(object sender, EventArgs e) => await RunFullAsync(() => new PatternAnalyzer(getPattern()).DiscoverNonDmcAllSprites());
+		private async void findDmcColorsBtn_Click(object sender, EventArgs e) => await RunFullAsync(() => new PatternAnalyzer(getPattern()).DiscoverNonDmc());
 		#endregion
 
 		#region tab: Replace Color

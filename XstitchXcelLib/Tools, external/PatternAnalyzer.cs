@@ -14,20 +14,12 @@ namespace XstitchXcelLib.Tools
 		public PatternAnalyzer(Pattern pattern) : base(pattern) => reportExportDirectory = Path.GetDirectoryName(pattern.InputFile);
 
 		/// <summary>create reports of non-DMC colors</summary>
-		public void DiscoverNonDmcAllSprites()
+		public void DiscoverNonDmc()
 		{
-			foreach (var sprite in Pattern.Sprites)
-				DiscoverNonDmc(sprite);
-		}
-
-		/// <summary>create reports of non-DMC colors</summary>
-		/// <param name="sprite"></param>
-		public void DiscoverNonDmc(Sprite sprite)
-		{
-			Console.WriteLine(sprite);
+			Console.WriteLine(Pattern.Sprite);
 
 			// print all colors contained in sprite. get unmatched colors
-			var unmatchedColors = getUnmatchedColors(sprite);
+			var unmatchedColors = getUnmatchedColors(Pattern.Sprite);
 
 			if (!unmatchedColors.Any())
 			{
@@ -37,8 +29,8 @@ namespace XstitchXcelLib.Tools
 			}
 
 			// only export to excel if there are unresolved dmc colors
-			using var writer = new Utilities.EzExcelWriter(getFileName(sprite));
-			writer.WriteRow(sprite.Name);
+			using var writer = new Utilities.EzExcelWriter(getFileName(Pattern.Sprite));
+			writer.WriteRow(Pattern.Sprite.Name);
 			writer.WriteRow("", "hex", "DMC", "R", "G", "B");
 
 			foreach (var unmatchedColor in unmatchedColors)

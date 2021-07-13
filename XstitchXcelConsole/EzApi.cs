@@ -14,7 +14,7 @@ namespace XstitchXcelConsole
 		private EzApi(Pattern pattern) => this.pattern = pattern;
 		public static EzApi LoadPattern(string patternInputFile) => new(Configuration.GetPattern(patternInputFile));
 
-		public void DiscoverNonDmcAllSprites() => new PatternAnalyzer(pattern).DiscoverNonDmcAllSprites();
+		public void DiscoverNonDmcAllSprites() => new PatternAnalyzer(pattern).DiscoverNonDmc();
 
 		public void ReplaceColors(string oldHex, string newHex) => new ColorReplacer(pattern).Replace(oldHex, newHex);
 

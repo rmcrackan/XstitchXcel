@@ -25,14 +25,12 @@ namespace XstitchXcelLib.Tools
 		public bool PrintArrowsAtMidpoints { get; set; } = true;
 		public bool PrintLegend { get; set; } = true;
 
-		private Sprite sprite => Pattern.Sprites[0];
-
 		public PatternBuilder(Pattern pattern) : base(pattern)
 		{
 			OutputFile = Path.Combine(Path.GetDirectoryName(pattern.InputFile), Path.GetFileNameWithoutExtension(pattern.InputFile) + " - output" + Path.GetExtension(pattern.InputFile));
 
-			if (pattern?.Sprites is null || pattern.Sprites.Count != 1)
-				throw new Exception("unexpected image qty");
+			if (pattern?.Sprite is null)
+				throw new NullReferenceException(nameof(pattern.Sprite));
 
 			if (pattern?.Symbols is null || pattern.Symbols.Count == 0)
 				throw new Exception("no symbols loaded");
@@ -65,9 +63,9 @@ namespace XstitchXcelLib.Tools
 			var colorsAndSymbols = getSortedColorsAndSymbols();
 
 			// aka offset within the original picture from 0,0 (aka 1,1)
-			var location = sprite.Location;
+			var location = Pattern.Sprite.Location;
 
-			var size = sprite.Size;
+			var size = Pattern.Sprite.Size;
 			var rows = size.Height;
 			var cols = size.Width;
 
@@ -302,7 +300,7 @@ namespace XstitchXcelLib.Tools
 				// grid 1 content: print pattern pixel colors
 				// grid 2 content: print pattern pixel symbols
 				// grid 3 content: print pattern pixel colors and symbols
-				foreach (var p in sprite.Pixels.Where(p => !p.Color.IsTransparent()))
+				foreach (var p in Pattern.Sprite.Pixels.Where(p => !p.Color.IsTransparent()))
 				{
 					var row = p.RowNumber + contentRowOffset - location.Y + 1;
 					var column = p.ColumnNumber + contentColOffset - location.X + 1;
@@ -354,7 +352,7 @@ namespace XstitchXcelLib.Tools
 
 		private List<(Color Color, Symbol Symbol)> getSortedColorsAndSymbols()
 			=> DmcColorProcessor
-			.GetSortedColors(sprite.Pixels)
+			.GetSortedColors(Pattern.Sprite.Pixels)
 			.Select((color, i) => (color, Pattern.Symbols[i]))
 			.ToList();
 	}

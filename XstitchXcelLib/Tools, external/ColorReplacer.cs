@@ -35,10 +35,8 @@ namespace XstitchXcelLib.Tools
 			if (replacementIsInvalid(oldColor, newColor))
 				return;
 
-			foreach (var sprite in Pattern.Sprites)
-				spriteReplace(sprite, oldColor, newColor);
-
-			Config.Configuration.SaveSprites(Pattern.Sprites, Pattern.InputFile);
+			spriteReplace(Pattern.Sprite, oldColor, newColor);
+			Config.Configuration.SaveSprite(Pattern.Sprite, Pattern.InputFile);
 		}
 
 		private void spriteReplace(Sprite sprite, Color oldColor, Color newColor)

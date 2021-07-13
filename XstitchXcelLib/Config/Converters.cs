@@ -35,14 +35,12 @@ namespace XstitchXcelLib.Config
 
 		public static Pixel ToPixel(this PixelEntry pixelEntry) => new()
 		{
-			Text = pixelEntry.Text,
 			RowNumber = pixelEntry.RowNumber,
 			ColumnNumber = pixelEntry.ColumnNumber,
 			Color = Color.FromArgb(pixelEntry.Argb)
 		};
 		public static PixelEntry ToPixelEntry(this Pixel pixel) => new()
 		{
-			Text = pixel.Text,
 			RowNumber = pixel.RowNumber,
 			ColumnNumber = pixel.ColumnNumber,
 			Argb = pixel.Color.ToArgb()
@@ -59,11 +57,9 @@ namespace XstitchXcelLib.Config
 			Pixels = sprite.Pixels.Select(p => p.ToPixelEntry()).ToList()
 		};
 
-		public static List<SpriteEntry> ToSpriteEntries(this IEnumerable<Sprite> sprites) => sprites.Select(s => s.ToSpriteEntry()).ToList();
-
 		public static Pattern ToPattern(this PatternEntry patternEntry) => new(patternEntry.InputFile)
 		{
-			Sprites = patternEntry.Sprites.Select(s => s.ToSprite()).ToList(),
+			Sprite = patternEntry.Sprite.ToSprite(),
 			Symbols = patternEntry.Symbols.Select(s => s.ToSymbol()).ToList()
 		};
 

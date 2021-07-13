@@ -11,7 +11,6 @@ namespace XstitchXcelLib.Tools
 		// https://lordlibidan.com/how-many-stitches-can-you-get-out-of-a-8m-skein/
 		// 14 count
 		private const float EFFICIENT_STITCHES = 1850;
-		private const float AVERAGE_STITCHES = 1750;
 		private const float INEFFICIENT_STITCHES = 1650;
 
 		public float MinSkeins => Count / EFFICIENT_STITCHES;
@@ -27,8 +26,8 @@ namespace XstitchXcelLib.Tools
 
 		/// <summary>find needed floss. print number of stitches and skeins needed</summary>
 		public List<StatEntry> StitchStatsReport()
-			=> Pattern.Sprites
-			.SelectMany(s => s.Pixels)
+			=> Pattern.Sprite
+			.Pixels
 			.GetColorsAndCounts()
 			.Select(cc => new StatEntry(
 				cc.Count,
