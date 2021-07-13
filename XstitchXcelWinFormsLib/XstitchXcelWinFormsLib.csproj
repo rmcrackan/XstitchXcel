@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dinah.Core\Dinah.Core.WindowsDesktop\Dinah.Core.WindowsDesktop.csproj" />
+    <ProjectReference Include="..\XstitchXcelLib\XstitchXcelLib.csproj" />
+  </ItemGroup>
+
+</Project>

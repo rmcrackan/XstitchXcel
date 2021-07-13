@@ -77,26 +77,6 @@ namespace XstitchXcel
 			this.crtBlurOutputBtn = new System.Windows.Forms.Button();
 			this.crtBlurOutputTb = new System.Windows.Forms.TextBox();
 			this.crtBlurOutputLbl = new System.Windows.Forms.Label();
-			this.inventoryTabPage = new System.Windows.Forms.TabPage();
-			this.openBtn = new System.Windows.Forms.Button();
-			this.shoppingListGrp = new System.Windows.Forms.GroupBox();
-			this.shoppingListAddTb = new System.Windows.Forms.TextBox();
-			this.shoppingListAddBtn = new System.Windows.Forms.Button();
-			this.shoppingListRemoveTb = new System.Windows.Forms.TextBox();
-			this.shoppingListRemoveBtn = new System.Windows.Forms.Button();
-			this.inventoryGrp = new System.Windows.Forms.GroupBox();
-			this.inventoryAddTb = new System.Windows.Forms.TextBox();
-			this.inventoryAddLBtn = new System.Windows.Forms.Button();
-			this.inventoryRemoveTb = new System.Windows.Forms.TextBox();
-			this.inventoryRemoveBtn = new System.Windows.Forms.Button();
-			this.inventorySearchTb = new System.Windows.Forms.TextBox();
-			this.inventorySearchBtn = new System.Windows.Forms.Button();
-			this.inventoryOutTb = new System.Windows.Forms.TextBox();
-			this.inventoryFileSaveBtn = new System.Windows.Forms.Button();
-			this.inventoryFileBtn = new System.Windows.Forms.Button();
-			this.inventoryFileTb = new System.Windows.Forms.TextBox();
-			this.inventoryFileLbl = new System.Windows.Forms.Label();
-			this.inventoryInstructionsTb = new System.Windows.Forms.TextBox();
 			this.tabControl.SuspendLayout();
 			this.createPatternTabPage.SuspendLayout();
 			this.statsTabPage.SuspendLayout();
@@ -107,9 +87,6 @@ namespace XstitchXcel
 			((System.ComponentModel.ISupportInitialize)(this.newColorPb)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.oldColorPb)).BeginInit();
 			this.crtBlurTabPage.SuspendLayout();
-			this.inventoryTabPage.SuspendLayout();
-			this.shoppingListGrp.SuspendLayout();
-			this.inventoryGrp.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// fileNameLbl
@@ -152,7 +129,6 @@ namespace XstitchXcel
 			this.tabControl.Controls.Add(this.findDmcColorsTabPage);
 			this.tabControl.Controls.Add(this.replaceColorTabPage);
 			this.tabControl.Controls.Add(this.crtBlurTabPage);
-			this.tabControl.Controls.Add(this.inventoryTabPage);
 			this.tabControl.Location = new System.Drawing.Point(12, 42);
 			this.tabControl.Name = "tabControl";
 			this.tabControl.SelectedIndex = 0;
@@ -664,217 +640,6 @@ namespace XstitchXcel
 			this.crtBlurOutputLbl.TabIndex = 10;
 			this.crtBlurOutputLbl.Text = "CRT Blur output file:";
 			// 
-			// inventoryTabPage
-			// 
-			this.inventoryTabPage.Controls.Add(this.openBtn);
-			this.inventoryTabPage.Controls.Add(this.shoppingListGrp);
-			this.inventoryTabPage.Controls.Add(this.inventoryGrp);
-			this.inventoryTabPage.Controls.Add(this.inventoryOutTb);
-			this.inventoryTabPage.Controls.Add(this.inventoryFileSaveBtn);
-			this.inventoryTabPage.Controls.Add(this.inventoryFileBtn);
-			this.inventoryTabPage.Controls.Add(this.inventoryFileTb);
-			this.inventoryTabPage.Controls.Add(this.inventoryFileLbl);
-			this.inventoryTabPage.Controls.Add(this.inventoryInstructionsTb);
-			this.inventoryTabPage.Location = new System.Drawing.Point(4, 24);
-			this.inventoryTabPage.Name = "inventoryTabPage";
-			this.inventoryTabPage.Padding = new System.Windows.Forms.Padding(3);
-			this.inventoryTabPage.Size = new System.Drawing.Size(693, 306);
-			this.inventoryTabPage.TabIndex = 5;
-			this.inventoryTabPage.Text = "Inventory";
-			this.inventoryTabPage.UseVisualStyleBackColor = true;
-			// 
-			// openBtn
-			// 
-			this.openBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.openBtn.Location = new System.Drawing.Point(612, 68);
-			this.openBtn.Name = "openBtn";
-			this.openBtn.Size = new System.Drawing.Size(75, 23);
-			this.openBtn.TabIndex = 5;
-			this.openBtn.Text = "Open";
-			this.openBtn.UseVisualStyleBackColor = true;
-			this.openBtn.Click += new System.EventHandler(this.openBtn_Click);
-			// 
-			// shoppingListGrp
-			// 
-			this.shoppingListGrp.Controls.Add(this.shoppingListAddTb);
-			this.shoppingListGrp.Controls.Add(this.shoppingListAddBtn);
-			this.shoppingListGrp.Controls.Add(this.shoppingListRemoveTb);
-			this.shoppingListGrp.Controls.Add(this.shoppingListRemoveBtn);
-			this.shoppingListGrp.Location = new System.Drawing.Point(211, 98);
-			this.shoppingListGrp.Name = "shoppingListGrp";
-			this.shoppingListGrp.Size = new System.Drawing.Size(197, 113);
-			this.shoppingListGrp.TabIndex = 7;
-			this.shoppingListGrp.TabStop = false;
-			this.shoppingListGrp.Text = "Shopping List";
-			// 
-			// shoppingListAddTb
-			// 
-			this.shoppingListAddTb.Location = new System.Drawing.Point(6, 22);
-			this.shoppingListAddTb.Name = "shoppingListAddTb";
-			this.shoppingListAddTb.Size = new System.Drawing.Size(100, 23);
-			this.shoppingListAddTb.TabIndex = 1;
-			this.shoppingListAddTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.shoppingListAddTb_KeyPress);
-			// 
-			// shoppingListAddBtn
-			// 
-			this.shoppingListAddBtn.Location = new System.Drawing.Point(112, 21);
-			this.shoppingListAddBtn.Name = "shoppingListAddBtn";
-			this.shoppingListAddBtn.Size = new System.Drawing.Size(75, 23);
-			this.shoppingListAddBtn.TabIndex = 2;
-			this.shoppingListAddBtn.Text = "Add";
-			this.shoppingListAddBtn.UseVisualStyleBackColor = true;
-			this.shoppingListAddBtn.Click += new System.EventHandler(this.shoppingListAddBtn_Click);
-			// 
-			// shoppingListRemoveTb
-			// 
-			this.shoppingListRemoveTb.Location = new System.Drawing.Point(6, 51);
-			this.shoppingListRemoveTb.Name = "shoppingListRemoveTb";
-			this.shoppingListRemoveTb.Size = new System.Drawing.Size(100, 23);
-			this.shoppingListRemoveTb.TabIndex = 3;
-			this.shoppingListRemoveTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.shoppingListRemoveTb_KeyPress);
-			// 
-			// shoppingListRemoveBtn
-			// 
-			this.shoppingListRemoveBtn.Location = new System.Drawing.Point(112, 50);
-			this.shoppingListRemoveBtn.Name = "shoppingListRemoveBtn";
-			this.shoppingListRemoveBtn.Size = new System.Drawing.Size(75, 23);
-			this.shoppingListRemoveBtn.TabIndex = 4;
-			this.shoppingListRemoveBtn.Text = "Remove";
-			this.shoppingListRemoveBtn.UseVisualStyleBackColor = true;
-			this.shoppingListRemoveBtn.Click += new System.EventHandler(this.shoppingListRemoveBtn_Click);
-			// 
-			// inventoryGrp
-			// 
-			this.inventoryGrp.Controls.Add(this.inventoryAddTb);
-			this.inventoryGrp.Controls.Add(this.inventoryAddLBtn);
-			this.inventoryGrp.Controls.Add(this.inventoryRemoveTb);
-			this.inventoryGrp.Controls.Add(this.inventoryRemoveBtn);
-			this.inventoryGrp.Controls.Add(this.inventorySearchTb);
-			this.inventoryGrp.Controls.Add(this.inventorySearchBtn);
-			this.inventoryGrp.Location = new System.Drawing.Point(6, 98);
-			this.inventoryGrp.Name = "inventoryGrp";
-			this.inventoryGrp.Size = new System.Drawing.Size(199, 113);
-			this.inventoryGrp.TabIndex = 6;
-			this.inventoryGrp.TabStop = false;
-			this.inventoryGrp.Text = "Inventory";
-			// 
-			// inventoryAddTb
-			// 
-			this.inventoryAddTb.Location = new System.Drawing.Point(6, 22);
-			this.inventoryAddTb.Name = "inventoryAddTb";
-			this.inventoryAddTb.Size = new System.Drawing.Size(100, 23);
-			this.inventoryAddTb.TabIndex = 1;
-			this.inventoryAddTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryAddTb_KeyPress);
-			// 
-			// inventoryAddLBtn
-			// 
-			this.inventoryAddLBtn.Location = new System.Drawing.Point(112, 21);
-			this.inventoryAddLBtn.Name = "inventoryAddLBtn";
-			this.inventoryAddLBtn.Size = new System.Drawing.Size(75, 23);
-			this.inventoryAddLBtn.TabIndex = 2;
-			this.inventoryAddLBtn.Text = "Add";
-			this.inventoryAddLBtn.UseVisualStyleBackColor = true;
-			this.inventoryAddLBtn.Click += new System.EventHandler(this.inventoryAddLBtn_Click);
-			// 
-			// inventoryRemoveTb
-			// 
-			this.inventoryRemoveTb.Location = new System.Drawing.Point(6, 51);
-			this.inventoryRemoveTb.Name = "inventoryRemoveTb";
-			this.inventoryRemoveTb.Size = new System.Drawing.Size(100, 23);
-			this.inventoryRemoveTb.TabIndex = 3;
-			this.inventoryRemoveTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryRemoveTb_KeyPress);
-			// 
-			// inventoryRemoveBtn
-			// 
-			this.inventoryRemoveBtn.Location = new System.Drawing.Point(112, 50);
-			this.inventoryRemoveBtn.Name = "inventoryRemoveBtn";
-			this.inventoryRemoveBtn.Size = new System.Drawing.Size(75, 23);
-			this.inventoryRemoveBtn.TabIndex = 4;
-			this.inventoryRemoveBtn.Text = "Remove";
-			this.inventoryRemoveBtn.UseVisualStyleBackColor = true;
-			this.inventoryRemoveBtn.Click += new System.EventHandler(this.inventoryRemoveBtn_Click);
-			// 
-			// inventorySearchTb
-			// 
-			this.inventorySearchTb.Location = new System.Drawing.Point(6, 80);
-			this.inventorySearchTb.Name = "inventorySearchTb";
-			this.inventorySearchTb.Size = new System.Drawing.Size(100, 23);
-			this.inventorySearchTb.TabIndex = 5;
-			this.inventorySearchTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventorySearchTb_KeyPress);
-			// 
-			// inventorySearchBtn
-			// 
-			this.inventorySearchBtn.Location = new System.Drawing.Point(112, 79);
-			this.inventorySearchBtn.Name = "inventorySearchBtn";
-			this.inventorySearchBtn.Size = new System.Drawing.Size(75, 23);
-			this.inventorySearchBtn.TabIndex = 6;
-			this.inventorySearchBtn.Text = "Search";
-			this.inventorySearchBtn.UseVisualStyleBackColor = true;
-			this.inventorySearchBtn.Click += new System.EventHandler(this.inventorySearchBtn_Click);
-			// 
-			// inventoryOutTb
-			// 
-			this.inventoryOutTb.Location = new System.Drawing.Point(414, 107);
-			this.inventoryOutTb.Multiline = true;
-			this.inventoryOutTb.Name = "inventoryOutTb";
-			this.inventoryOutTb.ReadOnly = true;
-			this.inventoryOutTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.inventoryOutTb.Size = new System.Drawing.Size(273, 169);
-			this.inventoryOutTb.TabIndex = 8;
-			// 
-			// inventoryFileSaveBtn
-			// 
-			this.inventoryFileSaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.inventoryFileSaveBtn.Enabled = false;
-			this.inventoryFileSaveBtn.Location = new System.Drawing.Point(495, 68);
-			this.inventoryFileSaveBtn.Name = "inventoryFileSaveBtn";
-			this.inventoryFileSaveBtn.Size = new System.Drawing.Size(75, 23);
-			this.inventoryFileSaveBtn.TabIndex = 4;
-			this.inventoryFileSaveBtn.Text = "SAVE";
-			this.inventoryFileSaveBtn.UseVisualStyleBackColor = true;
-			this.inventoryFileSaveBtn.Click += new System.EventHandler(this.inventoryFileSaveBtn_Click);
-			// 
-			// inventoryFileBtn
-			// 
-			this.inventoryFileBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.inventoryFileBtn.Location = new System.Drawing.Point(457, 68);
-			this.inventoryFileBtn.Name = "inventoryFileBtn";
-			this.inventoryFileBtn.Size = new System.Drawing.Size(32, 23);
-			this.inventoryFileBtn.TabIndex = 3;
-			this.inventoryFileBtn.Text = "...";
-			this.inventoryFileBtn.UseVisualStyleBackColor = true;
-			this.inventoryFileBtn.Click += new System.EventHandler(this.inventoryFileBtn_Click);
-			// 
-			// inventoryFileTb
-			// 
-			this.inventoryFileTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.inventoryFileTb.Location = new System.Drawing.Point(40, 69);
-			this.inventoryFileTb.Name = "inventoryFileTb";
-			this.inventoryFileTb.Size = new System.Drawing.Size(411, 23);
-			this.inventoryFileTb.TabIndex = 2;
-			this.inventoryFileTb.TextChanged += new System.EventHandler(this.inventoryFileTb_TextChanged);
-			// 
-			// inventoryFileLbl
-			// 
-			this.inventoryFileLbl.AutoSize = true;
-			this.inventoryFileLbl.Location = new System.Drawing.Point(6, 72);
-			this.inventoryFileLbl.Name = "inventoryFileLbl";
-			this.inventoryFileLbl.Size = new System.Drawing.Size(28, 15);
-			this.inventoryFileLbl.TabIndex = 1;
-			this.inventoryFileLbl.Text = "File:";
-			// 
-			// inventoryInstructionsTb
-			// 
-			this.inventoryInstructionsTb.Location = new System.Drawing.Point(6, 6);
-			this.inventoryInstructionsTb.Multiline = true;
-			this.inventoryInstructionsTb.Name = "inventoryInstructionsTb";
-			this.inventoryInstructionsTb.ReadOnly = true;
-			this.inventoryInstructionsTb.Size = new System.Drawing.Size(681, 57);
-			this.inventoryInstructionsTb.TabIndex = 0;
-			this.inventoryInstructionsTb.Text = "Inventory is kept in spreadsheet for easy sharing.\r\nInventory: Add/remove colors." +
-    " Search.\r\nShopping list: Add/remove. View.";
-			// 
 			// Form1
 			// 
 			this.AllowDrop = true;
@@ -904,12 +669,6 @@ namespace XstitchXcel
 			((System.ComponentModel.ISupportInitialize)(this.oldColorPb)).EndInit();
 			this.crtBlurTabPage.ResumeLayout(false);
 			this.crtBlurTabPage.PerformLayout();
-			this.inventoryTabPage.ResumeLayout(false);
-			this.inventoryTabPage.PerformLayout();
-			this.shoppingListGrp.ResumeLayout(false);
-			this.shoppingListGrp.PerformLayout();
-			this.inventoryGrp.ResumeLayout(false);
-			this.inventoryGrp.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -964,26 +723,6 @@ namespace XstitchXcel
 		private System.Windows.Forms.ComboBox statsUnitCb;
 		private System.Windows.Forms.NumericUpDown statsCountNum;
 		private System.Windows.Forms.Label statsCountLbl;
-		private System.Windows.Forms.TabPage inventoryTabPage;
-		private System.Windows.Forms.Button inventoryFileBtn;
-		private System.Windows.Forms.TextBox inventoryFileTb;
-		private System.Windows.Forms.Label inventoryFileLbl;
-		private System.Windows.Forms.TextBox inventoryInstructionsTb;
-		private System.Windows.Forms.Button inventoryFileSaveBtn;
-		private System.Windows.Forms.Button inventoryAddLBtn;
-		private System.Windows.Forms.TextBox inventoryAddTb;
-		private System.Windows.Forms.TextBox inventoryOutTb;
-		private System.Windows.Forms.Button inventorySearchBtn;
-		private System.Windows.Forms.TextBox inventorySearchTb;
-		private System.Windows.Forms.Button inventoryRemoveBtn;
-		private System.Windows.Forms.TextBox inventoryRemoveTb;
-		private System.Windows.Forms.GroupBox shoppingListGrp;
-		private System.Windows.Forms.TextBox shoppingListAddTb;
-		private System.Windows.Forms.Button shoppingListAddBtn;
-		private System.Windows.Forms.TextBox shoppingListRemoveTb;
-		private System.Windows.Forms.Button shoppingListRemoveBtn;
-		private System.Windows.Forms.GroupBox inventoryGrp;
-		private System.Windows.Forms.Button openBtn;
 	}
 }
 
