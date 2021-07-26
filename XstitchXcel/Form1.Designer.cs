@@ -506,7 +506,7 @@ namespace XstitchXcel
 			this.beginColorReplaceBtn.Location = new System.Drawing.Point(530, 280);
 			this.beginColorReplaceBtn.Name = "beginColorReplaceBtn";
 			this.beginColorReplaceBtn.Size = new System.Drawing.Size(160, 23);
-			this.beginColorReplaceBtn.TabIndex = 7;
+			this.beginColorReplaceBtn.TabIndex = 4;
 			this.beginColorReplaceBtn.Text = "Begin color replace";
 			this.beginColorReplaceBtn.UseVisualStyleBackColor = true;
 			this.beginColorReplaceBtn.Click += new System.EventHandler(this.beginColorReplaceBtn_Click);
@@ -528,7 +528,7 @@ namespace XstitchXcel
 			this.newColorTb.Location = new System.Drawing.Point(81, 243);
 			this.newColorTb.Name = "newColorTb";
 			this.newColorTb.Size = new System.Drawing.Size(100, 23);
-			this.newColorTb.TabIndex = 5;
+			this.newColorTb.TabIndex = 3;
 			this.newColorTb.TextChanged += new System.EventHandler(this.newColorTb_TextChanged);
 			this.newColorTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.newColorTb_KeyPress);
 			// 
@@ -559,7 +559,7 @@ namespace XstitchXcel
 			this.oldColorTb.Location = new System.Drawing.Point(81, 214);
 			this.oldColorTb.Name = "oldColorTb";
 			this.oldColorTb.Size = new System.Drawing.Size(100, 23);
-			this.oldColorTb.TabIndex = 2;
+			this.oldColorTb.TabIndex = 1;
 			this.oldColorTb.TextChanged += new System.EventHandler(this.oldColorTb_TextChanged);
 			this.oldColorTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.oldColorTb_KeyPress);
 			// 
@@ -580,7 +580,7 @@ namespace XstitchXcel
 			this.replaceColorBakCb.Location = new System.Drawing.Point(3, 189);
 			this.replaceColorBakCb.Name = "replaceColorBakCb";
 			this.replaceColorBakCb.Size = new System.Drawing.Size(234, 19);
-			this.replaceColorBakCb.TabIndex = 2;
+			this.replaceColorBakCb.TabIndex = 0;
 			this.replaceColorBakCb.Text = "Back up my file before making changes";
 			this.replaceColorBakCb.UseVisualStyleBackColor = true;
 			// 
