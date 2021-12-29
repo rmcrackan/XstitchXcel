@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dinah.Core.Windows.Forms;
+using Dinah.Core.Threading;
 
 namespace XstitchXcelWinFormsLib
 {
@@ -62,7 +62,7 @@ namespace XstitchXcelWinFormsLib
 
 				enableUI();
 
-				settings?.Focus?.UIThread(() => {
+				settings?.Focus?.UIThreadAsync(() => {
 					var control = settings.Focus;
 					if (control is TextBoxBase tb)
 						tb.SelectAll();

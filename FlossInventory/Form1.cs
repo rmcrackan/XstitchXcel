@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dinah.Core.Windows.Forms;
+using Dinah.Core.Threading;
 using XstitchXcelLib;
 using XstitchXcelLib.Config;
 using XstitchXcelLib.DataClasses;
@@ -195,6 +195,6 @@ namespace FlossInventory
 		private Inventory getInventory() => new Inventory(this.inventoryFileTb.Text);
 
 		private void inventoryOutWriteLine(string str)
-			=> inventoryOutTb.UIThread(() => inventoryOutTb.AppendText($"{str}\r\n"));
+			=> inventoryOutTb.UIThreadSync(() => inventoryOutTb.AppendText($"{str}\r\n"));
 	}
 }

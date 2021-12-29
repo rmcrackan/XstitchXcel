@@ -2,15 +2,16 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon />
-    <StartupObject />
+    <TargetFramework>net6.0-windows</TargetFramework>
+	<UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Dinah.Core\Dinah.Core.WindowsDesktop\Dinah.Core.WindowsDesktop.csproj" />
-    <ProjectReference Include="..\XstitchXcelLib\XstitchXcelLib.csproj" />
+    <PackageReference Include="Dinah.Core.WindowsDesktop" Version="4.0.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <ProjectReference Include="..\XstitchXcelLib\XstitchXcelLib.csproj" />
   </ItemGroup>
 
 </Project>
