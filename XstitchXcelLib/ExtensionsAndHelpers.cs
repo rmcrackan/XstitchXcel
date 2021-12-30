@@ -70,6 +70,21 @@ namespace XstitchXcelLib
 			=> Path.Combine(
 				Path.GetDirectoryName(fileName),
 				$"{Path.GetFileNameWithoutExtension(fileName)}{suffix}{Path.GetExtension(fileName)}");
+
+		/// <summary>Regex version</summary>
+		public static IEnumerable<string> GetFiles(string path, string regexSearchPatternExpression = "", SearchOption searchOption = SearchOption.TopDirectoryOnly)
+		{
+			var reSearchPattern = new Regex(regexSearchPatternExpression, RegexOptions.IgnoreCase);
+			return Directory
+				.EnumerateFiles(path, "*", searchOption)
+				.Where(file => reSearchPattern.IsMatch(Path.GetExtension(file)));
+		}
+
+		/// <summary>Takes same patterns, and executes in parallel</summary>
+		public static IEnumerable<string> GetFiles(string path, IEnumerable<string> searchPatterns, SearchOption searchOption = SearchOption.TopDirectoryOnly)
+			=> searchPatterns
+				.AsParallel()
+				.SelectMany(searchPattern => Directory.EnumerateFiles(path, searchPattern, searchOption));
 	}
 
 	public static class ExtensionMethods

@@ -237,6 +237,26 @@ namespace XstitchXcel
 				: "Non-DMC";
 		}
 
+		#region Batch Convert
+		private void batchConvertSourceBtn_Click(object sender, EventArgs e)
+		{
+			var dialog = new FolderBrowserDialog { ShowNewFolderButton = true };
+
+			if (dialog.ShowDialog() == DialogResult.OK)
+				batchConvertSourceTb.Text = dialog.SelectedPath;
+		}
+
+		private void batchConvertDestinationBtn_Click(object sender, EventArgs e)
+		{
+			var dialog = new FolderBrowserDialog { ShowNewFolderButton = true };
+
+			if (dialog.ShowDialog() == DialogResult.OK)
+				batchConvertDestinationTb.Text = dialog.SelectedPath;
+		}
+
+		private async void batchConvertStart_Click(object sender, EventArgs e) => await RunFullAsync(() => new BatchConvert(batchConvertSourceTb.Text, batchConvertDestinationTb.Text).Start());
+		#endregion
+
 		#region tab: CRT Blur
 		private void crtBlurOutputBtn_Click(object sender, EventArgs e)
 		{
@@ -269,6 +289,6 @@ namespace XstitchXcel
 
 			crtBlurer.SaveToFile();
 		}
-		#endregion
-	}
+        #endregion
+    }
 }

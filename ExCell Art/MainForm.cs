@@ -16,12 +16,14 @@ namespace ExCell_Art
 
         private void imageBtn_Click(object sender, EventArgs e)
         {
+            var types = SupportedImageFormats.GetDelimited();
+
             var openFileDialog = new OpenFileDialog
             {
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
                 Title = "ExCell Art generator",
                 FileName = "",
-                Filter = "Image Files(*.bmp; *.jpg; *.gif; *.png;)| *.bmp; *.jpg; *.gif; *.png;",
+                Filter = $"Image Files({types})|{types}",
                 CheckFileExists = true,
                 CheckPathExists = true
             };
