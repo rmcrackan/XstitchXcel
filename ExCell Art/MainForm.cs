@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+// originally from https://github.com/JamesMatchett/ExCell-Art-Generator
+// heavily adapted
 using System.ComponentModel;
-using System.Linq;
-using System.Windows.Forms;
+using XstitchXcelLib;
 
 namespace ExCell_Art
 {
@@ -17,30 +16,30 @@ namespace ExCell_Art
 
         private void imageBtn_Click(object sender, EventArgs e)
         {
-			var openFileDialog = new OpenFileDialog
-			{
-				InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
-				Title = "ExCell Art generator",
-				FileName = "",
-				Filter = "Image Files(*.BMP; *.JPG; *.GIF; *.PNG;)| *.BMP; *.JPG; *.GIF; *.PNG;",
-				CheckFileExists = true,
-				CheckPathExists = true
-			};
+            var openFileDialog = new OpenFileDialog
+            {
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                Title = "ExCell Art generator",
+                FileName = "",
+                Filter = "Image Files(*.bmp; *.jpg; *.gif; *.png;)| *.bmp; *.jpg; *.gif; *.png;",
+                CheckFileExists = true,
+                CheckPathExists = true
+            };
             openFileDialog.FileOk += (_, __) => InputName.Text = imagePath = openFileDialog.FileName;
             openFileDialog.ShowDialog();
         }
 
         private void outputBtn_Click(object sender, EventArgs e)
         {
-			var saveFileDialog = new SaveFileDialog
-			{
-				InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
-				CheckPathExists = true,
-				Filter = "Excel (*.xlsx)|*.xlsx",
+            var saveFileDialog = new SaveFileDialog
+            {
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                CheckPathExists = true,
+                Filter = "Excel (*.xlsx)|*.xlsx",
                 DefaultExt = ".xlsx",
                 AddExtension = true
-			};
-			saveFileDialog.FileOk += (_,__) => OutputPathLabel.Text = outputPath = saveFileDialog.FileName;
+            };
+            saveFileDialog.FileOk += (_, __) => OutputPathLabel.Text = outputPath = saveFileDialog.FileName;
             saveFileDialog.ShowDialog();
         }
 
@@ -62,47 +61,42 @@ namespace ExCell_Art
 
             artMaker = new ArtMaker(imagePath, outputPath);
             artMaker.bw.ProgressChanged += bw_ProgressChanged;
-            artMaker.Start();
+            artMaker.StartAsync();
         }
 
-		//for estimated time to completion counter
-		DateTime lastPercentageTime = DateTime.Now;
+        //for estimated time to completion counter
+        DateTime lastPercentageTime = DateTime.Now;
         decimal lastPercentageValue = 0;
         List<decimal> averageTimeFor1Percent { get; } = new List<decimal>();
 
         private void bw_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            //if not initiliased, or percentage has not increased since last execution
-            if (lastPercentageValue == 0 || e.ProgressPercentage == 0 || lastPercentageValue == e.ProgressPercentage)
+            var progress = e.ProgressPercentage;
+
+            // if not initiliased, or percentage has not increased since last execution
+            if (lastPercentageValue == 0 || progress == 0 || lastPercentageValue == progress)
             {
                 lastPercentageTime = DateTime.Now;
-                lastPercentageValue = e.ProgressPercentage;
+                lastPercentageValue = progress;
             }
             else
             {
-                var percentageDifference = e.ProgressPercentage - lastPercentageValue;
-                var timeDifference = DateTime.Now - lastPercentageTime;
+                var secondsRemaining = calcSecondsRemaining(progress);
 
-                //time for 1% = (1/percentageDifference * Time Difference)
-                var timeFor1Percent = (1 / percentageDifference) * Convert.ToDecimal(timeDifference.TotalSeconds);
-                averageTimeFor1Percent.Add(timeFor1Percent);
-
-                if (averageTimeFor1Percent.Count > 5)
-                    averageTimeFor1Percent.Remove(averageTimeFor1Percent.First());
-
-                //now multiply time for 1% by the percentage remianing e.g. 45% done would be 55% percent to go
-                decimal SecondsRemaining = (averageTimeFor1Percent.Average() * (100 - e.ProgressPercentage));
-                SecondsRemaining = Math.Floor(SecondsRemaining);
-
-                if (SecondsRemaining > 0)
+                if (secondsRemaining > 0)
                 {
-                    updateTimeRemaining(SecondsRemaining);
+                    updateTimeRemaining(secondsRemaining);
                     lastPercentageTime = DateTime.Now;
-                    lastPercentageValue = e.ProgressPercentage;
+                    lastPercentageValue = progress;
                 }
             }
 
-            int percentage = Convert.ToInt32(e.ProgressPercentage);
+            updateProgressBar(progress);
+        }
+
+        private void updateProgressBar(int progress)
+        {
+            int percentage = Convert.ToInt32(progress);
 
             progressBar.Value = Math.Min(percentage, 100);
 
@@ -114,13 +108,30 @@ namespace ExCell_Art
             }
         }
 
+        private decimal calcSecondsRemaining(int progress)
+        {
+            var percentageDifference = progress - lastPercentageValue;
+            var timeDifference = DateTime.Now - lastPercentageTime;
+
+            //time for 1% = (1/percentageDifference * Time Difference)
+            var timeFor1Percent = (1 / percentageDifference) * Convert.ToDecimal(timeDifference.TotalSeconds);
+            averageTimeFor1Percent.Add(timeFor1Percent);
+
+            if (averageTimeFor1Percent.Count > 5)
+                averageTimeFor1Percent.Remove(averageTimeFor1Percent.First());
+
+            //now multiply time for 1% by the percentage remianing e.g. 45% done would be 55% percent to go
+            decimal SecondsRemaining = (averageTimeFor1Percent.Average() * (100 - progress));
+            return Math.Floor(SecondsRemaining);
+        }
+
         private void updateTimeRemaining(decimal secondsRemaining) => TimeRemainingLabel.Text = ($"Time Remaining: {secondsRemaining} seconds");
 
         private void cancelBtn_Click(object sender, EventArgs e) => stop("Cancelled!");
 
         private void stop(string dialogMessage)
         {
-            artMaker.Stop();
+            artMaker.StopAsync();
 
             MessageBox.Show(dialogMessage);
 

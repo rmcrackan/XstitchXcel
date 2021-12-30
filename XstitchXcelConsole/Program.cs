@@ -31,7 +31,7 @@ namespace XstitchXcelConsole
 			//var api = EzApi.LoadPattern(patternInputFile);
 
 
-			//api.DiscoverNonDmcAllSprites();
+			//api.ReportNonDmc();
 
 
 			//var oldHex = "C00000"; // non dmc

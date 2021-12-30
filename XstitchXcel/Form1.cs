@@ -188,7 +188,7 @@ namespace XstitchXcel
 		#endregion
 
 		#region tab: Find DMC Colors
-		private async void findDmcColorsBtn_Click(object sender, EventArgs e) => await RunFullAsync(() => new PatternAnalyzer(getPattern()).DiscoverNonDmc());
+		private async void findDmcColorsBtn_Click(object sender, EventArgs e) => await RunFullAsync(() => new PatternAnalyzer(getPattern()).ReportNonDmc());
 		#endregion
 
 		#region tab: Replace Color

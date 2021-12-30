@@ -14,7 +14,7 @@ namespace XstitchXcelLib.Tools
 		public PatternAnalyzer(Pattern pattern) : base(pattern) => reportExportDirectory = Path.GetDirectoryName(pattern.InputFile);
 
 		/// <summary>create reports of non-DMC colors</summary>
-		public void DiscoverNonDmc()
+		public void ReportNonDmc()
 		{
 			Console.WriteLine(Pattern.Sprite);
 
@@ -29,7 +29,8 @@ namespace XstitchXcelLib.Tools
 			}
 
 			// only export to excel if there are unresolved dmc colors
-			using var writer = new Utilities.EzExcelWriter(getFileName(Pattern.Sprite));
+			var colorPickerOutputXlsx = HelperMethods.GetUniqueFileName(Path.Combine(reportExportDirectory, $"{Pattern.Sprite.Name} - color picker.xlsx"));
+			using var writer = new Utilities.EzExcelWriter(colorPickerOutputXlsx);
 			writer.WriteRow(Pattern.Sprite.Name);
 			writer.WriteRow("", "hex", "DMC", "R", "G", "B");
 
@@ -62,17 +63,6 @@ namespace XstitchXcelLib.Tools
 			Console.WriteLine();
 
 			return unmatchedColors;
-		}
-
-		private string getFileName(Sprite sprite)
-		{
-			const string lbl = "color picker";
-
-			// put these into new dir which we must 1st create
-			var colorPickerDir = Path.Combine(reportExportDirectory, lbl);
-			Directory.CreateDirectory(colorPickerDir);
-
-			return HelperMethods.GetUniqueFileName(Path.Combine(colorPickerDir, $"{lbl} - {sprite.Name}.xlsx"));
 		}
 
 		private static void printScores(Utilities.EzExcelWriter writer, Color unmatchedColor, Func<Color, List<DmcColor>> fn, string prefix, int takeCount)

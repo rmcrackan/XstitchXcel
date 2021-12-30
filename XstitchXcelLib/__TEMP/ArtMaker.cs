@@ -2,11 +2,12 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Threading.Tasks;
+
 using Excel = Microsoft.Office.Interop.Excel;
 
 // originally from https://github.com/JamesMatchett/ExCell-Art-Generator
 // heavily adapted
-namespace ExCell_Art
+namespace XstitchXcelLib
 {
     public class ArtMaker
     {
@@ -31,19 +32,29 @@ namespace ExCell_Art
             bw.DoWork += bw_makeArt;
         }
 
-        public void Start() => bw.RunWorkerAsync();
+        public void StartAsync() => bw.RunWorkerAsync();
+        public void StartSync() => bw_makeArt(null, null);
 
-        public void Stop()
+        public void StopAsync()
         {
             quitting = true;
             bw.CancelAsync();
             bw.Dispose();
         }
 
+        // these seemingly intuitive ways of loading an image will lock the file
+        // - with a stream
+        // - Image.FromFile()
+        // use this method instead: https://stackoverflow.com/a/8701772
+        public static Bitmap ToImage(string filepath)
+        {
+            using var bmpTemp = new Bitmap(filepath);
+            return new Bitmap(bmpTemp);
+        }
+
         private void bw_makeArt(object sender, EventArgs e)
         {
-            //read input image
-            Bitmap bm = new Bitmap(_imagePath);
+            var bitmap = ToImage(_imagePath);
 
             //create a new excel document
             Excel.Workbook xlWorkbook = xlApp.Workbooks.Add();
@@ -54,14 +65,14 @@ namespace ExCell_Art
             var xlRange = xlWorksheet.UsedRange;
 
             //assign it here rather than in the for loop to avoid multithreading calamities
-            var width = bm.Width;
-            var height = bm.Height;
+            var width = bitmap.Width;
+            var height = bitmap.Height;
 
             // using 'float' here avoids casts when calc'ing %
             float totalPixels = width * height;
-            int pixelCounter = 0;
+            var pixelCounter = 0;
 
-            object locker = new object();
+            var locker = new object();
 
             //i = across, j = up, image coordinates start from bottom left corner whereas excel starts from top left
             Parallel.For(0, height, (j, loopState) =>
@@ -72,8 +83,9 @@ namespace ExCell_Art
                         break;
 
                     Color color;
+                    // even though file access is safe, the GDI+ object isn't threadsafe
                     lock (locker)
-                        color = bm.GetPixel(i, j);
+                        color = bitmap.GetPixel(i, j);
 
                     var cell = xlRange.Cells[j + 1, i + 1];
 
