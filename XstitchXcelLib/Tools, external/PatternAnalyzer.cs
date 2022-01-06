@@ -19,7 +19,7 @@ namespace XstitchXcelLib.Tools
 			Console.WriteLine(Pattern.Sprite);
 
 			// print all colors contained in sprite. get unmatched colors
-			var unmatchedColors = getUnmatchedColors(Pattern.Sprite);
+			var unmatchedColors = NonDmcColors();
 
 			if (!unmatchedColors.Any())
 			{
@@ -49,11 +49,11 @@ namespace XstitchXcelLib.Tools
 			}
 		}
 
-		private List<Color> getUnmatchedColors(Sprite sprite)
+		public List<Color> NonDmcColors()
 		{
 			var unmatchedColors = new List<Color>();
 
-			foreach (var (clr, cnt) in sprite.Pixels.GetColorsAndCounts())
+			foreach (var (clr, cnt) in Pattern.Sprite.Pixels.GetColorsAndCounts())
 			{
 				if (!DmcColorProcessor.TryGetMatch(clr, out var dmcMatch))
 					unmatchedColors.Add(clr);

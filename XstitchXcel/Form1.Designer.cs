@@ -83,21 +83,21 @@ namespace XstitchXcel
             this.oldColorNaiveTb = new System.Windows.Forms.TextBox();
             this.oldColorNaiveLbl = new System.Windows.Forms.Label();
             this.replaceColorNaiveBakCb = new System.Windows.Forms.CheckBox();
+            this.batchConvertTabPage = new System.Windows.Forms.TabPage();
+            this.batchConvertStart = new System.Windows.Forms.Button();
+            this.batchConvertDestinationBtn = new System.Windows.Forms.Button();
+            this.batchConvertDestinationTb = new System.Windows.Forms.TextBox();
+            this.batchConvertDestinationLbl = new System.Windows.Forms.Label();
+            this.batchConvertSourceBtn = new System.Windows.Forms.Button();
+            this.batchConvertSourceTb = new System.Windows.Forms.TextBox();
+            this.batchConvertSourceLbl = new System.Windows.Forms.Label();
+            this.batchConvertInstructionsTb = new System.Windows.Forms.TextBox();
             this.crtBlurTabPage = new System.Windows.Forms.TabPage();
             this.crtBlurInstructionsTb = new System.Windows.Forms.TextBox();
             this.createCrtBlurBtn = new System.Windows.Forms.Button();
             this.crtBlurOutputBtn = new System.Windows.Forms.Button();
             this.crtBlurOutputTb = new System.Windows.Forms.TextBox();
             this.crtBlurOutputLbl = new System.Windows.Forms.Label();
-            this.batchConvertTabPage = new System.Windows.Forms.TabPage();
-            this.batchConvertInstructionsTb = new System.Windows.Forms.TextBox();
-            this.batchConvertSourceBtn = new System.Windows.Forms.Button();
-            this.batchConvertSourceTb = new System.Windows.Forms.TextBox();
-            this.batchConvertSourceLbl = new System.Windows.Forms.Label();
-            this.batchConvertDestinationBtn = new System.Windows.Forms.Button();
-            this.batchConvertDestinationTb = new System.Windows.Forms.TextBox();
-            this.batchConvertDestinationLbl = new System.Windows.Forms.Label();
-            this.batchConvertStart = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.createPatternTabPage.SuspendLayout();
             this.statsTabPage.SuspendLayout();
@@ -110,8 +110,8 @@ namespace XstitchXcel
             this.replaceColorNaiveTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newColorNaivePb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oldColorNaivePb)).BeginInit();
-            this.crtBlurTabPage.SuspendLayout();
             this.batchConvertTabPage.SuspendLayout();
+            this.crtBlurTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // fileNameLbl
@@ -736,6 +736,111 @@ namespace XstitchXcel
             this.replaceColorNaiveBakCb.Text = "Back up my file before making changes";
             this.replaceColorNaiveBakCb.UseVisualStyleBackColor = true;
             // 
+            // batchConvertTabPage
+            // 
+            this.batchConvertTabPage.Controls.Add(this.batchConvertStart);
+            this.batchConvertTabPage.Controls.Add(this.batchConvertDestinationBtn);
+            this.batchConvertTabPage.Controls.Add(this.batchConvertDestinationTb);
+            this.batchConvertTabPage.Controls.Add(this.batchConvertDestinationLbl);
+            this.batchConvertTabPage.Controls.Add(this.batchConvertSourceBtn);
+            this.batchConvertTabPage.Controls.Add(this.batchConvertSourceTb);
+            this.batchConvertTabPage.Controls.Add(this.batchConvertSourceLbl);
+            this.batchConvertTabPage.Controls.Add(this.batchConvertInstructionsTb);
+            this.batchConvertTabPage.Location = new System.Drawing.Point(4, 24);
+            this.batchConvertTabPage.Name = "batchConvertTabPage";
+            this.batchConvertTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.batchConvertTabPage.Size = new System.Drawing.Size(693, 306);
+            this.batchConvertTabPage.TabIndex = 6;
+            this.batchConvertTabPage.Text = "Batch Convert";
+            this.batchConvertTabPage.UseVisualStyleBackColor = true;
+            // 
+            // batchConvertStart
+            // 
+            this.batchConvertStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.batchConvertStart.Location = new System.Drawing.Point(530, 279);
+            this.batchConvertStart.Name = "batchConvertStart";
+            this.batchConvertStart.Size = new System.Drawing.Size(160, 23);
+            this.batchConvertStart.TabIndex = 8;
+            this.batchConvertStart.Text = "Start Batch Convert";
+            this.batchConvertStart.UseVisualStyleBackColor = true;
+            this.batchConvertStart.Click += new System.EventHandler(this.batchConvertStart_Click);
+            // 
+            // batchConvertDestinationBtn
+            // 
+            this.batchConvertDestinationBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.batchConvertDestinationBtn.Location = new System.Drawing.Point(658, 206);
+            this.batchConvertDestinationBtn.Name = "batchConvertDestinationBtn";
+            this.batchConvertDestinationBtn.Size = new System.Drawing.Size(32, 23);
+            this.batchConvertDestinationBtn.TabIndex = 7;
+            this.batchConvertDestinationBtn.Text = "...";
+            this.batchConvertDestinationBtn.UseVisualStyleBackColor = true;
+            this.batchConvertDestinationBtn.Click += new System.EventHandler(this.batchConvertDestinationBtn_Click);
+            // 
+            // batchConvertDestinationTb
+            // 
+            this.batchConvertDestinationTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.batchConvertDestinationTb.Location = new System.Drawing.Point(115, 207);
+            this.batchConvertDestinationTb.Name = "batchConvertDestinationTb";
+            this.batchConvertDestinationTb.Size = new System.Drawing.Size(537, 23);
+            this.batchConvertDestinationTb.TabIndex = 6;
+            // 
+            // batchConvertDestinationLbl
+            // 
+            this.batchConvertDestinationLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.batchConvertDestinationLbl.AutoSize = true;
+            this.batchConvertDestinationLbl.Location = new System.Drawing.Point(3, 210);
+            this.batchConvertDestinationLbl.Name = "batchConvertDestinationLbl";
+            this.batchConvertDestinationLbl.Size = new System.Drawing.Size(84, 15);
+            this.batchConvertDestinationLbl.TabIndex = 5;
+            this.batchConvertDestinationLbl.Text = "Destination dir";
+            // 
+            // batchConvertSourceBtn
+            // 
+            this.batchConvertSourceBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.batchConvertSourceBtn.Location = new System.Drawing.Point(658, 177);
+            this.batchConvertSourceBtn.Name = "batchConvertSourceBtn";
+            this.batchConvertSourceBtn.Size = new System.Drawing.Size(32, 23);
+            this.batchConvertSourceBtn.TabIndex = 4;
+            this.batchConvertSourceBtn.Text = "...";
+            this.batchConvertSourceBtn.UseVisualStyleBackColor = true;
+            this.batchConvertSourceBtn.Click += new System.EventHandler(this.batchConvertSourceBtn_Click);
+            // 
+            // batchConvertSourceTb
+            // 
+            this.batchConvertSourceTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.batchConvertSourceTb.Location = new System.Drawing.Point(115, 178);
+            this.batchConvertSourceTb.Name = "batchConvertSourceTb";
+            this.batchConvertSourceTb.Size = new System.Drawing.Size(537, 23);
+            this.batchConvertSourceTb.TabIndex = 3;
+            // 
+            // batchConvertSourceLbl
+            // 
+            this.batchConvertSourceLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.batchConvertSourceLbl.AutoSize = true;
+            this.batchConvertSourceLbl.Location = new System.Drawing.Point(3, 182);
+            this.batchConvertSourceLbl.Name = "batchConvertSourceLbl";
+            this.batchConvertSourceLbl.Size = new System.Drawing.Size(60, 15);
+            this.batchConvertSourceLbl.TabIndex = 2;
+            this.batchConvertSourceLbl.Text = "Source dir";
+            // 
+            // batchConvertInstructionsTb
+            // 
+            this.batchConvertInstructionsTb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.batchConvertInstructionsTb.Location = new System.Drawing.Point(3, 3);
+            this.batchConvertInstructionsTb.Multiline = true;
+            this.batchConvertInstructionsTb.Name = "batchConvertInstructionsTb";
+            this.batchConvertInstructionsTb.ReadOnly = true;
+            this.batchConvertInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.batchConvertInstructionsTb.Size = new System.Drawing.Size(687, 168);
+            this.batchConvertInstructionsTb.TabIndex = 1;
+            this.batchConvertInstructionsTb.Text = "For all images in source dir:\r\n\r\n* copy to destination\r\n* convert to xlsx\r\n* extr" +
+    "act pattern/json file\r\n* match colors to nearest DMC\r\n* create cross stitch patt" +
+    "ern";
+            // 
             // crtBlurTabPage
             // 
             this.crtBlurTabPage.Controls.Add(this.crtBlurInstructionsTb);
@@ -808,110 +913,6 @@ namespace XstitchXcel
             this.crtBlurOutputLbl.TabIndex = 10;
             this.crtBlurOutputLbl.Text = "CRT Blur output file:";
             // 
-            // batchConvertTabPage
-            // 
-            this.batchConvertTabPage.Controls.Add(this.batchConvertStart);
-            this.batchConvertTabPage.Controls.Add(this.batchConvertDestinationBtn);
-            this.batchConvertTabPage.Controls.Add(this.batchConvertDestinationTb);
-            this.batchConvertTabPage.Controls.Add(this.batchConvertDestinationLbl);
-            this.batchConvertTabPage.Controls.Add(this.batchConvertSourceBtn);
-            this.batchConvertTabPage.Controls.Add(this.batchConvertSourceTb);
-            this.batchConvertTabPage.Controls.Add(this.batchConvertSourceLbl);
-            this.batchConvertTabPage.Controls.Add(this.batchConvertInstructionsTb);
-            this.batchConvertTabPage.Location = new System.Drawing.Point(4, 24);
-            this.batchConvertTabPage.Name = "batchConvertTabPage";
-            this.batchConvertTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.batchConvertTabPage.Size = new System.Drawing.Size(693, 306);
-            this.batchConvertTabPage.TabIndex = 6;
-            this.batchConvertTabPage.Text = "Batch Convert";
-            this.batchConvertTabPage.UseVisualStyleBackColor = true;
-            // 
-            // batchConvertInstructionsTb
-            // 
-            this.batchConvertInstructionsTb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertInstructionsTb.Location = new System.Drawing.Point(3, 3);
-            this.batchConvertInstructionsTb.Multiline = true;
-            this.batchConvertInstructionsTb.Name = "batchConvertInstructionsTb";
-            this.batchConvertInstructionsTb.ReadOnly = true;
-            this.batchConvertInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.batchConvertInstructionsTb.Size = new System.Drawing.Size(687, 168);
-            this.batchConvertInstructionsTb.TabIndex = 1;
-            this.batchConvertInstructionsTb.Text = "For all images in source dir:\r\n\r\n* copy to destination\r\n* convert to xlsx\r\n* extr" +
-    "act pattern/json file";
-            // 
-            // batchConvertSourceBtn
-            // 
-            this.batchConvertSourceBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertSourceBtn.Location = new System.Drawing.Point(658, 177);
-            this.batchConvertSourceBtn.Name = "batchConvertSourceBtn";
-            this.batchConvertSourceBtn.Size = new System.Drawing.Size(32, 23);
-            this.batchConvertSourceBtn.TabIndex = 4;
-            this.batchConvertSourceBtn.Text = "...";
-            this.batchConvertSourceBtn.UseVisualStyleBackColor = true;
-            this.batchConvertSourceBtn.Click += new System.EventHandler(this.batchConvertSourceBtn_Click);
-            // 
-            // batchConvertSourceTb
-            // 
-            this.batchConvertSourceTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertSourceTb.Location = new System.Drawing.Point(115, 178);
-            this.batchConvertSourceTb.Name = "batchConvertSourceTb";
-            this.batchConvertSourceTb.Size = new System.Drawing.Size(537, 23);
-            this.batchConvertSourceTb.TabIndex = 3;
-            // 
-            // batchConvertSourceLbl
-            // 
-            this.batchConvertSourceLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.batchConvertSourceLbl.AutoSize = true;
-            this.batchConvertSourceLbl.Location = new System.Drawing.Point(3, 182);
-            this.batchConvertSourceLbl.Name = "batchConvertSourceLbl";
-            this.batchConvertSourceLbl.Size = new System.Drawing.Size(60, 15);
-            this.batchConvertSourceLbl.TabIndex = 2;
-            this.batchConvertSourceLbl.Text = "Source dir";
-            // 
-            // batchConvertDestinationBtn
-            // 
-            this.batchConvertDestinationBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertDestinationBtn.Location = new System.Drawing.Point(658, 206);
-            this.batchConvertDestinationBtn.Name = "batchConvertDestinationBtn";
-            this.batchConvertDestinationBtn.Size = new System.Drawing.Size(32, 23);
-            this.batchConvertDestinationBtn.TabIndex = 7;
-            this.batchConvertDestinationBtn.Text = "...";
-            this.batchConvertDestinationBtn.UseVisualStyleBackColor = true;
-            this.batchConvertDestinationBtn.Click += new System.EventHandler(this.batchConvertDestinationBtn_Click);
-            // 
-            // batchConvertDestinationTb
-            // 
-            this.batchConvertDestinationTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertDestinationTb.Location = new System.Drawing.Point(115, 207);
-            this.batchConvertDestinationTb.Name = "batchConvertDestinationTb";
-            this.batchConvertDestinationTb.Size = new System.Drawing.Size(537, 23);
-            this.batchConvertDestinationTb.TabIndex = 6;
-            // 
-            // batchConvertDestinationLbl
-            // 
-            this.batchConvertDestinationLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.batchConvertDestinationLbl.AutoSize = true;
-            this.batchConvertDestinationLbl.Location = new System.Drawing.Point(3, 210);
-            this.batchConvertDestinationLbl.Name = "batchConvertDestinationLbl";
-            this.batchConvertDestinationLbl.Size = new System.Drawing.Size(84, 15);
-            this.batchConvertDestinationLbl.TabIndex = 5;
-            this.batchConvertDestinationLbl.Text = "Destination dir";
-            // 
-            // batchConvertStart
-            // 
-            this.batchConvertStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertStart.Location = new System.Drawing.Point(530, 279);
-            this.batchConvertStart.Name = "batchConvertStart";
-            this.batchConvertStart.Size = new System.Drawing.Size(160, 23);
-            this.batchConvertStart.TabIndex = 8;
-            this.batchConvertStart.Text = "Start Batch Convert";
-            this.batchConvertStart.UseVisualStyleBackColor = true;
-            this.batchConvertStart.Click += new System.EventHandler(this.batchConvertStart_Click);
-            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -943,10 +944,10 @@ namespace XstitchXcel
             this.replaceColorNaiveTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newColorNaivePb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oldColorNaivePb)).EndInit();
-            this.crtBlurTabPage.ResumeLayout(false);
-            this.crtBlurTabPage.PerformLayout();
             this.batchConvertTabPage.ResumeLayout(false);
             this.batchConvertTabPage.PerformLayout();
+            this.crtBlurTabPage.ResumeLayout(false);
+            this.crtBlurTabPage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

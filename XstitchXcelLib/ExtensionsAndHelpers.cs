@@ -66,6 +66,11 @@ namespace XstitchXcelLib
 			return output;
 		}
 
+		public static string AddFilePrefix(string fileName, string prefix)
+			=> Path.Combine(
+				Path.GetDirectoryName(fileName),
+				$"{prefix}{Path.GetFileNameWithoutExtension(fileName)}{Path.GetExtension(fileName)}");
+
 		public static string AddFileSuffix(string fileName, string suffix)
 			=> Path.Combine(
 				Path.GetDirectoryName(fileName),

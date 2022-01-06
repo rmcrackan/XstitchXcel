@@ -9,7 +9,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 // heavily adapted
 namespace XstitchXcelLib
 {
-    public class ArtMaker
+    public class ImageToExcel
     {
         public BackgroundWorker bw { get; } = new BackgroundWorker
         {
@@ -24,7 +24,7 @@ namespace XstitchXcelLib
 
         public Excel.Application xlApp = new Excel.Application();
 
-        public ArtMaker(string imagePath, string outputPath)
+        public ImageToExcel(string imagePath, string outputPath)
         {
             _imagePath = imagePath;
             _outputPath = outputPath;

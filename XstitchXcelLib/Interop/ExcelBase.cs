@@ -31,7 +31,7 @@ namespace XstitchXcelLib.Interop
 
 		protected ExcelBase(string fileName) : base(fileName)
 		{
-			app = Push(new Application { Visible = false });
+			app = Push(new Application { Visible = false, DisplayAlerts = false });
 			workbook = Push(GetWorkbook(Push(app.Workbooks)));
 
 			// get first sheet

@@ -1,4 +1,5 @@
 ﻿using XstitchXcelLib.Config;
+using XstitchXcelLib.DataClasses;
 
 namespace XstitchXcelLib.Tools
 {
@@ -28,7 +29,10 @@ namespace XstitchXcelLib.Tools
         {
             var img = await Task.Run(() => copyImage(source));
             var xlsx = await Task.Run(() => image2Xlsx(img));
-            await Task.Run(() => xlsx2Pattern(xlsx));
+            var pattern = await Task.Run(() => xlsx2Pattern(xlsx));
+            await Task.Run(() => matchToDmcColors(pattern));
+            await Task.Run(() => createPattern(pattern));
+            await Task.Run(() => cleanUpFiles(pattern));
         }
 
         private string copyImage(string source)
@@ -41,17 +45,57 @@ namespace XstitchXcelLib.Tools
         private string image2Xlsx(string img)
         {
             var xlsx = Path.Combine(destDir, Path.GetFileNameWithoutExtension(img) + ".xlsx");
-            new ArtMaker(img, xlsx).StartSync();
+            new ImageToExcel(img, xlsx).StartSync();
             return xlsx;
         }
 
-        private void xlsx2Pattern(string xlsx)
+        private Pattern xlsx2Pattern(string xlsx)
         {
             // back up the original
-            var newFile = HelperMethods.AddFileSuffix(xlsx, " - original");
+            var newFile = HelperMethods.AddFilePrefix(xlsx, "___original - ");
             File.Copy(xlsx, Path.Combine(Path.GetDirectoryName(xlsx), newFile), true);
 
-            var pattern = Configuration.GetPattern(xlsx);
+            return Configuration.GetPattern(xlsx);
+        }
+
+        private DmcColorProcessor DmcColorProcessor { get; } = new();
+        private void matchToDmcColors(Pattern pattern)
+        {
+            var unmatchedColors = new PatternAnalyzer(pattern).NonDmcColors();
+
+            if (!unmatchedColors.Any())
+                return;
+
+            var colorReplacer = new ColorReplacer(pattern);
+
+            foreach (var unmatchedColor in unmatchedColors)
+            {
+                var matchedColor = DmcColorProcessor.GetNearestNaive(unmatchedColor)
+                    .First()
+                    .Color;
+                colorReplacer.TargetedReplace(unmatchedColor, matchedColor);
+            }
+        }
+
+        private void createPattern(Pattern pattern)
+        {
+            var outputFile = HelperMethods.AddFilePrefix(pattern.InputFile, "_pattern - ");
+            var builder = new PatternBuilder(pattern)
+            {
+                OutputFile = outputFile,
+                // PrintColorsGrid = true
+            };
+            builder.ConvertToPattern();
+        }
+
+        private void cleanUpFiles(Pattern pattern)
+        {
+            var xlsxSource = pattern.InputFile;
+            var xlsxDestination = HelperMethods.AddFilePrefix(xlsxSource, "__dmc - ");
+            File.Move(xlsxSource, xlsxDestination);
+
+            var jsonSource = Path.ChangeExtension(xlsxSource, ".json");
+            File.Delete(jsonSource);
         }
     }
 }

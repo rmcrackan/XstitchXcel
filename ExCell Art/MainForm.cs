@@ -7,7 +7,7 @@ namespace ExCell_Art
 {
     public partial class MainForm : Form
     {
-        private ArtMaker artMaker;
+        private ImageToExcel artMaker;
 
         private string imagePath;
         private string outputPath;
@@ -61,7 +61,7 @@ namespace ExCell_Art
 
             start();
 
-            artMaker = new ArtMaker(imagePath, outputPath);
+            artMaker = new ImageToExcel(imagePath, outputPath);
             artMaker.bw.ProgressChanged += bw_ProgressChanged;
             artMaker.StartAsync();
         }
