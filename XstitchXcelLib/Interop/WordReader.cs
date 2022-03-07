@@ -15,10 +15,10 @@ namespace XstitchXcelLib.Interop
 		public WordReader(string fileName) : base(fileName) { }
 
 		public static string[] DISALLOWED_CHARS { get; } = new string[] { " ", "\r", "\n", "\t", "\v" };
-		public List<Symbol> GetSymbols()
+		public List<Glyph> GetGlyphs()
 		{
 			if (Document.Paragraphs.Count == 0)
-				return new List<Symbol>();
+				return new List<Glyph>();
 
 			return Document
 				// 1-based indexing: Paragraphs[1]
@@ -28,7 +28,7 @@ namespace XstitchXcelLib.Interop
 					p.Range.Characters
 					.Cast<Range>()
 					.Where(r => !DISALLOWED_CHARS.Contains(r.Text))
-					.Select(r => new Symbol
+					.Select(r => new Glyph
 					{
 						Character = r.Text,
 						FontName = r.Font.Name,

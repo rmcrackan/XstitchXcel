@@ -2,7 +2,7 @@
 
 namespace XstitchXcelLib.Config
 {
-	public class SymbolEntry
+	public class GlyphEntry
 	{
 		public int Utf32 { get; set; }
 

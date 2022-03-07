@@ -100,8 +100,8 @@ namespace XstitchXcel
 			{
 				OutputFile = patternOutputTb.Text,
 				PrintColorsGrid = colorsCb.Checked,
-				PrintSymbolsGrid = symbolsCb.Checked,
-				PrintColorsAndSymbolsGrid = colorsAndSymbolsCb.Checked,
+				PrintGlyphsGrid = glyphsCb.Checked,
+				PrintColorsAndGlyphsGrid = colorsAndGlyphsCb.Checked,
 			};
 
 			builder.ConvertToPattern();
@@ -181,9 +181,9 @@ namespace XstitchXcel
 				"cm" => (2.54, "cm"),
 				_ => throw new Exception()
 			};
-			(var multiplier, var symbol) = tuple;
+			(var multiplier, var abbrev) = tuple;
 
-			statsOutTb.Text = $"{sprite.Pixels.Count:n0} stitches  {heightInInches * multiplier:F2}h x {widthInInches * multiplier:F2}w {symbol}";
+			statsOutTb.Text = $"{sprite.Pixels.Count:n0} stitches  {heightInInches * multiplier:F2}h x {widthInInches * multiplier:F2}w {abbrev}";
 		}
 		#endregion
 

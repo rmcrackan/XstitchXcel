@@ -18,8 +18,8 @@ namespace XstitchXcelLib.Tools
 		public string OutputFile { get; set; }
 
 		public bool PrintColorsGrid { get; set; } = true;
-		public bool PrintSymbolsGrid { get; set; } = true;
-		public bool PrintColorsAndSymbolsGrid { get; set; } = true;
+		public bool PrintGlyphsGrid { get; set; } = true;
+		public bool PrintColorsAndGlyphsGrid { get; set; } = true;
 		public bool PrintLineNumbers { get; set; } = true;
 		public bool PrintGridLines { get; set; } = true;
 		public bool PrintArrowsAtMidpoints { get; set; } = true;
@@ -32,19 +32,19 @@ namespace XstitchXcelLib.Tools
 			if (pattern?.Sprite is null)
 				throw new NullReferenceException(nameof(pattern.Sprite));
 
-			if (pattern?.Symbols is null || pattern.Symbols.Count == 0)
-				throw new Exception("no symbols loaded");
+			if (pattern?.Glyphs is null || pattern.Glyphs.Count == 0)
+				throw new Exception("no glyphs loaded");
 		}
 
 		/// <summary>
-		/// Utility method to print colored design only. No pattern artifacts. eg: gridlines, arrows, symbols, legend
+		/// Utility method to print colored design only. No pattern artifacts. eg: gridlines, arrows, glyphs, legend
 		/// </summary>
 		public void PrintDesignOnly()
 		{
 			PrintColorsGrid = true;
 
-			PrintColorsAndSymbolsGrid = false;
-			PrintSymbolsGrid = false;
+			PrintColorsAndGlyphsGrid = false;
+			PrintGlyphsGrid = false;
 			PrintLineNumbers = false;
 			PrintGridLines = false;
 			PrintArrowsAtMidpoints = false;
@@ -60,7 +60,7 @@ namespace XstitchXcelLib.Tools
 			if (grids.Count < 1)
 				return;
 
-			var colorsAndSymbols = getSortedColorsAndSymbols();
+			var colorsAndGlyphs = getSortedColorsAndGlyphs();
 
 			// aka offset within the original picture from 0,0 (aka 1,1)
 			var location = Pattern.Sprite.Location;
@@ -91,7 +91,7 @@ namespace XstitchXcelLib.Tools
 			var bufferBeforeLegend = 1;
 
 			// legend:
-			//   2 columns for colors/symbols
+			//   2 columns for colors/glyphs
 			//   1 column DMC color # and name
 			var legendWidth = 3;
 
@@ -152,12 +152,12 @@ namespace XstitchXcelLib.Tools
 				//		break;
 				//	case 1:
 				//		writer.AddWorksheet();
-				//		writer.Worksheet.Name = "Symbols";
+				//		writer.Worksheet.Name = "Glyphs";
 				//		break;
 				//	case 2:
 				//	default:
 				//		writer.AddWorksheet();
-				//		writer.Worksheet.Name = "Colors and symbols";
+				//		writer.Worksheet.Name = "Colors and glyphs";
 				//		break;
 				//}
 
@@ -251,8 +251,8 @@ namespace XstitchXcelLib.Tools
 				//   col 3: DMC color # and name. align bottom left
 				// conditional grids:
 				//   grid 1: no changes
-				//   grid 2: col 1: symbols
-				//   grid 3: col 2: symbols. this will combine the color box and symbols
+				//   grid 2: col 1: glyphs
+				//   grid 3: col 2: glyphs. this will combine the color box and glyphs
 				if (PrintLegend)
 				{
 					var legendColBuffer = rightArrowBuffer + bufferBeforeLegend;
@@ -261,12 +261,12 @@ namespace XstitchXcelLib.Tools
 					var legendCol3 = legendColBuffer + 3;
 
 					// set all borders with 1 command per grid over entire range
-					var legendBorderedRange = writer.GetRange(contentRowOffset + 1, legendCol2, contentRowOffset + colorsAndSymbols.Count, legendCol2);
+					var legendBorderedRange = writer.GetRange(contentRowOffset + 1, legendCol2, contentRowOffset + colorsAndGlyphs.Count, legendCol2);
 					legendBorderedRange.DrawInternalBorders(2, XlLineStyle.xlContinuous);
 
-					for (var cs = 0; cs < colorsAndSymbols.Count; cs++)
+					for (var cs = 0; cs < colorsAndGlyphs.Count; cs++)
 					{
-						var (color, symbol) = colorsAndSymbols[cs];
+						var (color, glyph) = colorsAndGlyphs[cs];
 
 						var legendRowOffset = contentRowOffset + cs + 1;
 
@@ -275,14 +275,14 @@ namespace XstitchXcelLib.Tools
 						var legend3cell = writer.GetCell(legendRowOffset, legendCol3);
 
 						// column 1
-						if (grid.LegendSymbolsColumn1)
-							legend1cell.WriteSymbol(symbol);
+						if (grid.LegendGlyphsColumn1)
+							legend1cell.WriteGlyph(glyph);
 
 						// column 2
 						legend2cell.Interior.Color = color.ToOle();
-						if (grid.LegendSymbolsColumn2)
+						if (grid.LegendGlyphsColumn2)
 						{
-							legend2cell.WriteSymbol(symbol);
+							legend2cell.WriteGlyph(glyph);
 							legend2cell.EnsureTextContrast(color);
 						}
 
@@ -298,8 +298,8 @@ namespace XstitchXcelLib.Tools
 
 				// content
 				// grid 1 content: print pattern pixel colors
-				// grid 2 content: print pattern pixel symbols
-				// grid 3 content: print pattern pixel colors and symbols
+				// grid 2 content: print pattern pixel glyphs
+				// grid 3 content: print pattern pixel colors and glyphs
 				foreach (var p in Pattern.Sprite.Pixels.Where(p => !p.Color.IsTransparent()))
 				{
 					var row = p.RowNumber + contentRowOffset - location.Y + 1;
@@ -309,10 +309,10 @@ namespace XstitchXcelLib.Tools
 					if (grid.PatternColors)
 						cell.Interior.Color = p.Color.ToOle();
 
-					if (grid.PatternSymbols)
-						cell.WriteSymbol(colorsAndSymbols.Single(cs => p.Color.IsEquivalent(cs.Color)).Symbol);
+					if (grid.PatternGlyphs)
+						cell.WriteGlyph(colorsAndGlyphs.Single(cs => p.Color.IsEquivalent(cs.Color)).Glyph);
 
-					if (grid.PatternColors && grid.PatternSymbols)
+					if (grid.PatternColors && grid.PatternGlyphs)
 						cell.EnsureTextContrast(p.Color);
 				}
 			}
@@ -320,10 +320,10 @@ namespace XstitchXcelLib.Tools
 
 		record grid
 		{
-			public bool LegendSymbolsColumn1 { get; set; }
-			public bool LegendSymbolsColumn2 { get; set; }
+			public bool LegendGlyphsColumn1 { get; set; }
+			public bool LegendGlyphsColumn2 { get; set; }
 			public bool PatternColors { get; set; }
-			public bool PatternSymbols { get; set; }
+			public bool PatternGlyphs { get; set; }
 		}
 
 		private IEnumerable<grid> getGrids()
@@ -334,26 +334,26 @@ namespace XstitchXcelLib.Tools
 					PatternColors = true
 				};
 
-			if (PrintSymbolsGrid)
+			if (PrintGlyphsGrid)
 				yield return new grid
 				{
-					LegendSymbolsColumn1 = true,
-					PatternSymbols = true
+					LegendGlyphsColumn1 = true,
+					PatternGlyphs = true
 				};
 
-			if (PrintColorsAndSymbolsGrid)
+			if (PrintColorsAndGlyphsGrid)
 				yield return new grid
 				{
-					LegendSymbolsColumn2 = true,
+					LegendGlyphsColumn2 = true,
 					PatternColors = true,
-					PatternSymbols = true
+					PatternGlyphs = true
 				};
 		}
 
-		private List<(Color Color, Symbol Symbol)> getSortedColorsAndSymbols()
+		private List<(Color Color, Glyph Glyph)> getSortedColorsAndGlyphs()
 			=> DmcColorProcessor
 			.GetSortedColors(Pattern.Sprite.Pixels)
-			.Select((color, i) => (color, Pattern.Symbols[i]))
+			.Select((color, i) => (color, Pattern.Glyphs[i]))
 			.ToList();
 	}
 	public static class PatternBuilderExtMethods
@@ -365,17 +365,17 @@ namespace XstitchXcelLib.Tools
 				cell.Font.Color = WHITE_OLEDB;
 		}
 
-		public static void WriteSymbol(this Range cell, Symbol symbol)
+		public static void WriteGlyph(this Range cell, Glyph glyph)
 		{
-			cell.Value = symbol.Character;
+			cell.Value = glyph.Character;
 
-			if (cell.Font.Name != symbol.FontName) cell.Font.Name = symbol.FontName;
-			if (symbol.Bold) cell.Font.Bold = symbol.Bold;
-			if (symbol.Italic) cell.Font.Italic = symbol.Italic;
-			if (symbol.StrikeThrough) cell.Font.Strikethrough = symbol.StrikeThrough;
-			if (symbol.Subscript) cell.Font.Subscript = symbol.Subscript;
-			if (symbol.Superscript) cell.Font.Superscript = symbol.Superscript;
-			if (symbol.Underline) cell.Font.Underline = symbol.Underline;
+			if (cell.Font.Name != glyph.FontName) cell.Font.Name = glyph.FontName;
+			if (glyph.Bold) cell.Font.Bold = glyph.Bold;
+			if (glyph.Italic) cell.Font.Italic = glyph.Italic;
+			if (glyph.StrikeThrough) cell.Font.Strikethrough = glyph.StrikeThrough;
+			if (glyph.Subscript) cell.Font.Subscript = glyph.Subscript;
+			if (glyph.Superscript) cell.Font.Superscript = glyph.Superscript;
+			if (glyph.Underline) cell.Font.Underline = glyph.Underline;
 		}
 
 		public static void DrawAllEdgeBorders(this Range range, int weight, XlLineStyle lineStyle)

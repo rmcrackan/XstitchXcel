@@ -17,6 +17,6 @@ namespace XstitchXcelLib.Config
 		public DateTime DocxLastModified { get; set; }
 
 		public SpriteEntry Sprite = new();
-		public List<SymbolEntry> Symbols = new();
+		public List<GlyphEntry> Glyphs = new();
 	}
 }

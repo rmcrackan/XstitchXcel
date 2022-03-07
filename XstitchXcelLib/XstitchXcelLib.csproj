@@ -57,7 +57,7 @@
     <None Update="Config\dmc_colors.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Config\symbols.json">
+    <None Update="Config\glyphs.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="palettes\Damaniel.json">

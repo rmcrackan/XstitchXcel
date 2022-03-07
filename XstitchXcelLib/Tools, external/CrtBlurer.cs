@@ -92,8 +92,8 @@ namespace XstitchXcelLib.Tools
 
 			// build pattern
 			var pattern = new Pattern(Pattern.InputFile) { Sprite = sprite };
-			var defaultSymbols = Configuration.GetDefaultSymbolEntries().Select(se => Converters.ToSymbol(se));
-			pattern.Symbols.AddRange(defaultSymbols);
+			var defaultGlyphs = Configuration.GetDefaultGlyphEntries().Select(se => Converters.ToGlyph(se));
+			pattern.Glyphs.AddRange(defaultGlyphs);
 
 			var builder = new PatternBuilder(pattern) { OutputFile = OutputFile };
 			builder.PrintDesignOnly();

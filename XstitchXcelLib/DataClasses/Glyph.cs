@@ -2,7 +2,7 @@
 
 namespace XstitchXcelLib.DataClasses
 {
-	public record Symbol
+	public record Glyph
 	{
 		public string Character { get; init; }
 

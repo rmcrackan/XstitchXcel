@@ -8,30 +8,30 @@ namespace XstitchXcelLib.Config
 {
 	public static class Converters
 	{
-		public static Symbol ToSymbol(this SymbolEntry symbolEntry) => new()
+		public static Glyph ToGlyph(this GlyphEntry glyphEntry) => new()
 		{
-			FontName = symbolEntry.FontName,
-			Bold = symbolEntry.Bold,
-			Italic = symbolEntry.Italic,
-			StrikeThrough = symbolEntry.StrikeThrough,
-			Subscript = symbolEntry.Subscript,
-			Superscript = symbolEntry.Superscript,
-			Underline = symbolEntry.Underline,
-			Character = symbolEntry.GetCharacter()
+			FontName = glyphEntry.FontName,
+			Bold = glyphEntry.Bold,
+			Italic = glyphEntry.Italic,
+			StrikeThrough = glyphEntry.StrikeThrough,
+			Subscript = glyphEntry.Subscript,
+			Superscript = glyphEntry.Superscript,
+			Underline = glyphEntry.Underline,
+			Character = glyphEntry.GetCharacter()
 		};
-		public static SymbolEntry ToSymbolEntry(this Symbol symbol) => new()
+		public static GlyphEntry ToGlyphEntry(this Glyph glyph) => new()
 		{
-			FontName = symbol.FontName,
-			Bold = symbol.Bold,
-			Italic = symbol.Italic,
-			StrikeThrough = symbol.StrikeThrough,
-			Subscript = symbol.Subscript,
-			Superscript = symbol.Superscript,
-			Underline = symbol.Underline,
-			Utf32 = char.ConvertToUtf32(symbol.Character, 0)
+			FontName = glyph.FontName,
+			Bold = glyph.Bold,
+			Italic = glyph.Italic,
+			StrikeThrough = glyph.StrikeThrough,
+			Subscript = glyph.Subscript,
+			Superscript = glyph.Superscript,
+			Underline = glyph.Underline,
+			Utf32 = char.ConvertToUtf32(glyph.Character, 0)
 		};
 
-		public static List<SymbolEntry> ToSymbolEntries(this IEnumerable<Symbol> symbols) => symbols.Select(s => s.ToSymbolEntry()).ToList();
+		public static List<GlyphEntry> ToGlyphEntries(this IEnumerable<Glyph> glyphs) => glyphs.Select(s => s.ToGlyphEntry()).ToList();
 
 		public static Pixel ToPixel(this PixelEntry pixelEntry) => new()
 		{
@@ -60,7 +60,7 @@ namespace XstitchXcelLib.Config
 		public static Pattern ToPattern(this PatternEntry patternEntry) => new(patternEntry.InputFile)
 		{
 			Sprite = patternEntry.Sprite.ToSprite(),
-			Symbols = patternEntry.Symbols.Select(s => s.ToSymbol()).ToList()
+			Glyphs = patternEntry.Glyphs.Select(s => s.ToGlyph()).ToList()
 		};
 
 		public static DmcColor ToDmcColor(this DmcColorEntry dmcColorEntry) => new()

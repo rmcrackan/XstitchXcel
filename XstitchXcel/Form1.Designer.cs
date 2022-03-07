@@ -37,8 +37,8 @@ namespace XstitchXcel
             this.createPatternTabPage = new System.Windows.Forms.TabPage();
             this.createPatternInstructionsTb = new System.Windows.Forms.TextBox();
             this.createPatternBtn = new System.Windows.Forms.Button();
-            this.colorsAndSymbolsCb = new System.Windows.Forms.CheckBox();
-            this.symbolsCb = new System.Windows.Forms.CheckBox();
+            this.colorsAndGlyphsCb = new System.Windows.Forms.CheckBox();
+            this.glyphsCb = new System.Windows.Forms.CheckBox();
             this.colorsCb = new System.Windows.Forms.CheckBox();
             this.patternOutputBtn = new System.Windows.Forms.Button();
             this.patternOutputTb = new System.Windows.Forms.TextBox();
@@ -166,8 +166,8 @@ namespace XstitchXcel
             // 
             this.createPatternTabPage.Controls.Add(this.createPatternInstructionsTb);
             this.createPatternTabPage.Controls.Add(this.createPatternBtn);
-            this.createPatternTabPage.Controls.Add(this.colorsAndSymbolsCb);
-            this.createPatternTabPage.Controls.Add(this.symbolsCb);
+            this.createPatternTabPage.Controls.Add(this.colorsAndGlyphsCb);
+            this.createPatternTabPage.Controls.Add(this.glyphsCb);
             this.createPatternTabPage.Controls.Add(this.colorsCb);
             this.createPatternTabPage.Controls.Add(this.patternOutputBtn);
             this.createPatternTabPage.Controls.Add(this.patternOutputTb);
@@ -205,31 +205,31 @@ namespace XstitchXcel
             this.createPatternBtn.UseVisualStyleBackColor = true;
             this.createPatternBtn.Click += new System.EventHandler(this.createPatternBtn_Click);
             // 
-            // colorsAndSymbolsCb
+            // colorsAndGlyphsCb
             // 
-            this.colorsAndSymbolsCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.colorsAndSymbolsCb.AutoSize = true;
-            this.colorsAndSymbolsCb.Checked = true;
-            this.colorsAndSymbolsCb.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.colorsAndSymbolsCb.Location = new System.Drawing.Point(35, 261);
-            this.colorsAndSymbolsCb.Name = "colorsAndSymbolsCb";
-            this.colorsAndSymbolsCb.Size = new System.Drawing.Size(130, 19);
-            this.colorsAndSymbolsCb.TabIndex = 7;
-            this.colorsAndSymbolsCb.Text = "Colors and symbols";
-            this.colorsAndSymbolsCb.UseVisualStyleBackColor = true;
+            this.colorsAndGlyphsCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.colorsAndGlyphsCb.AutoSize = true;
+            this.colorsAndGlyphsCb.Checked = true;
+            this.colorsAndGlyphsCb.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.colorsAndGlyphsCb.Location = new System.Drawing.Point(35, 261);
+            this.colorsAndGlyphsCb.Name = "colorsAndGlyphsCb";
+            this.colorsAndGlyphsCb.Size = new System.Drawing.Size(130, 19);
+            this.colorsAndGlyphsCb.TabIndex = 7;
+            this.colorsAndGlyphsCb.Text = "Colors and symbols";
+            this.colorsAndGlyphsCb.UseVisualStyleBackColor = true;
             // 
-            // symbolsCb
+            // glyphsCb
             // 
-            this.symbolsCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.symbolsCb.AutoSize = true;
-            this.symbolsCb.Checked = true;
-            this.symbolsCb.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.symbolsCb.Location = new System.Drawing.Point(35, 236);
-            this.symbolsCb.Name = "symbolsCb";
-            this.symbolsCb.Size = new System.Drawing.Size(71, 19);
-            this.symbolsCb.TabIndex = 6;
-            this.symbolsCb.Text = "Symbols";
-            this.symbolsCb.UseVisualStyleBackColor = true;
+            this.glyphsCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.glyphsCb.AutoSize = true;
+            this.glyphsCb.Checked = true;
+            this.glyphsCb.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.glyphsCb.Location = new System.Drawing.Point(35, 236);
+            this.glyphsCb.Name = "glyphsCb";
+            this.glyphsCb.Size = new System.Drawing.Size(141, 19);
+            this.glyphsCb.TabIndex = 6;
+            this.glyphsCb.Text = "Symbols (aka: glyphs)";
+            this.glyphsCb.UseVisualStyleBackColor = true;
             // 
             // colorsCb
             // 
@@ -967,8 +967,8 @@ namespace XstitchXcel
 		private System.Windows.Forms.TextBox patternOutputTb;
 		private System.Windows.Forms.Label patternOutputLbl;
 		private System.Windows.Forms.Button createPatternBtn;
-		private System.Windows.Forms.CheckBox colorsAndSymbolsCb;
-		private System.Windows.Forms.CheckBox symbolsCb;
+		private System.Windows.Forms.CheckBox colorsAndGlyphsCb;
+		private System.Windows.Forms.CheckBox glyphsCb;
 		private System.Windows.Forms.CheckBox colorsCb;
 		private System.Windows.Forms.TextBox createPatternInstructionsTb;
 		private System.Windows.Forms.Button generateStatsBtn;

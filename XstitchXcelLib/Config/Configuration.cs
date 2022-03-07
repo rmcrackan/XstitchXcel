@@ -36,20 +36,20 @@ namespace XstitchXcelLib.Config
 			var saveFile = false;
 
 			saveFile |= xlsxToSprite(patternEntry);
-			saveFile |= docxToSymbols(patternEntry);
+			saveFile |= docxToGlyphs(patternEntry);
 
 			if (saveFile)
 				savePattern(patternEntry);
 
-			// pad with any default symbols which aren't already present. don't save to file
-			var defaultSymbols = GetDefaultSymbolEntries();
-			var newSymbols = defaultSymbols.Where(s => !patternEntry.Symbols.Contains(s)).ToList();
-			patternEntry.Symbols.AddRange(newSymbols);
+			// pad with any default glyphs which aren't already present. don't save to file
+			var defaultGlyphs = GetDefaultGlyphEntries();
+			var newGlyphs = defaultGlyphs.Where(s => !patternEntry.Glyphs.Contains(s)).ToList();
+			patternEntry.Glyphs.AddRange(newGlyphs);
 
 			return patternEntry.ToPattern();
 		}
 
-		public static List<SymbolEntry> GetDefaultSymbolEntries() => JsonConvert.DeserializeObject<List<SymbolEntry>>(File.ReadAllText(@"Config\symbols.json"));
+		public static List<GlyphEntry> GetDefaultGlyphEntries() => JsonConvert.DeserializeObject<List<GlyphEntry>>(File.ReadAllText(@"Config\glyphs.json"));
 
 		private static bool xlsxToSprite(PatternEntry patternEntry)
 		{
@@ -69,7 +69,7 @@ namespace XstitchXcelLib.Config
 			return true;
 		}
 
-		private static bool docxToSymbols(PatternEntry patternEntry)
+		private static bool docxToGlyphs(PatternEntry patternEntry)
 		{
 			var docxFile = Path.Combine(Path.GetDirectoryName(patternEntry.InputFile), Path.GetFileNameWithoutExtension(patternEntry.InputFile) + ".docx");
 
@@ -80,7 +80,7 @@ namespace XstitchXcelLib.Config
 			patternEntry.RefreshDocxLastModified();
 
 			using var reader = new WordReader(docxFile);
-			patternEntry.Symbols = reader.GetSymbols().ToSymbolEntries();
+			patternEntry.Glyphs = reader.GetGlyphs().ToGlyphEntries();
 
 			return true;
 		}
