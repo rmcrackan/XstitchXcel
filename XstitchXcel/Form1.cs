@@ -22,7 +22,8 @@ namespace XstitchXcel
 		{
 			InitializeComponent();
 
-			initStats();
+			initStatsTab();
+			initToPngTab();
 		}
 
 		#region main form
@@ -43,10 +44,9 @@ namespace XstitchXcel
 
 		private void fileNameTb_TextChanged(object sender, EventArgs e)
 		{
-			var output = HelperMethods.GetUniqueFileName(HelperMethods.AddFileSuffix(fileNameTb.Text, " - output"));
-
-			patternOutputTb.Text = output;
-			crtBlurOutputTb.Text = output;
+			patternNewFileSelected();
+			toPngNewFileSelected();
+			crtNewFileSelected();
 		}
 
 		private void fileNameBtn_Click(object sender, EventArgs e)
@@ -72,6 +72,13 @@ namespace XstitchXcel
 		private Pattern getPattern() => Configuration.GetPattern(fileNameTb.Text);
 
 		#region tab: Create Pattern
+		private void patternNewFileSelected()
+		{
+			var output = HelperMethods.GetUniqueFileName(HelperMethods.AddFileSuffix(fileNameTb.Text, " - output"));
+
+			patternOutputTb.Text = output;
+		}
+
 		private void patternOutputBtn_Click(object sender, EventArgs e)
 		{
 			var dialog = new SaveFileDialog
@@ -109,7 +116,7 @@ namespace XstitchXcel
 		#endregion
 
 		#region tab: Stats
-		private void initStats()
+		private void initStatsTab()
 		{
 			statsCountNum.Value = 14;
 			statsUnitCb.SelectedIndex = 0;
@@ -237,7 +244,7 @@ namespace XstitchXcel
 				: "Non-DMC";
 		}
 
-		#region Batch Convert
+		#region tab: Batch Convert
 		private void batchConvertSourceBtn_Click(object sender, EventArgs e)
 		{
 			var dialog = new FolderBrowserDialog { ShowNewFolderButton = true };
@@ -257,7 +264,67 @@ namespace XstitchXcel
 		private async void batchConvertStart_Click(object sender, EventArgs e) => await RunFullAsync(() => new BatchConvert(batchConvertSourceTb.Text, batchConvertDestinationTb.Text).Start());
 		#endregion
 
+		#region tab: To png
+		private void initToPngTab()
+		{
+			enableScaleUpDown(null, null);
+		}
+
+		private void toPngNewFileSelected()
+		{
+			var newExt = Path.ChangeExtension(fileNameTb.Text, ".png");
+			var withSuffix = HelperMethods.AddFileSuffix(newExt, " - output");
+			var unique = HelperMethods.GetUniqueFileName(withSuffix);
+
+			toPngOutputTb.Text = unique;
+		}
+
+		private void toPngOutputBtn_Click(object sender, EventArgs e)
+		{
+			var dialog = new SaveFileDialog
+			{
+				Title = "Save generated png image file",
+
+				AddExtension = true,
+				DefaultExt = "png",
+				FileName = toPngOutputTb.Text,
+				Filter = "PNG (*.png)|*.png|All files (*.*)|*.*",
+				FilterIndex = 0,
+				OverwritePrompt = true
+			};
+
+			if (dialog.ShowDialog() == DialogResult.OK)
+				toPngOutputTb.Text = dialog.FileName;
+
+		}
+
+        private void enableScaleUpDown(object sender, EventArgs e) => toPngNud.Enabled = toPngScaleRb.Checked;
+
+		private async void createPngBtn_Click(object sender, EventArgs e) => await RunFullAsync(createPng);
+		private void createPng()
+		{
+			var pattern = getPattern();
+
+			var excelToImage = new ExcelToImage(pattern)
+			{
+				OutputFile = toPngOutputTb.Text
+			};
+
+			if (toPngScaleRb.Checked && toPngNud.Value > 1)
+				excelToImage.SaveToPngResize((int)toPngNud.Value);
+			else
+				excelToImage.SaveToPng();
+		}
+		#endregion
+
 		#region tab: CRT Blur
+		private void crtNewFileSelected()
+		{
+			var output = HelperMethods.GetUniqueFileName(HelperMethods.AddFileSuffix(fileNameTb.Text, " - output"));
+
+			crtBlurOutputTb.Text = output;
+		}
+
 		private void crtBlurOutputBtn_Click(object sender, EventArgs e)
 		{
 			var dialog = new SaveFileDialog

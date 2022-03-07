@@ -64,7 +64,14 @@ namespace XstitchXcelConsole
             //};
             //list.Sort();
 
-            analyzePalettes();
+
+            //analyzePalettes();
+
+
+            //api.ExcelToPng();
+
+
+            //api.ExcelToPngResize(5);
         }
 
         static void analyzePalettes()

@@ -1,14 +1,13 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
-using System.Threading.Tasks;
 
 using Excel = Microsoft.Office.Interop.Excel;
 
-// originally from https://github.com/JamesMatchett/ExCell-Art-Generator
-// heavily adapted
-namespace XstitchXcelLib
+// heavily adapted from https://github.com/JamesMatchett/ExCell-Art-Generator
+namespace XstitchXcelLib.Tools
 {
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Interoperability", "CA1416:Validate platform compatibility")]
     public class ImageToExcel
     {
         public BackgroundWorker bw { get; } = new BackgroundWorker

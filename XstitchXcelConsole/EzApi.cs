@@ -34,5 +34,9 @@ namespace XstitchXcelConsole
 		public void PrintCrtBlurConsole() => new CrtBlurer(pattern).PrintToConsole();
 
 		public void SaveCrtBlurFile() => new CrtBlurer(pattern).SaveToFile();
+
+		public void ExcelToPng() => new ExcelToImage(pattern).SaveToPng();
+
+		public void ExcelToPngResize(int scale) => new ExcelToImage(pattern).SaveToPngResize(scale);
 	}
 }
