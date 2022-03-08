@@ -53,7 +53,10 @@ namespace XstitchXcelLib.Tools
         {
             var bitmap = new Bitmap(size.Width, size.Height);
             foreach (var p in Pattern.Sprite.Pixels)
-                bitmap.SetPixel(p.ColumnNumber - 1, p.RowNumber - 1, p.Color);
+                bitmap.SetPixel(
+                    (p.ColumnNumber - 1) - (Pattern.Sprite.Location.X - 1),
+                    (p.RowNumber - 1) - (Pattern.Sprite.Location.Y - 1),
+                    p.Color);
             return bitmap;
         }
     }
