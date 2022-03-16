@@ -258,7 +258,6 @@ namespace XstitchXcel
 			if (dialog.ShowDialog() == DialogResult.OK)
 				batchConvertSourceTb.Text = dialog.SelectedPath;
 		}
-
 		private void batchConvertDestinationBtn_Click(object sender, EventArgs e)
 		{
 			var dialog = new FolderBrowserDialog { ShowNewFolderButton = true };
@@ -267,7 +266,11 @@ namespace XstitchXcel
 				batchConvertDestinationTb.Text = dialog.SelectedPath;
 		}
 
-		private async void batchConvertStart_Click(object sender, EventArgs e) => await RunFullAsync(() => new BatchConvert(batchConvertSourceTb.Text, batchConvertDestinationTb.Text).Start());
+		private async void batchConvertSourceTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, batchConvert);
+		private async void batchConvertDestinationTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, batchConvert);
+		private async void batchConvertStart_Click(object sender, EventArgs e) => await RunFullAsync(batchConvert);
+		private void batchConvert()
+			=> new BatchConvert(batchConvertSourceTb.Text, batchConvertDestinationTb.Text).Start();
 		#endregion
 
 		#region tab: To png
