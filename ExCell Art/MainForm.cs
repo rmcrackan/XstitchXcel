@@ -2,6 +2,7 @@
 // heavily adapted
 using System.ComponentModel;
 using XstitchXcelLib;
+using XstitchXcelLib.Tools;
 
 namespace ExCell_Art
 {
