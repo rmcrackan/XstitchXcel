@@ -220,7 +220,6 @@ namespace XstitchXcel
 		#endregion
 
 		#region tab: Replace Color (naive)
-
 		private void oldColorNaiveTb_TextChanged(object sender, EventArgs e) => setDmcPictureBox(oldColorNaiveTb, oldColorNaivePb, oldIsDmcNaiveLbl);
 		private void newColorNaiveTb_TextChanged(object sender, EventArgs e) => setDmcPictureBox(newColorNaiveTb, newColorNaivePb, newIsDmcNaiveLbl);
 
