@@ -308,6 +308,7 @@ namespace XstitchXcel
 
         private void enableScaleUpDown(object sender, EventArgs e) => toPngNud.Enabled = toPngScaleRb.Checked;
 
+        private async void toPngOutputTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, createPng);
 		private async void createPngBtn_Click(object sender, EventArgs e) => await RunFullAsync(createPng);
 		private void createPng()
 		{

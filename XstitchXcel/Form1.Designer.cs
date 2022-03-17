@@ -963,6 +963,7 @@ namespace XstitchXcel
             this.toPngOutputTb.Name = "toPngOutputTb";
             this.toPngOutputTb.Size = new System.Drawing.Size(612, 23);
             this.toPngOutputTb.TabIndex = 20;
+            this.toPngOutputTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.toPngOutputTb_KeyPress);
             // 
             // toPngOutputLbl
             // 
