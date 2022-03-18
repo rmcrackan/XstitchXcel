@@ -21,8 +21,10 @@ namespace XstitchXcelLib.Tools
 		/// <summary>
 		/// Replace per scanned model stored in Sprite, Pixels, json, et al.
 		/// </summary>
-		public void TargetedReplace(string oldColorHex, string newColorHex)
-			=> TargetedReplace(DmcColorProcessor.SmartColorFinder(oldColorHex), DmcColorProcessor.SmartColorFinder(newColorHex));
+		/// <param name="oldColor">Hex or DMC code</param>
+		/// <param name="newColor">Hex or DMC code</param>
+		public void TargetedReplace(string oldColor, string newColor)
+			=> TargetedReplace(DmcColorProcessor.SmartColorFinder(oldColor), DmcColorProcessor.SmartColorFinder(newColor));
 
 		/// <summary>
 		/// Replace per scanned model stored in Sprite, Pixels, json, et al.
