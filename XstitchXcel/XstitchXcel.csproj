@@ -3,7 +3,15 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
-	  <UseWindowsForms>true</UseWindowsForms>
+    <Version>2.0.0.1</Version>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>XstitchXcel</AssemblyName>
+
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
