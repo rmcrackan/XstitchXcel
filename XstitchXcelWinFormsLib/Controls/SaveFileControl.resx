@@ -57,34 +57,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="replaceColorInstructionsTb.Text" xml:space="preserve">
-    <value>Replace all of one color with a different color
-
-This will makes changes to your file. To create a back up of the original file before changine it, use the checkbox.
-Note: when this box is checked, a new backup file will be created each time you click the button
-
-Options:
-- Hex code. Eg: #123456 , f0f0f0
-- DMC number. Eg: 310, B5200
-- Transparent: T
-
-Use "T"ransparent as the "old color" to change the transparent background to a color
-Use "T"ransparent as the "new color" to remove the background color</value>
-  </data>
-  <data name="replaceColorNaiveInstructionsTb.Text" xml:space="preserve">
-    <value>Replace color can use a pre-scan of the spreadsheet (as with the other tabs)
-and quickly only replace the matching colors.
-
-Naive replace color is the same except this scans the whole spreadsheet
-each time and changes matching colors. No sprite parsing or preferred formatting.
-
-Naive replace is more versitile, less efficient</value>
-  </data>
-  <data name="toPngInstructionsTb.Text" xml:space="preserve">
-    <value>Convert xlsx file to png image file.
-
-If scaling the image up, the scale number is the multiplier for both directions: height and width.
-
-Eg: scale=3: each new pixel/cell will be 3 cells across and 3 high.</value>
-  </data>
 </root>

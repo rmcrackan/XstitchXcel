@@ -15,10 +15,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Panels\CreatePatternPanel.cs" />
-    <Compile Update="Panels\CreatePatternSplitPanel.cs" />
-    <Compile Update="Panels\_ToolControlsBase.cs" />
-    <Compile Update="Panels\_ToolSplit.cs" />
+    <Folder Include="Controls\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Panels\CreatePatternPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Panels\CreatePatternSplitPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Panels\_ToolControlsBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Panels\_ToolSplit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Panels\__ToolPaneBase.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -35,27 +35,7 @@ namespace XstitchXcel
             this.fileNameBtn = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.createPatternTabPage = new System.Windows.Forms.TabPage();
-            this.createPatternInstructionsTb = new System.Windows.Forms.TextBox();
-            this.createPatternBtn = new System.Windows.Forms.Button();
-            this.colorsAndGlyphsCb = new System.Windows.Forms.CheckBox();
-            this.glyphsCb = new System.Windows.Forms.CheckBox();
-            this.colorsCb = new System.Windows.Forms.CheckBox();
-            this.patternOutputBtn = new System.Windows.Forms.Button();
-            this.patternOutputTb = new System.Windows.Forms.TextBox();
-            this.patternOutputLbl = new System.Windows.Forms.Label();
-            this.statsTabPage = new System.Windows.Forms.TabPage();
-            this.statsOutTb = new System.Windows.Forms.TextBox();
-            this.statsUnitCb = new System.Windows.Forms.ComboBox();
-            this.statsCountNum = new System.Windows.Forms.NumericUpDown();
-            this.statsCountLbl = new System.Windows.Forms.Label();
-            this.generateStatsBtn = new System.Windows.Forms.Button();
-            this.statsDgv = new System.Windows.Forms.DataGridView();
-            this.qtyStitches = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minSkeins = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxSkeins = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dmcNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dmcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createPatternSplitPanel1 = new XstitchXcelWinFormsLib.Panels.CreatePatternSplitPanel();
             this.findDmcColorsTabPage = new System.Windows.Forms.TabPage();
             this.findDmcColorsBtn = new System.Windows.Forms.Button();
             this.findDmcColorsInstructionsTb = new System.Windows.Forms.TextBox();
@@ -107,11 +87,10 @@ namespace XstitchXcel
             this.crtBlurOutputBtn = new System.Windows.Forms.Button();
             this.crtBlurOutputTb = new System.Windows.Forms.TextBox();
             this.crtBlurOutputLbl = new System.Windows.Forms.Label();
+            this.statsTabPage = new System.Windows.Forms.TabPage();
+            this.statsPanel1 = new XstitchXcelWinFormsLib.Panels.StatsPanel();
             this.tabControl.SuspendLayout();
             this.createPatternTabPage.SuspendLayout();
-            this.statsTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.statsCountNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statsDgv)).BeginInit();
             this.findDmcColorsTabPage.SuspendLayout();
             this.replaceColorTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newColorPb)).BeginInit();
@@ -123,6 +102,7 @@ namespace XstitchXcel
             this.toPngTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toPngNud)).BeginInit();
             this.crtBlurTabPage.SuspendLayout();
+            this.statsTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // fileNameLbl
@@ -176,257 +156,22 @@ namespace XstitchXcel
             // 
             // createPatternTabPage
             // 
-            this.createPatternTabPage.Controls.Add(this.createPatternInstructionsTb);
-            this.createPatternTabPage.Controls.Add(this.createPatternBtn);
-            this.createPatternTabPage.Controls.Add(this.colorsAndGlyphsCb);
-            this.createPatternTabPage.Controls.Add(this.glyphsCb);
-            this.createPatternTabPage.Controls.Add(this.colorsCb);
-            this.createPatternTabPage.Controls.Add(this.patternOutputBtn);
-            this.createPatternTabPage.Controls.Add(this.patternOutputTb);
-            this.createPatternTabPage.Controls.Add(this.patternOutputLbl);
+            this.createPatternTabPage.Controls.Add(this.createPatternSplitPanel1);
             this.createPatternTabPage.Location = new System.Drawing.Point(4, 24);
             this.createPatternTabPage.Name = "createPatternTabPage";
             this.createPatternTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.createPatternTabPage.Size = new System.Drawing.Size(754, 353);
-            this.createPatternTabPage.TabIndex = 0;
+            this.createPatternTabPage.TabIndex = 8;
             this.createPatternTabPage.Text = "Create Pattern";
             this.createPatternTabPage.UseVisualStyleBackColor = true;
             // 
-            // createPatternInstructionsTb
+            // createPatternSplitPanel1
             // 
-            this.createPatternInstructionsTb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.createPatternInstructionsTb.Location = new System.Drawing.Point(3, 3);
-            this.createPatternInstructionsTb.Multiline = true;
-            this.createPatternInstructionsTb.Name = "createPatternInstructionsTb";
-            this.createPatternInstructionsTb.ReadOnly = true;
-            this.createPatternInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.createPatternInstructionsTb.Size = new System.Drawing.Size(748, 215);
-            this.createPatternInstructionsTb.TabIndex = 9;
-            this.createPatternInstructionsTb.Text = resources.GetString("createPatternInstructionsTb.Text");
-            // 
-            // createPatternBtn
-            // 
-            this.createPatternBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.createPatternBtn.Location = new System.Drawing.Point(591, 326);
-            this.createPatternBtn.Name = "createPatternBtn";
-            this.createPatternBtn.Size = new System.Drawing.Size(160, 23);
-            this.createPatternBtn.TabIndex = 8;
-            this.createPatternBtn.Text = "Create Pattern";
-            this.createPatternBtn.UseVisualStyleBackColor = true;
-            this.createPatternBtn.Click += new System.EventHandler(this.createPatternBtn_Click);
-            // 
-            // colorsAndGlyphsCb
-            // 
-            this.colorsAndGlyphsCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.colorsAndGlyphsCb.AutoSize = true;
-            this.colorsAndGlyphsCb.Checked = true;
-            this.colorsAndGlyphsCb.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.colorsAndGlyphsCb.Location = new System.Drawing.Point(35, 308);
-            this.colorsAndGlyphsCb.Name = "colorsAndGlyphsCb";
-            this.colorsAndGlyphsCb.Size = new System.Drawing.Size(130, 19);
-            this.colorsAndGlyphsCb.TabIndex = 7;
-            this.colorsAndGlyphsCb.Text = "Colors and symbols";
-            this.colorsAndGlyphsCb.UseVisualStyleBackColor = true;
-            // 
-            // glyphsCb
-            // 
-            this.glyphsCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.glyphsCb.AutoSize = true;
-            this.glyphsCb.Checked = true;
-            this.glyphsCb.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.glyphsCb.Location = new System.Drawing.Point(35, 283);
-            this.glyphsCb.Name = "glyphsCb";
-            this.glyphsCb.Size = new System.Drawing.Size(141, 19);
-            this.glyphsCb.TabIndex = 6;
-            this.glyphsCb.Text = "Symbols (aka: glyphs)";
-            this.glyphsCb.UseVisualStyleBackColor = true;
-            // 
-            // colorsCb
-            // 
-            this.colorsCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.colorsCb.AutoSize = true;
-            this.colorsCb.Checked = true;
-            this.colorsCb.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.colorsCb.Location = new System.Drawing.Point(35, 258);
-            this.colorsCb.Name = "colorsCb";
-            this.colorsCb.Size = new System.Drawing.Size(60, 19);
-            this.colorsCb.TabIndex = 5;
-            this.colorsCb.Text = "Colors";
-            this.colorsCb.UseVisualStyleBackColor = true;
-            // 
-            // patternOutputBtn
-            // 
-            this.patternOutputBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.patternOutputBtn.Location = new System.Drawing.Point(719, 224);
-            this.patternOutputBtn.Name = "patternOutputBtn";
-            this.patternOutputBtn.Size = new System.Drawing.Size(32, 23);
-            this.patternOutputBtn.TabIndex = 3;
-            this.patternOutputBtn.Text = "...";
-            this.patternOutputBtn.UseVisualStyleBackColor = true;
-            this.patternOutputBtn.Click += new System.EventHandler(this.patternOutputBtn_Click);
-            // 
-            // patternOutputTb
-            // 
-            this.patternOutputTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.patternOutputTb.Location = new System.Drawing.Point(115, 225);
-            this.patternOutputTb.Name = "patternOutputTb";
-            this.patternOutputTb.Size = new System.Drawing.Size(598, 23);
-            this.patternOutputTb.TabIndex = 1;
-            this.patternOutputTb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.patternOutputTb_KeyPress);
-            // 
-            // patternOutputLbl
-            // 
-            this.patternOutputLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.patternOutputLbl.AutoSize = true;
-            this.patternOutputLbl.Location = new System.Drawing.Point(3, 228);
-            this.patternOutputLbl.Name = "patternOutputLbl";
-            this.patternOutputLbl.Size = new System.Drawing.Size(106, 15);
-            this.patternOutputLbl.TabIndex = 0;
-            this.patternOutputLbl.Text = "Pattern output file:";
-            // 
-            // statsTabPage
-            // 
-            this.statsTabPage.Controls.Add(this.statsOutTb);
-            this.statsTabPage.Controls.Add(this.statsUnitCb);
-            this.statsTabPage.Controls.Add(this.statsCountNum);
-            this.statsTabPage.Controls.Add(this.statsCountLbl);
-            this.statsTabPage.Controls.Add(this.generateStatsBtn);
-            this.statsTabPage.Controls.Add(this.statsDgv);
-            this.statsTabPage.Location = new System.Drawing.Point(4, 24);
-            this.statsTabPage.Name = "statsTabPage";
-            this.statsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.statsTabPage.Size = new System.Drawing.Size(754, 353);
-            this.statsTabPage.TabIndex = 1;
-            this.statsTabPage.Text = "Stats";
-            this.statsTabPage.UseVisualStyleBackColor = true;
-            // 
-            // statsOutTb
-            // 
-            this.statsOutTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.statsOutTb.Location = new System.Drawing.Point(172, 326);
-            this.statsOutTb.Name = "statsOutTb";
-            this.statsOutTb.ReadOnly = true;
-            this.statsOutTb.Size = new System.Drawing.Size(243, 23);
-            this.statsOutTb.TabIndex = 4;
-            // 
-            // statsUnitCb
-            // 
-            this.statsUnitCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.statsUnitCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.statsUnitCb.FormattingEnabled = true;
-            this.statsUnitCb.Items.AddRange(new object[] {
-            "inches",
-            "cm"});
-            this.statsUnitCb.Location = new System.Drawing.Point(106, 326);
-            this.statsUnitCb.Name = "statsUnitCb";
-            this.statsUnitCb.Size = new System.Drawing.Size(60, 23);
-            this.statsUnitCb.TabIndex = 3;
-            this.statsUnitCb.SelectedIndexChanged += new System.EventHandler(this.updateStatsOut);
-            // 
-            // statsCountNum
-            // 
-            this.statsCountNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.statsCountNum.Location = new System.Drawing.Point(52, 327);
-            this.statsCountNum.Name = "statsCountNum";
-            this.statsCountNum.Size = new System.Drawing.Size(48, 23);
-            this.statsCountNum.TabIndex = 2;
-            this.statsCountNum.Value = new decimal(new int[] {
-            14,
-            0,
-            0,
-            0});
-            this.statsCountNum.ValueChanged += new System.EventHandler(this.updateStatsOut);
-            // 
-            // statsCountLbl
-            // 
-            this.statsCountLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.statsCountLbl.AutoSize = true;
-            this.statsCountLbl.Location = new System.Drawing.Point(6, 329);
-            this.statsCountLbl.Name = "statsCountLbl";
-            this.statsCountLbl.Size = new System.Drawing.Size(40, 15);
-            this.statsCountLbl.TabIndex = 1;
-            this.statsCountLbl.Text = "Count";
-            // 
-            // generateStatsBtn
-            // 
-            this.generateStatsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.generateStatsBtn.Location = new System.Drawing.Point(591, 327);
-            this.generateStatsBtn.Name = "generateStatsBtn";
-            this.generateStatsBtn.Size = new System.Drawing.Size(160, 23);
-            this.generateStatsBtn.TabIndex = 5;
-            this.generateStatsBtn.Text = "Generate Stats";
-            this.generateStatsBtn.UseVisualStyleBackColor = true;
-            this.generateStatsBtn.Click += new System.EventHandler(this.generateStatsBtn_Click);
-            // 
-            // statsDgv
-            // 
-            this.statsDgv.AllowUserToAddRows = false;
-            this.statsDgv.AllowUserToDeleteRows = false;
-            this.statsDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.statsDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.statsDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.qtyStitches,
-            this.minSkeins,
-            this.maxSkeins,
-            this.hex,
-            this.dmcNumber,
-            this.dmcName});
-            this.statsDgv.EnableHeadersVisualStyles = false;
-            this.statsDgv.Location = new System.Drawing.Point(3, 3);
-            this.statsDgv.Name = "statsDgv";
-            this.statsDgv.ReadOnly = true;
-            this.statsDgv.RowHeadersVisible = false;
-            this.statsDgv.RowTemplate.Height = 25;
-            this.statsDgv.Size = new System.Drawing.Size(748, 318);
-            this.statsDgv.TabIndex = 0;
-            // 
-            // qtyStitches
-            // 
-            this.qtyStitches.FillWeight = 93.1677F;
-            this.qtyStitches.HeaderText = "# Stitches";
-            this.qtyStitches.Name = "qtyStitches";
-            this.qtyStitches.ReadOnly = true;
-            // 
-            // minSkeins
-            // 
-            this.minSkeins.FillWeight = 96.51846F;
-            this.minSkeins.HeaderText = "Min skeins";
-            this.minSkeins.Name = "minSkeins";
-            this.minSkeins.ReadOnly = true;
-            // 
-            // maxSkeins
-            // 
-            this.maxSkeins.FillWeight = 99.34892F;
-            this.maxSkeins.HeaderText = "Max skeins";
-            this.maxSkeins.Name = "maxSkeins";
-            this.maxSkeins.ReadOnly = true;
-            // 
-            // hex
-            // 
-            this.hex.FillWeight = 101.7399F;
-            this.hex.HeaderText = "Hex #";
-            this.hex.Name = "hex";
-            this.hex.ReadOnly = true;
-            // 
-            // dmcNumber
-            // 
-            this.dmcNumber.FillWeight = 103.7595F;
-            this.dmcNumber.HeaderText = "DMC #";
-            this.dmcNumber.Name = "dmcNumber";
-            this.dmcNumber.ReadOnly = true;
-            // 
-            // dmcName
-            // 
-            this.dmcName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dmcName.FillWeight = 105.4656F;
-            this.dmcName.HeaderText = "DMC name";
-            this.dmcName.Name = "dmcName";
-            this.dmcName.ReadOnly = true;
+            this.createPatternSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.createPatternSplitPanel1.Location = new System.Drawing.Point(3, 3);
+            this.createPatternSplitPanel1.Name = "createPatternSplitPanel1";
+            this.createPatternSplitPanel1.Size = new System.Drawing.Size(748, 347);
+            this.createPatternSplitPanel1.TabIndex = 0;
             // 
             // findDmcColorsTabPage
             // 
@@ -443,7 +188,7 @@ namespace XstitchXcel
             // findDmcColorsBtn
             // 
             this.findDmcColorsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.findDmcColorsBtn.Location = new System.Drawing.Point(591, 327);
+            this.findDmcColorsBtn.Location = new System.Drawing.Point(591, 318);
             this.findDmcColorsBtn.Name = "findDmcColorsBtn";
             this.findDmcColorsBtn.Size = new System.Drawing.Size(160, 23);
             this.findDmcColorsBtn.TabIndex = 11;
@@ -461,7 +206,7 @@ namespace XstitchXcel
             this.findDmcColorsInstructionsTb.Name = "findDmcColorsInstructionsTb";
             this.findDmcColorsInstructionsTb.ReadOnly = true;
             this.findDmcColorsInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.findDmcColorsInstructionsTb.Size = new System.Drawing.Size(748, 215);
+            this.findDmcColorsInstructionsTb.Size = new System.Drawing.Size(748, 206);
             this.findDmcColorsInstructionsTb.TabIndex = 10;
             this.findDmcColorsInstructionsTb.Text = "Finds the non-DMC colors in your file. Creates report with the closest DMC matche" +
     "s";
@@ -491,7 +236,7 @@ namespace XstitchXcel
             // 
             this.newIsDmcLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.newIsDmcLbl.AutoSize = true;
-            this.newIsDmcLbl.Location = new System.Drawing.Point(331, 293);
+            this.newIsDmcLbl.Location = new System.Drawing.Point(331, 284);
             this.newIsDmcLbl.Name = "newIsDmcLbl";
             this.newIsDmcLbl.Size = new System.Drawing.Size(38, 15);
             this.newIsDmcLbl.TabIndex = 6;
@@ -502,7 +247,7 @@ namespace XstitchXcel
             // 
             this.oldIsDmcLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.oldIsDmcLbl.AutoSize = true;
-            this.oldIsDmcLbl.Location = new System.Drawing.Point(331, 264);
+            this.oldIsDmcLbl.Location = new System.Drawing.Point(331, 255);
             this.oldIsDmcLbl.Name = "oldIsDmcLbl";
             this.oldIsDmcLbl.Size = new System.Drawing.Size(38, 15);
             this.oldIsDmcLbl.TabIndex = 3;
@@ -519,14 +264,14 @@ namespace XstitchXcel
             this.replaceColorInstructionsTb.Name = "replaceColorInstructionsTb";
             this.replaceColorInstructionsTb.ReadOnly = true;
             this.replaceColorInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.replaceColorInstructionsTb.Size = new System.Drawing.Size(748, 227);
+            this.replaceColorInstructionsTb.Size = new System.Drawing.Size(748, 218);
             this.replaceColorInstructionsTb.TabIndex = 1;
             this.replaceColorInstructionsTb.Text = resources.GetString("replaceColorInstructionsTb.Text");
             // 
             // beginColorReplaceBtn
             // 
             this.beginColorReplaceBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.beginColorReplaceBtn.Location = new System.Drawing.Point(591, 327);
+            this.beginColorReplaceBtn.Location = new System.Drawing.Point(591, 318);
             this.beginColorReplaceBtn.Name = "beginColorReplaceBtn";
             this.beginColorReplaceBtn.Size = new System.Drawing.Size(160, 23);
             this.beginColorReplaceBtn.TabIndex = 4;
@@ -538,7 +283,7 @@ namespace XstitchXcel
             // 
             this.newColorPb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.newColorPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.newColorPb.Location = new System.Drawing.Point(207, 290);
+            this.newColorPb.Location = new System.Drawing.Point(207, 281);
             this.newColorPb.Name = "newColorPb";
             this.newColorPb.Size = new System.Drawing.Size(100, 23);
             this.newColorPb.TabIndex = 6;
@@ -548,7 +293,7 @@ namespace XstitchXcel
             // newColorTb
             // 
             this.newColorTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.newColorTb.Location = new System.Drawing.Point(81, 290);
+            this.newColorTb.Location = new System.Drawing.Point(81, 281);
             this.newColorTb.Name = "newColorTb";
             this.newColorTb.Size = new System.Drawing.Size(100, 23);
             this.newColorTb.TabIndex = 3;
@@ -559,7 +304,7 @@ namespace XstitchXcel
             // 
             this.newColorLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.newColorLbl.AutoSize = true;
-            this.newColorLbl.Location = new System.Drawing.Point(3, 293);
+            this.newColorLbl.Location = new System.Drawing.Point(3, 284);
             this.newColorLbl.Name = "newColorLbl";
             this.newColorLbl.Size = new System.Drawing.Size(64, 15);
             this.newColorLbl.TabIndex = 4;
@@ -569,7 +314,7 @@ namespace XstitchXcel
             // 
             this.oldColorPb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.oldColorPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.oldColorPb.Location = new System.Drawing.Point(207, 261);
+            this.oldColorPb.Location = new System.Drawing.Point(207, 252);
             this.oldColorPb.Name = "oldColorPb";
             this.oldColorPb.Size = new System.Drawing.Size(100, 23);
             this.oldColorPb.TabIndex = 3;
@@ -579,7 +324,7 @@ namespace XstitchXcel
             // oldColorTb
             // 
             this.oldColorTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.oldColorTb.Location = new System.Drawing.Point(81, 261);
+            this.oldColorTb.Location = new System.Drawing.Point(81, 252);
             this.oldColorTb.Name = "oldColorTb";
             this.oldColorTb.Size = new System.Drawing.Size(100, 23);
             this.oldColorTb.TabIndex = 1;
@@ -590,7 +335,7 @@ namespace XstitchXcel
             // 
             this.oldColorLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.oldColorLbl.AutoSize = true;
-            this.oldColorLbl.Location = new System.Drawing.Point(3, 264);
+            this.oldColorLbl.Location = new System.Drawing.Point(3, 255);
             this.oldColorLbl.Name = "oldColorLbl";
             this.oldColorLbl.Size = new System.Drawing.Size(59, 15);
             this.oldColorLbl.TabIndex = 3;
@@ -600,7 +345,7 @@ namespace XstitchXcel
             // 
             this.replaceColorBakCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.replaceColorBakCb.AutoSize = true;
-            this.replaceColorBakCb.Location = new System.Drawing.Point(3, 236);
+            this.replaceColorBakCb.Location = new System.Drawing.Point(3, 227);
             this.replaceColorBakCb.Name = "replaceColorBakCb";
             this.replaceColorBakCb.Size = new System.Drawing.Size(234, 19);
             this.replaceColorBakCb.TabIndex = 0;
@@ -632,7 +377,7 @@ namespace XstitchXcel
             // 
             this.newIsDmcNaiveLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.newIsDmcNaiveLbl.AutoSize = true;
-            this.newIsDmcNaiveLbl.Location = new System.Drawing.Point(331, 293);
+            this.newIsDmcNaiveLbl.Location = new System.Drawing.Point(331, 284);
             this.newIsDmcNaiveLbl.Name = "newIsDmcNaiveLbl";
             this.newIsDmcNaiveLbl.Size = new System.Drawing.Size(38, 15);
             this.newIsDmcNaiveLbl.TabIndex = 16;
@@ -643,7 +388,7 @@ namespace XstitchXcel
             // 
             this.oldIsDmcNaiveLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.oldIsDmcNaiveLbl.AutoSize = true;
-            this.oldIsDmcNaiveLbl.Location = new System.Drawing.Point(331, 264);
+            this.oldIsDmcNaiveLbl.Location = new System.Drawing.Point(331, 255);
             this.oldIsDmcNaiveLbl.Name = "oldIsDmcNaiveLbl";
             this.oldIsDmcNaiveLbl.Size = new System.Drawing.Size(38, 15);
             this.oldIsDmcNaiveLbl.TabIndex = 11;
@@ -660,14 +405,14 @@ namespace XstitchXcel
             this.replaceColorNaiveInstructionsTb.Name = "replaceColorNaiveInstructionsTb";
             this.replaceColorNaiveInstructionsTb.ReadOnly = true;
             this.replaceColorNaiveInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.replaceColorNaiveInstructionsTb.Size = new System.Drawing.Size(748, 227);
+            this.replaceColorNaiveInstructionsTb.Size = new System.Drawing.Size(748, 218);
             this.replaceColorNaiveInstructionsTb.TabIndex = 8;
             this.replaceColorNaiveInstructionsTb.Text = resources.GetString("replaceColorNaiveInstructionsTb.Text");
             // 
             // beginColorReplaceNaiveBtn
             // 
             this.beginColorReplaceNaiveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.beginColorReplaceNaiveBtn.Location = new System.Drawing.Point(591, 327);
+            this.beginColorReplaceNaiveBtn.Location = new System.Drawing.Point(591, 318);
             this.beginColorReplaceNaiveBtn.Name = "beginColorReplaceNaiveBtn";
             this.beginColorReplaceNaiveBtn.Size = new System.Drawing.Size(160, 23);
             this.beginColorReplaceNaiveBtn.TabIndex = 18;
@@ -679,7 +424,7 @@ namespace XstitchXcel
             // 
             this.newColorNaivePb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.newColorNaivePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.newColorNaivePb.Location = new System.Drawing.Point(207, 290);
+            this.newColorNaivePb.Location = new System.Drawing.Point(207, 281);
             this.newColorNaivePb.Name = "newColorNaivePb";
             this.newColorNaivePb.Size = new System.Drawing.Size(100, 23);
             this.newColorNaivePb.TabIndex = 17;
@@ -689,7 +434,7 @@ namespace XstitchXcel
             // newColorNaiveTb
             // 
             this.newColorNaiveTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.newColorNaiveTb.Location = new System.Drawing.Point(81, 290);
+            this.newColorNaiveTb.Location = new System.Drawing.Point(81, 281);
             this.newColorNaiveTb.Name = "newColorNaiveTb";
             this.newColorNaiveTb.Size = new System.Drawing.Size(100, 23);
             this.newColorNaiveTb.TabIndex = 15;
@@ -700,7 +445,7 @@ namespace XstitchXcel
             // 
             this.newColorNaiveLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.newColorNaiveLbl.AutoSize = true;
-            this.newColorNaiveLbl.Location = new System.Drawing.Point(3, 293);
+            this.newColorNaiveLbl.Location = new System.Drawing.Point(3, 284);
             this.newColorNaiveLbl.Name = "newColorNaiveLbl";
             this.newColorNaiveLbl.Size = new System.Drawing.Size(64, 15);
             this.newColorNaiveLbl.TabIndex = 14;
@@ -710,7 +455,7 @@ namespace XstitchXcel
             // 
             this.oldColorNaivePb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.oldColorNaivePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.oldColorNaivePb.Location = new System.Drawing.Point(207, 261);
+            this.oldColorNaivePb.Location = new System.Drawing.Point(207, 252);
             this.oldColorNaivePb.Name = "oldColorNaivePb";
             this.oldColorNaivePb.Size = new System.Drawing.Size(100, 23);
             this.oldColorNaivePb.TabIndex = 12;
@@ -720,7 +465,7 @@ namespace XstitchXcel
             // oldColorNaiveTb
             // 
             this.oldColorNaiveTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.oldColorNaiveTb.Location = new System.Drawing.Point(81, 261);
+            this.oldColorNaiveTb.Location = new System.Drawing.Point(81, 252);
             this.oldColorNaiveTb.Name = "oldColorNaiveTb";
             this.oldColorNaiveTb.Size = new System.Drawing.Size(100, 23);
             this.oldColorNaiveTb.TabIndex = 9;
@@ -731,7 +476,7 @@ namespace XstitchXcel
             // 
             this.oldColorNaiveLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.oldColorNaiveLbl.AutoSize = true;
-            this.oldColorNaiveLbl.Location = new System.Drawing.Point(3, 264);
+            this.oldColorNaiveLbl.Location = new System.Drawing.Point(3, 255);
             this.oldColorNaiveLbl.Name = "oldColorNaiveLbl";
             this.oldColorNaiveLbl.Size = new System.Drawing.Size(59, 15);
             this.oldColorNaiveLbl.TabIndex = 13;
@@ -741,7 +486,7 @@ namespace XstitchXcel
             // 
             this.replaceColorNaiveBakCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.replaceColorNaiveBakCb.AutoSize = true;
-            this.replaceColorNaiveBakCb.Location = new System.Drawing.Point(3, 236);
+            this.replaceColorNaiveBakCb.Location = new System.Drawing.Point(3, 227);
             this.replaceColorNaiveBakCb.Name = "replaceColorNaiveBakCb";
             this.replaceColorNaiveBakCb.Size = new System.Drawing.Size(234, 19);
             this.replaceColorNaiveBakCb.TabIndex = 10;
@@ -769,7 +514,7 @@ namespace XstitchXcel
             // batchConvertStart
             // 
             this.batchConvertStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertStart.Location = new System.Drawing.Point(591, 326);
+            this.batchConvertStart.Location = new System.Drawing.Point(591, 317);
             this.batchConvertStart.Name = "batchConvertStart";
             this.batchConvertStart.Size = new System.Drawing.Size(160, 23);
             this.batchConvertStart.TabIndex = 8;
@@ -780,7 +525,7 @@ namespace XstitchXcel
             // batchConvertDestinationBtn
             // 
             this.batchConvertDestinationBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertDestinationBtn.Location = new System.Drawing.Point(719, 253);
+            this.batchConvertDestinationBtn.Location = new System.Drawing.Point(719, 244);
             this.batchConvertDestinationBtn.Name = "batchConvertDestinationBtn";
             this.batchConvertDestinationBtn.Size = new System.Drawing.Size(32, 23);
             this.batchConvertDestinationBtn.TabIndex = 7;
@@ -792,7 +537,7 @@ namespace XstitchXcel
             // 
             this.batchConvertDestinationTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertDestinationTb.Location = new System.Drawing.Point(115, 254);
+            this.batchConvertDestinationTb.Location = new System.Drawing.Point(115, 245);
             this.batchConvertDestinationTb.Name = "batchConvertDestinationTb";
             this.batchConvertDestinationTb.Size = new System.Drawing.Size(598, 23);
             this.batchConvertDestinationTb.TabIndex = 6;
@@ -802,7 +547,7 @@ namespace XstitchXcel
             // 
             this.batchConvertDestinationLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.batchConvertDestinationLbl.AutoSize = true;
-            this.batchConvertDestinationLbl.Location = new System.Drawing.Point(3, 257);
+            this.batchConvertDestinationLbl.Location = new System.Drawing.Point(3, 248);
             this.batchConvertDestinationLbl.Name = "batchConvertDestinationLbl";
             this.batchConvertDestinationLbl.Size = new System.Drawing.Size(84, 15);
             this.batchConvertDestinationLbl.TabIndex = 5;
@@ -811,7 +556,7 @@ namespace XstitchXcel
             // batchConvertSourceBtn
             // 
             this.batchConvertSourceBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertSourceBtn.Location = new System.Drawing.Point(719, 224);
+            this.batchConvertSourceBtn.Location = new System.Drawing.Point(719, 215);
             this.batchConvertSourceBtn.Name = "batchConvertSourceBtn";
             this.batchConvertSourceBtn.Size = new System.Drawing.Size(32, 23);
             this.batchConvertSourceBtn.TabIndex = 4;
@@ -823,7 +568,7 @@ namespace XstitchXcel
             // 
             this.batchConvertSourceTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.batchConvertSourceTb.Location = new System.Drawing.Point(115, 225);
+            this.batchConvertSourceTb.Location = new System.Drawing.Point(115, 216);
             this.batchConvertSourceTb.Name = "batchConvertSourceTb";
             this.batchConvertSourceTb.Size = new System.Drawing.Size(598, 23);
             this.batchConvertSourceTb.TabIndex = 3;
@@ -833,7 +578,7 @@ namespace XstitchXcel
             // 
             this.batchConvertSourceLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.batchConvertSourceLbl.AutoSize = true;
-            this.batchConvertSourceLbl.Location = new System.Drawing.Point(3, 229);
+            this.batchConvertSourceLbl.Location = new System.Drawing.Point(3, 220);
             this.batchConvertSourceLbl.Name = "batchConvertSourceLbl";
             this.batchConvertSourceLbl.Size = new System.Drawing.Size(60, 15);
             this.batchConvertSourceLbl.TabIndex = 2;
@@ -849,11 +594,10 @@ namespace XstitchXcel
             this.batchConvertInstructionsTb.Name = "batchConvertInstructionsTb";
             this.batchConvertInstructionsTb.ReadOnly = true;
             this.batchConvertInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.batchConvertInstructionsTb.Size = new System.Drawing.Size(748, 215);
+            this.batchConvertInstructionsTb.Size = new System.Drawing.Size(748, 206);
             this.batchConvertInstructionsTb.TabIndex = 1;
-            this.batchConvertInstructionsTb.Text = "For all images in source dir:\r\n\r\n* copy to destination\r\n* convert to xlsx\r\n* extr" +
-    "act pattern/json file\r\n* match colors to nearest DMC\r\n* create cross stitch patt" +
-    "ern";
+            this.batchConvertInstructionsTb.Text = "For each image in source directory:\r\n\r\n* copy to destination directory\r\n* convert" +
+    " to xlsx\r\n* match colors to nearest DMC\r\n* create cross stitch pattern";
             // 
             // toPngTabPage
             // 
@@ -876,7 +620,7 @@ namespace XstitchXcel
             // toPngNud
             // 
             this.toPngNud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.toPngNud.Location = new System.Drawing.Point(87, 279);
+            this.toPngNud.Location = new System.Drawing.Point(87, 270);
             this.toPngNud.Minimum = new decimal(new int[] {
             1,
             0,
@@ -886,7 +630,7 @@ namespace XstitchXcel
             this.toPngNud.Size = new System.Drawing.Size(50, 23);
             this.toPngNud.TabIndex = 24;
             this.toPngNud.Value = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
             0});
@@ -895,7 +639,7 @@ namespace XstitchXcel
             // 
             this.toPngScaleRb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.toPngScaleRb.AutoSize = true;
-            this.toPngScaleRb.Location = new System.Drawing.Point(6, 279);
+            this.toPngScaleRb.Location = new System.Drawing.Point(6, 270);
             this.toPngScaleRb.Name = "toPngScaleRb";
             this.toPngScaleRb.Size = new System.Drawing.Size(75, 19);
             this.toPngScaleRb.TabIndex = 23;
@@ -908,7 +652,7 @@ namespace XstitchXcel
             this.toPngOriginalRb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.toPngOriginalRb.AutoSize = true;
             this.toPngOriginalRb.Checked = true;
-            this.toPngOriginalRb.Location = new System.Drawing.Point(6, 254);
+            this.toPngOriginalRb.Location = new System.Drawing.Point(6, 245);
             this.toPngOriginalRb.Name = "toPngOriginalRb";
             this.toPngOriginalRb.Size = new System.Drawing.Size(89, 19);
             this.toPngOriginalRb.TabIndex = 22;
@@ -927,16 +671,14 @@ namespace XstitchXcel
             this.toPngInstructionsTb.Name = "toPngInstructionsTb";
             this.toPngInstructionsTb.ReadOnly = true;
             this.toPngInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.toPngInstructionsTb.Size = new System.Drawing.Size(748, 215);
+            this.toPngInstructionsTb.Size = new System.Drawing.Size(748, 206);
             this.toPngInstructionsTb.TabIndex = 18;
-            this.toPngInstructionsTb.Text = "Convert xlsx file to png image file.\r\n\r\nIf scaling the image up, the scale number" +
-    " is the multiplier for both directions.\r\n\r\nEg: scale=3: each pixel/cell will be " +
-    "3 across and 3 high.";
+            this.toPngInstructionsTb.Text = resources.GetString("toPngInstructionsTb.Text");
             // 
             // createPngBtn
             // 
             this.createPngBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.createPngBtn.Location = new System.Drawing.Point(591, 326);
+            this.createPngBtn.Location = new System.Drawing.Point(591, 317);
             this.createPngBtn.Name = "createPngBtn";
             this.createPngBtn.Size = new System.Drawing.Size(160, 23);
             this.createPngBtn.TabIndex = 25;
@@ -947,7 +689,7 @@ namespace XstitchXcel
             // toPngOutputBtn
             // 
             this.toPngOutputBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.toPngOutputBtn.Location = new System.Drawing.Point(719, 224);
+            this.toPngOutputBtn.Location = new System.Drawing.Point(719, 215);
             this.toPngOutputBtn.Name = "toPngOutputBtn";
             this.toPngOutputBtn.Size = new System.Drawing.Size(32, 23);
             this.toPngOutputBtn.TabIndex = 21;
@@ -959,7 +701,7 @@ namespace XstitchXcel
             // 
             this.toPngOutputTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.toPngOutputTb.Location = new System.Drawing.Point(101, 225);
+            this.toPngOutputTb.Location = new System.Drawing.Point(101, 216);
             this.toPngOutputTb.Name = "toPngOutputTb";
             this.toPngOutputTb.Size = new System.Drawing.Size(612, 23);
             this.toPngOutputTb.TabIndex = 20;
@@ -969,7 +711,7 @@ namespace XstitchXcel
             // 
             this.toPngOutputLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.toPngOutputLbl.AutoSize = true;
-            this.toPngOutputLbl.Location = new System.Drawing.Point(6, 228);
+            this.toPngOutputLbl.Location = new System.Drawing.Point(6, 219);
             this.toPngOutputLbl.Name = "toPngOutputLbl";
             this.toPngOutputLbl.Size = new System.Drawing.Size(89, 15);
             this.toPngOutputLbl.TabIndex = 19;
@@ -1000,7 +742,7 @@ namespace XstitchXcel
             this.crtBlurInstructionsTb.Name = "crtBlurInstructionsTb";
             this.crtBlurInstructionsTb.ReadOnly = true;
             this.crtBlurInstructionsTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.crtBlurInstructionsTb.Size = new System.Drawing.Size(748, 215);
+            this.crtBlurInstructionsTb.Size = new System.Drawing.Size(748, 206);
             this.crtBlurInstructionsTb.TabIndex = 17;
             this.crtBlurInstructionsTb.Text = "Apply a CRT blur effect to your design.\r\n\r\nALL non-transparent pixels are treated" +
     " as white, then the CRT blur effect is applied.";
@@ -1008,7 +750,7 @@ namespace XstitchXcel
             // createCrtBlurBtn
             // 
             this.createCrtBlurBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.createCrtBlurBtn.Location = new System.Drawing.Point(591, 326);
+            this.createCrtBlurBtn.Location = new System.Drawing.Point(591, 317);
             this.createCrtBlurBtn.Name = "createCrtBlurBtn";
             this.createCrtBlurBtn.Size = new System.Drawing.Size(160, 23);
             this.createCrtBlurBtn.TabIndex = 16;
@@ -1019,7 +761,7 @@ namespace XstitchXcel
             // crtBlurOutputBtn
             // 
             this.crtBlurOutputBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.crtBlurOutputBtn.Location = new System.Drawing.Point(719, 224);
+            this.crtBlurOutputBtn.Location = new System.Drawing.Point(719, 215);
             this.crtBlurOutputBtn.Name = "crtBlurOutputBtn";
             this.crtBlurOutputBtn.Size = new System.Drawing.Size(32, 23);
             this.crtBlurOutputBtn.TabIndex = 12;
@@ -1031,7 +773,7 @@ namespace XstitchXcel
             // 
             this.crtBlurOutputTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.crtBlurOutputTb.Location = new System.Drawing.Point(121, 225);
+            this.crtBlurOutputTb.Location = new System.Drawing.Point(121, 216);
             this.crtBlurOutputTb.Name = "crtBlurOutputTb";
             this.crtBlurOutputTb.Size = new System.Drawing.Size(592, 23);
             this.crtBlurOutputTb.TabIndex = 11;
@@ -1041,11 +783,30 @@ namespace XstitchXcel
             // 
             this.crtBlurOutputLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.crtBlurOutputLbl.AutoSize = true;
-            this.crtBlurOutputLbl.Location = new System.Drawing.Point(3, 228);
+            this.crtBlurOutputLbl.Location = new System.Drawing.Point(3, 219);
             this.crtBlurOutputLbl.Name = "crtBlurOutputLbl";
             this.crtBlurOutputLbl.Size = new System.Drawing.Size(112, 15);
             this.crtBlurOutputLbl.TabIndex = 10;
             this.crtBlurOutputLbl.Text = "CRT Blur output file:";
+            // 
+            // statsTabPage
+            // 
+            this.statsTabPage.Controls.Add(this.statsPanel1);
+            this.statsTabPage.Location = new System.Drawing.Point(4, 24);
+            this.statsTabPage.Name = "statsTabPage";
+            this.statsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.statsTabPage.Size = new System.Drawing.Size(754, 353);
+            this.statsTabPage.TabIndex = 9;
+            this.statsTabPage.Text = "Stats";
+            this.statsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // statsPanel1
+            // 
+            this.statsPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statsPanel1.Location = new System.Drawing.Point(3, 3);
+            this.statsPanel1.Name = "statsPanel1";
+            this.statsPanel1.Size = new System.Drawing.Size(748, 347);
+            this.statsPanel1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -1059,15 +820,11 @@ namespace XstitchXcel
             this.Controls.Add(this.fileNameLbl);
             this.Name = "Form1";
             this.Text = "Xstitch Xcel";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Form1_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Form1_DragEnter);
             this.tabControl.ResumeLayout(false);
             this.createPatternTabPage.ResumeLayout(false);
-            this.createPatternTabPage.PerformLayout();
-            this.statsTabPage.ResumeLayout(false);
-            this.statsTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.statsCountNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statsDgv)).EndInit();
             this.findDmcColorsTabPage.ResumeLayout(false);
             this.findDmcColorsTabPage.PerformLayout();
             this.replaceColorTabPage.ResumeLayout(false);
@@ -1085,6 +842,7 @@ namespace XstitchXcel
             ((System.ComponentModel.ISupportInitialize)(this.toPngNud)).EndInit();
             this.crtBlurTabPage.ResumeLayout(false);
             this.crtBlurTabPage.PerformLayout();
+            this.statsTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1096,26 +854,8 @@ namespace XstitchXcel
         private System.Windows.Forms.TextBox fileNameTb;
         private System.Windows.Forms.Button fileNameBtn;
         private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TabPage createPatternTabPage;
-        private System.Windows.Forms.TabPage statsTabPage;
         private System.Windows.Forms.TabPage findDmcColorsTabPage;
         private System.Windows.Forms.TabPage replaceColorTabPage;
-        private System.Windows.Forms.Button patternOutputBtn;
-        private System.Windows.Forms.TextBox patternOutputTb;
-        private System.Windows.Forms.Label patternOutputLbl;
-        private System.Windows.Forms.Button createPatternBtn;
-        private System.Windows.Forms.CheckBox colorsAndGlyphsCb;
-        private System.Windows.Forms.CheckBox glyphsCb;
-        private System.Windows.Forms.CheckBox colorsCb;
-        private System.Windows.Forms.TextBox createPatternInstructionsTb;
-        private System.Windows.Forms.Button generateStatsBtn;
-        private System.Windows.Forms.DataGridView statsDgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtyStitches;
-        private System.Windows.Forms.DataGridViewTextBoxColumn minSkeins;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maxSkeins;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dmcNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dmcName;
         private System.Windows.Forms.Button beginColorReplaceBtn;
         private System.Windows.Forms.PictureBox newColorPb;
         private System.Windows.Forms.TextBox newColorTb;
@@ -1135,10 +875,6 @@ namespace XstitchXcel
         private System.Windows.Forms.Button crtBlurOutputBtn;
         private System.Windows.Forms.TextBox crtBlurOutputTb;
         private System.Windows.Forms.Label crtBlurOutputLbl;
-        private System.Windows.Forms.TextBox statsOutTb;
-        private System.Windows.Forms.ComboBox statsUnitCb;
-        private System.Windows.Forms.NumericUpDown statsCountNum;
-        private System.Windows.Forms.Label statsCountLbl;
         private System.Windows.Forms.TabPage replaceColorNaiveTabPage;
         private System.Windows.Forms.Label newIsDmcNaiveLbl;
         private System.Windows.Forms.Label oldIsDmcNaiveLbl;
@@ -1169,6 +905,10 @@ namespace XstitchXcel
         private System.Windows.Forms.RadioButton toPngScaleRb;
         private System.Windows.Forms.RadioButton toPngOriginalRb;
         private System.Windows.Forms.NumericUpDown toPngNud;
+        private System.Windows.Forms.TabPage createPatternTabPage;
+        private XstitchXcelWinFormsLib.Panels.CreatePatternSplitPanel createPatternSplitPanel1;
+        private System.Windows.Forms.TabPage statsTabPage;
+        private XstitchXcelWinFormsLib.Panels.StatsPanel statsPanel1;
     }
 }
 

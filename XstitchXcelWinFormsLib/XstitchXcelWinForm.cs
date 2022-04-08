@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dinah.Core.Threading;
+using XstitchXcelWinFormsLib.Panels;
 
 namespace XstitchXcelWinFormsLib
 {
-	public partial class XstitchXcelWinForm : Form
+	public partial class XstitchXcelWinForm : Form, IRunner
 	{
 		public XstitchXcelWinForm()
 		{
@@ -14,40 +16,30 @@ namespace XstitchXcelWinFormsLib
 		}
 
 		#region run tool async
-		public record RunSettings(bool ShowCompletedDialog, Control Focus);
-		private static RunSettings DefaultRunSettings { get; } = new RunSettings(true, null);
-
-		protected Task TextBoxEnterKeyAsync(KeyPressEventArgs e, Action action) => TextBoxEnterKeyAsync(e, action, DefaultRunSettings);
-		protected async Task TextBoxEnterKeyAsync(KeyPressEventArgs e, Action action, RunSettings settings)
+		public async Task RunAsync(IRunCommand runCommand)
 		{
-			if (e.KeyChar == (char)Keys.Return)
-			{
-				// silence the 'ding'
-				e.Handled = true;
-
-				await RunFullAsync(action, settings);
-			}
-		}
-
-		protected Task RunFullAsync(Action action) => RunFullAsync(action, DefaultRunSettings);
-		protected async Task RunFullAsync(Action action, RunSettings settings)
-		{
-			var ex = await RunAsync(action, settings);
+			var ex = await runAsync(runCommand);
 
 			if (ex is not null)
+			{
 				MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			else if (settings.ShowCompletedDialog)
+				runCommand.FailureAction();
+				return;
+			}
+
+			if (runCommand.FocusControl is null || !runCommand.ShowSuccessDialog)
 				MessageBox.Show("Successfully completed");
+
+			runCommand.SuccessAction();
 		}
 
-		protected Task<Exception> RunAsync(Action action) => RunAsync(action, DefaultRunSettings);
-		protected async Task<Exception> RunAsync(Action action, RunSettings settings)
+		private async Task<Exception> runAsync(IRunCommand runCommand)
 		{
 			try
 			{
 				disableUI();
 
-				await Task.Run(action);
+				await Task.Run(runCommand.RunAction);
 
 				return null;
 			}
@@ -62,11 +54,11 @@ namespace XstitchXcelWinFormsLib
 
 				enableUI();
 
-				settings?.Focus?.UIThreadAsync(() => {
-					var control = settings.Focus;
-					if (control is TextBoxBase tb)
+				var focusControl = runCommand.FocusControl;
+				focusControl?.UIThreadAsync(() => {
+					if (focusControl is TextBoxBase tb)
 						tb.SelectAll();
-					control.Focus();
+					focusControl.Focus();
 				});
 			}
 		}
@@ -91,5 +83,24 @@ namespace XstitchXcelWinFormsLib
 			control.Enabled = enable;
 		}
 		#endregion
+
+		protected IEnumerable<_ToolControlsBase> GetChildrenToolControls() => getChildrenToolControls();
+		private List<_ToolControlsBase> getChildrenToolControls()
+		{
+			var list = new List<_ToolControlsBase>();
+
+			foreach (var c in Controls.Cast<Control>())
+				getChildrenToolControls(c, list);
+
+			return list;
+		}
+		private static void getChildrenToolControls(Control control, List<_ToolControlsBase> list)
+		{
+			if (control is _ToolControlsBase toolControl)
+				list.Add(toolControl);
+
+			foreach (var c in control.Controls.Cast<Control>())
+				getChildrenToolControls(c, list);
+		}
 	}
 }
