@@ -2,9 +2,9 @@
 
 namespace XstitchXcelWinFormsLib.Panels
 {
-    public partial class ReplaceColorNaiveSplitPanel : _ToolSplit
+    public partial class BatchConvertSplitPanel : _ToolSplit
     {
-        public ReplaceColorNaiveSplitPanel() : base()
+        public BatchConvertSplitPanel() : base()
         {
             InitializeComponent();
         }

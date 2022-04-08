@@ -27,14 +27,14 @@ We'll match font and style choices like bold, italics, etc.
 
         protected override void Register()
             => MasterForm.NewExcelFileSelected += (_, __)
-                => this.saveFileControl1.TextBoxText = HelperMethods.GetUniqueFileName(HelperMethods.AddFileSuffix(MasterForm.FileName, " - output"));
+                => this.saveFileControl1.FileName = HelperMethods.GetUniqueFileName(HelperMethods.AddFileSuffix(MasterForm.FileName, " - output"));
 
         private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
 
         public override void Run()
             => new PatternBuilder(MasterForm.GetPattern())
             {
-                OutputFile = saveFileControl1.TextBoxText,
+                OutputFile = saveFileControl1.FileName,
                 PrintColorsGrid = colorsCb.Checked,
                 PrintGlyphsGrid = glyphsCb.Checked,
                 PrintColorsAndGlyphsGrid = colorsAndGlyphsCb.Checked,

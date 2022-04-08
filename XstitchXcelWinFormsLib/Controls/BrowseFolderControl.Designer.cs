@@ -1,6 +1,6 @@
 ﻿namespace XstitchXcelWinFormsLib.Controls
 {
-    partial class SaveFileControl
+    partial class BrowseFolderControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // SaveFileControl
+            // BrowseFolderControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "SaveFileControl";
-            this.SelectButtonClick += new System.EventHandler(this.SaveFileControl_SelectButtonClick);
+            this.Name = "BrowseFolderControl";
+            this.SelectButtonClick += new System.EventHandler(this.BrowseFolderControl_SelectButtonClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

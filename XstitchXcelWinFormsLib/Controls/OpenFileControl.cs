@@ -3,25 +3,26 @@ using System.Windows.Forms;
 
 namespace XstitchXcelWinFormsLib.Controls
 {
-    public partial class SaveFileControl : _PickerBaseControl
+    public partial class OpenFileControl : _PickerBaseControl
     {
-        public SaveFileControl()
+        public OpenFileControl()
         {
             InitializeComponent();
         }
 
-        private void SaveFileControl_SelectButtonClick(object sender, EventArgs e)
+        private void OpenFileControl_SelectButtonClick(object sender, EventArgs e)
         {
-            var dialog = new SaveFileDialog
+            var dialog = new OpenFileDialog
             {
                 Title = this.DialogTitle,
 
-                AddExtension = true,
+                CheckFileExists = true,
+                CheckPathExists = true,
                 DefaultExt = this.FileExtension,
                 FileName = this.FileName,
                 Filter = $"{this.FileTypeName} (*.{this.FileExtension})|*.{this.FileExtension}|All files (*.*)|*.*",
                 FilterIndex = 0,
-                OverwritePrompt = true
+                Multiselect = false
             };
             dialog.FileOk += (_, __) => this.FileName = dialog.FileName;
             dialog.ShowDialog();

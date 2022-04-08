@@ -80,7 +80,7 @@
             this.saveFileControl1.Name = "saveFileControl1";
             this.saveFileControl1.Size = new System.Drawing.Size(751, 31);
             this.saveFileControl1.TabIndex = 14;
-            this.saveFileControl1.TextBoxText = "";
+            this.saveFileControl1.FileName = "";
             this.saveFileControl1.FileNameKeyPress += new System.Windows.Forms.KeyPressEventHandler(this.saveFileControl1_FileNameKeyPress);
             // 
             // CreatePatternPanel

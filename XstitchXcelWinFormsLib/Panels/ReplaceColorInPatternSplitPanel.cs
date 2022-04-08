@@ -4,7 +4,7 @@ namespace XstitchXcelWinFormsLib.Panels
 {
     public partial class ReplaceColorInPatternSplitPanel : _ToolSplit
     {
-        public ReplaceColorInPatternSplitPanel()
+        public ReplaceColorInPatternSplitPanel() : base()
         {
             InitializeComponent();
         }

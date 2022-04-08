@@ -1,6 +1,6 @@
-﻿namespace XstitchXcelWinFormsLib.Controls
+﻿namespace XstitchXcelWinFormsLib.Panels
 {
-    partial class SaveFileControl
+    partial class CrtBlurSplitPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,19 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.crtBlurPanel1 = new XstitchXcelWinFormsLib.Panels.CrtBlurPanel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // SaveFileControl
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.crtBlurPanel1);
+            // 
+            // crtBlurPanel1
+            // 
+            this.crtBlurPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crtBlurPanel1.Location = new System.Drawing.Point(0, 0);
+            this.crtBlurPanel1.Name = "crtBlurPanel1";
+            this.crtBlurPanel1.Size = new System.Drawing.Size(754, 138);
+            this.crtBlurPanel1.TabIndex = 0;
+            // 
+            // CrtBlurSplitPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "SaveFileControl";
-            this.SelectButtonClick += new System.EventHandler(this.SaveFileControl_SelectButtonClick);
+            this.Name = "CrtBlurSplitPanel";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private CrtBlurPanel crtBlurPanel1;
     }
 }
