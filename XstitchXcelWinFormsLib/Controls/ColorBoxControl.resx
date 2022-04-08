@@ -57,11 +57,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="toPngInstructionsTb.Text" xml:space="preserve">
-    <value>Convert xlsx file to png image file.
-
-If scaling the image up, the scale number is the multiplier for both directions: height and width.
-
-Eg: scale=3: each new pixel/cell will be 3 cells across and 3 high.</value>
-  </data>
 </root>

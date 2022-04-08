@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,7 +20,7 @@ namespace XstitchXcelWinFormsLib.Panels
             if (configuration is null)
                 return;
 
-            this.Instructions = configuration.Instructions;
+            this.Instructions = configuration.Instructions?.Trim();
 
             // this even works for designer
             this.button1.Text = configuration.SubmitButtonText;
@@ -40,9 +36,9 @@ namespace XstitchXcelWinFormsLib.Panels
         protected virtual void Register() { }
 
         #region IRunCommand
-        public virtual void RunAction() { }
-        public virtual void SuccessAction() { }
-        public virtual void FailureAction() { }
+        public virtual void Run() { }
+        public virtual void OnSuccess() { }
+        public virtual void OnFailure() { }
 
         public virtual bool ShowSuccessDialog => true;
         public virtual Control FocusControl { get; }

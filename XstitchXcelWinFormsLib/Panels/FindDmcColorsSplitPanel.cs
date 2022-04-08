@@ -2,9 +2,9 @@
 
 namespace XstitchXcelWinFormsLib.Panels
 {
-    public partial class CreatePatternSplitPanel : _ToolSplit
+    public partial class FindDmcColorsSplitPanel : _ToolSplit
     {
-        public CreatePatternSplitPanel() : base()
+        public FindDmcColorsSplitPanel() : base()
         {
             InitializeComponent();
         }

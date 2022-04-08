@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XstitchXcelLib;
@@ -24,7 +20,7 @@ We'll match font and style choices like bold, italics, etc.
 ";
         private const string SUBMIT_BUTTON_TEXT = "Create Pattern";
 
-        public CreatePatternPanel() : base(new Configuration(INSTRUCTIONS, SUBMIT_BUTTON_TEXT))
+        public CreatePatternPanel() : base(new(INSTRUCTIONS, SUBMIT_BUTTON_TEXT))
         {
             InitializeComponent();
         }
@@ -33,21 +29,16 @@ We'll match font and style choices like bold, italics, etc.
             => MasterForm.NewExcelFileSelected += (_, __)
                 => this.saveFileControl1.TextBoxText = HelperMethods.GetUniqueFileName(HelperMethods.AddFileSuffix(MasterForm.FileName, " - output"));
 
-        private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, RunAction);
+        private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
 
-        public override void RunAction()
-        {
-            var pattern = MasterForm.GetPattern();
-
-            var builder = new PatternBuilder(pattern)
+        public override void Run()
+            => new PatternBuilder(MasterForm.GetPattern())
             {
                 OutputFile = saveFileControl1.TextBoxText,
                 PrintColorsGrid = colorsCb.Checked,
                 PrintGlyphsGrid = glyphsCb.Checked,
                 PrintColorsAndGlyphsGrid = colorsAndGlyphsCb.Checked,
-            };
-
-            builder.ConvertToPattern();
-        }
+            }
+            .ConvertToPattern();
     }
 }

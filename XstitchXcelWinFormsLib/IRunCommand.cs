@@ -8,8 +8,8 @@ namespace XstitchXcelWinFormsLib
         bool ShowSuccessDialog { get; }
         Control FocusControl { get; }
 
-        void RunAction();
-        void SuccessAction();
-        void FailureAction();
+        void Run();
+        void OnSuccess();
+        void OnFailure();
     }
 }

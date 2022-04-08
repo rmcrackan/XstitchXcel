@@ -23,14 +23,14 @@ namespace XstitchXcelWinFormsLib
 			if (ex is not null)
 			{
 				MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				runCommand.FailureAction();
+				runCommand.OnFailure();
 				return;
 			}
 
 			if (runCommand.FocusControl is null || !runCommand.ShowSuccessDialog)
 				MessageBox.Show("Successfully completed");
 
-			runCommand.SuccessAction();
+			runCommand.OnSuccess();
 		}
 
 		private async Task<Exception> runAsync(IRunCommand runCommand)
@@ -39,7 +39,7 @@ namespace XstitchXcelWinFormsLib
 			{
 				disableUI();
 
-				await Task.Run(runCommand.RunAction);
+				await Task.Run(runCommand.Run);
 
 				return null;
 			}

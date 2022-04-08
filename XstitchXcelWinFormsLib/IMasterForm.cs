@@ -30,9 +30,9 @@ namespace XstitchXcelWinFormsLib
             public Action SuccessActionDelegate { get; set; }
             public Action FailureActionDelegate { get; set; }
 
-            public void RunAction() => RunActionDelegate?.Invoke();
-            public void SuccessAction() => SuccessActionDelegate?.Invoke();
-            public void FailureAction() => FailureActionDelegate?.Invoke();
+            public void Run() => RunActionDelegate?.Invoke();
+            public void OnSuccess() => SuccessActionDelegate?.Invoke();
+            public void OnFailure() => FailureActionDelegate?.Invoke();
         }
         public static async Task TextBoxEnterKeyAsync(this IRunner runner, KeyPressEventArgs e, Action action, Control focusControl = null)
         {

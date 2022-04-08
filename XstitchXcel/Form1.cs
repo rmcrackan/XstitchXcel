@@ -23,8 +23,6 @@ namespace XstitchXcel
         public string FileName => fileNameTb.Text;
         public Pattern GetPattern() => Configuration.GetPattern(fileNameTb.Text);
 
-        private DmcColorProcessor dmcColorProcessor { get; } = new DmcColorProcessor();
-
         public Form1()
         {
             InitializeComponent();
@@ -108,55 +106,6 @@ namespace XstitchXcel
         // might be unneeded after refactor
         private Task RunAsync(Action action) => RunnerExtensions.RunAsync(this, action);
         private Task TextBoxEnterKeyAsync(KeyPressEventArgs e, Action action, Control focusControl = null) => RunnerExtensions.TextBoxEnterKeyAsync(this, e, action, focusControl);
-
-        #region tab: Find DMC Colors
-        private async void findDmcColorsBtn_Click(object sender, EventArgs e) => await RunAsync(() => new PatternAnalyzer(GetPattern()).ReportNonDmc());
-        #endregion
-
-        #region tab: Replace Color
-        private void oldColorTb_TextChanged(object sender, EventArgs e) => setDmcPictureBox(oldColorTb, oldColorPb, oldIsDmcLbl);
-        private void newColorTb_TextChanged(object sender, EventArgs e) => setDmcPictureBox(newColorTb, newColorPb, newIsDmcLbl);
-
-        private async void oldColorTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceColor);
-        private async void newColorTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceColor);
-        private async void beginColorReplaceBtn_Click(object sender, EventArgs e) => await RunAsync(replaceColor);
-        private void replaceColor()
-            => new ColorReplacer(GetPattern())
-            {
-                CreateBackupFile = replaceColorBakCb.Checked
-            }
-            .TargetedReplace(oldColorTb.Text, newColorTb.Text);
-        #endregion
-
-        #region tab: Replace Color (naive)
-        private void oldColorNaiveTb_TextChanged(object sender, EventArgs e) => setDmcPictureBox(oldColorNaiveTb, oldColorNaivePb, oldIsDmcNaiveLbl);
-        private void newColorNaiveTb_TextChanged(object sender, EventArgs e) => setDmcPictureBox(newColorNaiveTb, newColorNaivePb, newIsDmcNaiveLbl);
-
-        private async void oldColorNaiveTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceNaiveColor);
-        private async void newColorNaiveTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, replaceNaiveColor);
-        private async void beginColorReplaceNaiveBtn_Click(object sender, EventArgs e) => await RunAsync(replaceNaiveColor);
-        private void replaceNaiveColor()
-            => ColorReplacer.NaiveReplace(fileNameTb.Text, oldColorNaiveTb.Text, newColorNaiveTb.Text, replaceColorNaiveBakCb.Checked);
-        #endregion
-
-        private void setDmcPictureBox(TextBox tb, PictureBox pb, Label isDmcLbl)
-        {
-            var color = dmcColorProcessor.SmartColorFinder(tb.Text);
-
-            var isValidColor = !color.IsEquivalent(Color.Empty);
-
-            pb.Visible = isValidColor && !color.IsTransparent();
-            isDmcLbl.Visible = isValidColor;
-            if (!isValidColor)
-                return;
-
-            pb.BackColor = color;
-
-            isDmcLbl.Text
-                = color.IsTransparent() ? "Transparent"
-                : dmcColorProcessor.TryGetMatch(color, out var dmcColor) ? $"DMC # {dmcColor.DmcNumber} - {dmcColor.Name}"
-                : "Non-DMC";
-        }
 
         #region tab: Batch Convert
         private void batchConvertSourceBtn_Click(object sender, EventArgs e)

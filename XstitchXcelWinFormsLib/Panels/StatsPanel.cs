@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using XstitchXcelLib;
 using XstitchXcelLib.DataClasses;
@@ -20,7 +15,7 @@ namespace XstitchXcelWinFormsLib.Panels
 
         private Pattern statsPattern;
 
-        public StatsPanel() : base(new Configuration(INSTRUCTIONS, SUBMIT_BUTTON_TEXT))
+        public StatsPanel() : base(new(INSTRUCTIONS, SUBMIT_BUTTON_TEXT))
         {
             InitializeComponent();
 
@@ -32,8 +27,8 @@ namespace XstitchXcelWinFormsLib.Panels
 
         public override bool ShowSuccessDialog => false;
 
-        public override void RunAction() => statsPattern = MasterForm.GetPattern();
-        public override void SuccessAction()
+        public override void Run() => statsPattern = MasterForm.GetPattern();
+        public override void OnSuccess()
         {
             var reporter = new StatsReporter(statsPattern);
             var results = reporter.StitchStatsReport();
@@ -63,7 +58,7 @@ namespace XstitchXcelWinFormsLib.Panels
 
             updateStatsOut();
         }
-        public override void FailureAction() => statsPattern = null;
+        public override void OnFailure() => statsPattern = null;
 
         private void updateStatsOut(object sender = null, EventArgs e = null)
         {
