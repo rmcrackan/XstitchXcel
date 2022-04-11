@@ -5,6 +5,8 @@ namespace XstitchXcelWinFormsLib.Panels
 {
     public partial class BatchConvertPanel : _ToolControlsBase
     {
+        public override bool UseGlobalExcelFile => false;
+
         private const string INSTRUCTIONS = @"For each image in source directory:
 
 * copy to destination directory

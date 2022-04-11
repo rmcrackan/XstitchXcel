@@ -23,9 +23,24 @@ namespace XstitchXcel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach (var tc in GetChildrenToolControls())
+            // register all tool controls, whether or not they are contained by a tab page
+            foreach (var tc in GetChildrenToolControls(this))
                 tc.RegisterMasterForm(this);
+
+            // build map
+            foreach (var tab in this.tabControl.TabPages.Cast<TabPage>())
+            {
+                var tc = GetChildrenToolControls(tab).FirstOrDefault();
+                if (tc != default)
+                    tabControlsMap.Add(tab, tc);
+            }
+
+            this.tabControl.SelectedIndexChanged += TabControl_SelectedIndexChanged;
         }
+
+        private Dictionary<TabPage, XstitchXcelWinFormsLib.Panels._ToolControlsBase> tabControlsMap { get; } = new();
+        private void TabControl_SelectedIndexChanged(object sender, EventArgs e)
+            => this.openFileControl1.Enabled = (!tabControlsMap.TryGetValue(this.tabControl.SelectedTab, out var toolControls)) || toolControls.UseGlobalExcelFile;
 
         private void Form1_DragEnter(object sender, DragEventArgs e)
         {

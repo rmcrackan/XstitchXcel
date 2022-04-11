@@ -11,6 +11,7 @@ namespace XstitchXcelWinFormsLib.Panels
         public record Configuration(string Instructions, string SubmitButtonText);
 
         public string Instructions { get; }
+        public virtual bool UseGlobalExcelFile { get; } = true;
 
         public _ToolControlsBase() : this(null) { }
         public _ToolControlsBase(Configuration configuration) : base()

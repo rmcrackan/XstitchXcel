@@ -82,14 +82,10 @@ namespace XstitchXcelWinFormsLib
 		}
 		#endregion
 
-		protected IEnumerable<_ToolControlsBase> GetChildrenToolControls() => getChildrenToolControls();
-		private List<_ToolControlsBase> getChildrenToolControls()
+		protected List<_ToolControlsBase> GetChildrenToolControls(Control control)
 		{
 			var list = new List<_ToolControlsBase>();
-
-			foreach (var c in Controls.Cast<Control>())
-				getChildrenToolControls(c, list);
-
+			getChildrenToolControls(control, list);
 			return list;
 		}
 		private static void getChildrenToolControls(Control control, List<_ToolControlsBase> list)
