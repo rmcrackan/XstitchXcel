@@ -66,12 +66,10 @@ namespace XstitchXcelWinFormsLib
 		/// <summary>
 		/// set enable for each control in form, not on Form/"this" (which would freezes the form itself in place)
 		/// </summary>
-		public bool ChildrenEnabled { get; set; } = true;
 		private void disableUI() => setEnable(false);
 		private void enableUI() => setEnable(true);
 		private void setEnable(bool enable)
 		{
-			ChildrenEnabled = enable;
 			foreach (var c in Controls.Cast<Control>())
 				setEnableRecurs(c, enable);
 		}

@@ -29,7 +29,7 @@ namespace XstitchXcel
 
         private void Form1_DragEnter(object sender, DragEventArgs e)
         {
-            if (!ChildrenEnabled)
+            if (!this.openFileControl1.Enabled)
                 return;
 
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -38,7 +38,7 @@ namespace XstitchXcel
 
         private void Form1_DragDrop(object sender, DragEventArgs e)
         {
-            if (!ChildrenEnabled)
+            if (!this.openFileControl1.Enabled)
                 return;
 
             var files = (string[])e.Data.GetData(DataFormats.FileDrop);
