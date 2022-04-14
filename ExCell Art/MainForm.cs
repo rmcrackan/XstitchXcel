@@ -1,5 +1,4 @@
-// originally from https://github.com/JamesMatchett/ExCell-Art-Generator
-// heavily adapted
+// heavily adapted from https://github.com/JamesMatchett/ExCell-Art-Generator
 using System.ComponentModel;
 using XstitchXcelLib;
 using XstitchXcelLib.Tools;
@@ -67,10 +66,10 @@ namespace ExCell_Art
             artMaker.StartAsync();
         }
 
-        //for estimated time to completion counter
+        // for estimated time to completion counter
         DateTime lastPercentageTime = DateTime.Now;
         decimal lastPercentageValue = 0;
-        List<decimal> averageTimeFor1Percent { get; } = new List<decimal>();
+        List<decimal> averageTimeFor1Percent { get; } = new();
 
         private void bw_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
@@ -99,12 +98,12 @@ namespace ExCell_Art
 
         private void updateProgressBar(int progress)
         {
-            int percentage = Convert.ToInt32(progress);
+            var percentage = Convert.ToInt32(progress);
 
             progressBar.Value = Math.Min(percentage, 100);
 
             // 101 signifies finished, stop multithread sending multiple "finished" signal
-            if (percentage == 101)
+            if (percentage == ImageToExcel.Complete)
             {
                 updateTimeRemaining(0);
                 stop("Finished!");
@@ -124,7 +123,7 @@ namespace ExCell_Art
                 averageTimeFor1Percent.Remove(averageTimeFor1Percent.First());
 
             //now multiply time for 1% by the percentage remianing e.g. 45% done would be 55% percent to go
-            decimal SecondsRemaining = (averageTimeFor1Percent.Average() * (100 - progress));
+            var SecondsRemaining = averageTimeFor1Percent.Average() * (100 - progress);
             return Math.Floor(SecondsRemaining);
         }
 

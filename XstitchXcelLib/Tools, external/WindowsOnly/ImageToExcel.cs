@@ -10,7 +10,9 @@ namespace XstitchXcelLib.Tools
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Interoperability", "CA1416:Validate platform compatibility")]
     public class ImageToExcel
     {
-        public BackgroundWorker bw { get; } = new BackgroundWorker
+        public const int Complete = 101;
+
+        public BackgroundWorker bw { get; } = new()
         {
             WorkerReportsProgress = true,
             WorkerSupportsCancellation = true
@@ -19,9 +21,7 @@ namespace XstitchXcelLib.Tools
         private string _imagePath { get; }
         private string _outputPath { get; }
 
-        private bool quitting = false;
-
-        public Excel.Application xlApp = new Excel.Application();
+        public Excel.Application xlApp = new();
 
         public ImageToExcel(string imagePath, string outputPath)
         {
@@ -36,7 +36,6 @@ namespace XstitchXcelLib.Tools
 
         public void StopAsync()
         {
-            quitting = true;
             bw.CancelAsync();
             bw.Dispose();
         }
@@ -73,49 +72,60 @@ namespace XstitchXcelLib.Tools
 
             var locker = new object();
 
-            //i = across, j = up, image coordinates start from bottom left corner whereas excel starts from top left
-            Parallel.For(0, height, (j, loopState) =>
+            try
             {
-                for (var i = 0; i < width; i++)
+                // i = across, j = up, image coordinates start from bottom left corner whereas excel starts from top left
+                Parallel.For(0, height, (j, loopState) =>
                 {
-                    if (quitting)
-                        break;
+                    for (var i = 0; i < width; i++)
+                    {
+                        if (bw.CancellationPending)
+                            break;
 
-                    Color color;
-                    // even though file access is safe, the GDI+ object isn't threadsafe
-                    lock (locker)
-                        color = bitmap.GetPixel(i, j);
+                        var cell = xlRange.Cells[j + 1, i + 1];
 
-                    var cell = xlRange.Cells[j + 1, i + 1];
+                        // GetPixel and SetPixel are SLOW. Improvements:
+                        // - https://csharpexamples.com/tag/parallel-bitmap-processing/
+                        // - https://codereview.stackexchange.com/questions/78835/parallelizing-bitmap-methods
+                        // - https://docs.microsoft.com/en-us/dotnet/api/system.drawing.bitmap.lockbits?redirectedfrom=MSDN&view=dotnet-plat-ext-6.0#overloads
+                        Color color;
+                        // even though file access is safe, the GDI+ object isn't threadsafe
+                        lock (locker)
+                            color = bitmap.GetPixel(i, j);
 
-                    // transparent
-                    if (color.A == 0)
-                        cell.Interior.ColorIndex = 0;
-                    // non-transparent
-                    else
-                        cell.Interior.Color = ColorTranslator.ToOle(color);
+                        // transparent
+                        if (color.A == 0)
+                            cell.Interior.ColorIndex = 0;
+                        // non-transparent
+                        else
+                            cell.Interior.Color = ColorTranslator.ToOle(color);
 
-                    pixelCounter++;
-                }
+                        pixelCounter++;
+                    }
 
-                if (quitting)
-                    loopState.Stop();
+                    if (bw.CancellationPending)
+                        loopState.Stop();
 
-                var progress = ((pixelCounter / totalPixels) * 100);
-                var progressInt = Convert.ToInt32(progress);
-                bw.ReportProgress(progressInt);
-            });
+                    var progress = pixelCounter / totalPixels * 100;
+                    var progressInt = Convert.ToInt32(progress);
+                    bw.ReportProgress(progressInt);
+                });
 
-            if (!quitting)
+                // skip save as. skip report progress complete
+                if (bw.CancellationPending)
+                    return;
+                
                 xlWorkbook.SaveAs(_outputPath);
-
-            xlWorkbook.Close(0);
-            xlApp.Quit();
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(xlWorkbook);
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(xlApp);
-
-            if (!quitting)
-                bw.ReportProgress(101);
+            }
+            finally
+            {
+                xlWorkbook.Close(0);
+                xlApp.Quit();
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(xlWorkbook);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(xlApp);
+            }
+            
+            bw.ReportProgress(Complete);
         }
     }
 }

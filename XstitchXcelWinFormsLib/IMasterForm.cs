@@ -49,7 +49,8 @@ namespace XstitchXcelWinFormsLib
             => runner.RunAsync(new DynamicRunCommand()
             {
                 RunActionDelegate = action,
-                FocusControl = focusControl
+                FocusControl = focusControl,
+                ShowSuccessDialog = focusControl is null
             });
     }
 }

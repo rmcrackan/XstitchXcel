@@ -27,7 +27,7 @@ namespace XstitchXcelWinFormsLib
 				return;
 			}
 
-			if (runCommand.FocusControl is null || !runCommand.ShowSuccessDialog)
+			if (runCommand.ShowSuccessDialog)
 				MessageBox.Show("Successfully completed");
 
 			runCommand.OnSuccess();
