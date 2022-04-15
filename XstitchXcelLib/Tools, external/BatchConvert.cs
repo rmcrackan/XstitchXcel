@@ -45,7 +45,7 @@ namespace XstitchXcelLib.Tools
         private string image2Xlsx(string img)
         {
             var xlsx = Path.Combine(destDir, Path.GetFileNameWithoutExtension(img) + ".xlsx");
-            new ImageToExcel(img, xlsx).StartSync();
+            new ImageToExcel(img, xlsx).Start();
             return xlsx;
         }
 

@@ -36,7 +36,6 @@
             this.cancelBtn = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.imageBtn = new System.Windows.Forms.Button();
-            this.TimeRemainingLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InputName
@@ -107,21 +106,11 @@
             this.imageBtn.UseVisualStyleBackColor = true;
             this.imageBtn.Click += new System.EventHandler(this.imageBtn_Click);
             // 
-            // TimeRemainingLabel
-            // 
-            this.TimeRemainingLabel.AutoSize = true;
-            this.TimeRemainingLabel.Location = new System.Drawing.Point(247, 176);
-            this.TimeRemainingLabel.Name = "TimeRemainingLabel";
-            this.TimeRemainingLabel.Size = new System.Drawing.Size(93, 15);
-            this.TimeRemainingLabel.TabIndex = 7;
-            this.TimeRemainingLabel.Text = "Time remaining:";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 211);
-            this.Controls.Add(this.TimeRemainingLabel);
             this.Controls.Add(this.imageBtn);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.cancelBtn);
@@ -146,6 +135,5 @@
         private Button cancelBtn;
         private ProgressBar progressBar;
         private Button imageBtn;
-        private Label TimeRemainingLabel;
     }
 }
