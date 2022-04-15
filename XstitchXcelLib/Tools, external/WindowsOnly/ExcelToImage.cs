@@ -49,6 +49,10 @@ namespace XstitchXcelLib.Tools
             destImage.Save(OutputFile, ImageFormat.Png);
         }
 
+        // GetPixel and SetPixel are SLOW. Improvements:
+        // - https://csharpexamples.com/tag/parallel-bitmap-processing/
+        // - https://codereview.stackexchange.com/questions/78835/parallelizing-bitmap-methods
+        // - https://docs.microsoft.com/en-us/dotnet/api/system.drawing.bitmap.lockbits?redirectedfrom=MSDN&view=dotnet-plat-ext-6.0#overloads
         private Bitmap patternToBitmap(Size size)
         {
             var bitmap = new Bitmap(size.Width, size.Height);
