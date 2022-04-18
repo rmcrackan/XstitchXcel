@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dinah.Core.Threading;
 
 namespace XstitchXcelWinFormsLib
 {
@@ -9,16 +10,15 @@ namespace XstitchXcelWinFormsLib
     {
         public class DynamicRunCommand : IRunCommand
         {
-            public bool ShowSuccessDialog { get; set; } = true;
-            public Control FocusControl { get; set; }
-
             public Action<CancellationToken> RunActionDelegate { get; set; }
+            public Action CompleteActionDelegate { get; set; }
             public Action SuccessActionDelegate { get; set; }
             public Action CancelledActionDelegate { get; set; }
             public Action FailureActionDelegate { get; set; }
 
             public bool IsValid() => true;
             public void Run(CancellationToken cancellationToken) => RunActionDelegate?.Invoke(cancellationToken);
+            public void OnComplete() => CompleteActionDelegate?.Invoke();
             public void OnSuccess() => SuccessActionDelegate?.Invoke();
             public void OnCancelled() => CancelledActionDelegate?.Invoke();
             public void OnFailure() => FailureActionDelegate?.Invoke();
@@ -39,8 +39,19 @@ namespace XstitchXcelWinFormsLib
             => runner.RunAsync(new DynamicRunCommand()
             {
                 RunActionDelegate = action,
-                FocusControl = focusControl,
-                ShowSuccessDialog = focusControl is null
+                SuccessActionDelegate = () =>
+                {
+                    if (focusControl is null)
+                        MessageBox.Show("Successfully completed");
+                },
+                CompleteActionDelegate = () =>
+                {
+                    focusControl?.UIThreadAsync(() => {
+                        if (focusControl is TextBoxBase tb)
+                            tb.SelectAll();
+                        focusControl.Focus();
+                    });
+                }
             });
     }
 }

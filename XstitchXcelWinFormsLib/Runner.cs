@@ -26,6 +26,8 @@ namespace XstitchXcelWinFormsLib
 
 			var ex = await runAsync(runCommand, cancellationToken);
 
+			runCommand.OnComplete();
+
 			// should come after the cleanup in runAsync's "finally"
 			if (ex is not null)
 			{
@@ -40,9 +42,6 @@ namespace XstitchXcelWinFormsLib
 				runCommand.OnCancelled();
 				return;
 			}
-
-			if (runCommand.ShowSuccessDialog)
-				MessageBox.Show("Successfully completed");
 
 			runCommand.OnSuccess();
 		}
@@ -67,13 +66,6 @@ namespace XstitchXcelWinFormsLib
 				GC.WaitForPendingFinalizers();
 
 				control.EnableUI();
-
-				var focusControl = runCommand.FocusControl;
-				focusControl?.UIThreadAsync(() => {
-					if (focusControl is TextBoxBase tb)
-						tb.SelectAll();
-					focusControl.Focus();
-				});
 			}
 		}
 

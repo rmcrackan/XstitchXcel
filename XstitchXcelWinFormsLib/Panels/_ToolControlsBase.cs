@@ -59,12 +59,19 @@ namespace XstitchXcelWinFormsLib.Panels
         }
 
         public virtual void Run(CancellationToken cancellationToken) { }
-        public virtual void OnSuccess() { }
-        public virtual void OnCancelled() { }
-        public virtual void OnFailure() { }
+
+        public virtual void OnComplete() { }
 
         public virtual bool ShowSuccessDialog => true;
-        public virtual Control FocusControl { get; }
+        public virtual void OnSuccess()
+        {
+            if (ShowSuccessDialog)
+                MessageBox.Show("Successfully completed");
+        }
+
+        public virtual void OnCancelled() { }
+
+        public virtual void OnFailure() { }
 
         private void cancelBtn_Click(object sender, EventArgs e) => Runner.Cancel();
 

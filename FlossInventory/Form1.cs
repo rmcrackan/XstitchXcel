@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dinah.Core.Threading;
-using XstitchXcelLib;
-using XstitchXcelLib.Config;
-using XstitchXcelLib.DataClasses;
 using XstitchXcelLib.Tools;
 using XstitchXcelWinFormsLib;
 

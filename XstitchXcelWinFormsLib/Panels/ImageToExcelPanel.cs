@@ -38,10 +38,7 @@ namespace XstitchXcelWinFormsLib.Panels
         public override void Run(CancellationToken cancellationToken)
             => new ImageToExcel(openFileControl1.FileName, saveFileControl1.FileName).Start(progress, cancellationToken);
 
-        public override void OnSuccess() => reset();
-        public override void OnCancelled() => reset();
-        public override void OnFailure() => reset();
-        private void reset() => this.progressBar1.Value = 0;
+        public override void OnComplete() => this.progressBar1.Value = 0;
 
         private async void fileNameKeyPress(object sender, KeyPressEventArgs e) => await Runner.TextBoxEnterKeyAsync(e, Run);
     }
