@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using XstitchXcelLib.Config;
 using XstitchXcelLib.DataClasses;
 using XstitchXcelWinFormsLib;
+using XstitchXcelWinFormsLib.Panels;
 
 namespace XstitchXcel
 {
@@ -35,13 +36,13 @@ namespace XstitchXcel
                 return;
 
             // register all tool controls, whether or not they are contained by a tab page
-            foreach (var tc in this.GetChildrenToolControls())
+            foreach (var tc in this.GetChildrenByType<_ToolControlsBase>())
                 tc.RegisterMasterForm(this);
 
             // build map
             foreach (var tab in this.tabControl.TabPages.Cast<TabPage>())
             {
-                var tc = tab.GetChildrenToolControls().FirstOrDefault();
+                var tc = tab.GetChildrenByType<_ToolControlsBase>().FirstOrDefault();
                 if (tc != default)
                     tabControlsMap.Add(tab, tc);
             }

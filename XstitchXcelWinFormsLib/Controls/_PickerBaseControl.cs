@@ -52,5 +52,16 @@ namespace XstitchXcelWinFormsLib.Controls
         {
             InitializeComponent();
         }
+
+        public bool IsValid()
+        {
+            if (string.IsNullOrWhiteSpace(FileName))
+            {
+                MessageBox.Show($"Choose a valid {LabelText}");
+                return false;
+            }
+
+            return true;
+        }
     }
 }

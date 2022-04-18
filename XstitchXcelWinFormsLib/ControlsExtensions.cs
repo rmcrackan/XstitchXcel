@@ -8,19 +8,19 @@ namespace XstitchXcelWinFormsLib
 {
 	public static class ControlsExtensions
 	{
-		public static List<_ToolControlsBase> GetChildrenToolControls(this Control control)
+		public static List<T> GetChildrenByType<T>(this Control control)
 		{
-			var list = new List<_ToolControlsBase>();
-			getChildrenToolControls(control, list);
+			var list = new List<T>();
+			getChildrenByType(control, list);
 			return list;
 		}
-		private static void getChildrenToolControls(Control control, List<_ToolControlsBase> list)
+		private static void getChildrenByType<T>(Control control, List<T> list)
 		{
-			if (control is _ToolControlsBase toolControl)
+			if (control is T toolControl)
 				list.Add(toolControl);
 
 			foreach (var c in control.Controls.Cast<Control>())
-				getChildrenToolControls(c, list);
+				getChildrenByType(c, list);
 		}
 
 		/// <summary>

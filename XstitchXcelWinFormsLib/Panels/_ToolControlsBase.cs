@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XstitchXcelWinFormsLib.Controls;
 
 namespace XstitchXcelWinFormsLib.Panels
 {
@@ -42,7 +43,21 @@ namespace XstitchXcelWinFormsLib.Panels
         protected virtual void Register() { }
 
         #region IRunCommand
-        public virtual bool IsValid() => true;
+        public bool IsValid()
+        {
+            if (this.UseGlobalExcelFile && string.IsNullOrWhiteSpace(MasterForm.FileName))
+            {
+                MessageBox.Show("Choose a valid input excel file");
+                return false;
+            }
+
+            foreach (var control in this.GetChildrenByType<_PickerBaseControl>())
+                if (!control.IsValid())
+                    return false;
+
+            return true;
+        }
+
         public virtual void Run(CancellationToken cancellationToken) { }
         public virtual void OnSuccess() { }
         public virtual void OnCancelled() { }

@@ -35,23 +35,6 @@ namespace XstitchXcelWinFormsLib.Panels
             progress = new Progress<int>(percent => this.progressBar1.Value = percent);
         }
 
-        public override bool IsValid()
-        {
-            if (string.IsNullOrWhiteSpace(openFileControl1.FileName))
-            {
-                MessageBox.Show("Choose a valid input image");
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(saveFileControl1.FileName))
-            {
-                MessageBox.Show("Choose a valid output path");
-                return false;
-            }
-
-            return true;
-        }
-
         public override void Run(CancellationToken cancellationToken)
             => new ImageToExcel(openFileControl1.FileName, saveFileControl1.FileName).Start(progress, cancellationToken);
 
