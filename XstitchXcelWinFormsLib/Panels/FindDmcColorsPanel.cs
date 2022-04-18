@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using XstitchXcelLib.Tools;
 
 namespace XstitchXcelWinFormsLib.Panels
@@ -13,7 +14,7 @@ namespace XstitchXcelWinFormsLib.Panels
             InitializeComponent();
         }
 
-        public override void Run()
+        public override void Run(CancellationToken cancellationToken)
             => new PatternAnalyzer(MasterForm.GetPattern())
             .ReportNonDmc();
     }

@@ -8,12 +8,13 @@ namespace XstitchXcelLib
 {
     public static class SupportedImageFormats
     {
+        public const string DefaultExtension = "png";
         public static List<string> Extensions { get; } = new()
         {
             "bmp",
             "jpg",
             "gif",
-            "png"
+            DefaultExtension
         };
 
         public static string GetDelimited()

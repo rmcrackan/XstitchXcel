@@ -27,6 +27,13 @@ namespace XstitchXcelWinFormsLib.Controls
         public string FileTypeName { get; set; }
         public string FileExtension { get; set; }
 
+        public string FileFilterOverride { get; set; }
+
+        protected string GetFilter()
+            => !string.IsNullOrWhiteSpace(this.FileFilterOverride)
+            ? this.FileFilterOverride
+            : $"{this.FileTypeName} (*.{this.FileExtension})|*.{this.FileExtension}|All files (*.*)|*.*";
+
         public string LabelText
         {
             get => this.label1.Text;

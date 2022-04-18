@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using XstitchXcelLib.Tools;
 
 namespace XstitchXcelWinFormsLib.Panels
@@ -24,7 +25,7 @@ Use ""T""ransparent as the ""new color"" to remove the background color
             InitializeComponent();
         }
 
-        public override void Run()
+        public override void Run(CancellationToken cancellationToken)
             => new ColorReplacer(MasterForm.GetPattern()) { CreateBackupFile = BackupChecked }
             .TargetedReplace(OldColorName, NewColorName);
     }

@@ -27,6 +27,8 @@ namespace XstitchXcel
             foreach (var tc in GetChildrenToolControls(this))
                 tc.RegisterMasterForm(this);
 
+            EnableUI();
+
             // build map
             foreach (var tab in this.tabControl.TabPages.Cast<TabPage>())
             {

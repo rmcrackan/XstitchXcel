@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XstitchXcelLib;
@@ -22,7 +23,6 @@ Eg: scale=3: each new pixel/cell will be 3 cells across and 3 high.
         public ToPngPanel() : base(new(INSTRUCTIONS, SUBMIT_BUTTON_TEXT))
         {
             InitializeComponent();
-            enableScaleUpDown(null, null);
         }
 
         protected override void Register()
@@ -39,9 +39,16 @@ Eg: scale=3: each new pixel/cell will be 3 cells across and 3 high.
 
         private void enableScaleUpDown(object sender, EventArgs e) => toPngNud.Enabled = toPngScaleRb.Checked;
 
+        public override void SetEnable(bool enable)
+        {
+            base.SetEnable(enable);
+
+            enableScaleUpDown(null, null);
+        }
+
         private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
 
-        public override void Run()
+        public override void Run(CancellationToken cancellationToken)
         {
             var excelToImage = new ExcelToImage(MasterForm.GetPattern())
             {

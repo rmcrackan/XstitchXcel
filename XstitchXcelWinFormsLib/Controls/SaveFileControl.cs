@@ -17,12 +17,14 @@ namespace XstitchXcelWinFormsLib.Controls
                 Title = this.DialogTitle,
 
                 AddExtension = true,
+                CheckPathExists = true,
                 DefaultExt = this.FileExtension,
                 FileName = this.FileName,
-                Filter = $"{this.FileTypeName} (*.{this.FileExtension})|*.{this.FileExtension}|All files (*.*)|*.*",
+                Filter = GetFilter(),
                 FilterIndex = 0,
                 OverwritePrompt = true
             };
+
             dialog.FileOk += (_, __) => this.FileName = dialog.FileName;
             dialog.ShowDialog();
         }

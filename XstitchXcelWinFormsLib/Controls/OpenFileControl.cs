@@ -20,7 +20,7 @@ namespace XstitchXcelWinFormsLib.Controls
                 CheckPathExists = true,
                 DefaultExt = this.FileExtension,
                 FileName = this.FileName,
-                Filter = $"{this.FileTypeName} (*.{this.FileExtension})|*.{this.FileExtension}|All files (*.*)|*.*",
+                Filter = GetFilter(),
                 FilterIndex = 0,
                 Multiselect = false
             };

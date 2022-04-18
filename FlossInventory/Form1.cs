@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dinah.Core.Threading;
@@ -93,7 +94,7 @@ namespace FlossInventory
 
 		private async void inventoryAddTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, addToInventory, inventoryAddTb);
 		private async void inventoryAddBtn_Click(object sender, EventArgs e) => await RunAsync(addToInventory, inventoryAddTb);
-		private void addToInventory()
+		private void addToInventory(CancellationToken cancellationToken)
 		{
 			var success = getInventory().TryAddToInventory(inventoryAddTb.Text, out var inventoryEntries);
 			_addToInventory("inventory", success, inventoryEntries);
@@ -102,7 +103,7 @@ namespace FlossInventory
 
 		private async void inventoryRemoveTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, removeFromInventory, inventoryRemoveTb);
 		private async void inventoryRemoveBtn_Click(object sender, EventArgs e) => await RunAsync(removeFromInventory, inventoryRemoveTb);
-		private void removeFromInventory()
+		private void removeFromInventory(CancellationToken cancellationToken)
 		{
 			var success = getInventory().TryRemoveFromInventory(this.inventoryRemoveTb.Text, out var inventoryEntries);
 			_removeFromInventory("inventory", this.inventoryRemoveTb.Text, success, inventoryEntries);
@@ -111,7 +112,7 @@ namespace FlossInventory
 
 		private async void inventorySearchTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, searchInventory, inventorySearchTb);
 		private async void inventorySearchBtn_Click(object sender, EventArgs e) => await RunAsync(searchInventory, inventorySearchTb);
-		private void searchInventory()
+		private void searchInventory(CancellationToken cancellationToken)
 		{
 			var listType = "inventory";
 
@@ -130,7 +131,7 @@ namespace FlossInventory
 
 		private async void shoppingListAddTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, addToShoppingList, shoppingListAddTb);
 		private async void shoppingListAddBtn_Click(object sender, EventArgs e) => await RunAsync(addToShoppingList, shoppingListAddTb);
-		private void addToShoppingList()
+		private void addToShoppingList(CancellationToken cancellationToken)
 		{
 			var success = getInventory().TryAddToShoppingList(shoppingListAddTb.Text, out var inventoryEntries);
 			_addToInventory("shopping list", success, inventoryEntries);
@@ -139,7 +140,7 @@ namespace FlossInventory
 
 		private async void shoppingListRemoveTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, removeFromShoppingList, shoppingListRemoveTb);
 		private async void shoppingListRemoveBtn_Click(object sender, EventArgs e) => await RunAsync(removeFromShoppingList, shoppingListRemoveTb);
-		private void removeFromShoppingList()
+		private void removeFromShoppingList(CancellationToken cancellationToken)
 		{
 			var success = getInventory().TryRemoveFromShoppingList(this.shoppingListRemoveTb.Text, out var inventoryEntries);
 			_removeFromInventory("shopping list", this.inventoryRemoveTb.Text, success, inventoryEntries);
@@ -149,8 +150,8 @@ namespace FlossInventory
 		#endregion
 
 		// convenience method to avoid using 'this.' in this class
-		private Task RunAsync(Action action, Control focusControl) => RunnerExtensions.RunAsync(this, action, focusControl);
-		private Task TextBoxEnterKeyAsync(KeyPressEventArgs e, Action action, Control focusControl = null) => RunnerExtensions.TextBoxEnterKeyAsync(this, e, action, focusControl);
+		private Task RunAsync(Action<CancellationToken> action, Control focusControl) => RunnerExtensions.RunAsync(this, action, focusControl);
+		private Task TextBoxEnterKeyAsync(KeyPressEventArgs e, Action<CancellationToken> action, Control focusControl = null) => RunnerExtensions.TextBoxEnterKeyAsync(this, e, action, focusControl);
 
 		private void _addToInventory(string listType, bool success, List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
 		{

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XstitchXcelLib;
@@ -27,7 +28,7 @@ ALL non-transparent pixels are treated as white, then the CRT blur effect is app
 
         private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
 
-        public override void Run()
+        public override void Run(CancellationToken cancellationToken)
         {
             var pattern = MasterForm.GetPattern();
 

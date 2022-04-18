@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using XstitchXcelLib.Tools;
 
 namespace XstitchXcelWinFormsLib.Panels
@@ -23,6 +24,6 @@ namespace XstitchXcelWinFormsLib.Panels
 
         private async void fileNameKeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
 
-        public override void Run() => new BatchConvert(this.sourceBrowseFolderControl.FileName, this.destinationBrowseFolderControl.FileName).Start();
+        public override void Run(CancellationToken cancellationToken) => new BatchConvert(this.sourceBrowseFolderControl.FileName, this.destinationBrowseFolderControl.FileName).Start();
     }
 }

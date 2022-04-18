@@ -8,8 +8,6 @@ namespace XstitchXcelLib.Tools
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Interoperability", "CA1416:Validate platform compatibility")]
     public class ImageToExcel
     {
-        public const int Complete = 101;
-
         private string _imagePath { get; }
         private string _outputPath { get; }
 
@@ -35,7 +33,6 @@ namespace XstitchXcelLib.Tools
         {
             var bitmap = toImage(_imagePath);
 
-            //create a new excel document
             var xlWorkbook = xlApp.Workbooks.Add();
             var xlWorksheet = (Excel.Worksheet)xlWorkbook.Worksheets.get_Item(1);
             xlWorksheet.Unprotect();
@@ -43,7 +40,7 @@ namespace XstitchXcelLib.Tools
 
             var xlRange = xlWorksheet.UsedRange;
 
-            // assign it here rather than in the for loop to avoid multithreading calamities
+            // assign outside of 'for' loop to avoid multithreading calamities
             var width = bitmap.Width;
             var height = bitmap.Height;
 
@@ -61,7 +58,10 @@ namespace XstitchXcelLib.Tools
                     for (var i = 0; i < width; i++)
                     {
                         if (token.IsCancellationRequested)
+                        {
+                            loopState.Stop();
                             break;
+                        }
 
                         var cell = xlRange.Cells[j + 1, i + 1];
 
@@ -81,22 +81,12 @@ namespace XstitchXcelLib.Tools
                         else
                             cell.Interior.Color = ColorTranslator.ToOle(color);
 
-                        pixelCounter++;
+                        progress?.Report(Convert.ToInt32(++pixelCounter / totalPixels * 100));
                     }
-                    
-                    if (token.IsCancellationRequested)
-                        loopState.Stop();
-
-                    var progressFloat = pixelCounter / totalPixels * 100;
-                    var progressInt = Convert.ToInt32(progressFloat);
-                    progress?.Report(progressInt);
                 });
 
-                // skip save as. skip report progress complete
-                if (token.IsCancellationRequested)
-                    return;
-                
-                xlWorkbook.SaveAs(_outputPath);
+                if (!token.IsCancellationRequested)
+                    xlWorkbook.SaveAs(_outputPath);
             }
             finally
             {
@@ -105,8 +95,6 @@ namespace XstitchXcelLib.Tools
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(xlWorkbook);
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(xlApp);
             }
-
-            progress?.Report(Complete);
         }
     }
 }

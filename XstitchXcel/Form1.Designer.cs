@@ -47,6 +47,8 @@ namespace XstitchXcel
             this.crtBlurTabPage = new System.Windows.Forms.TabPage();
             this.crtBlurSplitPanel1 = new XstitchXcelWinFormsLib.Panels.CrtBlurSplitPanel();
             this.openFileControl1 = new XstitchXcelWinFormsLib.Controls.OpenFileControl();
+            this.imageToExcelTabPage = new System.Windows.Forms.TabPage();
+            this.imageToExcelSplitPanel1 = new XstitchXcelWinFormsLib.Panels.ImageToExcelSplitPanel();
             this.tabControl.SuspendLayout();
             this.createPatternTabPage.SuspendLayout();
             this.statsTabPage.SuspendLayout();
@@ -56,6 +58,7 @@ namespace XstitchXcel
             this.batchConvertTabPage.SuspendLayout();
             this.toPngTabPage.SuspendLayout();
             this.crtBlurTabPage.SuspendLayout();
+            this.imageToExcelTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -71,6 +74,7 @@ namespace XstitchXcel
             this.tabControl.Controls.Add(this.batchConvertTabPage);
             this.tabControl.Controls.Add(this.toPngTabPage);
             this.tabControl.Controls.Add(this.crtBlurTabPage);
+            this.tabControl.Controls.Add(this.imageToExcelTabPage);
             this.tabControl.Location = new System.Drawing.Point(12, 37);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -227,6 +231,7 @@ namespace XstitchXcel
             // 
             this.openFileControl1.DialogTitle = "Select the Excel file with your design";
             this.openFileControl1.FileExtension = "xlsx";
+            this.openFileControl1.FileFilterOverride = null;
             this.openFileControl1.FileName = "";
             this.openFileControl1.FileTypeName = "Excel Spreadsheet";
             this.openFileControl1.LabelText = "Excel file";
@@ -234,6 +239,24 @@ namespace XstitchXcel
             this.openFileControl1.Name = "openFileControl1";
             this.openFileControl1.Size = new System.Drawing.Size(762, 31);
             this.openFileControl1.TabIndex = 4;
+            // 
+            // imageToExcelTabPage
+            // 
+            this.imageToExcelTabPage.Controls.Add(this.imageToExcelSplitPanel1);
+            this.imageToExcelTabPage.Location = new System.Drawing.Point(4, 24);
+            this.imageToExcelTabPage.Name = "imageToExcelTabPage";
+            this.imageToExcelTabPage.Size = new System.Drawing.Size(754, 358);
+            this.imageToExcelTabPage.TabIndex = 16;
+            this.imageToExcelTabPage.Text = "Image to Excel";
+            this.imageToExcelTabPage.UseVisualStyleBackColor = true;
+            // 
+            // imageToExcelSplitPanel1
+            // 
+            this.imageToExcelSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imageToExcelSplitPanel1.Location = new System.Drawing.Point(0, 0);
+            this.imageToExcelSplitPanel1.Name = "imageToExcelSplitPanel1";
+            this.imageToExcelSplitPanel1.Size = new System.Drawing.Size(754, 358);
+            this.imageToExcelSplitPanel1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -257,6 +280,7 @@ namespace XstitchXcel
             this.batchConvertTabPage.ResumeLayout(false);
             this.toPngTabPage.ResumeLayout(false);
             this.crtBlurTabPage.ResumeLayout(false);
+            this.imageToExcelTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -280,6 +304,8 @@ namespace XstitchXcel
         private XstitchXcelWinFormsLib.Controls.OpenFileControl openFileControl1;
         private System.Windows.Forms.TabPage batchConvertTabPage;
         private XstitchXcelWinFormsLib.Panels.BatchConvertSplitPanel batchConvertSplitPanel1;
+        private System.Windows.Forms.TabPage imageToExcelTabPage;
+        private XstitchXcelWinFormsLib.Panels.ImageToExcelSplitPanel imageToExcelSplitPanel1;
     }
 }
 

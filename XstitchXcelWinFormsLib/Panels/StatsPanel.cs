@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using XstitchXcelLib;
 using XstitchXcelLib.DataClasses;
@@ -27,7 +28,7 @@ namespace XstitchXcelWinFormsLib.Panels
 
         public override bool ShowSuccessDialog => false;
 
-        public override void Run() => statsPattern = MasterForm.GetPattern();
+        public override void Run(CancellationToken cancellationToken) => statsPattern = MasterForm.GetPattern();
         public override void OnSuccess()
         {
             var reporter = new StatsReporter(statsPattern);

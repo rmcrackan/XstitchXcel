@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using XstitchXcelLib.Tools;
 
 namespace XstitchXcelWinFormsLib.Panels
@@ -19,7 +20,7 @@ Naive replace is more versitile, less efficient
             InitializeComponent();
         }
 
-        public override void Run()
+        public override void Run(CancellationToken cancellationToken)
             => ColorReplacer.NaiveReplace(MasterForm.FileName, OldColorName, NewColorName, BackupChecked);
     }
 }

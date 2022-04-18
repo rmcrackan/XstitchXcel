@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dinah.Core.Threading;
@@ -10,20 +11,32 @@ namespace XstitchXcelWinFormsLib
 {
 	public partial class XstitchXcelWinForm : Form, IRunner
 	{
-		public XstitchXcelWinForm()
-		{
-			InitializeComponent();
-		}
+		public XstitchXcelWinForm() => InitializeComponent();
 
 		#region run tool async
+		private CancellationTokenSource cancellationTokenSource;
 		public async Task RunAsync(IRunCommand runCommand)
 		{
-			var ex = await runAsync(runCommand);
+			if (!runCommand.IsValid())
+				return;
 
+			cancellationTokenSource = new();
+			var cancellationToken = cancellationTokenSource.Token;
+
+			var ex = await runAsync(runCommand, cancellationToken);
+
+			// should come after the cleanup in runAsync's "finally"
 			if (ex is not null)
 			{
 				MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				runCommand.OnFailure();
+				return;
+			}
+
+			if (cancellationToken.IsCancellationRequested)
+            {
+				MessageBox.Show("Cancelled");
+				runCommand.OnCancelled();
 				return;
 			}
 
@@ -33,13 +46,13 @@ namespace XstitchXcelWinFormsLib
 			runCommand.OnSuccess();
 		}
 
-		private async Task<Exception> runAsync(IRunCommand runCommand)
+		private async Task<Exception> runAsync(IRunCommand runCommand, CancellationToken cancellationToken)
 		{
 			try
 			{
 				disableUI();
 
-				await Task.Run(runCommand.Run);
+				await Task.Run(() => runCommand.Run(cancellationToken), cancellationToken);
 
 				return null;
 			}
@@ -52,7 +65,7 @@ namespace XstitchXcelWinFormsLib
 				GC.Collect();
 				GC.WaitForPendingFinalizers();
 
-				enableUI();
+				EnableUI();
 
 				var focusControl = runCommand.FocusControl;
 				focusControl?.UIThreadAsync(() => {
@@ -62,12 +75,13 @@ namespace XstitchXcelWinFormsLib
 				});
 			}
 		}
+		public void Cancel() => cancellationTokenSource.Cancel();
 
 		/// <summary>
 		/// set enable for each control in form, not on Form/"this" (which would freezes the form itself in place)
 		/// </summary>
+		protected void EnableUI() => setEnable(true);
 		private void disableUI() => setEnable(false);
-		private void enableUI() => setEnable(true);
 		private void setEnable(bool enable)
 		{
 			foreach (var c in Controls.Cast<Control>())
@@ -75,10 +89,27 @@ namespace XstitchXcelWinFormsLib
 		}
 		private static void setEnableRecurs(Control control, bool enable)
 		{
+			// these handle themselves. don't dig deeper
+			if (control is _ToolControlsBase toolControlsBase)
+			{
+				toolControlsBase.SetEnable(enable);
+				return;
+			}
+
 			foreach (var c in control.Controls.Cast<Control>())
 				setEnableRecurs(c, enable);
 
-			control.Enabled = enable;
+			// these are containers. don't freeze them. do traverse.
+			// later add these containers and their elements. eg: TabControl has TabPage elements
+			// - FlowLayoutPanel
+			// - GroupBox
+			// - SplitContainer
+			// - TableLayoutPanel
+			if (control is not TabControl &&
+				control is not TabPage &&
+				control is not Panel &&
+				control is not __ToolPaneBase)
+				control.Enabled = enable;
 		}
 		#endregion
 
