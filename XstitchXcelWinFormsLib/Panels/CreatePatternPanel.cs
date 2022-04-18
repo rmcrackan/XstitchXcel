@@ -30,7 +30,7 @@ We'll match font and style choices like bold, italics, etc.
             => MasterForm.NewExcelFileSelected += (_, __)
                 => this.saveFileControl1.FileName = HelperMethods.GetUniqueFileName(HelperMethods.AddFileSuffix(MasterForm.FileName, " - output"));
 
-        private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
+        private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await Runner.TextBoxEnterKeyAsync(e, Run);
 
         public override void Run(CancellationToken cancellationToken)
             => new PatternBuilder(MasterForm.GetPattern())

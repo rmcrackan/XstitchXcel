@@ -22,6 +22,6 @@ namespace XstitchXcelWinFormsLib.Panels
             InitializeComponent();
         }
 
-        private async void colorTextBoxKeyPress(object sender, KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
+        private async void colorTextBoxKeyPress(object sender, KeyPressEventArgs e) => await Runner.TextBoxEnterKeyAsync(e, Run);
     }
 }

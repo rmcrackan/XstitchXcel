@@ -60,6 +60,6 @@ namespace XstitchXcelWinFormsLib.Panels
         public override void OnFailure() => reset();
         private void reset() => this.progressBar1.Value = 0;
 
-        private async void fileNameKeyPress(object sender, KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
+        private async void fileNameKeyPress(object sender, KeyPressEventArgs e) => await Runner.TextBoxEnterKeyAsync(e, Run);
     }
 }

@@ -30,11 +30,13 @@ namespace XstitchXcelWinFormsLib.Panels
             this.cancelBtn.Visible = IsCancellable;
         }
 
-        protected IMasterForm MasterForm { get; private set; }
+        protected IMasterForm<Control> MasterForm { get; private set; }
+        protected Runner Runner { get; private set; }
 
-        public void RegisterMasterForm(IMasterForm masterForm)
+        public void RegisterMasterForm(IMasterForm<Control> masterForm)
         {
             MasterForm = masterForm;
+            Runner = new(MasterForm.GetInstance());
             Register();
         }
         protected virtual void Register() { }
@@ -49,9 +51,9 @@ namespace XstitchXcelWinFormsLib.Panels
         public virtual bool ShowSuccessDialog => true;
         public virtual Control FocusControl { get; }
 
-        private void cancelBtn_Click(object sender, EventArgs e) => MasterForm.Cancel();
+        private void cancelBtn_Click(object sender, EventArgs e) => Runner.Cancel();
 
-        private async void button1_Click(object sender, EventArgs e) => await MasterForm.RunAsync(this);
+        private async void button1_Click(object sender, EventArgs e) => await Runner.RunAsync(this);
         #endregion
 
         public virtual void SetEnable(bool enable)

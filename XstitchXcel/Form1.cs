@@ -9,41 +9,51 @@ using XstitchXcelWinFormsLib;
 
 namespace XstitchXcel
 {
-    public partial class Form1 : XstitchXcelWinForm, IMasterForm
+    public partial class Form1 : Form, IMasterForm<Control>
     {
+        #region IMasterForm impl
         public event EventHandler NewExcelFileSelected
         {
             add => this.openFileControl1.FileNameChanged += value;
             remove => this.openFileControl1.FileNameChanged -= value;
         }
+
         public string FileName => this.openFileControl1.FileName;
+
+        public Control GetInstance() => this;
+
         public Pattern GetPattern() => Configuration.GetPattern(FileName);
+        #endregion
 
         public Form1() => InitializeComponent();
 
+        private Dictionary<TabPage, XstitchXcelWinFormsLib.Panels._ToolControlsBase> tabControlsMap { get; } = new();
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            // register all tool controls, whether or not they are contained by a tab page
-            foreach (var tc in GetChildrenToolControls(this))
-                tc.RegisterMasterForm(this);
+            if (this.DesignMode)
+                return;
 
-            EnableUI();
+            // register all tool controls, whether or not they are contained by a tab page
+            foreach (var tc in this.GetChildrenToolControls())
+                tc.RegisterMasterForm(this);
 
             // build map
             foreach (var tab in this.tabControl.TabPages.Cast<TabPage>())
             {
-                var tc = GetChildrenToolControls(tab).FirstOrDefault();
+                var tc = tab.GetChildrenToolControls().FirstOrDefault();
                 if (tc != default)
                     tabControlsMap.Add(tab, tc);
             }
 
-            this.tabControl.SelectedIndexChanged += TabControl_SelectedIndexChanged;
+            TabControl_SelectedIndexChanged();
+            this.EnableUI();
         }
 
-        private Dictionary<TabPage, XstitchXcelWinFormsLib.Panels._ToolControlsBase> tabControlsMap { get; } = new();
-        private void TabControl_SelectedIndexChanged(object sender, EventArgs e)
-            => this.openFileControl1.Enabled = (!tabControlsMap.TryGetValue(this.tabControl.SelectedTab, out var toolControls)) || toolControls.UseGlobalExcelFile;
+        private void TabControl_SelectedIndexChanged(object sender = null, EventArgs e = null)
+            => this.openFileControl1.Enabled = tabControlsMap.TryGetValue(this.tabControl.SelectedTab, out var toolControls) && toolControls.UseGlobalExcelFile;
 
+        #region drag + drop
         private void Form1_DragEnter(object sender, DragEventArgs e)
         {
             if (!this.openFileControl1.Enabled)
@@ -64,5 +74,6 @@ namespace XstitchXcel
             if (xlsx is not null)
                 this.openFileControl1.FileName = xlsx;
         }
+        #endregion
     }
 }

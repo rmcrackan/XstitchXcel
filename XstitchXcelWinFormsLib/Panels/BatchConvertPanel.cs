@@ -22,7 +22,7 @@ namespace XstitchXcelWinFormsLib.Panels
             InitializeComponent();
         }
 
-        private async void fileNameKeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
+        private async void fileNameKeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e) => await Runner.TextBoxEnterKeyAsync(e, Run);
 
         public override void Run(CancellationToken cancellationToken) => new BatchConvert(this.sourceBrowseFolderControl.FileName, this.destinationBrowseFolderControl.FileName).Start();
     }

@@ -46,7 +46,7 @@ Eg: scale=3: each new pixel/cell will be 3 cells across and 3 high.
             enableScaleUpDown(null, null);
         }
 
-        private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
+        private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await Runner.TextBoxEnterKeyAsync(e, Run);
 
         public override void Run(CancellationToken cancellationToken)
         {

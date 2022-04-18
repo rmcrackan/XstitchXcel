@@ -15,7 +15,7 @@ using XstitchXcelWinFormsLib;
 
 namespace FlossInventory
 {
-	public partial class Form1 : XstitchXcelWinForm
+	public partial class Form1 : Form
 	{
 		private static string InventoryFilePath
 		{
@@ -28,9 +28,22 @@ namespace FlossInventory
 			}
 		}
 
+		private Runner runner { get; }
+
+		// convenience methods
+		private Task RunAsync(Action<CancellationToken> action, Control focusControl) => runner.RunAsync(action, focusControl);
+		private Task TextBoxEnterKeyAsync(KeyPressEventArgs e, Action<CancellationToken> action, Control focusControl = null) => runner.TextBoxEnterKeyAsync(e, action, focusControl);
+
 		public Form1()
 		{
 			InitializeComponent();
+			runner = new(this);
+		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			if (this.DesignMode)
+				return;
 
 			// load file name into form
 			inventoryFileTb.Text = InventoryFilePath;
@@ -74,7 +87,7 @@ namespace FlossInventory
 			{
 				new System.Diagnostics.Process
 				{
-					StartInfo = new System.Diagnostics.ProcessStartInfo(inventoryFileTb.Text.Trim())
+                    StartInfo = new(inventoryFileTb.Text.Trim())
 					{
 						UseShellExecute = true
 					}
@@ -149,10 +162,6 @@ namespace FlossInventory
 
 		#endregion
 
-		// convenience method to avoid using 'this.' in this class
-		private Task RunAsync(Action<CancellationToken> action, Control focusControl) => RunnerExtensions.RunAsync(this, action, focusControl);
-		private Task TextBoxEnterKeyAsync(KeyPressEventArgs e, Action<CancellationToken> action, Control focusControl = null) => RunnerExtensions.TextBoxEnterKeyAsync(this, e, action, focusControl);
-
 		private void _addToInventory(string listType, bool success, List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
 		{
 			if (!success)
@@ -197,9 +206,9 @@ namespace FlossInventory
 			inventoryOutWriteLine($"{found.color} removed. New qty: {found.qty}");
 		}
 
-		private Inventory getInventory() => new Inventory(this.inventoryFileTb.Text);
+		private Inventory getInventory() => new(this.inventoryFileTb.Text);
 
 		private void inventoryOutWriteLine(string str)
 			=> inventoryOutTb.UIThreadSync(() => inventoryOutTb.AppendText($"{str}\r\n"));
-	}
+    }
 }

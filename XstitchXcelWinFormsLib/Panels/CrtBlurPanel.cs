@@ -26,7 +26,7 @@ ALL non-transparent pixels are treated as white, then the CRT blur effect is app
             => MasterForm.NewExcelFileSelected += (_, __)
                 => this.saveFileControl1.FileName = HelperMethods.GetUniqueFileName(HelperMethods.AddFileSuffix(MasterForm.FileName, " - output"));
 
-        private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await MasterForm.TextBoxEnterKeyAsync(e, Run);
+        private async void saveFileControl1_FileNameKeyPress(object sender, KeyPressEventArgs e) => await Runner.TextBoxEnterKeyAsync(e, Run);
 
         public override void Run(CancellationToken cancellationToken)
         {
