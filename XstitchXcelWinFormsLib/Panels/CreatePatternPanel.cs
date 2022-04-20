@@ -11,7 +11,8 @@ namespace XstitchXcelWinFormsLib.Panels
 {
     public partial class CreatePatternPanel : _ToolControlsBase
     {
-        private const string INSTRUCTIONS = @"Convert your excel design to a new excel file: formatted as 1 or more printable patterns
+        private const string INSTRUCTIONS = @"
+Convert your excel design to a new excel file: formatted as 1 or more printable patterns
 
 Default symbols will be used. To create your own symbols/glyphs, type your symbols into a word file. Name the word file the same thing as your excel file.
 Example:

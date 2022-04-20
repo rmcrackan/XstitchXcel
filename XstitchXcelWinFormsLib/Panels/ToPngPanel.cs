@@ -12,7 +12,8 @@ namespace XstitchXcelWinFormsLib.Panels
 {
     public partial class ToPngPanel : _ToolControlsBase
     {
-        private const string INSTRUCTIONS = @"Convert xlsx file to png image file.
+        private const string INSTRUCTIONS = @"
+Convert xlsx file to png image file.
 
 If scaling the image up, the scale number is the multiplier for both directions: height and width.
 

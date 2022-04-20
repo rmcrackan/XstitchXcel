@@ -11,7 +11,8 @@ namespace XstitchXcelWinFormsLib.Panels
 {
     public partial class CrtBlurPanel : _ToolControlsBase
     {
-        private const string INSTRUCTIONS = @"Apply a CRT blur effect to your design.
+        private const string INSTRUCTIONS = @"
+Apply a CRT blur effect to your design.
 
 ALL non-transparent pixels are treated as white, then the CRT blur effect is applied.
 ";

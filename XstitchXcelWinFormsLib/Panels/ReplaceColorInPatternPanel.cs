@@ -6,7 +6,8 @@ namespace XstitchXcelWinFormsLib.Panels
 {
     public partial class ReplaceColorInPatternPanel : ReplaceColorBasePanel
     {
-        private const string INSTRUCTIONS = @"Replace all of one color with a different color
+        private const string INSTRUCTIONS = @"
+Replace all of one color with a different color
 
 This will makes changes to your file. To create a back up of the original file before changine it, use the checkbox.
 Note: when this box is checked, a new backup file will be created each time you click the button

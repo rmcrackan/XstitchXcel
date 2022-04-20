@@ -9,7 +9,8 @@ namespace XstitchXcelWinFormsLib.Panels
     {
         public override bool UseGlobalExcelFile => false;
 
-        private const string INSTRUCTIONS = @"For each image in source directory:
+        private const string INSTRUCTIONS = @"
+For each image in source directory:
 
 * copy to destination directory
 * convert to xlsx
