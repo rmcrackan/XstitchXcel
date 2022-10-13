@@ -62,6 +62,7 @@ namespace XstitchXcelWinFormsLib
 			}
 			finally
 			{
+				// unfortunately needed to ensure headless excel is closed
 				GC.Collect();
 				GC.WaitForPendingFinalizers();
 

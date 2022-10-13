@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Dinah.Core;
@@ -139,6 +140,16 @@ namespace XstitchXcelLib.Tools
 		public DmcColorName DmcColorName { get; set; }
 		public int Quantity { get; set; }
 	}
+	public enum Section
+	{
+		None,
+
+        [Description("INVENTORY")]
+        Inventory,
+
+        [Description("SHOPPING LIST")]
+        ShoppingList
+    }
 	public static class InventoryCommon
 	{
 		public const string INVENTORY_SECTION = "INVENTORY";
@@ -229,7 +240,9 @@ namespace XstitchXcelLib.Tools
 		public Inventory(string filename) : this(new InventoryDataLayer(filename)) { }
 		public Inventory(IInventoryDataLayer inventoryDataLayer) => _inventoryDataLayer = inventoryDataLayer ?? throw new ArgumentNullException(nameof(inventoryDataLayer));
 
-		public bool TryAddToInventory(string dmc, out List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
+        public bool TryAdd(string dmc, Section section, out List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
+            => tryAdd(dmc, section.GetDescription(), out inventoryEntries);
+        public bool TryAddToInventory(string dmc, out List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
 			=> tryAdd(dmc, InventoryCommon.INVENTORY_SECTION, out inventoryEntries);
 		public bool TryAddToShoppingList(string dmc, out List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
 			=> tryAdd(dmc, InventoryCommon.SHOPPING_LIST_SECTION, out inventoryEntries);
@@ -268,9 +281,11 @@ namespace XstitchXcelLib.Tools
 		{
 			var processor = new DmcColorProcessor();
 			return processor.GetByDmcNumber(dmcColorName.Name) is null && processor.GetByDmcNumber(dmcColorName.ToString()) is null;
-		}
+        }
 
-		public bool TryRemoveFromInventory(string dmc, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
+        public bool TryRemove(string dmc, Section section, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
+            => tryRemove(dmc, section.GetDescription(), out inventoryEntries);
+        public bool TryRemoveFromInventory(string dmc, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
 			=> tryRemove(dmc, InventoryCommon.INVENTORY_SECTION, out inventoryEntries);
 		public bool TryRemoveFromShoppingList(string dmc, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
 			=> tryRemove(dmc, InventoryCommon.SHOPPING_LIST_SECTION, out inventoryEntries);
@@ -312,7 +327,9 @@ namespace XstitchXcelLib.Tools
 			return true;
 		}
 
-		public bool SearchInventory(string dmc, out List<(DmcColorName color, int qty)> inventoryEntries)
+        public bool Search(string dmc, Section section, out List<(DmcColorName color, int qty)> inventoryEntries)
+            => search(dmc, section.GetDescription(), out inventoryEntries);
+        public bool SearchInventory(string dmc, out List<(DmcColorName color, int qty)> inventoryEntries)
 			=> search(dmc, InventoryCommon.INVENTORY_SECTION, out inventoryEntries);
 		private bool search(string dmc, string header, out List<(DmcColorName color, int qty)> inventoryEntries)
 		{

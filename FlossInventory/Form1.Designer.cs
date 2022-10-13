@@ -48,8 +48,13 @@ namespace FlossInventory
             this.inventoryFileTb = new System.Windows.Forms.TextBox();
             this.inventoryFileLbl = new System.Windows.Forms.Label();
             this.inventoryInstructionsTb = new System.Windows.Forms.TextBox();
+            this.bulkInventoryAddGrp = new System.Windows.Forms.GroupBox();
+            this.bulkInventoryAddBtn = new System.Windows.Forms.Button();
+            this.bulkInventoryAddTb = new System.Windows.Forms.TextBox();
+            this.inventoryOutBtn = new System.Windows.Forms.Button();
             this.shoppingListGrp.SuspendLayout();
             this.inventoryGrp.SuspendLayout();
+            this.bulkInventoryAddGrp.SuspendLayout();
             this.SuspendLayout();
             // 
             // openBtn
@@ -191,7 +196,7 @@ namespace FlossInventory
             this.inventoryOutTb.Name = "inventoryOutTb";
             this.inventoryOutTb.ReadOnly = true;
             this.inventoryOutTb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.inventoryOutTb.Size = new System.Drawing.Size(344, 221);
+            this.inventoryOutTb.Size = new System.Drawing.Size(344, 238);
             this.inventoryOutTb.TabIndex = 17;
             // 
             // inventoryFileSaveBtn
@@ -249,11 +254,59 @@ namespace FlossInventory
             this.inventoryInstructionsTb.Text = "Inventory is kept in spreadsheet for easy sharing.\r\nInventory: Add/remove colors." +
     " Search.\r\nShopping list: Add/remove. View.";
             // 
+            // bulkInventoryAddGrp
+            // 
+            this.bulkInventoryAddGrp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.bulkInventoryAddGrp.Controls.Add(this.bulkInventoryAddBtn);
+            this.bulkInventoryAddGrp.Controls.Add(this.bulkInventoryAddTb);
+            this.bulkInventoryAddGrp.Location = new System.Drawing.Point(12, 223);
+            this.bulkInventoryAddGrp.Name = "bulkInventoryAddGrp";
+            this.bulkInventoryAddGrp.Size = new System.Drawing.Size(402, 163);
+            this.bulkInventoryAddGrp.TabIndex = 18;
+            this.bulkInventoryAddGrp.TabStop = false;
+            this.bulkInventoryAddGrp.Text = "Bulk Inventory";
+            // 
+            // bulkInventoryAddBtn
+            // 
+            this.bulkInventoryAddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bulkInventoryAddBtn.Location = new System.Drawing.Point(6, 134);
+            this.bulkInventoryAddBtn.Name = "bulkInventoryAddBtn";
+            this.bulkInventoryAddBtn.Size = new System.Drawing.Size(75, 23);
+            this.bulkInventoryAddBtn.TabIndex = 1;
+            this.bulkInventoryAddBtn.Text = "Add";
+            this.bulkInventoryAddBtn.UseVisualStyleBackColor = true;
+            this.bulkInventoryAddBtn.Click += new System.EventHandler(this.bulkInventoryAddBtn_Click);
+            // 
+            // bulkInventoryAddTb
+            // 
+            this.bulkInventoryAddTb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bulkInventoryAddTb.Location = new System.Drawing.Point(6, 22);
+            this.bulkInventoryAddTb.Multiline = true;
+            this.bulkInventoryAddTb.Name = "bulkInventoryAddTb";
+            this.bulkInventoryAddTb.Size = new System.Drawing.Size(386, 106);
+            this.bulkInventoryAddTb.TabIndex = 0;
+            // 
+            // inventoryOutBtn
+            // 
+            this.inventoryOutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.inventoryOutBtn.Location = new System.Drawing.Point(420, 357);
+            this.inventoryOutBtn.Name = "inventoryOutBtn";
+            this.inventoryOutBtn.Size = new System.Drawing.Size(108, 23);
+            this.inventoryOutBtn.TabIndex = 19;
+            this.inventoryOutBtn.Text = "Clear output";
+            this.inventoryOutBtn.UseVisualStyleBackColor = true;
+            this.inventoryOutBtn.Click += new System.EventHandler(this.inventoryOutBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 346);
+            this.ClientSize = new System.Drawing.Size(776, 398);
+            this.Controls.Add(this.inventoryOutBtn);
+            this.Controls.Add(this.bulkInventoryAddGrp);
             this.Controls.Add(this.openBtn);
             this.Controls.Add(this.shoppingListGrp);
             this.Controls.Add(this.inventoryGrp);
@@ -270,6 +323,8 @@ namespace FlossInventory
             this.shoppingListGrp.PerformLayout();
             this.inventoryGrp.ResumeLayout(false);
             this.inventoryGrp.PerformLayout();
+            this.bulkInventoryAddGrp.ResumeLayout(false);
+            this.bulkInventoryAddGrp.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,6 +351,10 @@ namespace FlossInventory
 		private System.Windows.Forms.TextBox inventoryFileTb;
 		private System.Windows.Forms.Label inventoryFileLbl;
 		private System.Windows.Forms.TextBox inventoryInstructionsTb;
-	}
+        private System.Windows.Forms.GroupBox bulkInventoryAddGrp;
+        private System.Windows.Forms.Button bulkInventoryAddBtn;
+        private System.Windows.Forms.TextBox bulkInventoryAddTb;
+        private System.Windows.Forms.Button inventoryOutBtn;
+    }
 }
 
