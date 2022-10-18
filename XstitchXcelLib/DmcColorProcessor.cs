@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using Dinah.Core;
 using XstitchXcelLib.Config;
 using XstitchXcelLib.DataClasses;
 
@@ -19,7 +20,7 @@ namespace XstitchXcelLib
 
 		public DmcColor GetMatch(Color color) => dmcColors.SingleOrDefault(d => color.IsEquivalent(d.Color));
 
-		public DmcColor GetByDmcNumber(string color) => dmcColors.SingleOrDefault(d => string.Equals(d.DmcNumber, color.Trim(), StringComparison.OrdinalIgnoreCase));
+		public DmcColor GetByDmcNumber(string color) => dmcColors.SingleOrDefault(d => d.DmcNumber.EqualsInsensitive(color.Trim()));
 
 		/// <summary>sort by DMC color name, then by hex for non-DMC</summary>
 		public IOrderedEnumerable<Color> GetSortedColors(List<Pixel> pixels) =>
