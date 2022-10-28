@@ -72,6 +72,12 @@ namespace XstitchXcelConsole
 
 
             //api.ExcelToPngResize(5);
+
+
+            var dmcColorProcessor = new DmcColorProcessor();
+            var colors = dmcColorProcessor.GetNearestNaive(HelperMethods.HexToColor("475566"))
+                .Take(5)
+                .ToList();
         }
 
         static void analyzePalettes()
