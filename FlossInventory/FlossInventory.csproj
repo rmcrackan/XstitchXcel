@@ -6,6 +6,10 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\XstitchXcelWinFormsLib\XstitchXcelWinFormsLib.csproj" />
   </ItemGroup>

@@ -39,7 +39,7 @@ namespace XstitchXcelConsole
             //var newHex = "BB051F"; // dmc
             //// can replace as targeted or naive
             //// static naive replace also available: no Pattern parsing required
-            //api.ReplaceColors(oldHex, newHex);
+            //api.TargetedReplaceColors(oldHex, newHex);
 
 
             //api.PrintStitchStatsReport();
@@ -74,10 +74,10 @@ namespace XstitchXcelConsole
             //api.ExcelToPngResize(5);
 
 
-            var dmcColorProcessor = new DmcColorProcessor();
-            var colors = dmcColorProcessor.GetNearestNaive(HelperMethods.HexToColor("475566"))
-                .Take(5)
-                .ToList();
+            //var dmcColorProcessor = new DmcColorProcessor();
+            //var colors = dmcColorProcessor.GetNearestNaive(HelperMethods.HexToColor("475566"))
+            //    .Take(5)
+            //    .ToList();
         }
 
         static void analyzePalettes()

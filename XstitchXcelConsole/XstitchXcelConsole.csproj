@@ -6,6 +6,10 @@
 	  <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\XstitchXcelLib\XstitchXcelLib.csproj" />
   </ItemGroup>
