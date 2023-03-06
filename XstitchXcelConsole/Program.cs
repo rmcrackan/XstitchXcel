@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 using XstitchXcelLib;
+using XstitchXcelLib.Config;
+using XstitchXcelLib.DataClasses;
 using XstitchXcelLib.Tools;
 
 namespace XstitchXcelConsole
@@ -78,6 +81,9 @@ namespace XstitchXcelConsole
             //var colors = dmcColorProcessor.GetNearestNaive(HelperMethods.HexToColor("475566"))
             //    .Take(5)
             //    .ToList();
+
+
+            //findMissingColors();
         }
 
         static void analyzePalettes()
@@ -146,6 +152,42 @@ namespace XstitchXcelConsole
                 Console.Write($"{kvp.Value.ToHex()}");
 
                 Console.WriteLine();
+            }
+        }
+
+        static void findMissingColors()
+        {
+            var localDmcColors = Configuration.GetDmcColors(true);
+            var localDmcNumbers = localDmcColors.Select(d => d.DmcNumber.ToLower()).ToList();
+
+            var dir = @"C:\Dropbox\DinahsFolder\coding\_NET\Visual Studio 2022\XstitchXcel\XstitchXcelLib\palettes";
+            var libidanJson = Directory
+                .EnumerateFiles(dir)
+                .Select(file => JsonConvert.DeserializeObject<Palette>(File.ReadAllText(file)))
+                .Single(p => p.Name == "Lord Libidan")
+                .ColorMap;
+            var libidanDmcNumbers = libidanJson.Keys.Select(e => e.ID.ToLower()).ToList();
+
+            // get missing entries from palette
+            {
+                var libidanOnly = libidanDmcNumbers.Except(localDmcNumbers).ToList();
+                var missingColors = libidanJson
+                    .Where(kvp => libidanOnly.Contains(kvp.Key.ID))
+                    .Select(kvp =>
+                        new DmcColor
+                        {
+                            Name = kvp.Key.Name,
+                            DmcNumber = kvp.Key.ID,
+                            Color = kvp.Value
+                        }
+                        .ToDmcColorEntry())
+                    .ToList();
+
+                // paste into dmc_colors.json
+                var json = File.ReadAllText(@"Config\dmc_colors.json");
+                var dmcJsonAsList = JsonConvert.DeserializeObject<List<DmcColorEntry>>(json).ToList();
+                dmcJsonAsList.AddRange(missingColors);
+                var newJson = JsonConvert.SerializeObject(dmcJsonAsList, Formatting.Indented);
             }
         }
     }
