@@ -4,3184 +4,4409 @@
     "Name": "Ecru",
     "Red": 240,
     "Green": 234,
-    "Blue": 218
+    "Blue": 218,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "B5200",
     "Name": "Snow White",
     "Red": 255,
     "Green": 255,
-    "Blue": 255
+    "Blue": 255,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "White",
     "Name": "White",
     "Red": 252,
     "Green": 251,
-    "Blue": 248
+    "Blue": 248,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "Blanc",
+    "Name": "Blanc",
+    "Red": 252,
+    "Green": 251,
+    "Blue": 248,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "1",
+    "Name": "White Tin",
+    "Red": 217,
+    "Green": 217,
+    "Blue": 217,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "2",
+    "Name": "Tin",
+    "Red": 194,
+    "Green": 194,
+    "Blue": 194,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3",
+    "Name": "Tin - Medium",
+    "Red": 145,
+    "Green": 144,
+    "Blue": 149,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "4",
+    "Name": "Tin - Dark",
+    "Red": 106,
+    "Green": 101,
+    "Blue": 106,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "5",
+    "Name": "Driftwood - Light",
+    "Red": 207,
+    "Green": 187,
+    "Blue": 176,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "6",
+    "Name": "Driftwood - Medium Light",
+    "Red": 197,
+    "Green": 176,
+    "Blue": 164,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "7",
+    "Name": "Driftwood",
+    "Red": 141,
+    "Green": 115,
+    "Blue": 102,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "8",
+    "Name": "Driftwood - Dark",
+    "Red": 84,
+    "Green": 60,
+    "Blue": 49,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "9",
+    "Name": "Cocoa - Very Dark",
+    "Red": 56,
+    "Green": 36,
+    "Blue": 43,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "10",
+    "Name": "Tender Green - Very Light",
+    "Red": 238,
+    "Green": 234,
+    "Blue": 194,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "11",
+    "Name": "Tender Green - Light",
+    "Red": 241,
+    "Green": 238,
+    "Blue": 123,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "12",
+    "Name": "Tender Green",
+    "Red": 225,
+    "Green": 225,
+    "Blue": 87,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "13",
+    "Name": "Nile Green - Medium Light",
+    "Red": 173,
+    "Green": 231,
+    "Blue": 161,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "14",
+    "Name": "Apple Green - Pale",
+    "Red": 234,
+    "Green": 246,
+    "Blue": 168,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "15",
+    "Name": "Apple Green",
+    "Red": 215,
+    "Green": 227,
+    "Blue": 134,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "16",
+    "Name": "Chartreuse - Light",
+    "Red": 197,
+    "Green": 219,
+    "Blue": 91,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "17",
+    "Name": "Yellow Plum - Light",
+    "Red": 236,
+    "Green": 202,
+    "Blue": 89,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "18",
+    "Name": "Yellow Plum",
+    "Red": 232,
+    "Green": 187,
+    "Blue": 70,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "19",
+    "Name": "Autumn Gold - Medium Light",
+    "Red": 244,
+    "Green": 183,
+    "Blue": 110,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "20",
+    "Name": "Shrimp",
+    "Red": 246,
+    "Green": 175,
+    "Blue": 178,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "21",
+    "Name": "Alizarian - Light",
+    "Red": 220,
+    "Green": 81,
+    "Blue": 79,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "22",
+    "Name": "Alizarian",
+    "Red": 178,
+    "Green": 29,
+    "Blue": 38,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "23",
+    "Name": "Apple Blossom",
+    "Red": 245,
+    "Green": 234,
+    "Blue": 240,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "24",
+    "Name": "White Lavender",
+    "Red": 241,
+    "Green": 226,
+    "Blue": 240,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "25",
+    "Name": "Lavender - Ultra Light",
+    "Red": 227,
+    "Green": 213,
+    "Blue": 236,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "26",
+    "Name": "Lavender - Pale",
+    "Red": 199,
+    "Green": 195,
+    "Blue": 232,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "27",
+    "Name": "White Violet",
+    "Red": 233,
+    "Green": 227,
+    "Blue": 237,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "28",
+    "Name": "Eggplant - Medium Light",
+    "Red": 113,
+    "Green": 102,
+    "Blue": 125,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "29",
+    "Name": "Eggplant",
+    "Red": 52,
+    "Green": 38,
+    "Blue": 60,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "30",
+    "Name": "Blueberry - Medium Light",
+    "Red": 118,
+    "Green": 108,
+    "Blue": 158,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "31",
+    "Name": "Blueberry",
+    "Red": 84,
+    "Green": 78,
+    "Blue": 125,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "32",
+    "Name": "Blueberry - Dark",
+    "Red": 56,
+    "Green": 53,
+    "Blue": 96,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "33",
+    "Name": "Fuchsia",
+    "Red": 142,
+    "Green": 52,
+    "Blue": 111,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "34",
+    "Name": "Fuchsia - Dark",
+    "Red": 122,
+    "Green": 13,
+    "Blue": 74,
+    "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "35",
+    "Name": "Fuchsia - Very Dark",
+    "Red": 91,
+    "Green": 3,
+    "Blue": 47,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "150",
     "Name": "Dusty Rose Ult Vy Dk",
     "Red": 171,
     "Green": 2,
-    "Blue": 73
+    "Blue": 73,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "151",
     "Name": "Dusty Rose Vry Lt",
     "Red": 240,
     "Green": 206,
-    "Blue": 212
+    "Blue": 212,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "152",
     "Name": "Shell Pink Med Light",
     "Red": 226,
     "Green": 160,
-    "Blue": 153
+    "Blue": 153,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "153",
     "Name": "Violet Very Light",
     "Red": 230,
     "Green": 204,
-    "Blue": 217
+    "Blue": 217,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "154",
     "Name": "Grape Very Dark",
     "Red": 87,
     "Green": 36,
-    "Blue": 51
+    "Blue": 51,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "155",
     "Name": "Blue Violet Med Dark",
     "Red": 152,
     "Green": 145,
-    "Blue": 182
+    "Blue": 182,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "156",
     "Name": "Blue Violet Med Lt",
     "Red": 163,
     "Green": 174,
-    "Blue": 209
+    "Blue": 209,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "157",
     "Name": "Cornflower Blue Vy Lt",
     "Red": 187,
     "Green": 195,
-    "Blue": 217
+    "Blue": 217,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "158",
     "Name": "Cornflower Blu M V D",
     "Red": 76,
     "Green": 82,
-    "Blue": 110
+    "Blue": 110,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "159",
     "Name": "Blue Gray Light",
     "Red": 199,
     "Green": 202,
-    "Blue": 215
+    "Blue": 215,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "160",
     "Name": "Blue Gray Medium",
     "Red": 153,
     "Green": 159,
-    "Blue": 183
+    "Blue": 183,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "161",
     "Name": "Blue Gray",
     "Red": 120,
     "Green": 128,
-    "Blue": 164
+    "Blue": 164,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "162",
     "Name": "Blue Ultra Very Light",
     "Red": 219,
     "Green": 236,
-    "Blue": 245
+    "Blue": 245,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "163",
     "Name": "Celadon Green Md",
     "Red": 77,
     "Green": 131,
-    "Blue": 97
+    "Blue": 97,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "164",
     "Name": "Forest Green Lt",
     "Red": 200,
     "Green": 216,
-    "Blue": 184
+    "Blue": 184,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "165",
     "Name": "Moss Green Vy Lt",
     "Red": 239,
     "Green": 244,
-    "Blue": 164
+    "Blue": 164,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "166",
     "Name": "Moss Green Md Lt",
     "Red": 192,
     "Green": 200,
-    "Blue": 64
+    "Blue": 64,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "167",
     "Name": "Yellow Beige V Dk",
     "Red": 167,
     "Green": 124,
-    "Blue": 73
+    "Blue": 73,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "168",
     "Name": "Pewter Very Light",
     "Red": 209,
     "Green": 209,
-    "Blue": 209
+    "Blue": 209,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "169",
     "Name": "Pewter Light",
     "Red": 132,
     "Green": 132,
-    "Blue": 132
+    "Blue": 132,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "208",
     "Name": "Lavender Very Dark",
     "Red": 131,
     "Green": 91,
-    "Blue": 139
+    "Blue": 139,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "209",
     "Name": "Lavender Dark",
     "Red": 163,
     "Green": 123,
-    "Blue": 167
+    "Blue": 167,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "210",
     "Name": "Lavender Medium",
     "Red": 195,
     "Green": 159,
-    "Blue": 195
+    "Blue": 195,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "211",
     "Name": "Lavender Light",
     "Red": 227,
     "Green": 203,
-    "Blue": 227
+    "Blue": 227,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "221",
     "Name": "Shell Pink Vy Dk",
     "Red": 136,
     "Green": 62,
-    "Blue": 67
+    "Blue": 67,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "223",
     "Name": "Shell Pink Light",
     "Red": 204,
     "Green": 132,
-    "Blue": 124
+    "Blue": 124,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "224",
     "Name": "Shell Pink Very Light",
     "Red": 235,
     "Green": 183,
-    "Blue": 175
+    "Blue": 175,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "225",
     "Name": "Shell Pink Ult Vy Lt",
     "Red": 255,
     "Green": 223,
-    "Blue": 213
+    "Blue": 213,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "300",
     "Name": "Mahogany Vy Dk",
     "Red": 111,
     "Green": 47,
-    "Blue": 0
+    "Blue": 0,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "301",
     "Name": "Mahogany Med",
     "Red": 179,
     "Green": 95,
-    "Blue": 43
+    "Blue": 43,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "304",
     "Name": "Red Medium",
     "Red": 183,
     "Green": 31,
-    "Blue": 51
+    "Blue": 51,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "307",
     "Name": "Lemon",
     "Red": 253,
     "Green": 237,
-    "Blue": 84
+    "Blue": 84,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "309",
     "Name": "Rose Dark",
     "Red": 86,
     "Green": 74,
-    "Blue": 74
+    "Blue": 74,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "310",
     "Name": "Black",
     "Red": 0,
     "Green": 0,
-    "Blue": 0
+    "Blue": 0,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "311",
     "Name": "Wedgewood Ult VyDk",
     "Red": 28,
     "Green": 80,
-    "Blue": 102
+    "Blue": 102,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "312",
     "Name": "Baby Blue Very Dark",
     "Red": 53,
     "Green": 102,
-    "Blue": 139
+    "Blue": 139,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "315",
     "Name": "Antique Mauve Md Dk",
     "Red": 129,
     "Green": 73,
-    "Blue": 82
+    "Blue": 82,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "316",
     "Name": "Antique Mauve Med",
     "Red": 183,
     "Green": 115,
-    "Blue": 127
+    "Blue": 127,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "317",
     "Name": "Pewter Gray",
     "Red": 108,
     "Green": 108,
-    "Blue": 108
+    "Blue": 108,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "318",
     "Name": "Steel Gray Lt",
     "Red": 171,
     "Green": 171,
-    "Blue": 171
+    "Blue": 171,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "319",
     "Name": "Pistachio Grn Vy Dk",
     "Red": 32,
     "Green": 95,
-    "Blue": 46
+    "Blue": 46,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "320",
     "Name": "Pistachio Green Med",
     "Red": 105,
     "Green": 136,
-    "Blue": 90
+    "Blue": 90,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "321",
     "Name": "Red",
     "Red": 199,
     "Green": 43,
-    "Blue": 59
+    "Blue": 59,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "322",
     "Name": "Baby Blue Dark",
     "Red": 90,
     "Green": 143,
-    "Blue": 184
+    "Blue": 184,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "326",
     "Name": "Rose Very Dark",
     "Red": 179,
     "Green": 59,
-    "Blue": 75
+    "Blue": 75,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "327",
     "Name": "Violet Dark",
     "Red": 99,
     "Green": 54,
-    "Blue": 102
+    "Blue": 102,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "333",
     "Name": "Blue Violet Very Dark",
     "Red": 92,
     "Green": 84,
-    "Blue": 120
+    "Blue": 120,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "334",
     "Name": "Baby Blue Medium",
     "Red": 115,
     "Green": 159,
-    "Blue": 193
+    "Blue": 193,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "335",
     "Name": "Rose",
     "Red": 238,
     "Green": 84,
-    "Blue": 110
+    "Blue": 110,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "336",
     "Name": "Navy Blue",
     "Red": 37,
     "Green": 59,
-    "Blue": 115
+    "Blue": 115,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "340",
     "Name": "Blue Violet Medium",
     "Red": 173,
     "Green": 167,
-    "Blue": 199
+    "Blue": 199,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "341",
     "Name": "Blue Violet Light",
     "Red": 183,
     "Green": 191,
-    "Blue": 221
+    "Blue": 221,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "347",
     "Name": "Salmon Very Dark",
     "Red": 191,
     "Green": 45,
-    "Blue": 45
+    "Blue": 45,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "349",
     "Name": "Coral Dark",
     "Red": 210,
     "Green": 16,
-    "Blue": 53
+    "Blue": 53,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "350",
     "Name": "Coral Medium",
     "Red": 224,
     "Green": 72,
-    "Blue": 72
+    "Blue": 72,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "351",
     "Name": "Coral",
     "Red": 233,
     "Green": 106,
-    "Blue": 103
+    "Blue": 103,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "352",
     "Name": "Coral Light",
     "Red": 253,
     "Green": 156,
-    "Blue": 151
+    "Blue": 151,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "353",
     "Name": "Peach",
     "Red": 254,
     "Green": 215,
-    "Blue": 204
+    "Blue": 204,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "355",
     "Name": "Terra Cotta Dark",
     "Red": 152,
     "Green": 68,
-    "Blue": 54
+    "Blue": 54,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "356",
     "Name": "Terra Cotta Med",
     "Red": 197,
     "Green": 106,
-    "Blue": 91
+    "Blue": 91,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "367",
     "Name": "Pistachio Green Dk",
     "Red": 97,
     "Green": 122,
-    "Blue": 82
+    "Blue": 82,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "368",
     "Name": "Pistachio Green Lt",
     "Red": 166,
     "Green": 194,
-    "Blue": 152
+    "Blue": 152,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "369",
     "Name": "Pistachio Green Vy Lt",
     "Red": 215,
     "Green": 237,
-    "Blue": 204
+    "Blue": 204,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "370",
     "Name": "Mustard Medium",
     "Red": 184,
     "Green": 157,
-    "Blue": 100
+    "Blue": 100,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "371",
     "Name": "Mustard",
     "Red": 191,
     "Green": 166,
-    "Blue": 113
+    "Blue": 113,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "372",
     "Name": "Mustard Lt",
     "Red": 204,
     "Green": 183,
-    "Blue": 132
+    "Blue": 132,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "400",
     "Name": "Mahogany Dark",
     "Red": 143,
     "Green": 67,
-    "Blue": 15
+    "Blue": 15,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "402",
     "Name": "Mahogany Vy Lt",
     "Red": 247,
     "Green": 167,
-    "Blue": 119
+    "Blue": 119,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "407",
     "Name": "Desert Sand Med",
     "Red": 187,
     "Green": 129,
-    "Blue": 97
+    "Blue": 97,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "413",
     "Name": "Pewter Gray Dark",
     "Red": 86,
     "Green": 86,
-    "Blue": 86
+    "Blue": 86,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "414",
     "Name": "Steel Gray Dk",
     "Red": 140,
     "Green": 140,
-    "Blue": 140
+    "Blue": 140,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "415",
     "Name": "Pearl Gray",
     "Red": 211,
     "Green": 211,
-    "Blue": 214
+    "Blue": 214,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "420",
     "Name": "Hazelnut Brown Dk",
     "Red": 160,
     "Green": 112,
-    "Blue": 66
+    "Blue": 66,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "422",
     "Name": "Hazelnut Brown Lt",
     "Red": 198,
     "Green": 159,
-    "Blue": 123
+    "Blue": 123,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "433",
     "Name": "Brown Med",
     "Red": 122,
     "Green": 69,
-    "Blue": 31
+    "Blue": 31,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "434",
     "Name": "Brown Light",
     "Red": 152,
     "Green": 94,
-    "Blue": 51
+    "Blue": 51,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "435",
     "Name": "Brown Very Light",
     "Red": 184,
     "Green": 119,
-    "Blue": 72
+    "Blue": 72,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "436",
     "Name": "Tan",
     "Red": 203,
     "Green": 144,
-    "Blue": 81
+    "Blue": 81,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "437",
     "Name": "Tan Light",
     "Red": 228,
     "Green": 187,
-    "Blue": 142
+    "Blue": 142,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "444",
     "Name": "Lemon Dark",
     "Red": 255,
     "Green": 214,
-    "Blue": 0
+    "Blue": 0,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "445",
     "Name": "Lemon Light",
     "Red": 255,
     "Green": 251,
-    "Blue": 139
+    "Blue": 139,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "451",
     "Name": "Shell Gray Dark",
     "Red": 145,
     "Green": 123,
-    "Blue": 115
+    "Blue": 115,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "452",
     "Name": "Shell Gray Med",
     "Red": 192,
     "Green": 179,
-    "Blue": 174
+    "Blue": 174,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "453",
     "Name": "Shell Gray Light",
     "Red": 215,
     "Green": 206,
-    "Blue": 203
+    "Blue": 203,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "469",
     "Name": "Avocado Green",
     "Red": 114,
     "Green": 132,
-    "Blue": 60
+    "Blue": 60,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "470",
     "Name": "Avocado Grn Lt",
     "Red": 148,
     "Green": 171,
-    "Blue": 79
+    "Blue": 79,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "471",
     "Name": "Avocado Grn V Lt",
     "Red": 174,
     "Green": 191,
-    "Blue": 121
+    "Blue": 121,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "472",
     "Name": "Avocado Grn U Lt",
     "Red": 216,
     "Green": 228,
-    "Blue": 152
+    "Blue": 152,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "498",
     "Name": "Red Dark",
     "Red": 167,
     "Green": 19,
-    "Blue": 43
+    "Blue": 43,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "500",
     "Name": "Blue Green Vy Dk",
     "Red": 4,
     "Green": 77,
-    "Blue": 51
+    "Blue": 51,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "501",
     "Name": "Blue Green Dark",
     "Red": 57,
     "Green": 111,
-    "Blue": 82
+    "Blue": 82,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "502",
     "Name": "Blue Green",
     "Red": 91,
     "Green": 144,
-    "Blue": 113
+    "Blue": 113,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "503",
     "Name": "Blue Green Med",
     "Red": 123,
     "Green": 172,
-    "Blue": 148
+    "Blue": 148,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "504",
     "Name": "Blue Green Vy Lt",
     "Red": 196,
     "Green": 222,
-    "Blue": 204
+    "Blue": 204,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "505",
     "Name": "Jade Green",
     "Red": 51,
     "Green": 131,
-    "Blue": 98
+    "Blue": 98,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "517",
     "Name": "Wedgewood Dark",
     "Red": 59,
     "Green": 118,
-    "Blue": 143
+    "Blue": 143,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "518",
     "Name": "Wedgewood Light",
     "Red": 79,
     "Green": 147,
-    "Blue": 167
+    "Blue": 167,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "519",
     "Name": "Sky Blue",
     "Red": 126,
     "Green": 177,
-    "Blue": 200
+    "Blue": 200,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "520",
     "Name": "Fern Green Dark",
     "Red": 102,
     "Green": 109,
-    "Blue": 79
+    "Blue": 79,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "522",
     "Name": "Fern Green",
     "Red": 150,
     "Green": 158,
-    "Blue": 126
+    "Blue": 126,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "523",
     "Name": "Fern Green Lt",
     "Red": 171,
     "Green": 177,
-    "Blue": 151
+    "Blue": 151,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "524",
     "Name": "Fern Green Vy Lt",
     "Red": 196,
     "Green": 205,
-    "Blue": 172
+    "Blue": 172,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "535",
     "Name": "Ash Gray Vy Lt",
     "Red": 99,
     "Green": 100,
-    "Blue": 88
+    "Blue": 88,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "543",
     "Name": "Beige Brown Ult Vy Lt",
     "Red": 242,
     "Green": 227,
-    "Blue": 206
+    "Blue": 206,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "550",
     "Name": "Violet Very Dark",
     "Red": 92,
     "Green": 24,
-    "Blue": 78
+    "Blue": 78,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "552",
     "Name": "Violet  Medium",
     "Red": 128,
     "Green": 58,
-    "Blue": 107
+    "Blue": 107,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "553",
     "Name": "Violet",
     "Red": 163,
     "Green": 99,
-    "Blue": 139
+    "Blue": 139,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "554",
     "Name": "Violet Light",
     "Red": 219,
     "Green": 179,
-    "Blue": 203
+    "Blue": 203,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "561",
     "Name": "Celadon Green VD",
     "Red": 44,
     "Green": 106,
-    "Blue": 69
+    "Blue": 69,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "562",
     "Name": "Jade Medium",
     "Red": 83,
     "Green": 151,
-    "Blue": 106
+    "Blue": 106,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "563",
     "Name": "Jade Light",
     "Red": 143,
     "Green": 192,
-    "Blue": 152
+    "Blue": 152,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "564",
     "Name": "Jade Very Light",
     "Red": 167,
     "Green": 205,
-    "Blue": 175
+    "Blue": 175,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "580",
     "Name": "Moss Green Dk",
     "Red": 136,
     "Green": 141,
-    "Blue": 51
+    "Blue": 51,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "581",
     "Name": "Moss Green",
     "Red": 167,
     "Green": 174,
-    "Blue": 56
+    "Blue": 56,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "597",
     "Name": "Turquoise",
     "Red": 91,
     "Green": 163,
-    "Blue": 179
+    "Blue": 179,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "598",
     "Name": "Turquoise Light",
     "Red": 144,
     "Green": 195,
-    "Blue": 204
+    "Blue": 204,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "600",
     "Name": "Cranberry Very Dark",
     "Red": 205,
     "Green": 47,
-    "Blue": 99
+    "Blue": 99,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "601",
     "Name": "Cranberry Dark",
     "Red": 209,
     "Green": 40,
-    "Blue": 106
+    "Blue": 106,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "602",
     "Name": "Cranberry Medium",
     "Red": 226,
     "Green": 72,
-    "Blue": 116
+    "Blue": 116,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "603",
     "Name": "Cranberry",
     "Red": 255,
     "Green": 164,
-    "Blue": 190
+    "Blue": 190,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "604",
     "Name": "Cranberry Light",
     "Red": 255,
     "Green": 176,
-    "Blue": 190
+    "Blue": 190,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "605",
     "Name": "Cranberry Very Light",
     "Red": 255,
     "Green": 192,
-    "Blue": 205
+    "Blue": 205,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "606",
     "Name": "Orange-Red Bright",
     "Red": 250,
     "Green": 50,
-    "Blue": 3
+    "Blue": 3,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "608",
     "Name": "Burnt Orange Bright",
     "Red": 253,
     "Green": 93,
-    "Blue": 53
+    "Blue": 53,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "610",
     "Name": "Drab Brown Dk",
     "Red": 121,
     "Green": 96,
-    "Blue": 71
+    "Blue": 71,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "611",
     "Name": "Drab Brown",
     "Red": 150,
     "Green": 118,
-    "Blue": 86
+    "Blue": 86,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "612",
     "Name": "Drab Brown Lt",
     "Red": 188,
     "Green": 154,
-    "Blue": 120
+    "Blue": 120,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "613",
     "Name": "Drab Brown V Lt",
     "Red": 220,
     "Green": 196,
-    "Blue": 170
+    "Blue": 170,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "632",
     "Name": "Desert Sand Ult Vy Dk",
     "Red": 135,
     "Green": 85,
-    "Blue": 57
+    "Blue": 57,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "640",
     "Name": "Beige Gray Vy Dk",
     "Red": 133,
     "Green": 123,
-    "Blue": 97
+    "Blue": 97,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "642",
     "Name": "Beige Gray Dark",
     "Red": 164,
     "Green": 152,
-    "Blue": 120
+    "Blue": 120,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "644",
     "Name": "Beige Gray Med",
     "Red": 221,
     "Green": 216,
-    "Blue": 203
+    "Blue": 203,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "645",
     "Name": "Beaver Gray Vy Dk",
     "Red": 110,
     "Green": 101,
-    "Blue": 92
+    "Blue": 92,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "646",
     "Name": "Beaver Gray Dk",
     "Red": 135,
     "Green": 125,
-    "Blue": 115
+    "Blue": 115,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "647",
     "Name": "Beaver Gray Med",
     "Red": 176,
     "Green": 166,
-    "Blue": 156
+    "Blue": 156,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "648",
     "Name": "Beaver Gray Lt",
     "Red": 188,
     "Green": 180,
-    "Blue": 172
+    "Blue": 172,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "666",
     "Name": "Bright Red",
     "Red": 227,
     "Green": 29,
-    "Blue": 66
+    "Blue": 66,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "676",
     "Name": "Old Gold Lt",
     "Red": 229,
     "Green": 206,
-    "Blue": 151
+    "Blue": 151,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "677",
     "Name": "Old Gold Vy Lt",
     "Red": 245,
     "Green": 236,
-    "Blue": 203
+    "Blue": 203,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "680",
     "Name": "Old Gold Dark",
     "Red": 188,
     "Green": 141,
-    "Blue": 14
+    "Blue": 14,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "699",
     "Name": "Green",
     "Red": 5,
     "Green": 101,
-    "Blue": 23
+    "Blue": 23,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "700",
     "Name": "Green Bright",
     "Red": 7,
     "Green": 115,
-    "Blue": 27
+    "Blue": 27,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "701",
     "Name": "Green Light",
     "Red": 63,
     "Green": 143,
-    "Blue": 41
+    "Blue": 41,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "702",
     "Name": "Kelly Green",
     "Red": 71,
     "Green": 167,
-    "Blue": 47
+    "Blue": 47,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "703",
     "Name": "Chartreuse",
     "Red": 123,
     "Green": 181,
-    "Blue": 71
+    "Blue": 71,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "704",
     "Name": "Chartreuse Bright",
     "Red": 158,
     "Green": 207,
-    "Blue": 52
+    "Blue": 52,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "712",
     "Name": "Cream",
     "Red": 255,
     "Green": 251,
-    "Blue": 239
+    "Blue": 239,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "718",
     "Name": "Plum",
     "Red": 156,
     "Green": 36,
-    "Blue": 98
+    "Blue": 98,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "720",
     "Name": "Orange Spice Dark",
     "Red": 229,
     "Green": 92,
-    "Blue": 31
+    "Blue": 31,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "721",
     "Name": "Orange Spice Med",
     "Red": 242,
     "Green": 120,
-    "Blue": 66
+    "Blue": 66,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "722",
     "Name": "Orange Spice Light",
     "Red": 247,
     "Green": 151,
-    "Blue": 111
+    "Blue": 111,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "725",
     "Name": "Topaz Med Lt",
     "Red": 255,
     "Green": 200,
-    "Blue": 64
+    "Blue": 64,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "726",
     "Name": "Topaz Light",
     "Red": 253,
     "Green": 215,
-    "Blue": 85
+    "Blue": 85,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "727",
     "Name": "Topaz Vy Lt",
     "Red": 255,
     "Green": 241,
-    "Blue": 175
+    "Blue": 175,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "728",
     "Name": "Topaz",
     "Red": 228,
     "Green": 180,
-    "Blue": 104
+    "Blue": 104,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "729",
     "Name": "Old Gold Medium",
     "Red": 208,
     "Green": 165,
-    "Blue": 62
+    "Blue": 62,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "730",
     "Name": "Olive Green V Dk",
     "Red": 130,
     "Green": 123,
-    "Blue": 48
+    "Blue": 48,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "731",
     "Name": "Olive Green Dk",
     "Red": 147,
     "Green": 139,
-    "Blue": 55
+    "Blue": 55,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "732",
     "Name": "Olive Green",
     "Red": 148,
     "Green": 140,
-    "Blue": 54
+    "Blue": 54,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "733",
     "Name": "Olive Green Md",
     "Red": 188,
     "Green": 179,
-    "Blue": 76
+    "Blue": 76,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "734",
     "Name": "Olive Green Lt",
     "Red": 199,
     "Green": 192,
-    "Blue": 119
+    "Blue": 119,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "738",
     "Name": "Tan Very Light",
     "Red": 236,
     "Green": 204,
-    "Blue": 158
+    "Blue": 158,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "739",
     "Name": "Tan Ult Vy Lt",
     "Red": 248,
     "Green": 228,
-    "Blue": 200
+    "Blue": 200,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "740",
     "Name": "Tangerine",
     "Red": 255,
     "Green": 139,
-    "Blue": 0
+    "Blue": 0,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "741",
     "Name": "Tangerine Med",
     "Red": 255,
     "Green": 163,
-    "Blue": 43
+    "Blue": 43,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "742",
     "Name": "Tangerine Light",
     "Red": 255,
     "Green": 191,
-    "Blue": 87
+    "Blue": 87,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "743",
     "Name": "Yellow Med",
     "Red": 254,
     "Green": 211,
-    "Blue": 118
+    "Blue": 118,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "744",
     "Name": "Yellow Pale",
     "Red": 255,
     "Green": 231,
-    "Blue": 147
+    "Blue": 147,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "745",
     "Name": "Yellow Pale Light",
     "Red": 255,
     "Green": 233,
-    "Blue": 173
+    "Blue": 173,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "746",
     "Name": "Off White",
     "Red": 252,
     "Green": 252,
-    "Blue": 238
+    "Blue": 238,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "747",
     "Name": "Peacock Blue Vy Lt",
     "Red": 229,
     "Green": 252,
-    "Blue": 253
+    "Blue": 253,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "754",
     "Name": "Peach Light",
     "Red": 247,
     "Green": 203,
-    "Blue": 191
+    "Blue": 191,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "758",
     "Name": "Terra Cotta Vy Lt",
     "Red": 238,
     "Green": 170,
-    "Blue": 155
+    "Blue": 155,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "760",
     "Name": "Salmon",
     "Red": 245,
     "Green": 173,
-    "Blue": 173
+    "Blue": 173,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "761",
     "Name": "Salmon Light",
     "Red": 255,
     "Green": 201,
-    "Blue": 201
+    "Blue": 201,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "762",
     "Name": "Pearl Gray Vy Lt",
     "Red": 236,
     "Green": 236,
-    "Blue": 236
+    "Blue": 236,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "772",
     "Name": "Yellow Green Vy Lt",
     "Red": 228,
     "Green": 236,
-    "Blue": 212
+    "Blue": 212,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "775",
     "Name": "Baby Blue Very Light",
     "Red": 217,
     "Green": 235,
-    "Blue": 241
+    "Blue": 241,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "776",
     "Name": "Pink Medium",
     "Red": 252,
     "Green": 176,
-    "Blue": 185
+    "Blue": 185,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "777",
     "Name": "Raspberry Very Dark",
     "Red": 145,
     "Green": 53,
-    "Blue": 70
+    "Blue": 70,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "778",
     "Name": "Antique Mauve Vy Lt",
     "Red": 223,
     "Green": 179,
-    "Blue": 187
+    "Blue": 187,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "779",
     "Name": "Cocoa Dark",
     "Red": 98,
     "Green": 75,
-    "Blue": 69
+    "Blue": 69,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "780",
     "Name": "Topaz Ultra Vy Dk",
     "Red": 148,
     "Green": 99,
-    "Blue": 26
+    "Blue": 26,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "781",
     "Name": "Topaz Very Dark",
     "Red": 162,
     "Green": 109,
-    "Blue": 32
+    "Blue": 32,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "782",
     "Name": "Topaz Dark",
     "Red": 174,
     "Green": 119,
-    "Blue": 32
+    "Blue": 32,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "783",
     "Name": "Topaz Medium",
     "Red": 206,
     "Green": 145,
-    "Blue": 36
+    "Blue": 36,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "791",
     "Name": "Cornflower Blue V D",
     "Red": 70,
     "Green": 69,
-    "Blue": 99
+    "Blue": 99,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "792",
     "Name": "Cornflower Blue Dark",
     "Red": 85,
     "Green": 91,
-    "Blue": 123
+    "Blue": 123,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "793",
     "Name": "Cornflower Blue Med",
     "Red": 112,
     "Green": 125,
-    "Blue": 162
+    "Blue": 162,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "794",
     "Name": "Cornflower Blue Light",
     "Red": 143,
     "Green": 156,
-    "Blue": 193
+    "Blue": 193,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "796",
     "Name": "Royal Blue Dark",
     "Red": 17,
     "Green": 65,
-    "Blue": 109
+    "Blue": 109,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "797",
     "Name": "Royal Blue",
     "Red": 19,
     "Green": 71,
-    "Blue": 125
+    "Blue": 125,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "798",
     "Name": "Delft Blue Dark",
     "Red": 70,
     "Green": 106,
-    "Blue": 142
+    "Blue": 142,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "799",
     "Name": "Delft Blue Medium",
     "Red": 116,
     "Green": 142,
-    "Blue": 182
+    "Blue": 182,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "800",
     "Name": "Delft Blue Pale",
     "Red": 192,
     "Green": 204,
-    "Blue": 222
+    "Blue": 222,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "801",
     "Name": "Coffee Brown Dk",
     "Red": 101,
     "Green": 57,
-    "Blue": 25
+    "Blue": 25,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "803",
     "Name": "Baby Blue Ult Vy Dk",
     "Red": 44,
     "Green": 89,
-    "Blue": 124
+    "Blue": 124,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "806",
     "Name": "Peacock Blue Dark",
     "Red": 61,
     "Green": 149,
-    "Blue": 165
+    "Blue": 165,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "807",
     "Name": "Peacock Blue",
     "Red": 100,
     "Green": 171,
-    "Blue": 186
+    "Blue": 186,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "809",
     "Name": "Delft Blue",
     "Red": 148,
     "Green": 168,
-    "Blue": 198
+    "Blue": 198,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "813",
     "Name": "Blue Light",
     "Red": 161,
     "Green": 194,
-    "Blue": 215
+    "Blue": 215,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "814",
     "Name": "Garnet Dark",
     "Red": 123,
     "Green": 0,
-    "Blue": 27
+    "Blue": 27,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "815",
     "Name": "Garnet Medium",
     "Red": 135,
     "Green": 7,
-    "Blue": 31
+    "Blue": 31,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "816",
     "Name": "Garnet",
     "Red": 151,
     "Green": 11,
-    "Blue": 35
+    "Blue": 35,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "817",
     "Name": "Coral Red Very Dark",
     "Red": 187,
     "Green": 5,
-    "Blue": 31
+    "Blue": 31,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "818",
     "Name": "Baby Pink",
     "Red": 255,
     "Green": 223,
-    "Blue": 217
+    "Blue": 217,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "819",
     "Name": "Baby Pink Light",
     "Red": 255,
     "Green": 238,
-    "Blue": 235
+    "Blue": 235,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "820",
     "Name": "Royal Blue Very Dark",
     "Red": 14,
     "Green": 54,
-    "Blue": 92
+    "Blue": 92,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "822",
     "Name": "Beige Gray Light",
     "Red": 231,
     "Green": 226,
-    "Blue": 211
+    "Blue": 211,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "823",
     "Name": "Navy Blue Dark",
     "Red": 33,
     "Green": 48,
-    "Blue": 99
+    "Blue": 99,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "824",
     "Name": "Blue Very Dark",
     "Red": 57,
     "Green": 105,
-    "Blue": 135
+    "Blue": 135,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "825",
     "Name": "Blue Dark",
     "Red": 71,
     "Green": 129,
-    "Blue": 165
+    "Blue": 165,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "826",
     "Name": "Blue Medium",
     "Red": 107,
     "Green": 158,
-    "Blue": 191
+    "Blue": 191,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "827",
     "Name": "Blue Very Light",
     "Red": 189,
     "Green": 221,
-    "Blue": 237
+    "Blue": 237,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "828",
     "Name": "Sky Blue Vy Lt",
     "Red": 197,
     "Green": 232,
-    "Blue": 237
+    "Blue": 237,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "829",
     "Name": "Golden Olive Vy Dk",
     "Red": 126,
     "Green": 107,
-    "Blue": 66
+    "Blue": 66,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "830",
     "Name": "Golden Olive Dk",
     "Red": 141,
     "Green": 120,
-    "Blue": 75
+    "Blue": 75,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "831",
     "Name": "Golden Olive Md",
     "Red": 170,
     "Green": 143,
-    "Blue": 86
+    "Blue": 86,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "832",
     "Name": "Golden Olive",
     "Red": 189,
     "Green": 155,
-    "Blue": 81
+    "Blue": 81,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "833",
     "Name": "Golden Olive Lt",
     "Red": 200,
     "Green": 171,
-    "Blue": 108
+    "Blue": 108,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "834",
     "Name": "Golden Olive Vy Lt",
     "Red": 219,
     "Green": 190,
-    "Blue": 127
+    "Blue": 127,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "838",
     "Name": "Beige Brown Vy Dk",
     "Red": 89,
     "Green": 73,
-    "Blue": 55
+    "Blue": 55,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "839",
     "Name": "Beige Brown Dk",
     "Red": 103,
     "Green": 85,
-    "Blue": 65
+    "Blue": 65,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "840",
     "Name": "Beige Brown Med",
     "Red": 154,
     "Green": 124,
-    "Blue": 92
+    "Blue": 92,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "841",
     "Name": "Beige Brown Lt",
     "Red": 182,
     "Green": 155,
-    "Blue": 126
+    "Blue": 126,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "842",
     "Name": "Beige Brown Vy Lt",
     "Red": 209,
     "Green": 186,
-    "Blue": 161
+    "Blue": 161,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "844",
     "Name": "Beaver Gray Ult Dk",
     "Red": 72,
     "Green": 72,
-    "Blue": 72
+    "Blue": 72,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "869",
     "Name": "Hazelnut Brown V Dk",
     "Red": 131,
     "Green": 94,
-    "Blue": 57
+    "Blue": 57,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "890",
     "Name": "Pistachio Grn Ult V D",
     "Red": 23,
     "Green": 73,
-    "Blue": 35
+    "Blue": 35,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "891",
     "Name": "Carnation Dark",
     "Red": 255,
     "Green": 87,
-    "Blue": 115
+    "Blue": 115,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "892",
     "Name": "Carnation Medium",
     "Red": 255,
     "Green": 121,
-    "Blue": 140
+    "Blue": 140,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "893",
     "Name": "Carnation Light",
     "Red": 252,
     "Green": 144,
-    "Blue": 162
+    "Blue": 162,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "894",
     "Name": "Carnation Very Light",
     "Red": 255,
     "Green": 178,
-    "Blue": 187
+    "Blue": 187,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "895",
     "Name": "Hunter Green Vy Dk",
     "Red": 27,
     "Green": 83,
-    "Blue": 0
+    "Blue": 0,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "898",
     "Name": "Coffee Brown Vy Dk",
     "Red": 73,
     "Green": 42,
-    "Blue": 19
+    "Blue": 19,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "899",
     "Name": "Rose Medium",
     "Red": 242,
     "Green": 118,
-    "Blue": 136
+    "Blue": 136,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "900",
     "Name": "Burnt Orange Dark",
     "Red": 209,
     "Green": 88,
-    "Blue": 7
+    "Blue": 7,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "902",
     "Name": "Garnet Very Dark",
     "Red": 130,
     "Green": 38,
-    "Blue": 55
+    "Blue": 55,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "904",
     "Name": "Parrot Green V Dk",
     "Red": 85,
     "Green": 120,
-    "Blue": 34
+    "Blue": 34,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "905",
     "Name": "Parrot Green Dk",
     "Red": 98,
     "Green": 138,
-    "Blue": 40
+    "Blue": 40,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "906",
     "Name": "Parrot Green Md",
     "Red": 127,
     "Green": 179,
-    "Blue": 53
+    "Blue": 53,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "907",
     "Name": "Parrot Green Lt",
     "Red": 199,
     "Green": 230,
-    "Blue": 102
+    "Blue": 102,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "909",
     "Name": "Emerald Green Vy Dk",
     "Red": 21,
     "Green": 111,
-    "Blue": 73
+    "Blue": 73,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "910",
     "Name": "Emerald Green Dark",
     "Red": 24,
     "Green": 126,
-    "Blue": 86
+    "Blue": 86,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "911",
     "Name": "Emerald Green Med",
     "Red": 24,
     "Green": 144,
-    "Blue": 101
+    "Blue": 101,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "912",
     "Name": "Emerald Green Lt",
     "Red": 27,
     "Green": 157,
-    "Blue": 107
+    "Blue": 107,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "913",
     "Name": "Nile Green Med",
     "Red": 109,
     "Green": 171,
-    "Blue": 119
+    "Blue": 119,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "915",
     "Name": "Plum Dark",
     "Red": 130,
     "Green": 0,
-    "Blue": 67
+    "Blue": 67,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "917",
     "Name": "Plum Medium",
     "Red": 155,
     "Green": 19,
-    "Blue": 89
+    "Blue": 89,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "918",
     "Name": "Red?Copper Dark",
     "Red": 130,
     "Green": 52,
-    "Blue": 10
+    "Blue": 10,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "919",
     "Name": "Red?Copper",
     "Red": 166,
     "Green": 69,
-    "Blue": 16
+    "Blue": 16,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "920",
     "Name": "Copper Med",
     "Red": 172,
     "Green": 84,
-    "Blue": 20
+    "Blue": 20,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "921",
     "Name": "Copper",
     "Red": 198,
     "Green": 98,
-    "Blue": 24
+    "Blue": 24,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "922",
     "Name": "Copper Light",
     "Red": 226,
     "Green": 115,
-    "Blue": 35
+    "Blue": 35,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "924",
     "Name": "Gray Green Vy Dark",
     "Red": 86,
     "Green": 106,
-    "Blue": 106
+    "Blue": 106,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "926",
     "Name": "Gray Green Med",
     "Red": 152,
     "Green": 174,
-    "Blue": 174
+    "Blue": 174,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "927",
     "Name": "Gray Green Light",
     "Red": 189,
     "Green": 203,
-    "Blue": 203
+    "Blue": 203,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "928",
     "Name": "Gray Green Vy Lt",
     "Red": 221,
     "Green": 227,
-    "Blue": 227
+    "Blue": 227,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "930",
     "Name": "Antique Blue Dark",
     "Red": 69,
     "Green": 92,
-    "Blue": 113
+    "Blue": 113,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "931",
     "Name": "Antique Blue Medium",
     "Red": 106,
     "Green": 133,
-    "Blue": 158
+    "Blue": 158,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "932",
     "Name": "Antique Blue Light",
     "Red": 162,
     "Green": 181,
-    "Blue": 198
+    "Blue": 198,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "934",
     "Name": "Avocado Grn Black",
     "Red": 49,
     "Green": 57,
-    "Blue": 25
+    "Blue": 25,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "935",
     "Name": "Avocado Green Dk",
     "Red": 66,
     "Green": 77,
-    "Blue": 33
+    "Blue": 33,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "936",
     "Name": "Avocado Grn V Dk",
     "Red": 76,
     "Green": 88,
-    "Blue": 38
+    "Blue": 38,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "937",
     "Name": "Avocado Green Md",
     "Red": 98,
     "Green": 113,
-    "Blue": 51
+    "Blue": 51,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "938",
     "Name": "Coffee Brown Ult Dk",
     "Red": 54,
     "Green": 31,
-    "Blue": 14
+    "Blue": 14,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "939",
     "Name": "Navy Blue Very Dark",
     "Red": 27,
     "Green": 40,
-    "Blue": 83
+    "Blue": 83,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "943",
     "Name": "Green Bright Md",
     "Red": 61,
     "Green": 147,
-    "Blue": 132
+    "Blue": 132,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "945",
     "Name": "Tawny",
     "Red": 251,
     "Green": 213,
-    "Blue": 187
+    "Blue": 187,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "946",
     "Name": "Burnt Orange Med",
     "Red": 235,
     "Green": 99,
-    "Blue": 7
+    "Blue": 7,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "947",
     "Name": "Burnt Orange",
     "Red": 255,
     "Green": 123,
-    "Blue": 77
+    "Blue": 77,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "948",
     "Name": "Peach Very Light",
     "Red": 254,
     "Green": 231,
-    "Blue": 218
+    "Blue": 218,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "950",
     "Name": "Desert Sand Light",
     "Red": 238,
     "Green": 211,
-    "Blue": 196
+    "Blue": 196,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "951",
     "Name": "Tawny Light",
     "Red": 255,
     "Green": 226,
-    "Blue": 207
+    "Blue": 207,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "954",
     "Name": "Nile Green",
     "Red": 136,
     "Green": 186,
-    "Blue": 145
+    "Blue": 145,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "955",
     "Name": "Nile Green Light",
     "Red": 162,
     "Green": 214,
-    "Blue": 173
+    "Blue": 173,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "956",
     "Name": "Geranium",
     "Red": 255,
     "Green": 145,
-    "Blue": 145
+    "Blue": 145,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "957",
     "Name": "Geranium Pale",
     "Red": 253,
     "Green": 181,
-    "Blue": 181
+    "Blue": 181,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "958",
     "Name": "Sea Green Dark",
     "Red": 62,
     "Green": 182,
-    "Blue": 161
+    "Blue": 161,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "959",
     "Name": "Sea Green Med",
     "Red": 89,
     "Green": 199,
-    "Blue": 180
+    "Blue": 180,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "961",
     "Name": "Dusty Rose Dark",
     "Red": 207,
     "Green": 115,
-    "Blue": 115
+    "Blue": 115,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "962",
     "Name": "Dusty Rose Medium",
     "Red": 230,
     "Green": 138,
-    "Blue": 138
+    "Blue": 138,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "963",
     "Name": "Dusty Rose Ult Vy Lt",
     "Red": 255,
     "Green": 215,
-    "Blue": 215
+    "Blue": 215,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "964",
     "Name": "Sea Green Light",
     "Red": 169,
     "Green": 226,
-    "Blue": 216
+    "Blue": 216,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "966",
     "Name": "Jade Ultra Vy Lt",
     "Red": 185,
     "Green": 215,
-    "Blue": 192
+    "Blue": 192,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "967",
     "Name": "Apricot Very Light",
     "Red": 255,
     "Green": 222,
-    "Blue": 213
+    "Blue": 213,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "970",
     "Name": "Pumpkin Light",
     "Red": 247,
     "Green": 139,
-    "Blue": 19
+    "Blue": 19,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "971",
     "Name": "Pumpkin",
     "Red": 246,
     "Green": 127,
-    "Blue": 0
+    "Blue": 0,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "972",
     "Name": "Canary Deep",
     "Red": 255,
     "Green": 181,
-    "Blue": 21
+    "Blue": 21,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "973",
     "Name": "Canary Bright",
     "Red": 255,
     "Green": 227,
-    "Blue": 0
+    "Blue": 0,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "975",
     "Name": "Golden Brown Dk",
     "Red": 145,
     "Green": 79,
-    "Blue": 18
+    "Blue": 18,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "976",
     "Name": "Golden Brown Med",
     "Red": 194,
     "Green": 129,
-    "Blue": 66
+    "Blue": 66,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "977",
     "Name": "Golden Brown Light",
     "Red": 220,
     "Green": 156,
-    "Blue": 86
+    "Blue": 86,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "986",
     "Name": "Forest Green Vy Dk",
     "Red": 64,
     "Green": 82,
-    "Blue": 48
+    "Blue": 48,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "987",
     "Name": "Forest Green Dk",
     "Red": 88,
     "Green": 113,
-    "Blue": 65
+    "Blue": 65,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "988",
     "Name": "Forest Green Med",
     "Red": 115,
     "Green": 139,
-    "Blue": 91
+    "Blue": 91,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "989",
     "Name": "Forest Green ",
     "Red": 141,
     "Green": 166,
-    "Blue": 117
+    "Blue": 117,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "991",
     "Name": "Aquamarine Dk",
     "Red": 71,
     "Green": 123,
-    "Blue": 110
+    "Blue": 110,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "992",
     "Name": "Aquamarine Lt",
     "Red": 111,
     "Green": 174,
-    "Blue": 159
+    "Blue": 159,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "993",
     "Name": "Aquamarine Vy Lt",
     "Red": 144,
     "Green": 192,
-    "Blue": 180
+    "Blue": 180,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "995",
     "Name": "Electric Blue Dark",
     "Red": 38,
     "Green": 150,
-    "Blue": 182
+    "Blue": 182,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "996",
     "Name": "Electric Blue Medium",
     "Red": 48,
     "Green": 194,
-    "Blue": 236
+    "Blue": 236,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3011",
     "Name": "Khaki Green Dk",
     "Red": 137,
     "Green": 138,
-    "Blue": 88
+    "Blue": 88,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3012",
     "Name": "Khaki Green Md",
     "Red": 166,
     "Green": 167,
-    "Blue": 93
+    "Blue": 93,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3013",
     "Name": "Khaki Green Lt",
     "Red": 185,
     "Green": 185,
-    "Blue": 130
+    "Blue": 130,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3021",
     "Name": "Brown Gray Vy Dk",
     "Red": 79,
     "Green": 75,
-    "Blue": 65
+    "Blue": 65,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3022",
     "Name": "Brown Gray Med",
     "Red": 142,
     "Green": 144,
-    "Blue": 120
+    "Blue": 120,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3023",
     "Name": "Brown Gray Light",
     "Red": 177,
     "Green": 170,
-    "Blue": 151
+    "Blue": 151,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3024",
     "Name": "Brown Gray Vy Lt",
     "Red": 235,
     "Green": 234,
-    "Blue": 231
+    "Blue": 231,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3031",
     "Name": "Mocha Brown Vy Dk",
     "Red": 75,
     "Green": 60,
-    "Blue": 42
+    "Blue": 42,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3032",
     "Name": "Mocha Brown Med",
     "Red": 179,
     "Green": 159,
-    "Blue": 139
+    "Blue": 139,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3033",
     "Name": "Mocha Brown Vy Lt",
     "Red": 227,
     "Green": 216,
-    "Blue": 204
+    "Blue": 204,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3041",
     "Name": "Antique Violet Medium",
     "Red": 149,
     "Green": 111,
-    "Blue": 124
+    "Blue": 124,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3042",
     "Name": "Antique Violet Light",
     "Red": 183,
     "Green": 157,
-    "Blue": 167
+    "Blue": 167,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3045",
     "Name": "Yellow Beige Dk",
     "Red": 188,
     "Green": 150,
-    "Blue": 106
+    "Blue": 106,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3046",
     "Name": "Yellow Beige Md",
     "Red": 216,
     "Green": 188,
-    "Blue": 154
+    "Blue": 154,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3047",
     "Name": "Yellow Beige Lt",
     "Red": 231,
     "Green": 214,
-    "Blue": 193
+    "Blue": 193,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3051",
     "Name": "Green Gray Dk",
     "Red": 95,
     "Green": 102,
-    "Blue": 72
+    "Blue": 72,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3052",
     "Name": "Green Gray Md",
     "Red": 136,
     "Green": 146,
-    "Blue": 104
+    "Blue": 104,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3053",
     "Name": "Green Gray",
     "Red": 156,
     "Green": 164,
-    "Blue": 130
+    "Blue": 130,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3064",
     "Name": "Desert Sand",
     "Red": 196,
     "Green": 142,
-    "Blue": 112
+    "Blue": 112,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3072",
     "Name": "Beaver Gray Vy Lt",
     "Red": 230,
     "Green": 232,
-    "Blue": 232
+    "Blue": 232,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3078",
     "Name": "Golden Yellow Vy Lt",
     "Red": 253,
     "Green": 249,
-    "Blue": 205
+    "Blue": 205,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3325",
     "Name": "Baby Blue Light",
     "Red": 184,
     "Green": 210,
-    "Blue": 230
+    "Blue": 230,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3326",
     "Name": "Rose Light",
     "Red": 251,
     "Green": 173,
-    "Blue": 180
+    "Blue": 180,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3328",
     "Name": "Salmon Dark",
     "Red": 227,
     "Green": 109,
-    "Blue": 109
+    "Blue": 109,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3340",
     "Name": "Apricot Med",
     "Red": 255,
     "Green": 131,
-    "Blue": 111
+    "Blue": 111,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3341",
     "Name": "Apricot",
     "Red": 252,
     "Green": 171,
-    "Blue": 152
+    "Blue": 152,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3345",
     "Name": "Hunter Green Dk",
     "Red": 27,
     "Green": 89,
-    "Blue": 21
+    "Blue": 21,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3346",
     "Name": "Hunter Green",
     "Red": 64,
     "Green": 106,
-    "Blue": 58
+    "Blue": 58,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3347",
     "Name": "Yellow Green Med",
     "Red": 113,
     "Green": 147,
-    "Blue": 92
+    "Blue": 92,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3348",
     "Name": "Yellow Green Lt",
     "Red": 204,
     "Green": 217,
-    "Blue": 177
+    "Blue": 177,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3350",
     "Name": "Dusty Rose Ultra Dark",
     "Red": 188,
     "Green": 67,
-    "Blue": 101
+    "Blue": 101,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3354",
     "Name": "Dusty Rose Light",
     "Red": 228,
     "Green": 166,
-    "Blue": 172
+    "Blue": 172,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3362",
     "Name": "Pine Green Dk",
     "Red": 94,
     "Green": 107,
-    "Blue": 71
+    "Blue": 71,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3363",
     "Name": "Pine Green Md",
     "Red": 114,
     "Green": 130,
-    "Blue": 86
+    "Blue": 86,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3364",
     "Name": "Pine Green",
     "Red": 131,
     "Green": 151,
-    "Blue": 95
+    "Blue": 95,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3371",
     "Name": "Black Brown",
     "Red": 30,
     "Green": 17,
-    "Blue": 8
+    "Blue": 8,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3607",
     "Name": "Plum Light",
     "Red": 197,
     "Green": 73,
-    "Blue": 137
+    "Blue": 137,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3608",
     "Name": "Plum Very Light",
     "Red": 234,
     "Green": 156,
-    "Blue": 196
+    "Blue": 196,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3609",
     "Name": "Plum Ultra Light",
     "Red": 244,
     "Green": 174,
-    "Blue": 213
+    "Blue": 213,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3685",
     "Name": "Mauve Very Dark",
     "Red": 136,
     "Green": 21,
-    "Blue": 49
+    "Blue": 49,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3687",
     "Name": "Mauve",
     "Red": 201,
     "Green": 107,
-    "Blue": 112
+    "Blue": 112,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3688",
     "Name": "Mauve Medium",
     "Red": 231,
     "Green": 169,
-    "Blue": 172
+    "Blue": 172,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3689",
     "Name": "Mauve Light",
     "Red": 251,
     "Green": 191,
-    "Blue": 194
+    "Blue": 194,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3705",
     "Name": "Melon Dark",
     "Red": 255,
     "Green": 121,
-    "Blue": 146
+    "Blue": 146,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3706",
     "Name": "Melon Medium",
     "Red": 255,
     "Green": 173,
-    "Blue": 188
+    "Blue": 188,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3708",
     "Name": "Melon Light",
     "Red": 255,
     "Green": 203,
-    "Blue": 213
+    "Blue": 213,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3712",
     "Name": "Salmon Medium",
     "Red": 241,
     "Green": 135,
-    "Blue": 135
+    "Blue": 135,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3713",
     "Name": "Salmon Very Light",
     "Red": 255,
     "Green": 226,
-    "Blue": 226
+    "Blue": 226,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3716",
     "Name": "Dusty Rose Med Vy Lt",
     "Red": 255,
     "Green": 189,
-    "Blue": 189
+    "Blue": 189,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3721",
     "Name": "Shell Pink Dark",
     "Red": 161,
     "Green": 75,
-    "Blue": 81
+    "Blue": 81,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3722",
     "Name": "Shell Pink Med",
     "Red": 188,
     "Green": 108,
-    "Blue": 100
+    "Blue": 100,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3726",
     "Name": "Antique Mauve Dark",
     "Red": 155,
     "Green": 91,
-    "Blue": 102
+    "Blue": 102,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3727",
     "Name": "Antique Mauve Light",
     "Red": 219,
     "Green": 169,
-    "Blue": 178
+    "Blue": 178,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3731",
     "Name": "Dusty Rose Very Dark",
     "Red": 218,
     "Green": 103,
-    "Blue": 131
+    "Blue": 131,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3733",
     "Name": "Dusty Rose",
     "Red": 232,
     "Green": 135,
-    "Blue": 155
+    "Blue": 155,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3740",
     "Name": "Antique Violet Dark",
     "Red": 120,
     "Green": 87,
-    "Blue": 98
+    "Blue": 98,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3743",
     "Name": "Antique Violet Vy Lt",
     "Red": 215,
     "Green": 203,
-    "Blue": 211
+    "Blue": 211,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3746",
     "Name": "Blue Violet Dark",
     "Red": 119,
     "Green": 107,
-    "Blue": 152
+    "Blue": 152,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3747",
     "Name": "Blue Violet Vy Lt",
     "Red": 211,
     "Green": 215,
-    "Blue": 237
+    "Blue": 237,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3750",
     "Name": "Antique Blue Very Dk",
     "Red": 56,
     "Green": 76,
-    "Blue": 94
+    "Blue": 94,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3752",
     "Name": "Antique Blue Very Lt",
     "Red": 199,
     "Green": 209,
-    "Blue": 219
+    "Blue": 219,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3753",
     "Name": "Antique Blue Ult Vy Lt",
     "Red": 219,
     "Green": 226,
-    "Blue": 233
+    "Blue": 233,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3755",
     "Name": "Baby Blue",
     "Red": 147,
     "Green": 180,
-    "Blue": 206
+    "Blue": 206,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3756",
     "Name": "Baby Blue Ult Vy Lt",
     "Red": 238,
     "Green": 252,
-    "Blue": 252
+    "Blue": 252,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3760",
     "Name": "Wedgewood Med",
     "Red": 62,
     "Green": 133,
-    "Blue": 162
+    "Blue": 162,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3761",
     "Name": "Sky Blue Light",
     "Red": 172,
     "Green": 216,
-    "Blue": 226
+    "Blue": 226,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3765",
     "Name": "Peacock Blue Vy Dk",
     "Red": 52,
     "Green": 127,
-    "Blue": 140
+    "Blue": 140,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3766",
     "Name": "Peacock Blue Light",
     "Red": 153,
     "Green": 207,
-    "Blue": 217
+    "Blue": 217,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3768",
     "Name": "Gray Green Dark",
     "Red": 101,
     "Green": 127,
-    "Blue": 127
+    "Blue": 127,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3770",
     "Name": "Tawny Vy Light",
     "Red": 255,
     "Green": 238,
-    "Blue": 227
+    "Blue": 227,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3771",
     "Name": "Terra Cotta Ult Vy Lt",
     "Red": 244,
     "Green": 187,
-    "Blue": 169
+    "Blue": 169,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3772",
     "Name": "Desert Sand Vy Dk",
     "Red": 160,
     "Green": 108,
-    "Blue": 80
+    "Blue": 80,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3773",
     "Name": "Desert Sand Dark",
     "Red": 182,
     "Green": 117,
-    "Blue": 82
+    "Blue": 82,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3774",
     "Name": "Desert Sand Vy Lt",
     "Red": 243,
     "Green": 225,
-    "Blue": 215
+    "Blue": 215,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3776",
     "Name": "Mahogany Light",
     "Red": 207,
     "Green": 121,
-    "Blue": 57
+    "Blue": 57,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3777",
     "Name": "Terra Cotta Vy Dk",
     "Red": 134,
     "Green": 48,
-    "Blue": 34
+    "Blue": 34,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3778",
     "Name": "Terra Cotta Light",
     "Red": 217,
     "Green": 137,
-    "Blue": 120
+    "Blue": 120,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3779",
     "Name": "Rosewood Ult Vy Lt",
     "Red": 248,
     "Green": 202,
-    "Blue": 200
+    "Blue": 200,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3781",
     "Name": "Mocha Brown Dk",
     "Red": 107,
     "Green": 87,
-    "Blue": 67
+    "Blue": 67,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3782",
     "Name": "Mocha Brown Lt",
     "Red": 210,
     "Green": 188,
-    "Blue": 166
+    "Blue": 166,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3787",
     "Name": "Brown Gray Dark",
     "Red": 98,
     "Green": 93,
-    "Blue": 80
+    "Blue": 80,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3790",
     "Name": "Beige Gray Ult Dk",
     "Red": 127,
     "Green": 106,
-    "Blue": 85
+    "Blue": 85,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3799",
     "Name": "Pewter Gray Vy Dk",
     "Red": 66,
     "Green": 66,
-    "Blue": 66
+    "Blue": 66,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3801",
     "Name": "Melon Very Dark",
     "Red": 231,
     "Green": 73,
-    "Blue": 103
+    "Blue": 103,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3802",
     "Name": "Antique Mauve Vy Dk",
     "Red": 113,
     "Green": 65,
-    "Blue": 73
+    "Blue": 73,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3803",
     "Name": "Mauve Dark",
     "Red": 171,
     "Green": 51,
-    "Blue": 87
+    "Blue": 87,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3804",
     "Name": "Cyclamen Pink Dark",
     "Red": 224,
     "Green": 40,
-    "Blue": 118
+    "Blue": 118,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3805",
     "Name": "Cyclamen Pink",
     "Red": 243,
     "Green": 71,
-    "Blue": 139
+    "Blue": 139,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3806",
     "Name": "Cyclamen Pink Light",
     "Red": 255,
     "Green": 140,
-    "Blue": 174
+    "Blue": 174,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3807",
     "Name": "Cornflower Blue",
     "Red": 96,
     "Green": 103,
-    "Blue": 140
+    "Blue": 140,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3808",
     "Name": "Turquoise Ult Vy Dk",
     "Red": 54,
     "Green": 105,
-    "Blue": 112
+    "Blue": 112,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3809",
     "Name": "Turquoise Vy Dark",
     "Red": 63,
     "Green": 124,
-    "Blue": 133
+    "Blue": 133,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3810",
     "Name": "Turquoise Dark",
     "Red": 72,
     "Green": 142,
-    "Blue": 154
+    "Blue": 154,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3811",
     "Name": "Turquoise Very Light",
     "Red": 188,
     "Green": 227,
-    "Blue": 230
+    "Blue": 230,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3812",
     "Name": "Sea Green Vy Dk",
     "Red": 47,
     "Green": 140,
-    "Blue": 132
+    "Blue": 132,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3813",
     "Name": "Blue Green Lt",
     "Red": 178,
     "Green": 212,
-    "Blue": 189
+    "Blue": 189,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3814",
     "Name": "Aquamarine",
     "Red": 80,
     "Green": 139,
-    "Blue": 125
+    "Blue": 125,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3815",
     "Name": "Celadon Green Dk",
     "Red": 71,
     "Green": 119,
-    "Blue": 89
+    "Blue": 89,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3816",
     "Name": "Celadon Green",
     "Red": 101,
     "Green": 165,
-    "Blue": 125
+    "Blue": 125,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3817",
     "Name": "Celadon Green Lt",
     "Red": 153,
     "Green": 195,
-    "Blue": 170
+    "Blue": 170,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3818",
     "Name": "Emerald Grn Ult V Dk",
     "Red": 17,
     "Green": 90,
-    "Blue": 59
+    "Blue": 59,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3819",
     "Name": "Moss Green Lt",
     "Red": 224,
     "Green": 232,
-    "Blue": 104
+    "Blue": 104,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3820",
     "Name": "Straw Dark",
     "Red": 223,
     "Green": 182,
-    "Blue": 95
+    "Blue": 95,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3821",
     "Name": "Straw",
     "Red": 243,
     "Green": 206,
-    "Blue": 117
+    "Blue": 117,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3822",
     "Name": "Straw Light",
     "Red": 246,
     "Green": 220,
-    "Blue": 152
+    "Blue": 152,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3823",
     "Name": "Yellow Ultra Pale",
     "Red": 255,
     "Green": 253,
-    "Blue": 227
+    "Blue": 227,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3824",
     "Name": "Apricot Light",
     "Red": 254,
     "Green": 205,
-    "Blue": 194
+    "Blue": 194,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3825",
     "Name": "Pumpkin Pale",
     "Red": 253,
     "Green": 189,
-    "Blue": 150
+    "Blue": 150,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3826",
     "Name": "Golden Brown",
     "Red": 173,
     "Green": 114,
-    "Blue": 57
+    "Blue": 57,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3827",
     "Name": "Golden Brown Pale",
     "Red": 247,
     "Green": 187,
-    "Blue": 119
+    "Blue": 119,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3828",
     "Name": "Hazelnut Brown",
     "Red": 183,
     "Green": 139,
-    "Blue": 97
+    "Blue": 97,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3829",
     "Name": "Old Gold Vy Dark",
     "Red": 169,
     "Green": 130,
-    "Blue": 4
+    "Blue": 4,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3830",
     "Name": "Terra Cotta",
     "Red": 185,
     "Green": 85,
-    "Blue": 68
+    "Blue": 68,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3831",
     "Name": "Raspberry Dark",
     "Red": 179,
     "Green": 47,
-    "Blue": 72
+    "Blue": 72,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3832",
     "Name": "Raspberry Medium",
     "Red": 219,
     "Green": 85,
-    "Blue": 110
+    "Blue": 110,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3833",
     "Name": "Raspberry Light",
     "Red": 234,
     "Green": 134,
-    "Blue": 153
+    "Blue": 153,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3834",
     "Name": "Grape Dark",
     "Red": 114,
     "Green": 55,
-    "Blue": 93
+    "Blue": 93,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3835",
     "Name": "Grape Medium",
     "Red": 148,
     "Green": 96,
-    "Blue": 131
+    "Blue": 131,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3836",
     "Name": "Grape Light",
     "Red": 186,
     "Green": 145,
-    "Blue": 170
+    "Blue": 170,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3837",
     "Name": "Lavender Ultra Dark",
     "Red": 108,
     "Green": 58,
-    "Blue": 110
+    "Blue": 110,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3838",
     "Name": "Lavender Blue Dark",
     "Red": 92,
     "Green": 114,
-    "Blue": 148
+    "Blue": 148,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3839",
     "Name": "Lavender Blue Med",
     "Red": 123,
     "Green": 142,
-    "Blue": 171
+    "Blue": 171,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3840",
     "Name": "Lavender Blue Light",
     "Red": 176,
     "Green": 192,
-    "Blue": 218
+    "Blue": 218,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3841",
     "Name": "Baby Blue Pale",
     "Red": 205,
     "Green": 223,
-    "Blue": 237
+    "Blue": 237,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3842",
     "Name": "Wedgewood Vry Dk",
     "Red": 50,
     "Green": 102,
-    "Blue": 124
+    "Blue": 124,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3843",
     "Name": "Electric Blue",
     "Red": 20,
     "Green": 170,
-    "Blue": 208
+    "Blue": 208,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3844",
     "Name": "Turquoise Bright Dark",
     "Red": 18,
     "Green": 174,
-    "Blue": 186
+    "Blue": 186,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3845",
     "Name": "Turquoise Bright Med",
     "Red": 4,
     "Green": 196,
-    "Blue": 202
+    "Blue": 202,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3846",
     "Name": "Turquoise Bright Light",
     "Red": 6,
     "Green": 227,
-    "Blue": 230
+    "Blue": 230,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3847",
     "Name": "Teal Green Dark",
     "Red": 52,
     "Green": 125,
-    "Blue": 117
+    "Blue": 117,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3848",
     "Name": "Teal Green Med",
     "Red": 85,
     "Green": 147,
-    "Blue": 146
+    "Blue": 146,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3849",
     "Name": "Teal Green Light",
     "Red": 82,
     "Green": 179,
-    "Blue": 164
+    "Blue": 164,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3850",
     "Name": "Green Bright Dk",
     "Red": 55,
     "Green": 132,
-    "Blue": 119
+    "Blue": 119,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3851",
     "Name": "Green Bright Lt",
     "Red": 73,
     "Green": 179,
-    "Blue": 161
+    "Blue": 161,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3852",
     "Name": "Straw Very Dark",
     "Red": 205,
     "Green": 157,
-    "Blue": 55
+    "Blue": 55,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3853",
     "Name": "Autumn Gold Dk",
     "Red": 242,
     "Green": 151,
-    "Blue": 70
+    "Blue": 70,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3854",
     "Name": "Autumn Gold Med",
     "Red": 242,
     "Green": 175,
-    "Blue": 104
+    "Blue": 104,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3855",
     "Name": "Autumn Gold Lt",
     "Red": 250,
     "Green": 211,
-    "Blue": 150
+    "Blue": 150,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3856",
     "Name": "Mahogany Ult Vy Lt",
     "Red": 255,
     "Green": 211,
-    "Blue": 181
+    "Blue": 181,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3857",
     "Name": "Rosewood Dark",
     "Red": 104,
     "Green": 37,
-    "Blue": 26
+    "Blue": 26,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3858",
     "Name": "Rosewood Med",
     "Red": 150,
     "Green": 74,
-    "Blue": 63
+    "Blue": 63,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3859",
     "Name": "Rosewood Light",
     "Red": 186,
     "Green": 139,
-    "Blue": 124
+    "Blue": 124,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3860",
     "Name": "Cocoa",
     "Red": 125,
     "Green": 93,
-    "Blue": 87
+    "Blue": 87,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3861",
     "Name": "Cocoa Light",
     "Red": 166,
     "Green": 136,
-    "Blue": 129
+    "Blue": 129,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3862",
     "Name": "Mocha Beige Dark",
     "Red": 138,
     "Green": 110,
-    "Blue": 78
+    "Blue": 78,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3863",
     "Name": "Mocha Beige Med",
     "Red": 164,
     "Green": 131,
-    "Blue": 92
+    "Blue": 92,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3864",
     "Name": "Mocha Beige Light",
     "Red": 203,
     "Green": 182,
-    "Blue": 156
+    "Blue": 156,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3865",
     "Name": "Winter White",
     "Red": 249,
     "Green": 247,
-    "Blue": 241
+    "Blue": 241,
+    "Discontinued": false,
+    "Replacements": []
   },
   {
     "DmcNumber": "3866",
     "Name": "Mocha Brn Ult Vy Lt",
     "Red": 250,
     "Green": 246,
-    "Blue": 240
-  },
-  {
-    "DmcNumber": "16",
-    "Name": "Light Chartreuse",
-    "Red": 218,
-    "Green": 255,
-    "Blue": 127
+    "Blue": 240,
+    "Discontinued": false,
+    "Replacements": []
   }
 ]

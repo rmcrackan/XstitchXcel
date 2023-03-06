@@ -67,15 +67,19 @@ namespace XstitchXcelLib.Config
 		{
 			DmcNumber = dmcColorEntry.DmcNumber,
 			Name = dmcColorEntry.Name,
-			Color = Color.FromArgb(dmcColorEntry.Red, dmcColorEntry.Green, dmcColorEntry.Blue)
-		};
+			Color = Color.FromArgb(dmcColorEntry.Red, dmcColorEntry.Green, dmcColorEntry.Blue),
+            Discontinued = dmcColorEntry.Discontinued,
+            Replacements = dmcColorEntry.Replacements ?? new()
+        };
 		public static DmcColorEntry ToDmcColorEntry(this DmcColor dmcColor) => new()
 		{
 			DmcNumber = dmcColor.DmcNumber,
 			Name = dmcColor.Name,
 			Red = dmcColor.Color.R,
 			Green = dmcColor.Color.G,
-			Blue = dmcColor.Color.B
-		};
+			Blue = dmcColor.Color.B,
+			Discontinued = dmcColor.Discontinued,
+			Replacements = dmcColor.Replacements ?? new()
+        };
 	}
 }

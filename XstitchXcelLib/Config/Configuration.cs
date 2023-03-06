@@ -10,8 +10,8 @@ using XstitchXcelLib.Utilities;
 namespace XstitchXcelLib.Config
 {
 	public class Configuration
-	{
-		public static List<DmcColor> GetDmcColors()
+    {
+		public static List<DmcColor> GetDmcColors(bool includeDiscontined = false)
 		{
 			// load DMC colors
 			var json = File.ReadAllText(@"Config\dmc_colors.json");
@@ -19,11 +19,13 @@ namespace XstitchXcelLib.Config
 				.DeserializeObject<List<DmcColorEntry>>(json)
 				.Select(d => d.ToDmcColor())
 				.ToList();
-			return dmcColors;
-		}
+            return includeDiscontined
+				? dmcColors
+				: dmcColors.Where(d => !d.Discontinued).ToList();
+        }
 
-		/// <summary>Can call expensive ExcelReader GetSprites</summary>
-		public static Pattern GetPattern(string inputFile)
+        /// <summary>Can call expensive ExcelReader GetSprites</summary>
+        public static Pattern GetPattern(string inputFile)
 		{
 			if (string.IsNullOrWhiteSpace(inputFile))
 				throw new Exception("Must provide a file name");

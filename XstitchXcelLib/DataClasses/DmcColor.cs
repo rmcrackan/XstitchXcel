@@ -9,6 +9,9 @@ namespace XstitchXcelLib.DataClasses
 		public string Name { get; init; }
 		public Color Color { get; init; }
 
-		public override string ToString() => $"{Name}, {DmcNumber}, #{Color.ToHex()}";
+        public bool Discontinued { get; set; }
+        public List<string> Replacements { get; set; } = new();
+
+        public override string ToString() => $"{Name}, {DmcNumber}, #{Color.ToHex()}";
 	}
 }
