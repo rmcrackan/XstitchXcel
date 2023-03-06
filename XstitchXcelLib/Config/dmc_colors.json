@@ -5,7 +5,6 @@
     "Red": 240,
     "Green": 234,
     "Blue": 218,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -14,7 +13,6 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -23,7 +21,6 @@
     "Red": 252,
     "Green": 251,
     "Blue": 248,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -32,7 +29,6 @@
     "Red": 252,
     "Green": 251,
     "Blue": 248,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -41,7 +37,6 @@
     "Red": 217,
     "Green": 217,
     "Blue": 217,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -50,7 +45,6 @@
     "Red": 194,
     "Green": 194,
     "Blue": 194,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -59,7 +53,6 @@
     "Red": 145,
     "Green": 144,
     "Blue": 149,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -68,7 +61,6 @@
     "Red": 106,
     "Green": 101,
     "Blue": 106,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -77,7 +69,6 @@
     "Red": 207,
     "Green": 187,
     "Blue": 176,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -86,7 +77,6 @@
     "Red": 197,
     "Green": 176,
     "Blue": 164,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -95,7 +85,6 @@
     "Red": 141,
     "Green": 115,
     "Blue": 102,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -104,7 +93,6 @@
     "Red": 84,
     "Green": 60,
     "Blue": 49,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -113,7 +101,6 @@
     "Red": 56,
     "Green": 36,
     "Blue": 43,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -122,7 +109,6 @@
     "Red": 238,
     "Green": 234,
     "Blue": 194,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -131,7 +117,6 @@
     "Red": 241,
     "Green": 238,
     "Blue": 123,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -140,7 +125,6 @@
     "Red": 225,
     "Green": 225,
     "Blue": 87,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -149,7 +133,6 @@
     "Red": 173,
     "Green": 231,
     "Blue": 161,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -158,7 +141,6 @@
     "Red": 234,
     "Green": 246,
     "Blue": 168,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -167,7 +149,6 @@
     "Red": 215,
     "Green": 227,
     "Blue": 134,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -176,7 +157,6 @@
     "Red": 197,
     "Green": 219,
     "Blue": 91,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -185,7 +165,6 @@
     "Red": 236,
     "Green": 202,
     "Blue": 89,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -194,7 +173,6 @@
     "Red": 232,
     "Green": 187,
     "Blue": 70,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -203,7 +181,6 @@
     "Red": 244,
     "Green": 183,
     "Blue": 110,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -212,7 +189,6 @@
     "Red": 246,
     "Green": 175,
     "Blue": 178,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -221,7 +197,6 @@
     "Red": 220,
     "Green": 81,
     "Blue": 79,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -230,7 +205,6 @@
     "Red": 178,
     "Green": 29,
     "Blue": 38,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -239,7 +213,6 @@
     "Red": 245,
     "Green": 234,
     "Blue": 240,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -248,7 +221,6 @@
     "Red": 241,
     "Green": 226,
     "Blue": 240,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -257,7 +229,6 @@
     "Red": 227,
     "Green": 213,
     "Blue": 236,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -266,7 +237,6 @@
     "Red": 199,
     "Green": 195,
     "Blue": 232,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -275,7 +245,6 @@
     "Red": 233,
     "Green": 227,
     "Blue": 237,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -284,7 +253,6 @@
     "Red": 113,
     "Green": 102,
     "Blue": 125,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -293,7 +261,6 @@
     "Red": 52,
     "Green": 38,
     "Blue": 60,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -302,7 +269,6 @@
     "Red": 118,
     "Green": 108,
     "Blue": 158,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -311,7 +277,6 @@
     "Red": 84,
     "Green": 78,
     "Blue": 125,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -320,7 +285,6 @@
     "Red": 56,
     "Green": 53,
     "Blue": 96,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -329,7 +293,6 @@
     "Red": 142,
     "Green": 52,
     "Blue": 111,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -338,7 +301,6 @@
     "Red": 122,
     "Green": 13,
     "Blue": 74,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -347,7 +309,6 @@
     "Red": 91,
     "Green": 3,
     "Blue": 47,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -356,7 +317,6 @@
     "Red": 171,
     "Green": 2,
     "Blue": 73,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -365,7 +325,6 @@
     "Red": 240,
     "Green": 206,
     "Blue": 212,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -374,7 +333,6 @@
     "Red": 226,
     "Green": 160,
     "Blue": 153,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -383,7 +341,6 @@
     "Red": 230,
     "Green": 204,
     "Blue": 217,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -392,7 +349,6 @@
     "Red": 87,
     "Green": 36,
     "Blue": 51,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -401,7 +357,6 @@
     "Red": 152,
     "Green": 145,
     "Blue": 182,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -410,7 +365,6 @@
     "Red": 163,
     "Green": 174,
     "Blue": 209,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -419,7 +373,6 @@
     "Red": 187,
     "Green": 195,
     "Blue": 217,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -428,7 +381,6 @@
     "Red": 76,
     "Green": 82,
     "Blue": 110,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -437,7 +389,6 @@
     "Red": 199,
     "Green": 202,
     "Blue": 215,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -446,7 +397,6 @@
     "Red": 153,
     "Green": 159,
     "Blue": 183,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -455,7 +405,6 @@
     "Red": 120,
     "Green": 128,
     "Blue": 164,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -464,7 +413,6 @@
     "Red": 219,
     "Green": 236,
     "Blue": 245,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -473,7 +421,6 @@
     "Red": 77,
     "Green": 131,
     "Blue": 97,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -482,7 +429,6 @@
     "Red": 200,
     "Green": 216,
     "Blue": 184,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -491,7 +437,6 @@
     "Red": 239,
     "Green": 244,
     "Blue": 164,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -500,7 +445,6 @@
     "Red": 192,
     "Green": 200,
     "Blue": 64,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -509,7 +453,6 @@
     "Red": 167,
     "Green": 124,
     "Blue": 73,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -518,7 +461,6 @@
     "Red": 209,
     "Green": 209,
     "Blue": 209,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -527,7 +469,6 @@
     "Red": 132,
     "Green": 132,
     "Blue": 132,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -536,7 +477,6 @@
     "Red": 131,
     "Green": 91,
     "Blue": 139,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -545,7 +485,6 @@
     "Red": 163,
     "Green": 123,
     "Blue": 167,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -554,7 +493,6 @@
     "Red": 195,
     "Green": 159,
     "Blue": 195,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -563,7 +501,6 @@
     "Red": 227,
     "Green": 203,
     "Blue": 227,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -572,7 +509,6 @@
     "Red": 136,
     "Green": 62,
     "Blue": 67,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -581,7 +517,6 @@
     "Red": 204,
     "Green": 132,
     "Blue": 124,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -590,7 +525,6 @@
     "Red": 235,
     "Green": 183,
     "Blue": 175,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -599,7 +533,6 @@
     "Red": 255,
     "Green": 223,
     "Blue": 213,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -608,7 +541,6 @@
     "Red": 111,
     "Green": 47,
     "Blue": 0,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -617,7 +549,6 @@
     "Red": 179,
     "Green": 95,
     "Blue": 43,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -626,7 +557,6 @@
     "Red": 183,
     "Green": 31,
     "Blue": 51,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -635,7 +565,6 @@
     "Red": 253,
     "Green": 237,
     "Blue": 84,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -644,7 +573,6 @@
     "Red": 86,
     "Green": 74,
     "Blue": 74,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -653,7 +581,6 @@
     "Red": 0,
     "Green": 0,
     "Blue": 0,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -662,7 +589,6 @@
     "Red": 28,
     "Green": 80,
     "Blue": 102,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -671,7 +597,6 @@
     "Red": 53,
     "Green": 102,
     "Blue": 139,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -680,7 +605,6 @@
     "Red": 129,
     "Green": 73,
     "Blue": 82,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -689,7 +613,6 @@
     "Red": 183,
     "Green": 115,
     "Blue": 127,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -698,7 +621,6 @@
     "Red": 108,
     "Green": 108,
     "Blue": 108,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -707,7 +629,6 @@
     "Red": 171,
     "Green": 171,
     "Blue": 171,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -716,7 +637,6 @@
     "Red": 32,
     "Green": 95,
     "Blue": 46,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -725,7 +645,6 @@
     "Red": 105,
     "Green": 136,
     "Blue": 90,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -734,7 +653,6 @@
     "Red": 199,
     "Green": 43,
     "Blue": 59,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -743,7 +661,6 @@
     "Red": 90,
     "Green": 143,
     "Blue": 184,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -752,7 +669,6 @@
     "Red": 179,
     "Green": 59,
     "Blue": 75,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -761,7 +677,6 @@
     "Red": 99,
     "Green": 54,
     "Blue": 102,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -770,7 +685,6 @@
     "Red": 92,
     "Green": 84,
     "Blue": 120,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -779,7 +693,6 @@
     "Red": 115,
     "Green": 159,
     "Blue": 193,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -788,7 +701,6 @@
     "Red": 238,
     "Green": 84,
     "Blue": 110,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -797,7 +709,6 @@
     "Red": 37,
     "Green": 59,
     "Blue": 115,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -806,7 +717,6 @@
     "Red": 173,
     "Green": 167,
     "Blue": 199,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -815,7 +725,6 @@
     "Red": 183,
     "Green": 191,
     "Blue": 221,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -824,7 +733,6 @@
     "Red": 191,
     "Green": 45,
     "Blue": 45,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -833,7 +741,6 @@
     "Red": 210,
     "Green": 16,
     "Blue": 53,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -842,7 +749,6 @@
     "Red": 224,
     "Green": 72,
     "Blue": 72,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -851,7 +757,6 @@
     "Red": 233,
     "Green": 106,
     "Blue": 103,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -860,7 +765,6 @@
     "Red": 253,
     "Green": 156,
     "Blue": 151,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -869,7 +773,6 @@
     "Red": 254,
     "Green": 215,
     "Blue": 204,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -878,7 +781,6 @@
     "Red": 152,
     "Green": 68,
     "Blue": 54,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -887,7 +789,6 @@
     "Red": 197,
     "Green": 106,
     "Blue": 91,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -896,7 +797,6 @@
     "Red": 97,
     "Green": 122,
     "Blue": 82,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -905,7 +805,6 @@
     "Red": 166,
     "Green": 194,
     "Blue": 152,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -914,7 +813,6 @@
     "Red": 215,
     "Green": 237,
     "Blue": 204,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -923,7 +821,6 @@
     "Red": 184,
     "Green": 157,
     "Blue": 100,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -932,7 +829,6 @@
     "Red": 191,
     "Green": 166,
     "Blue": 113,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -941,7 +837,6 @@
     "Red": 204,
     "Green": 183,
     "Blue": 132,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -950,7 +845,6 @@
     "Red": 143,
     "Green": 67,
     "Blue": 15,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -959,7 +853,6 @@
     "Red": 247,
     "Green": 167,
     "Blue": 119,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -968,7 +861,6 @@
     "Red": 187,
     "Green": 129,
     "Blue": 97,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -977,7 +869,6 @@
     "Red": 86,
     "Green": 86,
     "Blue": 86,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -986,7 +877,6 @@
     "Red": 140,
     "Green": 140,
     "Blue": 140,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -995,7 +885,6 @@
     "Red": 211,
     "Green": 211,
     "Blue": 214,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1004,7 +893,6 @@
     "Red": 160,
     "Green": 112,
     "Blue": 66,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1013,7 +901,6 @@
     "Red": 198,
     "Green": 159,
     "Blue": 123,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1022,7 +909,6 @@
     "Red": 122,
     "Green": 69,
     "Blue": 31,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1031,7 +917,6 @@
     "Red": 152,
     "Green": 94,
     "Blue": 51,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1040,7 +925,6 @@
     "Red": 184,
     "Green": 119,
     "Blue": 72,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1049,7 +933,6 @@
     "Red": 203,
     "Green": 144,
     "Blue": 81,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1058,7 +941,6 @@
     "Red": 228,
     "Green": 187,
     "Blue": 142,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1067,7 +949,6 @@
     "Red": 255,
     "Green": 214,
     "Blue": 0,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1076,7 +957,6 @@
     "Red": 255,
     "Green": 251,
     "Blue": 139,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1085,7 +965,6 @@
     "Red": 145,
     "Green": 123,
     "Blue": 115,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1094,7 +973,6 @@
     "Red": 192,
     "Green": 179,
     "Blue": 174,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1103,7 +981,6 @@
     "Red": 215,
     "Green": 206,
     "Blue": 203,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1112,7 +989,6 @@
     "Red": 114,
     "Green": 132,
     "Blue": 60,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1121,7 +997,6 @@
     "Red": 148,
     "Green": 171,
     "Blue": 79,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1130,7 +1005,6 @@
     "Red": 174,
     "Green": 191,
     "Blue": 121,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1139,7 +1013,6 @@
     "Red": 216,
     "Green": 228,
     "Blue": 152,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1148,7 +1021,6 @@
     "Red": 167,
     "Green": 19,
     "Blue": 43,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1157,7 +1029,6 @@
     "Red": 4,
     "Green": 77,
     "Blue": 51,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1166,7 +1037,6 @@
     "Red": 57,
     "Green": 111,
     "Blue": 82,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1175,7 +1045,6 @@
     "Red": 91,
     "Green": 144,
     "Blue": 113,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1184,7 +1053,6 @@
     "Red": 123,
     "Green": 172,
     "Blue": 148,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1193,8 +1061,9 @@
     "Red": 196,
     "Green": 222,
     "Blue": 204,
-    "Discontinued": false,
-    "Replacements": []
+    "Replacements": [
+      "3813"
+    ]
   },
   {
     "DmcNumber": "505",
@@ -1202,7 +1071,6 @@
     "Red": 51,
     "Green": 131,
     "Blue": 98,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1211,7 +1079,6 @@
     "Red": 59,
     "Green": 118,
     "Blue": 143,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1220,7 +1087,6 @@
     "Red": 79,
     "Green": 147,
     "Blue": 167,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1229,7 +1095,6 @@
     "Red": 126,
     "Green": 177,
     "Blue": 200,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1238,7 +1103,6 @@
     "Red": 102,
     "Green": 109,
     "Blue": 79,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1247,7 +1111,6 @@
     "Red": 150,
     "Green": 158,
     "Blue": 126,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1256,7 +1119,6 @@
     "Red": 171,
     "Green": 177,
     "Blue": 151,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1265,7 +1127,6 @@
     "Red": 196,
     "Green": 205,
     "Blue": 172,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1274,7 +1135,6 @@
     "Red": 99,
     "Green": 100,
     "Blue": 88,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1283,7 +1143,6 @@
     "Red": 242,
     "Green": 227,
     "Blue": 206,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1292,7 +1151,6 @@
     "Red": 92,
     "Green": 24,
     "Blue": 78,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1301,7 +1159,6 @@
     "Red": 128,
     "Green": 58,
     "Blue": 107,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1310,7 +1167,6 @@
     "Red": 163,
     "Green": 99,
     "Blue": 139,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1319,7 +1175,6 @@
     "Red": 219,
     "Green": 179,
     "Blue": 203,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1328,7 +1183,6 @@
     "Red": 44,
     "Green": 106,
     "Blue": 69,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1337,7 +1191,6 @@
     "Red": 83,
     "Green": 151,
     "Blue": 106,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1346,7 +1199,6 @@
     "Red": 143,
     "Green": 192,
     "Blue": 152,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1355,7 +1207,6 @@
     "Red": 167,
     "Green": 205,
     "Blue": 175,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1364,7 +1215,6 @@
     "Red": 136,
     "Green": 141,
     "Blue": 51,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1373,7 +1223,6 @@
     "Red": 167,
     "Green": 174,
     "Blue": 56,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1382,7 +1231,6 @@
     "Red": 91,
     "Green": 163,
     "Blue": 179,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1391,7 +1239,6 @@
     "Red": 144,
     "Green": 195,
     "Blue": 204,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1400,7 +1247,6 @@
     "Red": 205,
     "Green": 47,
     "Blue": 99,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1409,7 +1255,6 @@
     "Red": 209,
     "Green": 40,
     "Blue": 106,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1418,7 +1263,6 @@
     "Red": 226,
     "Green": 72,
     "Blue": 116,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1427,7 +1271,6 @@
     "Red": 255,
     "Green": 164,
     "Blue": 190,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1436,7 +1279,6 @@
     "Red": 255,
     "Green": 176,
     "Blue": 190,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1445,7 +1287,6 @@
     "Red": 255,
     "Green": 192,
     "Blue": 205,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1454,7 +1295,6 @@
     "Red": 250,
     "Green": 50,
     "Blue": 3,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1463,7 +1303,6 @@
     "Red": 253,
     "Green": 93,
     "Blue": 53,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1472,7 +1311,6 @@
     "Red": 121,
     "Green": 96,
     "Blue": 71,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1481,7 +1319,6 @@
     "Red": 150,
     "Green": 118,
     "Blue": 86,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1490,7 +1327,6 @@
     "Red": 188,
     "Green": 154,
     "Blue": 120,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1499,7 +1335,6 @@
     "Red": 220,
     "Green": 196,
     "Blue": 170,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1508,7 +1343,6 @@
     "Red": 135,
     "Green": 85,
     "Blue": 57,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1517,7 +1351,6 @@
     "Red": 133,
     "Green": 123,
     "Blue": 97,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1526,7 +1359,6 @@
     "Red": 164,
     "Green": 152,
     "Blue": 120,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1535,7 +1367,6 @@
     "Red": 221,
     "Green": 216,
     "Blue": 203,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1544,7 +1375,6 @@
     "Red": 110,
     "Green": 101,
     "Blue": 92,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1553,7 +1383,6 @@
     "Red": 135,
     "Green": 125,
     "Blue": 115,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1562,7 +1391,6 @@
     "Red": 176,
     "Green": 166,
     "Blue": 156,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1571,7 +1399,6 @@
     "Red": 188,
     "Green": 180,
     "Blue": 172,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1580,7 +1407,6 @@
     "Red": 227,
     "Green": 29,
     "Blue": 66,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1589,7 +1415,6 @@
     "Red": 229,
     "Green": 206,
     "Blue": 151,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1598,7 +1423,6 @@
     "Red": 245,
     "Green": 236,
     "Blue": 203,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1607,7 +1431,6 @@
     "Red": 188,
     "Green": 141,
     "Blue": 14,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1616,7 +1439,6 @@
     "Red": 5,
     "Green": 101,
     "Blue": 23,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1625,7 +1447,6 @@
     "Red": 7,
     "Green": 115,
     "Blue": 27,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1634,7 +1455,6 @@
     "Red": 63,
     "Green": 143,
     "Blue": 41,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1643,7 +1463,6 @@
     "Red": 71,
     "Green": 167,
     "Blue": 47,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1652,7 +1471,6 @@
     "Red": 123,
     "Green": 181,
     "Blue": 71,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1661,7 +1479,6 @@
     "Red": 158,
     "Green": 207,
     "Blue": 52,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1670,7 +1487,6 @@
     "Red": 255,
     "Green": 251,
     "Blue": 239,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1679,7 +1495,6 @@
     "Red": 156,
     "Green": 36,
     "Blue": 98,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1688,7 +1503,6 @@
     "Red": 229,
     "Green": 92,
     "Blue": 31,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1697,7 +1511,6 @@
     "Red": 242,
     "Green": 120,
     "Blue": 66,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1706,7 +1519,6 @@
     "Red": 247,
     "Green": 151,
     "Blue": 111,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1715,7 +1527,6 @@
     "Red": 255,
     "Green": 200,
     "Blue": 64,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1724,7 +1535,6 @@
     "Red": 253,
     "Green": 215,
     "Blue": 85,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1733,7 +1543,6 @@
     "Red": 255,
     "Green": 241,
     "Blue": 175,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1742,7 +1551,6 @@
     "Red": 228,
     "Green": 180,
     "Blue": 104,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1751,7 +1559,6 @@
     "Red": 208,
     "Green": 165,
     "Blue": 62,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1760,7 +1567,6 @@
     "Red": 130,
     "Green": 123,
     "Blue": 48,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1769,8 +1575,9 @@
     "Red": 147,
     "Green": 139,
     "Blue": 55,
-    "Discontinued": false,
-    "Replacements": []
+    "Replacements": [
+      "732"
+    ]
   },
   {
     "DmcNumber": "732",
@@ -1778,7 +1585,6 @@
     "Red": 148,
     "Green": 140,
     "Blue": 54,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1787,7 +1593,6 @@
     "Red": 188,
     "Green": 179,
     "Blue": 76,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1796,7 +1601,6 @@
     "Red": 199,
     "Green": 192,
     "Blue": 119,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1805,7 +1609,6 @@
     "Red": 236,
     "Green": 204,
     "Blue": 158,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1814,7 +1617,6 @@
     "Red": 248,
     "Green": 228,
     "Blue": 200,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1823,7 +1625,6 @@
     "Red": 255,
     "Green": 139,
     "Blue": 0,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1832,7 +1633,6 @@
     "Red": 255,
     "Green": 163,
     "Blue": 43,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1841,7 +1641,6 @@
     "Red": 255,
     "Green": 191,
     "Blue": 87,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1850,7 +1649,6 @@
     "Red": 254,
     "Green": 211,
     "Blue": 118,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1859,7 +1657,6 @@
     "Red": 255,
     "Green": 231,
     "Blue": 147,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1868,7 +1665,6 @@
     "Red": 255,
     "Green": 233,
     "Blue": 173,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1877,7 +1673,6 @@
     "Red": 252,
     "Green": 252,
     "Blue": 238,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1886,7 +1681,6 @@
     "Red": 229,
     "Green": 252,
     "Blue": 253,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1895,7 +1689,6 @@
     "Red": 247,
     "Green": 203,
     "Blue": 191,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1904,7 +1697,6 @@
     "Red": 238,
     "Green": 170,
     "Blue": 155,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1913,7 +1705,6 @@
     "Red": 245,
     "Green": 173,
     "Blue": 173,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1922,7 +1713,6 @@
     "Red": 255,
     "Green": 201,
     "Blue": 201,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1931,7 +1721,6 @@
     "Red": 236,
     "Green": 236,
     "Blue": 236,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1940,7 +1729,6 @@
     "Red": 228,
     "Green": 236,
     "Blue": 212,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1949,7 +1737,6 @@
     "Red": 217,
     "Green": 235,
     "Blue": 241,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1958,8 +1745,9 @@
     "Red": 252,
     "Green": 176,
     "Blue": 185,
-    "Discontinued": false,
-    "Replacements": []
+    "Replacements": [
+      "3326"
+    ]
   },
   {
     "DmcNumber": "777",
@@ -1967,7 +1755,6 @@
     "Red": 145,
     "Green": 53,
     "Blue": 70,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1976,7 +1763,6 @@
     "Red": 223,
     "Green": 179,
     "Blue": 187,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1985,7 +1771,6 @@
     "Red": 98,
     "Green": 75,
     "Blue": 69,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -1994,7 +1779,6 @@
     "Red": 148,
     "Green": 99,
     "Blue": 26,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2003,8 +1787,9 @@
     "Red": 162,
     "Green": 109,
     "Blue": 32,
-    "Discontinued": false,
-    "Replacements": []
+    "Replacements": [
+      "782"
+    ]
   },
   {
     "DmcNumber": "782",
@@ -2012,7 +1797,6 @@
     "Red": 174,
     "Green": 119,
     "Blue": 32,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2021,7 +1805,6 @@
     "Red": 206,
     "Green": 145,
     "Blue": 36,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2030,7 +1813,6 @@
     "Red": 70,
     "Green": 69,
     "Blue": 99,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2039,7 +1821,6 @@
     "Red": 85,
     "Green": 91,
     "Blue": 123,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2048,7 +1829,6 @@
     "Red": 112,
     "Green": 125,
     "Blue": 162,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2057,7 +1837,6 @@
     "Red": 143,
     "Green": 156,
     "Blue": 193,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2066,7 +1845,6 @@
     "Red": 17,
     "Green": 65,
     "Blue": 109,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2075,7 +1853,6 @@
     "Red": 19,
     "Green": 71,
     "Blue": 125,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2084,7 +1861,6 @@
     "Red": 70,
     "Green": 106,
     "Blue": 142,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2093,7 +1869,6 @@
     "Red": 116,
     "Green": 142,
     "Blue": 182,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2102,7 +1877,6 @@
     "Red": 192,
     "Green": 204,
     "Blue": 222,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2111,7 +1885,6 @@
     "Red": 101,
     "Green": 57,
     "Blue": 25,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2120,7 +1893,6 @@
     "Red": 44,
     "Green": 89,
     "Blue": 124,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2129,8 +1901,9 @@
     "Red": 61,
     "Green": 149,
     "Blue": 165,
-    "Discontinued": false,
-    "Replacements": []
+    "Replacements": [
+      "3760"
+    ]
   },
   {
     "DmcNumber": "807",
@@ -2138,7 +1911,6 @@
     "Red": 100,
     "Green": 171,
     "Blue": 186,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2147,7 +1919,6 @@
     "Red": 148,
     "Green": 168,
     "Blue": 198,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2156,7 +1927,6 @@
     "Red": 161,
     "Green": 194,
     "Blue": 215,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2165,7 +1935,6 @@
     "Red": 123,
     "Green": 0,
     "Blue": 27,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2174,7 +1943,6 @@
     "Red": 135,
     "Green": 7,
     "Blue": 31,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2183,7 +1951,6 @@
     "Red": 151,
     "Green": 11,
     "Blue": 35,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2192,7 +1959,6 @@
     "Red": 187,
     "Green": 5,
     "Blue": 31,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2201,7 +1967,6 @@
     "Red": 255,
     "Green": 223,
     "Blue": 217,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2210,7 +1975,6 @@
     "Red": 255,
     "Green": 238,
     "Blue": 235,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2219,7 +1983,6 @@
     "Red": 14,
     "Green": 54,
     "Blue": 92,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2228,7 +1991,6 @@
     "Red": 231,
     "Green": 226,
     "Blue": 211,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2237,7 +1999,6 @@
     "Red": 33,
     "Green": 48,
     "Blue": 99,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2246,7 +2007,6 @@
     "Red": 57,
     "Green": 105,
     "Blue": 135,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2255,7 +2015,6 @@
     "Red": 71,
     "Green": 129,
     "Blue": 165,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2264,7 +2023,6 @@
     "Red": 107,
     "Green": 158,
     "Blue": 191,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2273,7 +2031,6 @@
     "Red": 189,
     "Green": 221,
     "Blue": 237,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2282,7 +2039,6 @@
     "Red": 197,
     "Green": 232,
     "Blue": 237,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2291,7 +2047,6 @@
     "Red": 126,
     "Green": 107,
     "Blue": 66,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2300,7 +2055,6 @@
     "Red": 141,
     "Green": 120,
     "Blue": 75,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2309,7 +2063,6 @@
     "Red": 170,
     "Green": 143,
     "Blue": 86,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2318,7 +2071,6 @@
     "Red": 189,
     "Green": 155,
     "Blue": 81,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2327,7 +2079,6 @@
     "Red": 200,
     "Green": 171,
     "Blue": 108,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2336,7 +2087,6 @@
     "Red": 219,
     "Green": 190,
     "Blue": 127,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2345,7 +2095,6 @@
     "Red": 89,
     "Green": 73,
     "Blue": 55,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2354,7 +2103,6 @@
     "Red": 103,
     "Green": 85,
     "Blue": 65,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2363,7 +2111,6 @@
     "Red": 154,
     "Green": 124,
     "Blue": 92,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2372,7 +2119,6 @@
     "Red": 182,
     "Green": 155,
     "Blue": 126,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2381,7 +2127,6 @@
     "Red": 209,
     "Green": 186,
     "Blue": 161,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2390,7 +2135,6 @@
     "Red": 72,
     "Green": 72,
     "Blue": 72,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2399,8 +2143,9 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "801"
+    ]
   },
   {
     "DmcNumber": "869",
@@ -2408,7 +2153,6 @@
     "Red": 131,
     "Green": 94,
     "Blue": 57,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2417,7 +2161,6 @@
     "Red": 23,
     "Green": 73,
     "Blue": 35,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2426,7 +2169,6 @@
     "Red": 255,
     "Green": 87,
     "Blue": 115,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2435,7 +2177,6 @@
     "Red": 255,
     "Green": 121,
     "Blue": 140,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2444,7 +2185,6 @@
     "Red": 252,
     "Green": 144,
     "Blue": 162,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2453,7 +2193,6 @@
     "Red": 255,
     "Green": 178,
     "Blue": 187,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2462,7 +2201,6 @@
     "Red": 27,
     "Green": 83,
     "Blue": 0,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2471,7 +2209,6 @@
     "Red": 73,
     "Green": 42,
     "Blue": 19,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2480,7 +2217,6 @@
     "Red": 242,
     "Green": 118,
     "Blue": 136,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2489,7 +2225,6 @@
     "Red": 209,
     "Green": 88,
     "Blue": 7,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2498,7 +2233,6 @@
     "Red": 130,
     "Green": 38,
     "Blue": 55,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2507,7 +2241,6 @@
     "Red": 85,
     "Green": 120,
     "Blue": 34,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2516,7 +2249,6 @@
     "Red": 98,
     "Green": 138,
     "Blue": 40,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2525,7 +2257,6 @@
     "Red": 127,
     "Green": 179,
     "Blue": 53,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2534,7 +2265,6 @@
     "Red": 199,
     "Green": 230,
     "Blue": 102,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2543,7 +2273,6 @@
     "Red": 21,
     "Green": 111,
     "Blue": 73,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2552,7 +2281,6 @@
     "Red": 24,
     "Green": 126,
     "Blue": 86,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2561,7 +2289,6 @@
     "Red": 24,
     "Green": 144,
     "Blue": 101,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2570,7 +2297,6 @@
     "Red": 27,
     "Green": 157,
     "Blue": 107,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2579,7 +2305,6 @@
     "Red": 109,
     "Green": 171,
     "Blue": 119,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2588,7 +2313,6 @@
     "Red": 130,
     "Green": 0,
     "Blue": 67,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2597,7 +2321,6 @@
     "Red": 155,
     "Green": 19,
     "Blue": 89,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2606,7 +2329,6 @@
     "Red": 130,
     "Green": 52,
     "Blue": 10,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2615,7 +2337,6 @@
     "Red": 166,
     "Green": 69,
     "Blue": 16,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2624,7 +2345,6 @@
     "Red": 172,
     "Green": 84,
     "Blue": 20,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2633,7 +2353,6 @@
     "Red": 198,
     "Green": 98,
     "Blue": 24,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2642,7 +2361,6 @@
     "Red": 226,
     "Green": 115,
     "Blue": 35,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2651,7 +2369,6 @@
     "Red": 86,
     "Green": 106,
     "Blue": 106,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2660,7 +2377,6 @@
     "Red": 152,
     "Green": 174,
     "Blue": 174,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2669,7 +2385,6 @@
     "Red": 189,
     "Green": 203,
     "Blue": 203,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2678,7 +2393,6 @@
     "Red": 221,
     "Green": 227,
     "Blue": 227,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2687,7 +2401,6 @@
     "Red": 69,
     "Green": 92,
     "Blue": 113,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2696,7 +2409,6 @@
     "Red": 106,
     "Green": 133,
     "Blue": 158,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2705,7 +2417,6 @@
     "Red": 162,
     "Green": 181,
     "Blue": 198,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2714,7 +2425,6 @@
     "Red": 49,
     "Green": 57,
     "Blue": 25,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2723,7 +2433,6 @@
     "Red": 66,
     "Green": 77,
     "Blue": 33,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2732,7 +2441,6 @@
     "Red": 76,
     "Green": 88,
     "Blue": 38,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2741,7 +2449,6 @@
     "Red": 98,
     "Green": 113,
     "Blue": 51,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2750,7 +2457,6 @@
     "Red": 54,
     "Green": 31,
     "Blue": 14,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2759,7 +2465,6 @@
     "Red": 27,
     "Green": 40,
     "Blue": 83,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2768,7 +2473,6 @@
     "Red": 61,
     "Green": 147,
     "Blue": 132,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2777,7 +2481,6 @@
     "Red": 251,
     "Green": 213,
     "Blue": 187,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2786,7 +2489,6 @@
     "Red": 235,
     "Green": 99,
     "Blue": 7,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2795,7 +2497,6 @@
     "Red": 255,
     "Green": 123,
     "Blue": 77,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2804,7 +2505,6 @@
     "Red": 254,
     "Green": 231,
     "Blue": 218,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2813,7 +2513,6 @@
     "Red": 238,
     "Green": 211,
     "Blue": 196,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2822,7 +2521,6 @@
     "Red": 255,
     "Green": 226,
     "Blue": 207,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2831,7 +2529,6 @@
     "Red": 136,
     "Green": 186,
     "Blue": 145,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2840,7 +2537,6 @@
     "Red": 162,
     "Green": 214,
     "Blue": 173,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2849,7 +2545,6 @@
     "Red": 255,
     "Green": 145,
     "Blue": 145,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2858,7 +2553,6 @@
     "Red": 253,
     "Green": 181,
     "Blue": 181,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2867,7 +2561,6 @@
     "Red": 62,
     "Green": 182,
     "Blue": 161,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2876,7 +2569,6 @@
     "Red": 89,
     "Green": 199,
     "Blue": 180,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2885,7 +2577,6 @@
     "Red": 207,
     "Green": 115,
     "Blue": 115,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2894,7 +2585,6 @@
     "Red": 230,
     "Green": 138,
     "Blue": 138,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2903,7 +2593,6 @@
     "Red": 255,
     "Green": 215,
     "Blue": 215,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2912,7 +2601,6 @@
     "Red": 169,
     "Green": 226,
     "Blue": 216,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2921,7 +2609,6 @@
     "Red": 185,
     "Green": 215,
     "Blue": 192,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2930,7 +2617,6 @@
     "Red": 255,
     "Green": 222,
     "Blue": 213,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2939,7 +2625,6 @@
     "Red": 247,
     "Green": 139,
     "Blue": 19,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2948,8 +2633,9 @@
     "Red": 246,
     "Green": 127,
     "Blue": 0,
-    "Discontinued": false,
-    "Replacements": []
+    "Replacements": [
+      "740"
+    ]
   },
   {
     "DmcNumber": "972",
@@ -2957,7 +2643,6 @@
     "Red": 255,
     "Green": 181,
     "Blue": 21,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2966,7 +2651,6 @@
     "Red": 255,
     "Green": 227,
     "Blue": 0,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2975,7 +2659,6 @@
     "Red": 145,
     "Green": 79,
     "Blue": 18,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2984,7 +2667,6 @@
     "Red": 194,
     "Green": 129,
     "Blue": 66,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -2993,7 +2675,6 @@
     "Red": 220,
     "Green": 156,
     "Blue": 86,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3002,7 +2683,6 @@
     "Red": 64,
     "Green": 82,
     "Blue": 48,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3011,7 +2691,6 @@
     "Red": 88,
     "Green": 113,
     "Blue": 65,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3020,7 +2699,6 @@
     "Red": 115,
     "Green": 139,
     "Blue": 91,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3029,7 +2707,6 @@
     "Red": 141,
     "Green": 166,
     "Blue": 117,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3038,7 +2715,6 @@
     "Red": 71,
     "Green": 123,
     "Blue": 110,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3047,7 +2723,6 @@
     "Red": 111,
     "Green": 174,
     "Blue": 159,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3056,7 +2731,6 @@
     "Red": 144,
     "Green": 192,
     "Blue": 180,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3065,7 +2739,6 @@
     "Red": 38,
     "Green": 150,
     "Blue": 182,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3074,7 +2747,6 @@
     "Red": 48,
     "Green": 194,
     "Blue": 236,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3083,7 +2755,6 @@
     "Red": 137,
     "Green": 138,
     "Blue": 88,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3092,7 +2763,6 @@
     "Red": 166,
     "Green": 167,
     "Blue": 93,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3101,7 +2771,6 @@
     "Red": 185,
     "Green": 185,
     "Blue": 130,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3110,7 +2779,6 @@
     "Red": 79,
     "Green": 75,
     "Blue": 65,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3119,7 +2787,6 @@
     "Red": 142,
     "Green": 144,
     "Blue": 120,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3128,7 +2795,6 @@
     "Red": 177,
     "Green": 170,
     "Blue": 151,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3137,7 +2803,6 @@
     "Red": 235,
     "Green": 234,
     "Blue": 231,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3146,7 +2811,6 @@
     "Red": 75,
     "Green": 60,
     "Blue": 42,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3155,7 +2819,6 @@
     "Red": 179,
     "Green": 159,
     "Blue": 139,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3164,7 +2827,6 @@
     "Red": 227,
     "Green": 216,
     "Blue": 204,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3173,7 +2835,6 @@
     "Red": 149,
     "Green": 111,
     "Blue": 124,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3182,7 +2843,6 @@
     "Red": 183,
     "Green": 157,
     "Blue": 167,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3191,7 +2851,6 @@
     "Red": 188,
     "Green": 150,
     "Blue": 106,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3200,7 +2859,6 @@
     "Red": 216,
     "Green": 188,
     "Blue": 154,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3209,7 +2867,6 @@
     "Red": 231,
     "Green": 214,
     "Blue": 193,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3218,7 +2875,6 @@
     "Red": 95,
     "Green": 102,
     "Blue": 72,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3227,7 +2883,6 @@
     "Red": 136,
     "Green": 146,
     "Blue": 104,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3236,7 +2891,6 @@
     "Red": 156,
     "Green": 164,
     "Blue": 130,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3245,7 +2899,6 @@
     "Red": 196,
     "Green": 142,
     "Blue": 112,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3254,7 +2907,6 @@
     "Red": 230,
     "Green": 232,
     "Blue": 232,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3263,7 +2915,6 @@
     "Red": 253,
     "Green": 249,
     "Blue": 205,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3272,7 +2923,6 @@
     "Red": 184,
     "Green": 210,
     "Blue": 230,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3281,7 +2931,6 @@
     "Red": 251,
     "Green": 173,
     "Blue": 180,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3290,7 +2939,6 @@
     "Red": 227,
     "Green": 109,
     "Blue": 109,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3299,7 +2947,6 @@
     "Red": 255,
     "Green": 131,
     "Blue": 111,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3308,7 +2955,6 @@
     "Red": 252,
     "Green": 171,
     "Blue": 152,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3317,7 +2963,6 @@
     "Red": 27,
     "Green": 89,
     "Blue": 21,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3326,7 +2971,6 @@
     "Red": 64,
     "Green": 106,
     "Blue": 58,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3335,7 +2979,6 @@
     "Red": 113,
     "Green": 147,
     "Blue": 92,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3344,7 +2987,6 @@
     "Red": 204,
     "Green": 217,
     "Blue": 177,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3353,7 +2995,6 @@
     "Red": 188,
     "Green": 67,
     "Blue": 101,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3362,7 +3003,6 @@
     "Red": 228,
     "Green": 166,
     "Blue": 172,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3371,7 +3011,6 @@
     "Red": 94,
     "Green": 107,
     "Blue": 71,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3380,7 +3019,6 @@
     "Red": 114,
     "Green": 130,
     "Blue": 86,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3389,7 +3027,6 @@
     "Red": 131,
     "Green": 151,
     "Blue": 95,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3398,7 +3035,6 @@
     "Red": 30,
     "Green": 17,
     "Blue": 8,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3407,7 +3043,6 @@
     "Red": 197,
     "Green": 73,
     "Blue": 137,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3416,7 +3051,6 @@
     "Red": 234,
     "Green": 156,
     "Blue": 196,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3425,7 +3059,6 @@
     "Red": 244,
     "Green": 174,
     "Blue": 213,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3434,7 +3067,6 @@
     "Red": 136,
     "Green": 21,
     "Blue": 49,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3443,7 +3075,6 @@
     "Red": 201,
     "Green": 107,
     "Blue": 112,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3452,7 +3083,6 @@
     "Red": 231,
     "Green": 169,
     "Blue": 172,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3461,7 +3091,6 @@
     "Red": 251,
     "Green": 191,
     "Blue": 194,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3470,7 +3099,6 @@
     "Red": 255,
     "Green": 121,
     "Blue": 146,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3479,7 +3107,6 @@
     "Red": 255,
     "Green": 173,
     "Blue": 188,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3488,7 +3115,6 @@
     "Red": 255,
     "Green": 203,
     "Blue": 213,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3497,7 +3123,6 @@
     "Red": 241,
     "Green": 135,
     "Blue": 135,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3506,7 +3131,6 @@
     "Red": 255,
     "Green": 226,
     "Blue": 226,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3515,7 +3139,6 @@
     "Red": 255,
     "Green": 189,
     "Blue": 189,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3524,7 +3147,6 @@
     "Red": 161,
     "Green": 75,
     "Blue": 81,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3533,7 +3155,6 @@
     "Red": 188,
     "Green": 108,
     "Blue": 100,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3542,7 +3163,6 @@
     "Red": 155,
     "Green": 91,
     "Blue": 102,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3551,7 +3171,6 @@
     "Red": 219,
     "Green": 169,
     "Blue": 178,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3560,7 +3179,6 @@
     "Red": 218,
     "Green": 103,
     "Blue": 131,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3569,7 +3187,6 @@
     "Red": 232,
     "Green": 135,
     "Blue": 155,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3578,7 +3195,6 @@
     "Red": 120,
     "Green": 87,
     "Blue": 98,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3587,7 +3203,6 @@
     "Red": 215,
     "Green": 203,
     "Blue": 211,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3596,7 +3211,6 @@
     "Red": 119,
     "Green": 107,
     "Blue": 152,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3605,7 +3219,6 @@
     "Red": 211,
     "Green": 215,
     "Blue": 237,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3614,7 +3227,6 @@
     "Red": 56,
     "Green": 76,
     "Blue": 94,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3623,7 +3235,6 @@
     "Red": 199,
     "Green": 209,
     "Blue": 219,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3632,7 +3243,6 @@
     "Red": 219,
     "Green": 226,
     "Blue": 233,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3641,7 +3251,6 @@
     "Red": 147,
     "Green": 180,
     "Blue": 206,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3650,7 +3259,6 @@
     "Red": 238,
     "Green": 252,
     "Blue": 252,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3659,7 +3267,6 @@
     "Red": 62,
     "Green": 133,
     "Blue": 162,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3668,7 +3275,6 @@
     "Red": 172,
     "Green": 216,
     "Blue": 226,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3677,7 +3283,6 @@
     "Red": 52,
     "Green": 127,
     "Blue": 140,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3686,7 +3291,6 @@
     "Red": 153,
     "Green": 207,
     "Blue": 217,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3695,7 +3299,6 @@
     "Red": 101,
     "Green": 127,
     "Blue": 127,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3704,7 +3307,6 @@
     "Red": 255,
     "Green": 238,
     "Blue": 227,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3713,7 +3315,6 @@
     "Red": 244,
     "Green": 187,
     "Blue": 169,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3722,7 +3323,6 @@
     "Red": 160,
     "Green": 108,
     "Blue": 80,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3731,8 +3331,9 @@
     "Red": 182,
     "Green": 117,
     "Blue": 82,
-    "Discontinued": false,
-    "Replacements": []
+    "Replacements": [
+      "407"
+    ]
   },
   {
     "DmcNumber": "3774",
@@ -3740,7 +3341,6 @@
     "Red": 243,
     "Green": 225,
     "Blue": 215,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3749,7 +3349,6 @@
     "Red": 207,
     "Green": 121,
     "Blue": 57,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3758,7 +3357,6 @@
     "Red": 134,
     "Green": 48,
     "Blue": 34,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3767,7 +3365,6 @@
     "Red": 217,
     "Green": 137,
     "Blue": 120,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3776,7 +3373,6 @@
     "Red": 248,
     "Green": 202,
     "Blue": 200,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3785,7 +3381,6 @@
     "Red": 107,
     "Green": 87,
     "Blue": 67,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3794,7 +3389,6 @@
     "Red": 210,
     "Green": 188,
     "Blue": 166,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3803,7 +3397,6 @@
     "Red": 98,
     "Green": 93,
     "Blue": 80,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3812,7 +3405,6 @@
     "Red": 127,
     "Green": 106,
     "Blue": 85,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3821,7 +3413,6 @@
     "Red": 66,
     "Green": 66,
     "Blue": 66,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3830,7 +3421,6 @@
     "Red": 231,
     "Green": 73,
     "Blue": 103,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3839,7 +3429,6 @@
     "Red": 113,
     "Green": 65,
     "Blue": 73,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3848,7 +3437,6 @@
     "Red": 171,
     "Green": 51,
     "Blue": 87,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3857,7 +3445,6 @@
     "Red": 224,
     "Green": 40,
     "Blue": 118,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3866,7 +3453,6 @@
     "Red": 243,
     "Green": 71,
     "Blue": 139,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3875,7 +3461,6 @@
     "Red": 255,
     "Green": 140,
     "Blue": 174,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3884,7 +3469,6 @@
     "Red": 96,
     "Green": 103,
     "Blue": 140,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3893,7 +3477,6 @@
     "Red": 54,
     "Green": 105,
     "Blue": 112,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3902,7 +3485,6 @@
     "Red": 63,
     "Green": 124,
     "Blue": 133,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3911,7 +3493,6 @@
     "Red": 72,
     "Green": 142,
     "Blue": 154,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3920,7 +3501,6 @@
     "Red": 188,
     "Green": 227,
     "Blue": 230,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3929,7 +3509,6 @@
     "Red": 47,
     "Green": 140,
     "Blue": 132,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3938,7 +3517,6 @@
     "Red": 178,
     "Green": 212,
     "Blue": 189,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3947,7 +3525,6 @@
     "Red": 80,
     "Green": 139,
     "Blue": 125,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3956,7 +3533,6 @@
     "Red": 71,
     "Green": 119,
     "Blue": 89,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3965,7 +3541,6 @@
     "Red": 101,
     "Green": 165,
     "Blue": 125,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3974,7 +3549,6 @@
     "Red": 153,
     "Green": 195,
     "Blue": 170,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3983,7 +3557,6 @@
     "Red": 17,
     "Green": 90,
     "Blue": 59,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -3992,7 +3565,6 @@
     "Red": 224,
     "Green": 232,
     "Blue": 104,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4001,7 +3573,6 @@
     "Red": 223,
     "Green": 182,
     "Blue": 95,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4010,7 +3581,6 @@
     "Red": 243,
     "Green": 206,
     "Blue": 117,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4019,7 +3589,6 @@
     "Red": 246,
     "Green": 220,
     "Blue": 152,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4028,7 +3597,6 @@
     "Red": 255,
     "Green": 253,
     "Blue": 227,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4037,7 +3605,6 @@
     "Red": 254,
     "Green": 205,
     "Blue": 194,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4046,7 +3613,6 @@
     "Red": 253,
     "Green": 189,
     "Blue": 150,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4055,7 +3621,6 @@
     "Red": 173,
     "Green": 114,
     "Blue": 57,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4064,7 +3629,6 @@
     "Red": 247,
     "Green": 187,
     "Blue": 119,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4073,7 +3637,6 @@
     "Red": 183,
     "Green": 139,
     "Blue": 97,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4082,7 +3645,6 @@
     "Red": 169,
     "Green": 130,
     "Blue": 4,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4091,7 +3653,6 @@
     "Red": 185,
     "Green": 85,
     "Blue": 68,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4100,7 +3661,6 @@
     "Red": 179,
     "Green": 47,
     "Blue": 72,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4109,7 +3669,6 @@
     "Red": 219,
     "Green": 85,
     "Blue": 110,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4118,7 +3677,6 @@
     "Red": 234,
     "Green": 134,
     "Blue": 153,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4127,7 +3685,6 @@
     "Red": 114,
     "Green": 55,
     "Blue": 93,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4136,7 +3693,6 @@
     "Red": 148,
     "Green": 96,
     "Blue": 131,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4145,7 +3701,6 @@
     "Red": 186,
     "Green": 145,
     "Blue": 170,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4154,7 +3709,6 @@
     "Red": 108,
     "Green": 58,
     "Blue": 110,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4163,7 +3717,6 @@
     "Red": 92,
     "Green": 114,
     "Blue": 148,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4172,7 +3725,6 @@
     "Red": 123,
     "Green": 142,
     "Blue": 171,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4181,7 +3733,6 @@
     "Red": 176,
     "Green": 192,
     "Blue": 218,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4190,7 +3741,6 @@
     "Red": 205,
     "Green": 223,
     "Blue": 237,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4199,7 +3749,6 @@
     "Red": 50,
     "Green": 102,
     "Blue": 124,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4208,7 +3757,6 @@
     "Red": 20,
     "Green": 170,
     "Blue": 208,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4217,7 +3765,6 @@
     "Red": 18,
     "Green": 174,
     "Blue": 186,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4226,7 +3773,6 @@
     "Red": 4,
     "Green": 196,
     "Blue": 202,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4235,7 +3781,6 @@
     "Red": 6,
     "Green": 227,
     "Blue": 230,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4244,7 +3789,6 @@
     "Red": 52,
     "Green": 125,
     "Blue": 117,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4253,7 +3797,6 @@
     "Red": 85,
     "Green": 147,
     "Blue": 146,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4262,7 +3805,6 @@
     "Red": 82,
     "Green": 179,
     "Blue": 164,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4271,7 +3813,6 @@
     "Red": 55,
     "Green": 132,
     "Blue": 119,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4280,7 +3821,6 @@
     "Red": 73,
     "Green": 179,
     "Blue": 161,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4289,7 +3829,6 @@
     "Red": 205,
     "Green": 157,
     "Blue": 55,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4298,7 +3837,6 @@
     "Red": 242,
     "Green": 151,
     "Blue": 70,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4307,7 +3845,6 @@
     "Red": 242,
     "Green": 175,
     "Blue": 104,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4316,7 +3853,6 @@
     "Red": 250,
     "Green": 211,
     "Blue": 150,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4325,7 +3861,6 @@
     "Red": 255,
     "Green": 211,
     "Blue": 181,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4334,7 +3869,6 @@
     "Red": 104,
     "Green": 37,
     "Blue": 26,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4343,7 +3877,6 @@
     "Red": 150,
     "Green": 74,
     "Blue": 63,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4352,7 +3885,6 @@
     "Red": 186,
     "Green": 139,
     "Blue": 124,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4361,7 +3893,6 @@
     "Red": 125,
     "Green": 93,
     "Blue": 87,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4370,7 +3901,6 @@
     "Red": 166,
     "Green": 136,
     "Blue": 129,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4379,7 +3909,6 @@
     "Red": 138,
     "Green": 110,
     "Blue": 78,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4388,7 +3917,6 @@
     "Red": 164,
     "Green": 131,
     "Blue": 92,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4397,7 +3925,6 @@
     "Red": 203,
     "Green": 182,
     "Blue": 156,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4406,7 +3933,6 @@
     "Red": 249,
     "Green": 247,
     "Blue": 241,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4415,7 +3941,6 @@
     "Red": 250,
     "Green": 246,
     "Blue": 240,
-    "Discontinued": false,
     "Replacements": []
   },
   {
@@ -4424,8 +3949,10 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "3722",
+      "223"
+    ]
   },
   {
     "DmcNumber": "3881",
@@ -4433,8 +3960,10 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "3364",
+      "164"
+    ]
   },
   {
     "DmcNumber": "3882",
@@ -4442,8 +3971,10 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "801",
+      "839"
+    ]
   },
   {
     "DmcNumber": "3883",
@@ -4451,8 +3982,9 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "722"
+    ]
   },
   {
     "DmcNumber": "3884",
@@ -4460,8 +3992,10 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "4",
+      "535"
+    ]
   },
   {
     "DmcNumber": "3885",
@@ -4469,8 +4003,9 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "312"
+    ]
   },
   {
     "DmcNumber": "3886",
@@ -4478,8 +4013,10 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "35",
+      "3685"
+    ]
   },
   {
     "DmcNumber": "3887",
@@ -4487,8 +4024,10 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "3837",
+      "208"
+    ]
   },
   {
     "DmcNumber": "3888",
@@ -4496,8 +4035,10 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "3041",
+      "3740"
+    ]
   },
   {
     "DmcNumber": "3889",
@@ -4505,8 +4046,9 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "445"
+    ]
   },
   {
     "DmcNumber": "3890",
@@ -4514,8 +4056,10 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "3846",
+      "3766"
+    ]
   },
   {
     "DmcNumber": "3891",
@@ -4523,8 +4067,10 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "3844",
+      "995"
+    ]
   },
   {
     "DmcNumber": "3892",
@@ -4532,8 +4078,10 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "970",
+      "740"
+    ]
   },
   {
     "DmcNumber": "3893",
@@ -4541,8 +4089,9 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "543"
+    ]
   },
   {
     "DmcNumber": "3894",
@@ -4550,8 +4099,9 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "907"
+    ]
   },
   {
     "DmcNumber": "3895",
@@ -4559,7 +4109,9 @@
     "Red": 255,
     "Green": 255,
     "Blue": 255,
-    "Discontinued": true,
-    "Replacements": []
+    "Replacements": [
+      "648",
+      "646"
+    ]
   }
 ]
