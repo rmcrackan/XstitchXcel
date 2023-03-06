@@ -12,6 +12,6 @@ namespace XstitchXcelLib.DataClasses
         public bool Discontinued { get; set; }
         public List<string> Replacements { get; set; } = new();
 
-        public override string ToString() => $"{Name}, {DmcNumber}, #{Color.ToHex()}";
+        public override string ToString() => $"{(Discontinued ? "[Discontinued] " : "")}{Name}, {DmcNumber}, #{Color.ToHex()}";
 	}
 }

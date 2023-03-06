@@ -2394,6 +2394,15 @@
     "Replacements": []
   },
   {
+    "DmcNumber": "868",
+    "Name": "Hazel Nut Brown",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
     "DmcNumber": "869",
     "Name": "Hazelnut Brown V Dk",
     "Red": 131,
@@ -4407,6 +4416,150 @@
     "Green": 246,
     "Blue": 240,
     "Discontinued": false,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3880",
+    "Name": "Shell Pink - Light",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3881",
+    "Name": "Green - Light",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3882",
+    "Name": "Beige Brown - Dark",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3883",
+    "Name": "Orange Spice - Light",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3884",
+    "Name": "Ash Gray - Very Light",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3885",
+    "Name": "Baby Blue - Very Dark",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3886",
+    "Name": "Mauve - Very Dark",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3887",
+    "Name": "Lavender - Very Dark",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3888",
+    "Name": "Antique Violet - Dark",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3889",
+    "Name": "Lemon - Light",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3890",
+    "Name": "Peacock Blue - Light",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3891",
+    "Name": "Electric Blue - Dark",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3892",
+    "Name": "Tangerine",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3893",
+    "Name": "Beige Brown - Ultra Very Light",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3894",
+    "Name": "Parrot Green - Light",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
+    "Replacements": []
+  },
+  {
+    "DmcNumber": "3895",
+    "Name": "Beaver Gray - Dark",
+    "Red": 255,
+    "Green": 255,
+    "Blue": 255,
+    "Discontinued": true,
     "Replacements": []
   }
 ]

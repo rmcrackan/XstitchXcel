@@ -14,6 +14,6 @@ namespace XstitchXcelLib.Config
 		public bool Discontinued { get; set; }
 		public List<string> Replacements { get; set; } = new();
 
-        public override string ToString() => $"{Name}, {DmcNumber}, #{Red:X2}{Green:X2}{Blue:X2}";
+        public override string ToString() => $"{(Discontinued ? "[Discontinued] " : "")}{Name}, {DmcNumber}, #{Red:X2}{Green:X2}{Blue:X2}";
 	}
 }
