@@ -207,6 +207,14 @@ namespace FlossInventory
             foreach (var dmcColor in missing)
                 inventoryOutWriteLine($"{dmcColor.DmcNumber}: {dmcColor.Name}");
             inventoryOutWriteLine("END MISSING");
+
+            inventoryOutWriteLine();
+            if (missing.Count == 0)
+                inventoryOutWriteLine("w00h00 -- you got them all!");
+            else if (missing.Count == 1)
+                inventoryOutWriteLine("Only 1 color left!");
+            else
+                inventoryOutWriteLine($"{missing.Count} colors left");
         }
 
         private void _searchInventory(string value, Section section)
