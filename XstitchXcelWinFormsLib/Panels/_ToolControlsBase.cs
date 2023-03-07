@@ -10,14 +10,14 @@ namespace XstitchXcelWinFormsLib.Panels
 {
     public partial class _ToolControlsBase : __ToolPaneBase, IRunCommand
     {
-        public record Configuration(string Instructions, string SubmitButtonText);
+        public record UiConfiguration(string Instructions, string SubmitButtonText);
 
         public string Instructions { get; }
         public virtual bool UseGlobalExcelFile { get; } = true;
         public virtual bool IsCancellable { get; } = false;
 
         public _ToolControlsBase() : this(null) { }
-        public _ToolControlsBase(Configuration configuration) : base()
+        public _ToolControlsBase(UiConfiguration configuration) : base()
         {
             InitializeComponent();
 

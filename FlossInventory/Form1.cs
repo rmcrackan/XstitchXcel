@@ -12,8 +12,8 @@ using XstitchXcelWinFormsLib;
 
 namespace FlossInventory
 {
-	public partial class Form1 : Form
-	{
+    public partial class Form1 : Form
+    {
         #region appsettings.json
         private const string APPSETTINGS_JSON = "appsettings.json";
         private const string INVENTORY_FILE = "InventoryFile";
@@ -38,83 +38,83 @@ namespace FlossInventory
 
         private Runner runner { get; }
 
-		// convenience methods
-		private Task RunAsync(Action<CancellationToken> action, Control focusControl) => runner.RunAsync(action, focusControl);
-		private Task TextBoxEnterKeyAsync(KeyPressEventArgs e, Action<CancellationToken> action, Control focusControl = null) => runner.TextBoxEnterKeyAsync(e, action, focusControl);
+        // convenience methods
+        private Task RunAsync(Action<CancellationToken> action, Control focusControl) => runner.RunAsync(action, focusControl);
+        private Task TextBoxEnterKeyAsync(KeyPressEventArgs e, Action<CancellationToken> action, Control focusControl = null) => runner.TextBoxEnterKeyAsync(e, action, focusControl);
 
-		public Form1()
-		{
-			InitializeComponent();
-			runner = new(this);
-		}
+        public Form1()
+        {
+            InitializeComponent();
+            runner = new(this);
+        }
 
-		private void Form1_Load(object sender, EventArgs e)
-		{
-			if (this.DesignMode)
-				return;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (this.DesignMode)
+                return;
 
-			// load file name into form
-			inventoryFileTb.Text = GetInventoryFilePath();
+            // load file name into form
+            inventoryFileTb.Text = GetInventoryFilePath();
 
-			// start cursor in 'inventory add' textbox
-			this.inventoryAddTb.Select();
-		}
+            // start cursor in 'inventory add' textbox
+            this.inventoryAddTb.Select();
+        }
 
-		private void inventoryFileBtn_Click(object sender, EventArgs e)
-		{
-			var dialog = new OpenFileDialog
-			{
-				Title = "Select the text file with your inventory",
+        private void inventoryFileBtn_Click(object sender, EventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                Title = "Select the text file with your inventory",
 
-				CheckFileExists = true,
-				CheckPathExists = true,
-				DefaultExt = "txt",
-				FileName = inventoryFileTb.Text,
-				Filter = "Text document (*.txt)|*.txt|All files (*.*)|*.*",
-				FilterIndex = 0,
-				Multiselect = false
-			};
+                CheckFileExists = true,
+                CheckPathExists = true,
+                DefaultExt = "txt",
+                FileName = inventoryFileTb.Text,
+                Filter = "Text document (*.txt)|*.txt|All files (*.*)|*.*",
+                FilterIndex = 0,
+                Multiselect = false
+            };
 
-			if (dialog.ShowDialog() == DialogResult.OK)
-				inventoryFileTb.Text = dialog.FileName;
-		}
+            if (dialog.ShowDialog() == DialogResult.OK)
+                inventoryFileTb.Text = dialog.FileName;
+        }
 
-		private void inventoryFileTb_TextChanged(object sender, EventArgs e) => inventoryFileSaveBtn.Enabled = inventoryFileTb.Text != GetInventoryFilePath();
+        private void inventoryFileTb_TextChanged(object sender, EventArgs e) => inventoryFileSaveBtn.Enabled = inventoryFileTb.Text != GetInventoryFilePath();
 
         private void openBtn_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				new System.Diagnostics.Process
-				{
+        {
+            try
+            {
+                new System.Diagnostics.Process
+                {
                     StartInfo = new(inventoryFileTb.Text.Trim())
-					{
-						UseShellExecute = true
-					}
-				}
-				.Start();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
-		}
+                    {
+                        UseShellExecute = true
+                    }
+                }
+                .Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-		private void inventoryFileSaveBtn_Click(object sender, EventArgs e) => SetInventoryFilePath(inventoryFileTb.Text);
+        private void inventoryFileSaveBtn_Click(object sender, EventArgs e) => SetInventoryFilePath(inventoryFileTb.Text);
 
-		#region Inventory
+        #region Inventory
 
-		private async void inventoryAddTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, addToInventory, inventoryAddTb);
-		private async void inventoryAddBtn_Click(object sender, EventArgs e) => await RunAsync(addToInventory, inventoryAddTb);
-		private void addToInventory(CancellationToken cancellationToken) => _addToInventory(inventoryAddTb.Text, Section.Inventory);
+        private async void inventoryAddTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, addToInventory, inventoryAddTb);
+        private async void inventoryAddBtn_Click(object sender, EventArgs e) => await RunAsync(addToInventory, inventoryAddTb);
+        private void addToInventory(CancellationToken cancellationToken) => _addToInventory(inventoryAddTb.Text, Section.Inventory);
 
         private async void inventoryRemoveTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, removeFromInventory, inventoryRemoveTb);
-		private async void inventoryRemoveBtn_Click(object sender, EventArgs e) => await RunAsync(removeFromInventory, inventoryRemoveTb);
-		private void removeFromInventory(CancellationToken cancellationToken) => _removeFromInventory(this.inventoryRemoveTb.Text, Section.Inventory);
+        private async void inventoryRemoveBtn_Click(object sender, EventArgs e) => await RunAsync(removeFromInventory, inventoryRemoveTb);
+        private void removeFromInventory(CancellationToken cancellationToken) => _removeFromInventory(this.inventoryRemoveTb.Text, Section.Inventory);
 
         private async void inventorySearchTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, searchInventory, inventorySearchTb);
-		private async void inventorySearchBtn_Click(object sender, EventArgs e) => await RunAsync(searchInventory, inventorySearchTb);
-		private void searchInventory(CancellationToken cancellationToken) => _searchInventory(this.inventorySearchTb.Text, Section.Inventory);
+        private async void inventorySearchBtn_Click(object sender, EventArgs e) => await RunAsync(searchInventory, inventorySearchTb);
+        private void searchInventory(CancellationToken cancellationToken) => _searchInventory(this.inventorySearchTb.Text, Section.Inventory);
 
         #endregion
 
@@ -123,21 +123,23 @@ namespace FlossInventory
         private void bulkAddToInventory(CancellationToken cancellationToken)
         {
             var values = bulkInventoryAddTb.Text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-			foreach (var value in values)
-				_addToInventory(value, Section.Inventory);
+            foreach (var value in values)
+                _addToInventory(value, Section.Inventory);
         }
         #endregion
 
         #region Shopping List
 
         private async void shoppingListAddTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, addToShoppingList, shoppingListAddTb);
-		private async void shoppingListAddBtn_Click(object sender, EventArgs e) => await RunAsync(addToShoppingList, shoppingListAddTb);
-		private void addToShoppingList(CancellationToken cancellationToken) => _addToInventory(shoppingListAddTb.Text, Section.ShoppingList);
+        private async void shoppingListAddBtn_Click(object sender, EventArgs e) => await RunAsync(addToShoppingList, shoppingListAddTb);
+        private void addToShoppingList(CancellationToken cancellationToken) => _addToInventory(shoppingListAddTb.Text, Section.ShoppingList);
 
         private async void shoppingListRemoveTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, removeFromShoppingList, shoppingListRemoveTb);
-		private async void shoppingListRemoveBtn_Click(object sender, EventArgs e) => await RunAsync(removeFromShoppingList, shoppingListRemoveTb);
-		private void removeFromShoppingList(CancellationToken cancellationToken) => _removeFromInventory(this.shoppingListRemoveTb.Text, Section.ShoppingList);
+        private async void shoppingListRemoveBtn_Click(object sender, EventArgs e) => await RunAsync(removeFromShoppingList, shoppingListRemoveTb);
+        private void removeFromShoppingList(CancellationToken cancellationToken) => _removeFromInventory(this.shoppingListRemoveTb.Text, Section.ShoppingList);
 
+        private async void shoppingListAllDmcBtn_Click(object sender, EventArgs e) => await RunAsync(shoppingListAllDmc, shoppingListAllDmcBtn);
+        private void shoppingListAllDmc(CancellationToken cancellationToken) => _findAllMissingDmcColors();
         #endregion
 
         #region Output
@@ -145,10 +147,10 @@ namespace FlossInventory
         #endregion
 
         private void _addToInventory(string value, Section section)
-		{
-			var listType = section.GetDescription().ToLower();
+        {
+            var listType = section.GetDescription().ToLower();
 
-			var success = getInventory().TryAdd(value, section, out var inventoryEntries);
+            var success = getInventory().TryAdd(value, section, out var inventoryEntries);
             if (!success)
             {
                 inventoryOutWriteLine("ERROR: not a valid color\r\n\r\n");
@@ -165,12 +167,12 @@ namespace FlossInventory
             inventoryOutWriteLine();
         }
 
-		private void _removeFromInventory(string orig, Section section)
+        private void _removeFromInventory(string orig, Section section)
         {
             var listType = section.GetDescription().ToLower();
 
             var success = getInventory().TryRemove(orig, section, out var inventoryEntries);
-			if (success)
+            if (success)
             {
                 // color was present
                 var (color, qty, wasPresent) = inventoryEntries.Single();
@@ -198,6 +200,15 @@ namespace FlossInventory
             inventoryOutWriteLine();
         }
 
+        private void _findAllMissingDmcColors()
+        {
+            var missing = getInventory().FindAllMissingDmcColors();
+            inventoryOutWriteLine("BEGIN MISSING");
+            foreach (var dmcColor in missing)
+                inventoryOutWriteLine($"{dmcColor.DmcNumber}: {dmcColor.Name}");
+            inventoryOutWriteLine("END MISSING");
+        }
+
         private void _searchInventory(string value, Section section)
         {
             var listType = section.GetDescription().ToLower();
@@ -213,6 +224,6 @@ namespace FlossInventory
 
         private Inventory getInventory() => new(this.inventoryFileTb.Text);
 
-		private void inventoryOutWriteLine(string str = null) => inventoryOutTb.UIThreadSync(() => inventoryOutTb.AppendText($"{str}\r\n"));
+        private void inventoryOutWriteLine(string str = null) => inventoryOutTb.UIThreadSync(() => inventoryOutTb.AppendText($"{str}\r\n"));
     }
 }

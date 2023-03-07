@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Dinah.Core;
+using Dinah.Core.Collections.Generic;
+using XstitchXcelLib.DataClasses;
 
 namespace XstitchXcelLib.Tools
 {
@@ -353,5 +355,18 @@ namespace XstitchXcelLib.Tools
 
 			return inventoryEntries.Any();
 		}
-	}
+
+		public List<DmcColor> FindAllMissingDmcColors()
+        {
+			var owned = _inventoryDataLayer.Load()
+				.Sections.Single(s => s.Header == InventoryCommon.INVENTORY_SECTION)
+				.Rows.Select(r => r.DmcColorName.ToString())
+				.ToList();
+			var except = Config.Configuration
+				.GetDmcColors()
+				.Where(dmc => !owned.ContainsInsensative(dmc.DmcNumber))
+				.ToList();
+			return except;
+		}
+    }
 }

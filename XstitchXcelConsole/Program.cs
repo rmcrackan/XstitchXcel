@@ -88,7 +88,7 @@ namespace XstitchXcelConsole
 
         static void analyzePalettes()
         {
-            var dir = @"C:\Dropbox\DinahsFolder\coding\_NET\Visual Studio 2022\XstitchXcel\XstitchXcelLib\palettes";
+            var dir = "palettes";
             var files = Directory.GetFiles(dir);
 
             var palettes = Directory
@@ -160,7 +160,7 @@ namespace XstitchXcelConsole
             var localDmcColors = Configuration.GetDmcColors(true);
             var localDmcNumbers = localDmcColors.Select(d => d.DmcNumber.ToLower()).ToList();
 
-            var dir = @"C:\Dropbox\DinahsFolder\coding\_NET\Visual Studio 2022\XstitchXcel\XstitchXcelLib\palettes";
+            var dir = "palettes";
             var libidanJson = Directory
                 .EnumerateFiles(dir)
                 .Select(file => JsonConvert.DeserializeObject<Palette>(File.ReadAllText(file)))
