@@ -29,261 +29,235 @@ namespace XstitchXcel
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl = new System.Windows.Forms.TabControl();
-            this.createPatternTabPage = new System.Windows.Forms.TabPage();
-            this.createPatternSplitPanel1 = new XstitchXcelWinFormsLib.Panels.CreatePatternSplitPanel();
-            this.statsTabPage = new System.Windows.Forms.TabPage();
-            this.statsPanel1 = new XstitchXcelWinFormsLib.Panels.StatsPanel();
-            this.findDmcColorsTabPage = new System.Windows.Forms.TabPage();
-            this.findDmcColorsSplitPanel1 = new XstitchXcelWinFormsLib.Panels.FindDmcColorsSplitPanel();
-            this.replaceColorTabPage = new System.Windows.Forms.TabPage();
-            this.replaceColorInPatternSplitPanel1 = new XstitchXcelWinFormsLib.Panels.ReplaceColorInPatternSplitPanel();
-            this.replaceColorNaiveTabPage = new System.Windows.Forms.TabPage();
-            this.replaceColorNaiveSplitPanel1 = new XstitchXcelWinFormsLib.Panels.ReplaceColorNaiveSplitPanel();
-            this.batchConvertTabPage = new System.Windows.Forms.TabPage();
-            this.batchConvertSplitPanel1 = new XstitchXcelWinFormsLib.Panels.BatchConvertSplitPanel();
-            this.toPngTabPage = new System.Windows.Forms.TabPage();
-            this.toPngSplitPanel1 = new XstitchXcelWinFormsLib.Panels.ToPngSplitPanel();
-            this.crtBlurTabPage = new System.Windows.Forms.TabPage();
-            this.crtBlurSplitPanel1 = new XstitchXcelWinFormsLib.Panels.CrtBlurSplitPanel();
-            this.imageToExcelTabPage = new System.Windows.Forms.TabPage();
-            this.imageToExcelSplitPanel1 = new XstitchXcelWinFormsLib.Panels.ImageToExcelSplitPanel();
-            this.openFileControl1 = new XstitchXcelWinFormsLib.Controls.OpenFileControl();
-            this.tabControl.SuspendLayout();
-            this.createPatternTabPage.SuspendLayout();
-            this.statsTabPage.SuspendLayout();
-            this.findDmcColorsTabPage.SuspendLayout();
-            this.replaceColorTabPage.SuspendLayout();
-            this.replaceColorNaiveTabPage.SuspendLayout();
-            this.batchConvertTabPage.SuspendLayout();
-            this.toPngTabPage.SuspendLayout();
-            this.crtBlurTabPage.SuspendLayout();
-            this.imageToExcelTabPage.SuspendLayout();
-            this.SuspendLayout();
+            tabControl = new System.Windows.Forms.TabControl();
+            createPatternTabPage = new System.Windows.Forms.TabPage();
+            createPatternSplitPanel1 = new XstitchXcelWinFormsLib.Panels.CreatePatternSplitPanel();
+            statsTabPage = new System.Windows.Forms.TabPage();
+            statsPanel1 = new XstitchXcelWinFormsLib.Panels.StatsPanel();
+            findDmcColorsTabPage = new System.Windows.Forms.TabPage();
+            findDmcColorsSplitPanel1 = new XstitchXcelWinFormsLib.Panels.FindDmcColorsSplitPanel();
+            replaceColorTabPage = new System.Windows.Forms.TabPage();
+            replaceColorInPatternSplitPanel1 = new XstitchXcelWinFormsLib.Panels.ReplaceColorInPatternSplitPanel();
+            replaceColorNaiveTabPage = new System.Windows.Forms.TabPage();
+            replaceColorNaiveSplitPanel1 = new XstitchXcelWinFormsLib.Panels.ReplaceColorNaiveSplitPanel();
+            toPngTabPage = new System.Windows.Forms.TabPage();
+            toPngSplitPanel1 = new XstitchXcelWinFormsLib.Panels.ToPngSplitPanel();
+            crtBlurTabPage = new System.Windows.Forms.TabPage();
+            crtBlurSplitPanel1 = new XstitchXcelWinFormsLib.Panels.CrtBlurSplitPanel();
+            imageToExcelTabPage = new System.Windows.Forms.TabPage();
+            imageToExcelSplitPanel1 = new XstitchXcelWinFormsLib.Panels.ImageToExcelSplitPanel();
+            openFileControl1 = new XstitchXcelWinFormsLib.Controls.OpenFileControl();
+            tabControl.SuspendLayout();
+            createPatternTabPage.SuspendLayout();
+            statsTabPage.SuspendLayout();
+            findDmcColorsTabPage.SuspendLayout();
+            replaceColorTabPage.SuspendLayout();
+            replaceColorNaiveTabPage.SuspendLayout();
+            toPngTabPage.SuspendLayout();
+            crtBlurTabPage.SuspendLayout();
+            imageToExcelTabPage.SuspendLayout();
+            SuspendLayout();
             // 
             // tabControl
             // 
-            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl.Controls.Add(this.createPatternTabPage);
-            this.tabControl.Controls.Add(this.statsTabPage);
-            this.tabControl.Controls.Add(this.findDmcColorsTabPage);
-            this.tabControl.Controls.Add(this.replaceColorTabPage);
-            this.tabControl.Controls.Add(this.replaceColorNaiveTabPage);
-            this.tabControl.Controls.Add(this.batchConvertTabPage);
-            this.tabControl.Controls.Add(this.toPngTabPage);
-            this.tabControl.Controls.Add(this.crtBlurTabPage);
-            this.tabControl.Controls.Add(this.imageToExcelTabPage);
-            this.tabControl.Location = new System.Drawing.Point(12, 37);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(762, 386);
-            this.tabControl.TabIndex = 3;
-            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.TabControl_SelectedIndexChanged);
+            tabControl.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            tabControl.Controls.Add(createPatternTabPage);
+            tabControl.Controls.Add(statsTabPage);
+            tabControl.Controls.Add(findDmcColorsTabPage);
+            tabControl.Controls.Add(replaceColorTabPage);
+            tabControl.Controls.Add(replaceColorNaiveTabPage);
+            tabControl.Controls.Add(toPngTabPage);
+            tabControl.Controls.Add(crtBlurTabPage);
+            tabControl.Controls.Add(imageToExcelTabPage);
+            tabControl.Location = new System.Drawing.Point(12, 37);
+            tabControl.Name = "tabControl";
+            tabControl.SelectedIndex = 0;
+            tabControl.Size = new System.Drawing.Size(762, 386);
+            tabControl.TabIndex = 3;
+            tabControl.SelectedIndexChanged += TabControl_SelectedIndexChanged;
             // 
             // createPatternTabPage
             // 
-            this.createPatternTabPage.Controls.Add(this.createPatternSplitPanel1);
-            this.createPatternTabPage.Location = new System.Drawing.Point(4, 24);
-            this.createPatternTabPage.Name = "createPatternTabPage";
-            this.createPatternTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.createPatternTabPage.Size = new System.Drawing.Size(754, 358);
-            this.createPatternTabPage.TabIndex = 8;
-            this.createPatternTabPage.Text = "Create Pattern";
-            this.createPatternTabPage.UseVisualStyleBackColor = true;
+            createPatternTabPage.Controls.Add(createPatternSplitPanel1);
+            createPatternTabPage.Location = new System.Drawing.Point(4, 24);
+            createPatternTabPage.Name = "createPatternTabPage";
+            createPatternTabPage.Padding = new System.Windows.Forms.Padding(3);
+            createPatternTabPage.Size = new System.Drawing.Size(754, 358);
+            createPatternTabPage.TabIndex = 8;
+            createPatternTabPage.Text = "Create Pattern";
+            createPatternTabPage.UseVisualStyleBackColor = true;
             // 
             // createPatternSplitPanel1
             // 
-            this.createPatternSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.createPatternSplitPanel1.Location = new System.Drawing.Point(3, 3);
-            this.createPatternSplitPanel1.Name = "createPatternSplitPanel1";
-            this.createPatternSplitPanel1.Size = new System.Drawing.Size(748, 352);
-            this.createPatternSplitPanel1.TabIndex = 0;
+            createPatternSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            createPatternSplitPanel1.Location = new System.Drawing.Point(3, 3);
+            createPatternSplitPanel1.Name = "createPatternSplitPanel1";
+            createPatternSplitPanel1.Size = new System.Drawing.Size(748, 352);
+            createPatternSplitPanel1.TabIndex = 0;
             // 
             // statsTabPage
             // 
-            this.statsTabPage.Controls.Add(this.statsPanel1);
-            this.statsTabPage.Location = new System.Drawing.Point(4, 24);
-            this.statsTabPage.Name = "statsTabPage";
-            this.statsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.statsTabPage.Size = new System.Drawing.Size(754, 358);
-            this.statsTabPage.TabIndex = 9;
-            this.statsTabPage.Text = "Stats";
-            this.statsTabPage.UseVisualStyleBackColor = true;
+            statsTabPage.Controls.Add(statsPanel1);
+            statsTabPage.Location = new System.Drawing.Point(4, 24);
+            statsTabPage.Name = "statsTabPage";
+            statsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            statsTabPage.Size = new System.Drawing.Size(754, 358);
+            statsTabPage.TabIndex = 9;
+            statsTabPage.Text = "Stats";
+            statsTabPage.UseVisualStyleBackColor = true;
             // 
             // statsPanel1
             // 
-            this.statsPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statsPanel1.Location = new System.Drawing.Point(3, 3);
-            this.statsPanel1.Name = "statsPanel1";
-            this.statsPanel1.Size = new System.Drawing.Size(748, 352);
-            this.statsPanel1.TabIndex = 0;
+            statsPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            statsPanel1.Location = new System.Drawing.Point(3, 3);
+            statsPanel1.Name = "statsPanel1";
+            statsPanel1.Size = new System.Drawing.Size(748, 352);
+            statsPanel1.TabIndex = 0;
             // 
             // findDmcColorsTabPage
             // 
-            this.findDmcColorsTabPage.Controls.Add(this.findDmcColorsSplitPanel1);
-            this.findDmcColorsTabPage.Location = new System.Drawing.Point(4, 24);
-            this.findDmcColorsTabPage.Name = "findDmcColorsTabPage";
-            this.findDmcColorsTabPage.Size = new System.Drawing.Size(754, 358);
-            this.findDmcColorsTabPage.TabIndex = 10;
-            this.findDmcColorsTabPage.Text = "Find DMC Colors";
-            this.findDmcColorsTabPage.UseVisualStyleBackColor = true;
+            findDmcColorsTabPage.Controls.Add(findDmcColorsSplitPanel1);
+            findDmcColorsTabPage.Location = new System.Drawing.Point(4, 24);
+            findDmcColorsTabPage.Name = "findDmcColorsTabPage";
+            findDmcColorsTabPage.Size = new System.Drawing.Size(754, 358);
+            findDmcColorsTabPage.TabIndex = 10;
+            findDmcColorsTabPage.Text = "Find DMC Colors";
+            findDmcColorsTabPage.UseVisualStyleBackColor = true;
             // 
             // findDmcColorsSplitPanel1
             // 
-            this.findDmcColorsSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.findDmcColorsSplitPanel1.Location = new System.Drawing.Point(0, 0);
-            this.findDmcColorsSplitPanel1.Name = "findDmcColorsSplitPanel1";
-            this.findDmcColorsSplitPanel1.Size = new System.Drawing.Size(754, 358);
-            this.findDmcColorsSplitPanel1.TabIndex = 0;
+            findDmcColorsSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            findDmcColorsSplitPanel1.Location = new System.Drawing.Point(0, 0);
+            findDmcColorsSplitPanel1.Name = "findDmcColorsSplitPanel1";
+            findDmcColorsSplitPanel1.Size = new System.Drawing.Size(754, 358);
+            findDmcColorsSplitPanel1.TabIndex = 0;
             // 
             // replaceColorTabPage
             // 
-            this.replaceColorTabPage.Controls.Add(this.replaceColorInPatternSplitPanel1);
-            this.replaceColorTabPage.Location = new System.Drawing.Point(4, 24);
-            this.replaceColorTabPage.Name = "replaceColorTabPage";
-            this.replaceColorTabPage.Size = new System.Drawing.Size(754, 358);
-            this.replaceColorTabPage.TabIndex = 11;
-            this.replaceColorTabPage.Text = "Replace Color";
-            this.replaceColorTabPage.UseVisualStyleBackColor = true;
+            replaceColorTabPage.Controls.Add(replaceColorInPatternSplitPanel1);
+            replaceColorTabPage.Location = new System.Drawing.Point(4, 24);
+            replaceColorTabPage.Name = "replaceColorTabPage";
+            replaceColorTabPage.Size = new System.Drawing.Size(754, 358);
+            replaceColorTabPage.TabIndex = 11;
+            replaceColorTabPage.Text = "Replace Color";
+            replaceColorTabPage.UseVisualStyleBackColor = true;
             // 
             // replaceColorInPatternSplitPanel1
             // 
-            this.replaceColorInPatternSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.replaceColorInPatternSplitPanel1.Location = new System.Drawing.Point(0, 0);
-            this.replaceColorInPatternSplitPanel1.Name = "replaceColorInPatternSplitPanel1";
-            this.replaceColorInPatternSplitPanel1.Size = new System.Drawing.Size(754, 358);
-            this.replaceColorInPatternSplitPanel1.TabIndex = 0;
+            replaceColorInPatternSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            replaceColorInPatternSplitPanel1.Location = new System.Drawing.Point(0, 0);
+            replaceColorInPatternSplitPanel1.Name = "replaceColorInPatternSplitPanel1";
+            replaceColorInPatternSplitPanel1.Size = new System.Drawing.Size(754, 358);
+            replaceColorInPatternSplitPanel1.TabIndex = 0;
             // 
             // replaceColorNaiveTabPage
             // 
-            this.replaceColorNaiveTabPage.Controls.Add(this.replaceColorNaiveSplitPanel1);
-            this.replaceColorNaiveTabPage.Location = new System.Drawing.Point(4, 24);
-            this.replaceColorNaiveTabPage.Name = "replaceColorNaiveTabPage";
-            this.replaceColorNaiveTabPage.Size = new System.Drawing.Size(754, 358);
-            this.replaceColorNaiveTabPage.TabIndex = 12;
-            this.replaceColorNaiveTabPage.Text = "Replace Color (naive)";
-            this.replaceColorNaiveTabPage.UseVisualStyleBackColor = true;
+            replaceColorNaiveTabPage.Controls.Add(replaceColorNaiveSplitPanel1);
+            replaceColorNaiveTabPage.Location = new System.Drawing.Point(4, 24);
+            replaceColorNaiveTabPage.Name = "replaceColorNaiveTabPage";
+            replaceColorNaiveTabPage.Size = new System.Drawing.Size(754, 358);
+            replaceColorNaiveTabPage.TabIndex = 12;
+            replaceColorNaiveTabPage.Text = "Replace Color (naive)";
+            replaceColorNaiveTabPage.UseVisualStyleBackColor = true;
             // 
             // replaceColorNaiveSplitPanel1
             // 
-            this.replaceColorNaiveSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.replaceColorNaiveSplitPanel1.Location = new System.Drawing.Point(0, 0);
-            this.replaceColorNaiveSplitPanel1.Name = "replaceColorNaiveSplitPanel1";
-            this.replaceColorNaiveSplitPanel1.Size = new System.Drawing.Size(754, 358);
-            this.replaceColorNaiveSplitPanel1.TabIndex = 0;
-            // 
-            // batchConvertTabPage
-            // 
-            this.batchConvertTabPage.Controls.Add(this.batchConvertSplitPanel1);
-            this.batchConvertTabPage.Location = new System.Drawing.Point(4, 24);
-            this.batchConvertTabPage.Name = "batchConvertTabPage";
-            this.batchConvertTabPage.Size = new System.Drawing.Size(754, 358);
-            this.batchConvertTabPage.TabIndex = 15;
-            this.batchConvertTabPage.Text = "Batch Convert";
-            this.batchConvertTabPage.UseVisualStyleBackColor = true;
-            // 
-            // batchConvertSplitPanel1
-            // 
-            this.batchConvertSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.batchConvertSplitPanel1.Location = new System.Drawing.Point(0, 0);
-            this.batchConvertSplitPanel1.Name = "batchConvertSplitPanel1";
-            this.batchConvertSplitPanel1.Size = new System.Drawing.Size(754, 358);
-            this.batchConvertSplitPanel1.TabIndex = 0;
+            replaceColorNaiveSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            replaceColorNaiveSplitPanel1.Location = new System.Drawing.Point(0, 0);
+            replaceColorNaiveSplitPanel1.Name = "replaceColorNaiveSplitPanel1";
+            replaceColorNaiveSplitPanel1.Size = new System.Drawing.Size(754, 358);
+            replaceColorNaiveSplitPanel1.TabIndex = 0;
             // 
             // toPngTabPage
             // 
-            this.toPngTabPage.Controls.Add(this.toPngSplitPanel1);
-            this.toPngTabPage.Location = new System.Drawing.Point(4, 24);
-            this.toPngTabPage.Name = "toPngTabPage";
-            this.toPngTabPage.Size = new System.Drawing.Size(754, 358);
-            this.toPngTabPage.TabIndex = 13;
-            this.toPngTabPage.Text = "To png";
-            this.toPngTabPage.UseVisualStyleBackColor = true;
+            toPngTabPage.Controls.Add(toPngSplitPanel1);
+            toPngTabPage.Location = new System.Drawing.Point(4, 24);
+            toPngTabPage.Name = "toPngTabPage";
+            toPngTabPage.Size = new System.Drawing.Size(754, 358);
+            toPngTabPage.TabIndex = 13;
+            toPngTabPage.Text = "To png";
+            toPngTabPage.UseVisualStyleBackColor = true;
             // 
             // toPngSplitPanel1
             // 
-            this.toPngSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toPngSplitPanel1.Location = new System.Drawing.Point(0, 0);
-            this.toPngSplitPanel1.Name = "toPngSplitPanel1";
-            this.toPngSplitPanel1.Size = new System.Drawing.Size(754, 358);
-            this.toPngSplitPanel1.TabIndex = 0;
+            toPngSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            toPngSplitPanel1.Location = new System.Drawing.Point(0, 0);
+            toPngSplitPanel1.Name = "toPngSplitPanel1";
+            toPngSplitPanel1.Size = new System.Drawing.Size(754, 358);
+            toPngSplitPanel1.TabIndex = 0;
             // 
             // crtBlurTabPage
             // 
-            this.crtBlurTabPage.Controls.Add(this.crtBlurSplitPanel1);
-            this.crtBlurTabPage.Location = new System.Drawing.Point(4, 24);
-            this.crtBlurTabPage.Name = "crtBlurTabPage";
-            this.crtBlurTabPage.Size = new System.Drawing.Size(754, 358);
-            this.crtBlurTabPage.TabIndex = 14;
-            this.crtBlurTabPage.Text = "CRT Blur";
-            this.crtBlurTabPage.UseVisualStyleBackColor = true;
+            crtBlurTabPage.Controls.Add(crtBlurSplitPanel1);
+            crtBlurTabPage.Location = new System.Drawing.Point(4, 24);
+            crtBlurTabPage.Name = "crtBlurTabPage";
+            crtBlurTabPage.Size = new System.Drawing.Size(754, 358);
+            crtBlurTabPage.TabIndex = 14;
+            crtBlurTabPage.Text = "CRT Blur";
+            crtBlurTabPage.UseVisualStyleBackColor = true;
             // 
             // crtBlurSplitPanel1
             // 
-            this.crtBlurSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crtBlurSplitPanel1.Location = new System.Drawing.Point(0, 0);
-            this.crtBlurSplitPanel1.Name = "crtBlurSplitPanel1";
-            this.crtBlurSplitPanel1.Size = new System.Drawing.Size(754, 358);
-            this.crtBlurSplitPanel1.TabIndex = 0;
+            crtBlurSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            crtBlurSplitPanel1.Location = new System.Drawing.Point(0, 0);
+            crtBlurSplitPanel1.Name = "crtBlurSplitPanel1";
+            crtBlurSplitPanel1.Size = new System.Drawing.Size(754, 358);
+            crtBlurSplitPanel1.TabIndex = 0;
             // 
             // imageToExcelTabPage
             // 
-            this.imageToExcelTabPage.Controls.Add(this.imageToExcelSplitPanel1);
-            this.imageToExcelTabPage.Location = new System.Drawing.Point(4, 24);
-            this.imageToExcelTabPage.Name = "imageToExcelTabPage";
-            this.imageToExcelTabPage.Size = new System.Drawing.Size(754, 358);
-            this.imageToExcelTabPage.TabIndex = 16;
-            this.imageToExcelTabPage.Text = "Image to Excel";
-            this.imageToExcelTabPage.UseVisualStyleBackColor = true;
+            imageToExcelTabPage.Controls.Add(imageToExcelSplitPanel1);
+            imageToExcelTabPage.Location = new System.Drawing.Point(4, 24);
+            imageToExcelTabPage.Name = "imageToExcelTabPage";
+            imageToExcelTabPage.Size = new System.Drawing.Size(754, 358);
+            imageToExcelTabPage.TabIndex = 16;
+            imageToExcelTabPage.Text = "Image to Excel";
+            imageToExcelTabPage.UseVisualStyleBackColor = true;
             // 
             // imageToExcelSplitPanel1
             // 
-            this.imageToExcelSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.imageToExcelSplitPanel1.Location = new System.Drawing.Point(0, 0);
-            this.imageToExcelSplitPanel1.Name = "imageToExcelSplitPanel1";
-            this.imageToExcelSplitPanel1.Size = new System.Drawing.Size(754, 358);
-            this.imageToExcelSplitPanel1.TabIndex = 0;
+            imageToExcelSplitPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            imageToExcelSplitPanel1.Location = new System.Drawing.Point(0, 0);
+            imageToExcelSplitPanel1.Name = "imageToExcelSplitPanel1";
+            imageToExcelSplitPanel1.Size = new System.Drawing.Size(754, 358);
+            imageToExcelSplitPanel1.TabIndex = 0;
             // 
             // openFileControl1
             // 
-            this.openFileControl1.DialogTitle = "Select the Excel file with your design";
-            this.openFileControl1.FileExtension = "xlsx";
-            this.openFileControl1.FileFilterOverride = null;
-            this.openFileControl1.FileName = "";
-            this.openFileControl1.FileTypeName = "Excel Spreadsheet";
-            this.openFileControl1.LabelText = "Excel file";
-            this.openFileControl1.Location = new System.Drawing.Point(12, 0);
-            this.openFileControl1.Name = "openFileControl1";
-            this.openFileControl1.Size = new System.Drawing.Size(762, 31);
-            this.openFileControl1.TabIndex = 4;
+            openFileControl1.DialogTitle = "Select the Excel file with your design";
+            openFileControl1.FileExtension = "xlsx";
+            openFileControl1.FileFilterOverride = null;
+            openFileControl1.FileName = "";
+            openFileControl1.FileTypeName = "Excel Spreadsheet";
+            openFileControl1.LabelText = "Excel file";
+            openFileControl1.Location = new System.Drawing.Point(12, 0);
+            openFileControl1.Name = "openFileControl1";
+            openFileControl1.Size = new System.Drawing.Size(762, 31);
+            openFileControl1.TabIndex = 4;
             // 
             // Form1
             // 
-            this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 435);
-            this.Controls.Add(this.openFileControl1);
-            this.Controls.Add(this.tabControl);
-            this.Name = "Form1";
-            this.Text = "Xstitch Xcel";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Form1_DragDrop);
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Form1_DragEnter);
-            this.tabControl.ResumeLayout(false);
-            this.createPatternTabPage.ResumeLayout(false);
-            this.statsTabPage.ResumeLayout(false);
-            this.findDmcColorsTabPage.ResumeLayout(false);
-            this.replaceColorTabPage.ResumeLayout(false);
-            this.replaceColorNaiveTabPage.ResumeLayout(false);
-            this.batchConvertTabPage.ResumeLayout(false);
-            this.toPngTabPage.ResumeLayout(false);
-            this.crtBlurTabPage.ResumeLayout(false);
-            this.imageToExcelTabPage.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AllowDrop = true;
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(786, 435);
+            Controls.Add(openFileControl1);
+            Controls.Add(tabControl);
+            Name = "Form1";
+            Text = "Xstitch Xcel";
+            Load += Form1_Load;
+            DragDrop += Form1_DragDrop;
+            DragEnter += Form1_DragEnter;
+            tabControl.ResumeLayout(false);
+            createPatternTabPage.ResumeLayout(false);
+            statsTabPage.ResumeLayout(false);
+            findDmcColorsTabPage.ResumeLayout(false);
+            replaceColorTabPage.ResumeLayout(false);
+            replaceColorNaiveTabPage.ResumeLayout(false);
+            toPngTabPage.ResumeLayout(false);
+            crtBlurTabPage.ResumeLayout(false);
+            imageToExcelTabPage.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
@@ -303,8 +277,6 @@ namespace XstitchXcel
         private System.Windows.Forms.TabPage crtBlurTabPage;
         private XstitchXcelWinFormsLib.Panels.CrtBlurSplitPanel crtBlurSplitPanel1;
         private XstitchXcelWinFormsLib.Controls.OpenFileControl openFileControl1;
-        private System.Windows.Forms.TabPage batchConvertTabPage;
-        private XstitchXcelWinFormsLib.Panels.BatchConvertSplitPanel batchConvertSplitPanel1;
         private System.Windows.Forms.TabPage imageToExcelTabPage;
         private XstitchXcelWinFormsLib.Panels.ImageToExcelSplitPanel imageToExcelSplitPanel1;
     }
