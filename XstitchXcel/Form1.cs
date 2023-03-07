@@ -19,7 +19,11 @@ namespace XstitchXcel
             remove => this.openFileControl1.FileNameChanged -= value;
         }
 
-        public string FileName => this.openFileControl1.FileName;
+        public string FileName
+        {
+            get => this.openFileControl1.FileName;
+            set => this.openFileControl1.FileName = value;
+        }
 
         public Control GetInstance() => this;
 

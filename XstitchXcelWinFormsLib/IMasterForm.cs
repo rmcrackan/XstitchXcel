@@ -7,7 +7,7 @@ namespace XstitchXcelWinFormsLib
     {
         event EventHandler NewExcelFileSelected;
 
-        string FileName { get; }
+        string FileName { get; set; }
 
         T GetInstance();
 
