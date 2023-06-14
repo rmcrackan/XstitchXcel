@@ -103,10 +103,9 @@ namespace FlossInventory
         private void inventoryFileSaveBtn_Click(object sender, EventArgs e) => SetInventoryFilePath(inventoryFileTb.Text);
 
         #region Inventory
-
         private async void inventoryAddTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, addToInventory, inventoryAddTb);
         private async void inventoryAddBtn_Click(object sender, EventArgs e) => await RunAsync(addToInventory, inventoryAddTb);
-        private void addToInventory(CancellationToken cancellationToken) => _addToInventory(inventoryAddTb.Text, Section.Inventory);
+        private void addToInventory(CancellationToken cancellationToken) => _addToInventory(Section.Inventory, inventoryAddTb.Text);
 
         private async void inventoryRemoveTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, removeFromInventory, inventoryRemoveTb);
         private async void inventoryRemoveBtn_Click(object sender, EventArgs e) => await RunAsync(removeFromInventory, inventoryRemoveTb);
@@ -115,7 +114,6 @@ namespace FlossInventory
         private async void inventorySearchTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, searchInventory, inventorySearchTb);
         private async void inventorySearchBtn_Click(object sender, EventArgs e) => await RunAsync(searchInventory, inventorySearchTb);
         private void searchInventory(CancellationToken cancellationToken) => _searchInventory(this.inventorySearchTb.Text, Section.Inventory);
-
         #endregion
 
         #region Bulk Inventory
@@ -124,15 +122,14 @@ namespace FlossInventory
         {
             var values = bulkInventoryAddTb.Text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             foreach (var value in values)
-                _addToInventory(value, Section.Inventory);
+                _addToInventory(Section.Inventory, value);
         }
         #endregion
 
         #region Shopping List
-
         private async void shoppingListAddTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, addToShoppingList, shoppingListAddTb);
         private async void shoppingListAddBtn_Click(object sender, EventArgs e) => await RunAsync(addToShoppingList, shoppingListAddTb);
-        private void addToShoppingList(CancellationToken cancellationToken) => _addToInventory(shoppingListAddTb.Text, Section.ShoppingList);
+        private void addToShoppingList(CancellationToken cancellationToken) => _addToInventory(Section.ShoppingList, shoppingListAddTb.Text);
 
         private async void shoppingListRemoveTb_KeyPress(object sender, KeyPressEventArgs e) => await TextBoxEnterKeyAsync(e, removeFromShoppingList, shoppingListRemoveTb);
         private async void shoppingListRemoveBtn_Click(object sender, EventArgs e) => await RunAsync(removeFromShoppingList, shoppingListRemoveTb);
@@ -146,11 +143,9 @@ namespace FlossInventory
         private void inventoryOutBtn_Click(object sender, EventArgs e) => inventoryOutTb.Clear();
         #endregion
 
-        private void _addToInventory(string value, Section section)
+        private void _addToInventory(Section section, string value)
         {
-            var listType = section.GetDescription().ToLower();
-
-            var success = getInventory().TryAdd(value, section, out var inventoryEntries);
+            var success = getInventory().TryAdd(section, value, out var inventoryEntries);
             if (!success)
             {
                 inventoryOutWriteLine("ERROR: not a valid color\r\n\r\n");
@@ -161,7 +156,7 @@ namespace FlossInventory
             foreach (var (color, qty, isWarned) in inventoryEntries)
             {
                 if (isWarned)
-                    inventoryOutWriteLine($"Warning: {color} is not a recognized DMC color but was still added to the {listType}");
+                    inventoryOutWriteLine($"Warning: {color} is not a recognized DMC color but was still added to the {section.GetHeader().ToLower()}");
                 inventoryOutWriteLine($"{color} : {qty}");
             }
             inventoryOutWriteLine();
@@ -169,9 +164,7 @@ namespace FlossInventory
 
         private void _removeFromInventory(string orig, Section section)
         {
-            var listType = section.GetDescription().ToLower();
-
-            var success = getInventory().TryRemove(orig, section, out var inventoryEntries);
+            var success = getInventory().TryRemove(section, orig, out var inventoryEntries);
             if (success)
             {
                 // color was present
@@ -183,7 +176,7 @@ namespace FlossInventory
             // invalid color
             if (!inventoryEntries.Any())
             {
-                inventoryOutWriteLine($"{orig} not in {listType}\r\n");
+                inventoryOutWriteLine($"{orig} not in {section.GetHeader()}\r\n");
                 return;
             }
 
@@ -191,10 +184,10 @@ namespace FlossInventory
             {
                 // actual color
                 if (!wasPresent)
-                    inventoryOutWriteLine($"{color} not in {listType}");
+                    inventoryOutWriteLine($"{color} not in {section.GetHeader()}");
                 // variant
                 else
-                    inventoryOutWriteLine($"Variant '{color}' is still in {listType}. Qty: {qty}");
+                    inventoryOutWriteLine($"Variant '{color}' is still in {section.GetHeader()}. Qty: {qty}");
             }
 
             inventoryOutWriteLine();
@@ -203,27 +196,27 @@ namespace FlossInventory
         private void _findAllMissingDmcColors()
         {
             var missing = getInventory().FindAllMissingDmcColors();
-            inventoryOutWriteLine("BEGIN MISSING");
+            inventoryOutWriteLine("BEGIN MISSING ========================");
             foreach (var dmcColor in missing)
                 inventoryOutWriteLine($"{dmcColor.DmcNumber}: {dmcColor.Name}");
-            inventoryOutWriteLine("END MISSING");
+            inventoryOutWriteLine("END MISSING ==========================");
 
             inventoryOutWriteLine();
-            if (missing.Count == 0)
-                inventoryOutWriteLine("w00h00 -- you got them all!");
-            else if (missing.Count == 1)
-                inventoryOutWriteLine("Only 1 color left!");
-            else
-                inventoryOutWriteLine($"{missing.Count} colors left");
+
+            var qtyMessage = missing.Count switch
+            {
+                0 => "w00h00 -- you got them all!",
+                1 => "Only 1 color left!",
+                _ => $"{missing.Count} colors left"
+            };
+            inventoryOutWriteLine(qtyMessage);
         }
 
         private void _searchInventory(string value, Section section)
         {
-            var listType = section.GetDescription().ToLower();
-
-            var success = getInventory().Search(value, section, out var inventoryEntries);
+            var success = getInventory().Search(section, value, out var inventoryEntries);
             if (!success)
-                inventoryOutWriteLine($"{value} not in {listType}");
+                inventoryOutWriteLine($"{value} not in {section.GetHeader()}");
             else
                 foreach (var (color, qty) in inventoryEntries)
                     inventoryOutWriteLine($"{color}: {qty}");

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,7 +10,7 @@ using XstitchXcelLib.DataClasses;
 
 namespace XstitchXcelLib.Tools
 {
-	public record DmcColorName : IComparable<DmcColorName>
+    public record DmcColorName : IComparable<DmcColorName>
 	{
 		private static Regex regex { get; } = new Regex(
 			@"
@@ -128,10 +129,17 @@ namespace XstitchXcelLib.Tools
 
 		public override string ToString() => $"{Prefix}{Name}";
 	}
-	public class InventoryEntry
-	{
-		public List<SectionEntry> Sections { get; set; } = new();
-	}
+	public class InventoryEntry : IEnumerable<SectionEntry>
+    {
+		private List<SectionEntry> _sections { get; }
+
+		public InventoryEntry(List<SectionEntry> sections) => _sections = sections;
+
+        public SectionEntry this[Section section] => _sections.Single(s => s.Header == section.GetHeader());
+
+        public IEnumerator<SectionEntry> GetEnumerator() => _sections.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => _sections.GetEnumerator();
+    }
 	public class SectionEntry
 	{
 		public string Header { get; set; }
@@ -146,12 +154,17 @@ namespace XstitchXcelLib.Tools
 	{
 		None,
 
-        [Description("INVENTORY")]
+        [Description(InventoryCommon.INVENTORY_SECTION)]
         Inventory,
 
-        [Description("SHOPPING LIST")]
+        [Description(InventoryCommon.SHOPPING_LIST_SECTION)]
         ShoppingList
     }
+	public static class SectionExtensions
+	{
+		public static string GetHeader(this Section section) => section.GetDescription();
+	}
+
 	public static class InventoryCommon
 	{
 		public const string INVENTORY_SECTION = "INVENTORY";
@@ -171,32 +184,27 @@ namespace XstitchXcelLib.Tools
 
 		public InventoryEntry Load()
 		{
-			var inventoryEntry = new InventoryEntry();
+			var sections = new List<SectionEntry>();
 
-			var lines = System.IO.File.ReadAllLines(_filename);
-			SectionEntry sectionEntry = null;
+			var lines = File.ReadAllLines(_filename);
 			foreach (var line in lines)
 			{
 				if (string.IsNullOrWhiteSpace(line))
 					continue;
 
-				if (line.EqualsInsensitive(InventoryCommon.INVENTORY_SECTION))
+				// divider line
+				if (line.Distinct().Count() == 1)
+                    continue;
+
+                if (line.EqualsInsensitive(InventoryCommon.INVENTORY_SECTION))
 				{
-					sectionEntry = new SectionEntry { Header = InventoryCommon.INVENTORY_SECTION };
-					inventoryEntry.Sections.Add(sectionEntry);
+					sections.Add(new() { Header = InventoryCommon.INVENTORY_SECTION });
 					continue;
 				}
 
 				if (line.EqualsInsensitive(InventoryCommon.SHOPPING_LIST_SECTION))
 				{
-					sectionEntry = new SectionEntry { Header = InventoryCommon.SHOPPING_LIST_SECTION };
-					inventoryEntry.Sections.Add(sectionEntry);
-					continue;
-				}
-
-				// divider line
-				if (line.Distinct().Count() == 1)
-				{
+					sections.Add(new() { Header = InventoryCommon.SHOPPING_LIST_SECTION });
 					continue;
 				}
 
@@ -206,22 +214,22 @@ namespace XstitchXcelLib.Tools
 					throw new Exception($"This line does not start with a DMC color:\r\n{line}");
 				var qty = (parts.Length == 1) ? 0 : int.Parse(parts[1]);
 
-				sectionEntry.Rows.Add(new() { DmcColorName = color, Quantity = qty });
+                sections.Last().Rows.Add(new() { DmcColorName = color, Quantity = qty });
 			}
 
-			if (!inventoryEntry.Sections.Any(s => s.Header == InventoryCommon.SHOPPING_LIST_SECTION))
-				inventoryEntry.Sections.Add(new SectionEntry { Header = InventoryCommon.SHOPPING_LIST_SECTION });
+			if (!sections.Any(s => s.Header == InventoryCommon.SHOPPING_LIST_SECTION))
+				sections.Add(new() { Header = InventoryCommon.SHOPPING_LIST_SECTION });
 
-			if (!inventoryEntry.Sections.Any(s => s.Header == InventoryCommon.INVENTORY_SECTION))
-				inventoryEntry.Sections.Add(new SectionEntry { Header = InventoryCommon.INVENTORY_SECTION });
+			if (!sections.Any(s => s.Header == InventoryCommon.INVENTORY_SECTION))
+				sections.Add(new() { Header = InventoryCommon.INVENTORY_SECTION });
 
-			return inventoryEntry;
+			return new(sections);
 		}
 
 		public void Save(InventoryEntry inventoryEntry)
 		{
 			var sb = new System.Text.StringBuilder();
-			foreach (var sectionEntry in inventoryEntry.Sections)
+			foreach (var sectionEntry in inventoryEntry)
 			{
 				sb.AppendLine(sectionEntry.Header);
 				sb.AppendLine(InventoryCommon.DIVIDER);
@@ -232,7 +240,7 @@ namespace XstitchXcelLib.Tools
 				sb.AppendLine();
 			}
 
-			System.IO.File.WriteAllText(_filename, sb.ToString());
+            File.WriteAllText(_filename, sb.ToString());
 		}
 	}
 	public class Inventory
@@ -242,13 +250,11 @@ namespace XstitchXcelLib.Tools
 		public Inventory(string filename) : this(new InventoryDataLayer(filename)) { }
 		public Inventory(IInventoryDataLayer inventoryDataLayer) => _inventoryDataLayer = inventoryDataLayer ?? throw new ArgumentNullException(nameof(inventoryDataLayer));
 
-        public bool TryAdd(string dmc, Section section, out List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
-            => tryAdd(dmc, section.GetDescription(), out inventoryEntries);
         public bool TryAddToInventory(string dmc, out List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
-			=> tryAdd(dmc, InventoryCommon.INVENTORY_SECTION, out inventoryEntries);
+			=> TryAdd(Section.Inventory, dmc: dmc, out inventoryEntries);
 		public bool TryAddToShoppingList(string dmc, out List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
-			=> tryAdd(dmc, InventoryCommon.SHOPPING_LIST_SECTION, out inventoryEntries);
-		private bool tryAdd(string dmc, string header, out List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
+			=> TryAdd(Section.ShoppingList, dmc: dmc, out inventoryEntries);
+        public bool TryAdd(Section section, string dmc, out List<(DmcColorName color, int qty, bool isWarned)> inventoryEntries)
 		{
 			inventoryEntries = new();
 
@@ -258,7 +264,7 @@ namespace XstitchXcelLib.Tools
 
 			var inventoryEntry = _inventoryDataLayer.Load();
 
-			var inventorySection = inventoryEntry.Sections.Single(s => s.Header == header);
+			var inventorySection = inventoryEntry[section];
 
 			// add color
 			var colorEntry = inventorySection.Rows.SingleOrDefault(r => r.DmcColorName == dmcColorName);
@@ -285,13 +291,13 @@ namespace XstitchXcelLib.Tools
 			return processor.GetByDmcNumber(dmcColorName.Name) is null && processor.GetByDmcNumber(dmcColorName.ToString()) is null;
         }
 
-        public bool TryRemove(string dmc, Section section, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
-            => tryRemove(dmc, section.GetDescription(), out inventoryEntries);
-        public bool TryRemoveFromInventory(string dmc, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
-			=> tryRemove(dmc, InventoryCommon.INVENTORY_SECTION, out inventoryEntries);
+        public bool TryRemove(Section section, string dmc, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
+            => tryRemove(section, dmc: dmc, out inventoryEntries);
+		public bool TryRemoveFromInventory(string dmc, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
+			=> tryRemove(Section.Inventory, dmc: dmc, out inventoryEntries);
 		public bool TryRemoveFromShoppingList(string dmc, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
-			=> tryRemove(dmc, InventoryCommon.SHOPPING_LIST_SECTION, out inventoryEntries);
-		private bool tryRemove(string dmc, string header, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
+			=> tryRemove(Section.ShoppingList, dmc: dmc, out inventoryEntries);
+		private bool tryRemove(Section section, string dmc, out List<(DmcColorName color, int qty, bool wasPresent)> inventoryEntries)
 		{
 			inventoryEntries = new();
 
@@ -301,7 +307,7 @@ namespace XstitchXcelLib.Tools
 
 			var inventoryEntry = _inventoryDataLayer.Load();
 
-			var inventorySection = inventoryEntry.Sections.Single(s => s.Header == header);
+			var inventorySection = inventoryEntry[section];
 
 			var colorEntry = inventorySection.Rows.SingleOrDefault(r => r.DmcColorName == dmcColorName);
 
@@ -329,11 +335,11 @@ namespace XstitchXcelLib.Tools
 			return true;
 		}
 
-        public bool Search(string dmc, Section section, out List<(DmcColorName color, int qty)> inventoryEntries)
-            => search(dmc, section.GetDescription(), out inventoryEntries);
+        public bool Search(Section section, string dmc, out List<(DmcColorName color, int qty)> inventoryEntries)
+            => search(section, dmc: dmc, out inventoryEntries);
         public bool SearchInventory(string dmc, out List<(DmcColorName color, int qty)> inventoryEntries)
-			=> search(dmc, InventoryCommon.INVENTORY_SECTION, out inventoryEntries);
-		private bool search(string dmc, string header, out List<(DmcColorName color, int qty)> inventoryEntries)
+			=> search(Section.Inventory, dmc: dmc, out inventoryEntries);
+		private bool search(Section section, string dmc, out List<(DmcColorName color, int qty)> inventoryEntries)
 		{
 			inventoryEntries = new();
 
@@ -343,7 +349,7 @@ namespace XstitchXcelLib.Tools
 
 			var inventoryEntry = _inventoryDataLayer.Load();
 
-			var inventorySection = inventoryEntry.Sections.Single(s => s.Header == header);
+			var inventorySection = inventoryEntry[section];
 
 			var colorEntry = inventorySection.Rows.SingleOrDefault(r => r.DmcColorName == dmcColorName);
 			if (colorEntry is not null)
@@ -359,7 +365,7 @@ namespace XstitchXcelLib.Tools
 		public List<DmcColor> FindAllMissingDmcColors()
         {
 			var owned = _inventoryDataLayer.Load()
-				.Sections.Single(s => s.Header == InventoryCommon.INVENTORY_SECTION)
+				[Section.Inventory]
 				.Rows.Select(r => r.DmcColorName.ToString())
 				.ToList();
 			var except = Config.Configuration
