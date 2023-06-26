@@ -5,7 +5,18 @@ namespace XstitchXcelLib.DataClasses
 {
     public record DmcColor
     {
-        public string DmcNumber { get; init; }
+        private string _dmcNumber;
+        public string DmcNumber
+        {
+            get => _dmcNumber;
+            init
+            {
+                // 01-09 have one leading 0
+                if (int.TryParse(value, out var i))
+                    value = i.ToString().PadLeft(2, '0');
+                _dmcNumber = value;
+            }
+        }
         public string Name { get; init; }
         public Color Color { get; init; }
 

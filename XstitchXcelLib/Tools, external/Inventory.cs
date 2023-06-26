@@ -38,7 +38,8 @@ namespace XstitchXcelLib.Tools
 		public DmcColorName(int number)
 		{
 			Number = number;
-			Name = number.ToString();
+            // 01-09 have one leading 0
+            Name = number.ToString().PadLeft(2, '0');
 		}
 		public DmcColorName(string name) => Name = name;
 		public DmcColorName(char prefix, int number) : this(number) => Prefix = char.ToUpper(prefix);
