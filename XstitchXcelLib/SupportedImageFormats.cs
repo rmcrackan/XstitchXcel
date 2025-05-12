@@ -13,6 +13,7 @@ namespace XstitchXcelLib
         {
             "bmp",
             "jpg",
+            "jpeg",
             "gif",
             DefaultExtension
         };
